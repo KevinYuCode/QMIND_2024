@@ -1,0 +1,15 @@
+.navLinks {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}
+
+.navLinks a {
+    background: linear-gradient(180deg, #F7F7F7 0%, rgba(247, 247, 247, 0.50) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

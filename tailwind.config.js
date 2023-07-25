@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         gothic: ["var(--font-trade-gothic)"],
+        sofia: ["var(--font-sofia)"],
       },
     },
   },
