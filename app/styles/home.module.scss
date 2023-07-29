@@ -1,5 +1,12 @@
 .carousel {
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: #222222;
+  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  // background-color: #222222;
+  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.carousel_dots {
+  content: "";
+  display: block;
+  border-radius: 50%;
 }
