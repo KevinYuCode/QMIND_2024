@@ -4,9 +4,16 @@
   // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-
 .carousel_dots {
   content: "";
   display: block;
   border-radius: 50%;
+}
+
+.stripes {
+  position: absolute;
+  left: -183px;
+  bottom: -523px;
+  z-index: -1;
+  height: auto;
 }

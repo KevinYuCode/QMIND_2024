@@ -15,28 +15,22 @@ function CarouselCard({ project }: any) {
   };
   return (
     <>
-      <div className={`w-[1200px] ${styles.carousel}`}>
+      <div className={`xl:w-[100%] 2xl:w-[1200px] ${styles.carousel}`}>
         <motion.div
           variants={carouselVariants}
           initial="initial"
           transition={{ ease: "easeInOut", duration: 1.1 }}
           animate={controls}
-          className={`w-[100%] flex flex-col items-center rounded-[20px] ${styles.img_container}`}
+          className={`w-[100%] flex flex-col items-center ${styles.img_container}`}
         >
           <img
             src={project.image}
-            className={` max-w-[1200px] w-[1200px] h-[412px] min-w-[200px] object-cover rounded-[20px]`}
+            className={` w-[100%] h-[290px] lg:h-[390px] 2xl:h-[412px] min-w-[200px] object-cover rounded-[20px]`}
             alt="AI Banner"
           />
         </motion.div>
-        <motion.div
-          // variants={carouselVariants}
-          // animate={controls}
-          // initial="initial"
-          // transition={{ ease: "easeInOut", duration: 1.1, delay: 0.15 }}
-          className="flex gap-[20px] justify-between"
-        >
-          <div className="flex items-start flex-col mt-[30px] mb-[20px] w-[80%] ">
+        <motion.div className="flex gap-[20px] justify-center">
+          <div className="flex items-center flex-col mt-[30px] mb-[20px] w-[100%] lg:w-[70%] ">
             <p className="text-[35px] font-bold  leading-[50px] ">
               {project.title}
             </p>
@@ -50,7 +44,9 @@ function CarouselCard({ project }: any) {
                 </span>
               ))}
             </p>
-            <p className="text-[21px] font-light">{project.description}</p>
+            <p className="text-[21px] font-normal text-center">
+              {project.description}
+            </p>
           </div>
         </motion.div>
       </div>

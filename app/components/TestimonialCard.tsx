@@ -10,16 +10,19 @@ function TestimonialCard({
   headShot,
   fullImage,
 }: any) {
-
   return (
     <>
       {fullImage ? (
         <div className={`${styles.card} h-[268px]`}>
-          <img className="rounded-[inherit] h-[100%] object-cover" src={fullImage} alt="Testimonial Image" />
+          <img
+            className="rounded-[inherit] w-[100%] h-[100%] object-cover"
+            src={fullImage}
+            alt="Testimonial Image"
+          />
         </div>
       ) : (
-        <div className={` ${styles.card} p-[35px] h-[276px]`}>
-          <img src={QUOTES.src} alt="quotes" />
+        <div className={` ${styles.card} p-[35px] h-[268px]`}>
+          <img className="h-[30px] lg:h-auto" src={QUOTES.src} alt="quotes" />
           <p className="my-[18px] text-[18px] font-[600] tracking-[-0.36px]">
             {message}
           </p>

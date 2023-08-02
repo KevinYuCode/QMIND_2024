@@ -9,9 +9,6 @@ import styles from "./styles/home.module.scss";
 import TestimonialCard from "./components/TestimonialCard";
 import { TESTIMONIALS } from "./content/content";
 import { DESIGN_PROJECTS } from "./content/content";
-// import HEADSHOT from "../assets/headshot_test.png";
-// import COMPANY_LOGO from "../assets/microsoft.svg";
-// import TESTIMONIAL_IMAGE from "../assets/Testimonial_Card_Test.png";
 import CONFERENCE from "../assets/conference_image.png";
 import INCUBATOR from "../assets/incubator_image.png";
 import ALUMINI_BANNER from "../assets/alumni_banner.png";
@@ -28,26 +25,38 @@ export default function Home() {
     slidesToScroll: 1,
   };
 
+  const changeCarousel = (direction: number) => {
+    setActiveProject((index) => {
+      let newIndex = index + direction;
+      if (newIndex >= DESIGN_PROJECTS.length) {
+        newIndex = 0;
+      } else if (newIndex < 0) {
+        newIndex = DESIGN_PROJECTS.length - 1;
+      }
+      return newIndex;
+    });
+  };
+
   return (
-    <main className="min-h-[100vh] py-[5rem] relative">
+    <main className="min-h-[100vh] py-[3rem] 2xl:py-[5rem] relative">
       {/* Hero Panel */}
       <ContentContainer>
-        <div className="flex pt-[75.22px] justify-between">
-          {/* Left Content */}
-          <div className="w-[55%] flex flex-col gap-[50px] ">
+        <div className="flex pt-[0px] 2xl:pt-[75.22px] justify-between">
+          {/* Hero Content */}
+          <div className=" lg:w-[62%] 2xl:w-[55%] flex flex-col gap-[25px] lg:gap-[50px] relative">
             <img
-              className="w-[auto] h-[1000px] absolute left-[0]"
+              className={`${styles.stripes} w-[auto]`}
               src={STRIPES.src}
               alt=""
             />
-            <h1 className="font-gothic font-bold text-[70px] leading-[76.46px]">
+            <h1 className="font-gothic font-bold text-[50px] xl:text-[60px] 2xl:text-[70px] leading-[60px] 2xl:leading-[76.46px]">
               Empowering <br /> future leaders to <br />
               <span className="text-[#F0B542]">disrupt technology</span>
             </h1>
-            <p>
+            <p className="text-[20px]">
               265 undergraduate students building, researching, and exploring
               artificial intelligence, machine learning, blockchain and quantum
-              computing.
+              computing. We want you to join our community.
             </p>
 
             <div className="flex gap-[24px]">
@@ -65,10 +74,10 @@ export default function Home() {
               />
             </div>
           </div>
-          {/* Right Content */}
+          {/* QMIND LOGO */}
           <div>
             <img
-              className="h-[557px] w-auto rotate-[11.681deg]"
+              className="hidden lg:h-[350px] xl:h-[450px] 2xl:h-[557px] w-auto rotate-[11.681deg]"
               src={QMIND_LOGO.src}
               alt="QMIND LOGO"
             />
@@ -82,31 +91,56 @@ export default function Home() {
 
       {/* Design Team Projects */}
       <ContentContainer className="mt-[100px] flex flex-col items-center">
-        <h1 className="font-gothic font-bold text-[48px] leading-[76.46px] text-center mb-[50px]">
-          Design Team Projects
-        </h1>
+        <div className="mb-[50px]">
+          <h1 className="text-[45px] lg:text-[48px] font-gothic font-bold  md:leading-[60px] lg:leading-[76.46px] text-center ">
+            Design Team Projects
+          </h1>
+          <p className="text-[20px] font-bold font-gothic">
+            In Teams of 4-6 students, we tackle real world problems.
+          </p>
+        </div>
         <CarouselCard project={DESIGN_PROJECTS[activeProject]}></CarouselCard>
-        <div className="flex gap-[20px] justify-center mt-[30px]">
+        <div className="flex gap-[20px] gap-[70px] justify-center items-center mt-[30px]">
           {" "}
-          {DESIGN_PROJECTS.map((_, key) => (
-            <button
-              key={key}
-              onClick={() => {
-                setActiveProject(key);
-              }}
-              className={`${
-                key == activeProject ? "bg-white" : "bg-[#5a5a5a]"
-              } ${styles.carousel_dots} w-[10px] h-[10px] `}
-            ></button>
-          ))}
+          <button
+            onClick={() => {
+              changeCarousel(-1);
+            }}
+            className="min-w-[160px] bg-[#F7F7F7] rounded-[5px] tertiary-colour py-[6px] px-[35px] font-bold tracking-[1.6px] leading-[27.5px] text-[16px] font-gothic"
+          >
+            Previous
+          </button>
+          <div className="flex gap-[20px] justify-center ">
+            {DESIGN_PROJECTS.map((_, key) => (
+              <button
+                key={key}
+                onClick={() => {
+                  setActiveProject(key);
+                }}
+                className={`${
+                  key == activeProject ? "bg-white" : "bg-[#5a5a5a]"
+                } ${styles.carousel_dots} w-[10px] h-[10px] `}
+              ></button>
+            ))}
+          </div>
+          <button
+            onClick={() => {
+              changeCarousel(1);
+            }}
+            className=" min-w-[160px] bg-[#F7F7F7] rounded-[5px] tertiary-colour py-[6px] px-[35px] font-bold tracking-[1.6px] leading-[27.5px] text-[16px] font-gothic"
+          >
+            Next
+          </button>
         </div>
       </ContentContainer>
 
       {/* Testimonials */}
       <ContentContainer className="overflow-hidden relative !max-w-[2000px] ">
-        <div className="flex flex-col text-center mt-[100px] mb-[50px] font-gothic font-bold leading-[76.46px] text-center">
-          <h1 className="text-[48px]">Our Partners Love QMIND</h1>
-          <h2 className="text-[32px] mt-[-30px]">
+        <div className="flex flex-col text-center mt-[100px] mb-[50px] font-gothic font-bold leading-[60px] lg:leading-[76.46px] text-center">
+          <h1 className="text-[45px] lg:text-[48px]">
+            Our Partners Love QMIND
+          </h1>
+          <h2 className="text-[28px] lg:mt-[-30px]">
             Read What They Have To Say!
           </h2>
         </div>
@@ -117,20 +151,21 @@ export default function Home() {
       </ContentContainer>
 
       {/* National Conference */}
-      <ContentContainer>
-        <div className="flex flex-col text-center mt-[100px] mb-[50px] font-gothic font-bold leading-[76.46px] text-center">
-          <h1 className="text-[48px]">
+      <ContentContainer className="flex flex-col justify-center">
+        <div className="flex flex-col text-center mt-[100px] mb-[50px] font-gothic font-bold  text-center">
+          <h1 className="text-[45px] lg:text-[48px]">
             Our National Conference <br />{" "}
           </h1>
-          <h2 className="text-[32px] mt-[-30px]">
-            CUCAI 2023 had 320+ attendees...
-          </h2>
+          <h2 className="text-[28px] ">CUCAI 2023 had 320+ attendees...</h2>
         </div>
-        <img className="h-[437px] w-[auto]" src={CONFERENCE.src} alt="" />
+        <img
+          className="h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto] rounded-[20px] object-cover"
+          src={CONFERENCE.src}
+          alt=""
+        />
         <div className="flex justify-center w-[100%] mt-[50px]">
           <CTALink
             isExternalLink={true}
-            className=""
             text="LEARN MORE"
             href="https://www.cucai.ca/"
           />
@@ -138,17 +173,21 @@ export default function Home() {
       </ContentContainer>
 
       {/* National Conference */}
-      <ContentContainer>
-        <div className="flex flex-col text-center mt-[100px] mb-[50px] font-gothic font-bold leading-[76.46px] text-center">
-          <h1 className="text-[48px]">
+      <ContentContainer className="flex flex-col justify-center">
+        <div className="flex flex-col text-center mt-[100px] mb-[50px] font-gothic font-bold text-center">
+          <h1 className=" text-[45px] lg:text-[48px]">
             Our Product Incubator
             <br />{" "}
           </h1>
-          <h2 className="text-[32px] mt-[-30px]">
-            InQUbate Is Partnered with AWS Activate
+          <h2 className=" text-[28px] lg:mt-[30px]">
+            InQUbate Was partnered with aWS Activate [‘22-’23]
           </h2>
         </div>
-        <img className="h-[437px] w-[auto]" src={INCUBATOR.src} alt="" />
+        <img
+          className="h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto] rounded-[20px] object-cover"
+          src={INCUBATOR.src}
+          alt=""
+        />
         <div className="flex justify-center w-[100%] mt-[50px]">
           <CTALink
             isExternalLink={true}
@@ -159,7 +198,11 @@ export default function Home() {
         </div>
       </ContentContainer>
       <ContentContainer className="mt-[100px]">
-        <img src={ALUMINI_BANNER.src} alt="Alumini Placements" />
+        <img
+          className="lg:h-auto w-100%"
+          src={ALUMINI_BANNER.src}
+          alt="Alumini Placements"
+        />
         <div className="flex justify-center w-[100%] mt-[50px]">
           <CTALink
             isExternalLink={true}
