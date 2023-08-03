@@ -6,7 +6,7 @@ function CTALink({ text, href, className, isExternalLink }: CTAProps) {
     <a
       rel="noreferrer"
       target="_blank"
-      className={`${className}  bg-[#F7F7F7] rounded-[5px] tertiary-colour py-[6px] px-[20px] lg:px-[35px] font-bold tracking-[1.6px] leading-[27.5px] text-[11px] lg:text-[16px] font-gothic`}
+      className={`${className}  bg-[#F7F7F7] rounded-[5px] tertiary-colour py-[3px] md:py-[6px] px-[13px] md:px-[20px] lg:px-[35px] font-bold tracking-[1.6px] leading-[27.5px] text-[10px] md:text-[11px] lg:text-[16px] font-gothic`}
       href={href}
     >
       {text}

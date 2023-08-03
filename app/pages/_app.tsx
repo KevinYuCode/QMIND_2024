@@ -4,7 +4,7 @@ import { AppProps } from "next/app";
 
 function _app({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+  <Layout>
       <Component {...pageProps} />
     </Layout>
   );

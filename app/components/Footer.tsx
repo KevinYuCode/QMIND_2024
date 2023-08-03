@@ -5,7 +5,7 @@ import ContentContainer from "./ContentContainer";
 function Footer() {
   return (
     <div className="pb-[6rem]">
-      <ContentContainer className="flex justify-between gap-[75px] lg:gap-[50px]">
+      <ContentContainer className="flex justify-between gap-[30px] md:gap-[75px] lg:gap-[50px]">
         <div className="flex flex-col self-start ">
           <h2 className="font-bold text-[20px] pb-[30px]">Menu</h2>
           <div className="flex flex-col opacity-[70%] gap-[15px]">
@@ -16,7 +16,7 @@ function Footer() {
             <Link href="/our-story">Our Story</Link>
           </div>
         </div>
-        <div className="self-end relative top-[70px] ">
+        <div className="hidden md:block self-end relative top-[70px] ">
           <img
             className="max-w-[100%] min-w-[120px] h-[158px] object-contain h-auto"
             src={PILLARS.src}
