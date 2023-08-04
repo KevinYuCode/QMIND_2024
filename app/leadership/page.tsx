@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ContentContainer from "../components/ContentContainer";
 import Image from "next/image";
 import leadership_image from "../../assets/leadership_team.png"
+import "./page.scss";
 
 import rabab_azeem from "../../assets/Headshots/Rabab_Azeem.png";
 import marcello_mallqui from "../../assets/Headshots/Marcelo_Chaman_Mallqui.png";
@@ -36,19 +37,19 @@ export default function Leadership() {
                     name: "Rabab Azeem",
                     title: "Managing Director, Design",
                     img: rabab_azeem,
-                    background: "linear-gradient(224deg, #02256A 0%, #000 100%)"
+                    class: "leadershipCardDesign"
                 },
                 {
                     name: "Marcelo Chaman Mallqui",
                     title: "Managing Director, Operations",
                     img: marcello_mallqui,
-                    background: "linear-gradient(224deg, #553800 0%, #000 100%)"
+                    class: "leadershipCardOperations"
                 },
                 {
                     name: "Olivia Xu",
                     title: "Managing Director, Development",
                     img: olivia_xu,
-                    background: "linear-gradient(224deg, #5E022E 0%, #000 100%)"
+                    class: "leadershipCardDevelopment"
                 }
             ]
         },
@@ -59,49 +60,49 @@ export default function Leadership() {
                     name: "Bartek Kowalski",
                     title: "Director of AI Research",
                     img: bartek_k,
-                    background: "linear-gradient(224deg, #02256A 0%, #000 100%)"
+                    class: "leadershipCardDesign"
                 },
                 {
                     name: "Max Kang",
                     title: "Director of Disruptive Technology",
                     img: max_k,
-                    background: "linear-gradient(224deg, #02256A 0%, #000 100%)"
+                    class: "leadershipCardDesign"
                 },
                 {
                     name: "Leo Sandler",
                     title: "Director of AI Ethics",
                     img: leo_s,
-                    background: "linear-gradient(224deg, #02256A 0%, #000 100%)"
+                    class: "leadershipCardDesign"
                 },
                 {
                     name: "Sandindie Silva",
                     title: "Director of Design, Healthcare",
                     img: sanindie_s,
-                    background: "linear-gradient(224deg, #02256A 0%, #000 100%)"
+                    class: "leadershipCardDesign"
                 },
                 {
                     name: "Hunter Hoogendijk",
                     title: "Director of Design, Finance",
                     img: hunter_h,
-                    background: "linear-gradient(224deg, #02256A 0%, #000 100%)"
+                    class: "leadershipCardDesign"
                 },
                 {
                     name: "Khoa Nguyen",
                     title: "Director of Design, Computer Vision",
                     img: khoa_n,
-                    background: "linear-gradient(224deg, #02256A 0%, #000 100%)"
+                    class: "leadershipCardDesign"
                 },
                 {
                     name: "Mercy Doan",
                     title: "Director of Design, NLP",
                     img: rabab_azeem,
-                    background: "linear-gradient(224deg, #02256A 0%, #000 100%)"
+                    class: "leadershipCardDesign"
                 },
                 {
                     name: "Rodrigo Del Aguila",
                     title: "Director of Design, RL",
                     img: rodrigo_d,
-                    background: "linear-gradient(224deg, #02256A 0%, #000 100%)"
+                    class: "leadershipCardDesign"
                 },
             ]
         },
@@ -112,31 +113,31 @@ export default function Leadership() {
                     name: "Aren Jo",
                     title: "Director of Marketing",
                     img: aren_jo,
-                    background: "linear-gradient(224deg, #553800 0%, #000 100%)"
+                    class: "leadershipCardOperations"
                 },
                 {
                     name: "Rowan McDonald",
                     title: "Director of Finance",
                     img: rowan_m,
-                    background: "linear-gradient(224deg, #553800 0%, #000 100%)"
+                    class: "leadershipCardOperations"
                 },
                 {
                     name: "Kevin Yu",
                     title: "Director of Web Development",
                     img: kevin_yu,
-                    background: "linear-gradient(224deg, #553800 0%, #000 100%)"
+                    class: "leadershipCardOperations"
                 },
                 {
                     name: "Jenn Yang",
                     title: "Executive Director of InQUbate",
                     img: jenn_y,
-                    background: "linear-gradient(224deg, #553800 0%, #000 100%)"
+                    class: "leadershipCardOperations"
                 },
                 {
                     name: "Sunghoon Kim",
                     title: "Executive Director of InQUbate",
                     img: sunghoon_k,
-                    background: "linear-gradient(224deg, #553800 0%, #000 100%)"
+                    class: "leadershipCardOperations"
                 },
             ]
         },
@@ -147,19 +148,19 @@ export default function Leadership() {
                     name: "Daniel Wang",
                     title: "Director of External Relations",
                     img: daniel_w,
-                    background: "linear-gradient(224deg, #5E022E 0%, #000 100%)"
+                    class: "leadershipCardDevelopment"
                 },
                 {
                     name: "Sara Laker",
                     title: "Director of Internal Affairs",
                     img: sara_l,
-                    background: "linear-gradient(224deg, #5E022E 0%, #000 100%)"
+                    class: "leadershipCardDevelopment"
                 },
                 {
                     name: "Sam Lin",
                     title: "Director of QMIND Tech Review",
                     img: sam_l,
-                    background: "linear-gradient(224deg, #5E022E 0%, #000 100%)"
+                    class: "leadershipCardDevelopment"
                 },
             ]
         },
@@ -184,8 +185,8 @@ export default function Leadership() {
                             <div className="flex flex-row flex-wrap justify-center gap-[16px] w-[100%] mt-[1.5rem]">
                                 {section.cards.map((card,index) => {
                                     return (
-                                        <div key={index} className="w-[210px] md:w-[250px] text-center flex flex-col justify-center items-center rounded-[15px] p-[20px] md:rounded-[25px] md:p-[25px] bg-[#2E2E2E]">
-                                            <Image src={card.img} alt="" className="rounded-[5px] md:rounded-[10px]" style={{background: `${card.background}`}}/>
+                                        <div key={index} className={`${card.class} md:basis-[21%] w-[210px] md:w-[250px] text-center flex flex-col justify-center items-center rounded-[15px] p-[20px] md:rounded-[25px] md:p-[25px] bg-[#2E2E2E]`}>
+                                            <Image src={card.img} alt="" className={`${card.class}-img rounded-[5px] md:rounded-[10px]`}/>
                                             <p className={`${sofia_sans.className} font-semibold font-gothic text-[14px] md:text-[18px] mt-[0.75rem] md:mt-[1rem]`}>{card.name}</p>
                                             <p className={`${sofia_sans.className} font-light font-gothic text-[11px] md:text-[13px] mt-[0.1rem]`}>{card.title}</p>
                                         </div>
