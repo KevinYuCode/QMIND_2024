@@ -24,6 +24,7 @@ import sam_l from "../../assets/Headshots/Sam_Lin.png"
 import sanindie_s from "../../assets/Headshots/Sanindie_Silva.png"
 import sara_l from "../../assets/Headshots/Sara_Laker.png"
 import sunghoon_k from "../../assets/Headshots/Sunghoon_Kim.png"
+import mercy_d from "../../assets/Headshots/Mercy_Doan.png"
 
 import { sofia_sans } from "../font";
 
@@ -95,7 +96,7 @@ export default function Leadership() {
                 {
                     name: "Mercy Doan",
                     title: "Director of Design, NLP",
-                    img: rabab_azeem,
+                    img: mercy_d,
                     class: "leadershipCardDesign"
                 },
                 {
@@ -186,7 +187,9 @@ export default function Leadership() {
                                 {section.cards.map((card,index) => {
                                     return (
                                         <div key={index} className={`${card.class} md:basis-[21%] w-[210px] md:w-[250px] text-center flex flex-col justify-center items-center rounded-[15px] p-[20px] md:rounded-[25px] md:p-[25px] bg-[#2E2E2E]`}>
-                                            <Image src={card.img} alt="" className={`${card.class}-img rounded-[5px] md:rounded-[10px]`}/>
+                                            <div className={`${card.class}-img rounded-[5px] md:rounded-[10px]`}>
+                                                <Image src={card.img} alt="" className={`noise`}/>
+                                            </div>
                                             <p className={`${sofia_sans.className} font-semibold font-gothic text-[14px] md:text-[18px] mt-[0.75rem] md:mt-[1rem]`}>{card.name}</p>
                                             <p className={`${sofia_sans.className} font-light font-gothic text-[11px] md:text-[13px] mt-[0.1rem]`}>{card.title}</p>
                                         </div>
