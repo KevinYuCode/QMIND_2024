@@ -49,11 +49,11 @@ export default function Home() {
               src={STRIPES.src}
               alt=""
             />
-            <h1 className="font-gothic font-bold text-[50px] xl:text-[60px] 2xl:text-[70px] leading-[60px] 2xl:leading-[76.46px]">
+            <h1 className="font-gothic font-bold text-[35px] md:text-[50px] xl:text-[60px] 2xl:text-[70px] leading-[45px] md:leading-[60px] 2xl:leading-[76.46px]">
               Empowering <br /> future leaders to <br />
               <span className="text-[#F0B542]">disrupt technology</span>
             </h1>
-            <p className="text-[20px]">
+            <p className="text-[18px] md:text-[20px]">
               265 undergraduate students building, researching, and exploring
               artificial intelligence, machine learning, blockchain and quantum
               computing. We want you to join our community.
@@ -90,17 +90,17 @@ export default function Home() {
       </ContentContainer>
 
       {/* Design Team Projects */}
-      <ContentContainer className="mt-[100px] flex flex-col items-center">
-        <div className="mb-[50px]">
-          <h1 className="text-[45px] lg:text-[48px] font-gothic font-bold  md:leading-[60px] lg:leading-[76.46px] text-center ">
+      <ContentContainer className="mt-[50px] md:mt-0 text-mt-[100px] flex flex-col items-center">
+        <div className="mb-[50px] text-center">
+          <h1 className="text-[25px] md:text-[45px] lg:text-[48px] font-gothic font-bold  md:leading-[60px] lg:leading-[76.46px] text-center ">
             Design Team Projects
           </h1>
-          <p className="text-[20px] font-bold font-gothic">
+          <p className="text-[15px] md:text-[20px] font-bold font-gothic">
             In Teams of 4-6 students, we tackle real world problems.
           </p>
         </div>
         <CarouselCard project={DESIGN_PROJECTS[activeProject]}></CarouselCard>
-        <div className="flex gap-[20px] gap-[70px] justify-center items-center mt-[30px]">
+        <div className="flex order-1 md:order-none flex-wrap md:flex-nowrap gap-[20px] gap-[70px] justify-center items-center mt-[30px]">
           {" "}
           <button
             onClick={() => {
@@ -110,7 +110,7 @@ export default function Home() {
           >
             Previous
           </button>
-          <div className="flex gap-[20px] justify-center ">
+          <div className="w-[100%] md:w-[auto] flex gap-[20px] justify-center ">
             {DESIGN_PROJECTS.map((_, key) => (
               <button
                 key={key}
@@ -127,7 +127,7 @@ export default function Home() {
             onClick={() => {
               changeCarousel(1);
             }}
-            className=" min-w-[160px] bg-[#F7F7F7] rounded-[5px] tertiary-colour py-[6px] px-[35px] font-bold tracking-[1.6px] leading-[27.5px] text-[16px] font-gothic"
+            className=" order-2 md:order-none min-w-[160px] bg-[#F7F7F7] rounded-[5px] tertiary-colour py-[6px] px-[35px] font-bold tracking-[1.6px] leading-[27.5px] text-[16px] font-gothic"
           >
             Next
           </button>
@@ -135,12 +135,12 @@ export default function Home() {
       </ContentContainer>
 
       {/* Testimonials */}
-      <ContentContainer className="overflow-hidden relative !max-w-[2000px] ">
-        <div className="flex flex-col text-center mt-[100px] mb-[50px] font-gothic font-bold leading-[60px] lg:leading-[76.46px] text-center">
-          <h1 className="text-[45px] lg:text-[48px]">
+      <ContentContainer className="text-center overflow-hidden relative !max-w-[2000px] ">
+        <div className="flex flex-col text-center mt-[100px] mb-[50px] font-gothic font-bold leading-[40px] md:leading-[60px] lg:leading-[76.46px] text-center">
+          <h1 className="text-[25px] md:text-[45px] lg:text-[48px]">
             Our Partners Love QMIND
           </h1>
-          <h2 className="text-[28px] lg:mt-[-30px]">
+          <h2 className="text-[15px] md:text-[28px] lg:mt-[-30px]">
             Read What They Have To Say!
           </h2>
         </div>
@@ -151,12 +151,12 @@ export default function Home() {
       </ContentContainer>
 
       {/* National Conference */}
-      <ContentContainer className="flex flex-col justify-center">
+      <ContentContainer className="text-center flex flex-col justify-center">
         <div className="flex flex-col text-center mt-[100px] mb-[50px] font-gothic font-bold  text-center">
-          <h1 className="text-[45px] lg:text-[48px]">
+          <h1 className="text-[25px] md:text-[45px] lg:text-[48px]">
             Our National Conference <br />{" "}
           </h1>
-          <h2 className="text-[28px] ">CUCAI 2023 had 320+ attendees...</h2>
+          <h2 className="text-[15px] md:text-[25px] ">CUCAI 2023 had 320+ attendees...</h2>
         </div>
         <img
           className="h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto] rounded-[20px] object-cover"
@@ -173,14 +173,14 @@ export default function Home() {
       </ContentContainer>
 
       {/* National Conference */}
-      <ContentContainer className="flex flex-col justify-center">
+      <ContentContainer className="text-center flex flex-col justify-center">
         <div className="flex flex-col text-center mt-[100px] mb-[50px] font-gothic font-bold text-center">
-          <h1 className=" text-[45px] lg:text-[48px]">
+          <h1 className="text-[25px] md:text-[45px] lg:text-[48px]">
             Our Product Incubator
             <br />{" "}
           </h1>
-          <h2 className=" text-[28px] lg:mt-[30px]">
-            InQUbate Was partnered with aWS Activate [‘22-’23]
+          <h2 className="text-[15px] text-[28px] lg:mt-[30px]">
+            InQUbate Was partnered with AWS Activate [‘22-’23]
           </h2>
         </div>
         <img

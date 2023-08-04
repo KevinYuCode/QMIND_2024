@@ -31,10 +31,10 @@ function CarouselCard({ project }: any) {
         </motion.div>
         <motion.div className="flex gap-[20px] justify-center">
           <div className="flex items-center flex-col mt-[30px] mb-[20px] w-[100%] lg:w-[70%] ">
-            <p className="text-[35px] font-bold  leading-[50px] ">
+            <p className="text-[35px] font-bold text-center leading-[50px] ">
               {project.title}
             </p>
-            <p className="mt-[12px]  font-light opacity-[.59]">
+            <p className="mt-[12px] font-light opacity-[.59]">
               By:{" "}
               {project.teamMembers.map((name: string, key: number) => (
                 <span key={key}>
