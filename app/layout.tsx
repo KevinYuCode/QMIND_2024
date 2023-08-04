@@ -27,10 +27,10 @@ const tradeGothic = localFont({
   variable: "--font-trade-gothic",
 });
 
-export const metadata = {
-  title: "QMIND",
-  description: "QMIND is Canada's largest student-run organization. We empower undergraduate student's at Queen's University to tackle real-world problems through the use ...",
-};
+// export const metadata = {
+//   title: "QMIND",
+//   description: "QMIND is Canada's largest student-run organization. We empower undergraduate student's at Queen's University to tackle real-world problems through the use ...",
+// };
 
 export default function RootLayout({
   children,
