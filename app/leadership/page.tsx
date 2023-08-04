@@ -57,11 +57,46 @@ export default function Leadership() {
                     title: "Managing Director, Design",
                     img: rabab_azeem
                 },
+                {
+                    name: "Rabab Azeem",
+                    title: "Managing Director, Design",
+                    img: rabab_azeem
+                },
+                {
+                    name: "Rabab Azeem",
+                    title: "Managing Director, Design",
+                    img: rabab_azeem
+                },
+                {
+                    name: "Rabab Azeem",
+                    title: "Managing Director, Design",
+                    img: rabab_azeem
+                },
+                {
+                    name: "Rabab Azeem",
+                    title: "Managing Director, Design",
+                    img: rabab_azeem
+                },
             ]
         },
         {
             title: "Operations",
             cards: [
+                {
+                    name: "Marcelo Chaman Mallqui",
+                    title: "Managing Director, Operations",
+                    img: marcello_mallqui
+                },
+                {
+                    name: "Marcelo Chaman Mallqui",
+                    title: "Managing Director, Operations",
+                    img: marcello_mallqui
+                },
+                {
+                    name: "Marcelo Chaman Mallqui",
+                    title: "Managing Director, Operations",
+                    img: marcello_mallqui
+                },
                 {
                     name: "Marcelo Chaman Mallqui",
                     title: "Managing Director, Operations",
@@ -130,10 +165,10 @@ export default function Leadership() {
                             <div className="flex flex-row flex-wrap justify-center gap-[20px] md:justify-evenly w-[100%] mt-[1.5rem]">
                                 {section.cards.map((card,index) => {
                                     return (
-                                        <div key={index} className="w-[210px] md:w-[260px] text-center flex flex-col justify-center items-center rounded-[15px] p-[20px] md:rounded-[25px] md:p-[25px] bg-[#2E2E2E]">
+                                        <div key={index} className="w-[210px] md:w-[250px] text-center flex flex-col justify-center items-center rounded-[15px] p-[20px] md:rounded-[25px] md:p-[25px] bg-[#2E2E2E]">
                                             <Image src={card.img} alt="" className="w-full rounded-[5px] md:rounded-[10px]"/>
                                             <p className={`${sofia_sans.className} font-semibold font-gothic text-[14px] md:text-[18px] mt-[0.75rem] md:mt-[1rem]`}>{card.name}</p>
-                                            <p className={`${sofia_sans.className} font-light font-gothic text-[11px] md:text-[15px] mt-[0.1rem]`}>{card.title}</p>
+                                            <p className={`${sofia_sans.className} font-light font-gothic text-[11px] md:text-[13px] mt-[0.1rem]`}>{card.title}</p>
                                         </div>
                                     )
                                 })}

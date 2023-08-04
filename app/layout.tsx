@@ -27,10 +27,10 @@ const tradeGothic = localFont({
   variable: "--font-trade-gothic",
 });
 
-export const metadata = {
-  title: "QMIND",
-  description: "Student run W club",
-};
+// export const metadata = {
+//   title: "QMIND",
+//   description: "Student run W club",
+// };
 
 export default function RootLayout({
   children,
