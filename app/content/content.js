@@ -7,7 +7,7 @@ import HILARY from "../../assets/Testimonials/hilary.jpeg";
 import JACOB from "../../assets/Testimonials/Jacob.png";
 import REBAAB from "../../assets/Testimonials/Rebaab.png";
 import SMEET from "../../assets/Testimonials/Smeet.jpg";
-import KEVIN from "../../assets/Testimonials/Kevin.jpg";
+import KEVIN from "../../assets/Testimonials/Kevin.png";
 import QUEENS from "../../assets/Testimonials/Queens.png";
 export const TESTIMONIALS = [
   {
