@@ -13,59 +13,82 @@ function Navbar({ navOn = false, setNavOn }: any) {
       setNavOn(false);
     }, 200);
   };
+
   return (
     <nav
-      className={` ${
-        navOn ? "" : `${styles.navbarBg} h-[90px]`
-      } fixed z-10 top-0 right-0 left-0 lg:h-[140px] z-[3] flex items-center `}
+      className={` ${navOn ? "h-[100vh] " : `h-[90px]`} 
+      ${styles.navbarBg}
+      fixed z-10 top-0 right-0 left-0 lg:h-[90px] flex items-center `}
     >
-      <ContentContainer className="flex justify-between font-gothic w-[100%] ">
-        <Link href="/" className="left-section">
+      <ContentContainer className="flex justify-start lg:justify-between items-start  lg:items-center font-gothic w-[100%] ">
+        <Link href="/" className={`${navOn ? "hidden" : "block"} left-section`}>
           <img
-            className="h-[40px] lg:h-[47px]"
+            className="ml-[15px] h-[40px] lg:h-[47px]"
             src={QMIND_NAV_LOGO.src}
             alt="Qmind Nav Logo"
           />
         </Link>
+
+        {/* Open Button */}
         <button
-          className="absolute top-[33px] right-[30px] flex lg:none text-[30px]"
+          className={`${
+            navOn ? "hidden" : "flex"
+          } absolute top-[33px] right-[30px] lg:hidden text-[30px]`}
           onClick={() => {
             setNavOn(true);
           }}
         >
           <HiMenuAlt3 />
         </button>
+
+        {/* Right Section */}
         <motion.div
           className={`${
             navOn ? "flex" : "hidden"
-          } h-[100vh] lg:h-auto absolute lg:relative right-section  ${
-            styles.navLinks
-          }`}
+          } lg:flex w-[100%] lg:w-auto h-[100%] items-center ${
+            styles.mobileBg
+          } lg:relative right-section  ${styles.navLinks}`}
         >
+          {/* Close Button */}
           <button
-            className={` text-[30px] absolute top-[33px] right-[30px] text-blue ${styles.close}`}
+            className={`${
+              navOn ? "block" : "hidden"
+            } lg:hidden text-[30px] absolute top-[33px] right-[30px] text-blue ${
+              styles.close
+            }`}
             onClick={() => {
               setNavOn(false);
             }}
           >
             <MdClose />
           </button>
-          <div className="flex-col mt-[140px] w-[100%] lg:flex-row flex items-center gap-[50px]">
+
+          {/* Nav Links */}
+          <div className="flex-col md:mt-[0] bg-transparent w-[100%] lg:flex-row flex items-center gap-[50px]">
             <Link href="/" onClick={() => closeNav()}>
               HOME
             </Link>
             <Link href="/leadership" onClick={() => closeNav()}>
               LEADERSHIP
             </Link>
-            <Link href="/leadership" onClick={() => closeNav()}>
+            <p
+              className="!text-[#424242] cursor-not-allowed"
+              onClick={() => closeNav()}
+            >
               DESIGN
-            </Link>
-            <Link href="/leadership" onClick={() => closeNav()}>
+            </p>
+            <p
+              className="!text-[#424242] cursor-not-allowed"
+              onClick={() => closeNav()}
+            >
               OUR STORY
-            </Link>
-            <Link href="/leadership" onClick={() => closeNav()}>
+            </p>
+            <p
+              className="!text-[#424242] cursor-not-allowed"
+              onClick={() => closeNav()}
+            >
               BLOG
-            </Link>
+            </p>
           </div>
         </motion.div>
       </ContentContainer>

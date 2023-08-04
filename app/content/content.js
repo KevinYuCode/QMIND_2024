@@ -1,69 +1,138 @@
-import HEADSHOT from "../../assets/headshot_test.png";
-import COMPANY_LOGO from "../../assets/microsoft.svg";
-import TESTIMONIAL_IMAGE from "../../assets/Testimonial_Card_Test.png";
-import AI from "../../assets/AI_Banner.png";
-import AI2 from "../../assets/incubator_image.png";
-import AI_Banner from "../../assets/AI_Banner.png";
-import CONFERENCE from "../../assets/conference_image.png";
-
+import VIRTUAL from "../../assets/virtual.jpg";
+import DIABETES from "../../assets/diebetes.jpg";
+import QUANTUM from "../../assets/quantum.jpg";
+import ANDRIOD from "../../assets/andriod.jpg";
+import CHRIS from "../../assets/Testimonials/Chris.png";
+import HILARY from "../../assets/Testimonials/hilary.jpeg";
+import JACOB from "../../assets/Testimonials/Jacob.png";
+import REBAAB from "../../assets/Testimonials/Rebaab.png";
+import SMEET from "../../assets/Testimonials/Smeet.jpg";
+import KEVIN from "../../assets/Testimonials/Kevin.png";
+import QUEENS from "../../assets/Testimonials/Queens.png";
 export const TESTIMONIALS = [
   {
     message:
-      "QMIND gave me the opportunity to make long-lasting friendships while tackling problems through artificial intelligence.",
-    headshot: HEADSHOT.src,
-    name: "Coopster Midroni",
+      "QMIND has been a great place to find job opportunities, build skills outside of the classroom, and ultimately set me up for a fantastic career directly out of University.",
+    headshot: CHRIS.src,
+    name: "Chris Gauthier",
     position: "Product Manager",
-    companyLogo: COMPANY_LOGO.src,
+    companyLogo: QUEENS.src,
   },
-  {
-    fullImage: TESTIMONIAL_IMAGE.src,
-  },
-  {
-    fullImage: AI.src,
-  },
-  {
-    fullImage: AI2.src,
-  },
-
   {
     message:
-      "QMIND gave me the opportunity to make long-lasting friendships while tackling problems through artificial intelligence.",
-    headshot: HEADSHOT.src,
-    name: "Coopster Midroni",
+      "As a current member of the executive team, I am lucky to be able to collaborate and learn from a network of inspiring students through QMIND",
+    headshot: HILARY.src,
+    name: "Hilary Osler",
     position: "Product Manager",
-    companyLogo: COMPANY_LOGO.src,
+    companyLogo: QUEENS.src,
   },
   {
-    fullImage: TESTIMONIAL_IMAGE.src,
+    message:
+      "My experiences as a design team member, project manager, an director were some key talking points in interviews to land internships.",
+    headshot: JACOB.src,
+    name: "Jacob Laframboise",
+    position: "Product Manager",
+    companyLogo: QUEENS.src,
   },
   {
-    fullImage: AI.src,
+    message:
+      "QMIND & its community taught me so much that I couldn't have ever learned in the classroom.",
+    headshot: REBAAB.src,
+    name: "Rabaab Azeem",
+    position: "Product Manager",
+    companyLogo: QUEENS.src,
   },
   {
-    fullImage: AI2.src,
+    message: "There are opportunities to learn in QMIND everywhere you look.",
+    headshot: SMEET.src,
+    name: "Smeet Chheda",
+    position: "Product Manager",
+    companyLogo: QUEENS.src,
+  },
+  {
+    message:
+      "QMIND is a community of like-minded individuals who are driven and passionate about the work they do.",
+    headshot: KEVIN.src,
+    name: "Kevin Yu",
+    position: "Product Manager",
+    companyLogo: QUEENS.src,
+  },
+  {
+    message:
+      "QMIND has been a great place to find job opportunities, build skills outside of the classroom, and ultimately set me up for a fantastic career directly out of University.",
+    headshot: CHRIS.src,
+    name: "Chris Gauthier",
+    position: "Product Manager",
+    companyLogo: QUEENS.src,
+  },
+  {
+    message:
+      "As a current member of the executive team, I am lucky to be able to collaborate and learn from a network of inspiring students through QMIND",
+    headshot: HILARY.src,
+    name: "Hilary Osler",
+    position: "Product Manager",
+    companyLogo: QUEENS.src,
+  },
+  {
+    message:
+      "My experiences as a design team member, project manager, an director were some key talking points in interviews to land internships.",
+    headshot: JACOB.src,
+    name: "Jacob Laframboise",
+    position: "Product Manager",
+    companyLogo: QUEENS.src,
+  },
+  {
+    message:
+      "QMIND & its community taught me so much that I couldn't have ever learned in the classroom.",
+    headshot: REBAAB.src,
+    name: "Rabaab Azeem",
+    position: "Product Manager",
+    companyLogo: QUEENS.src,
+  },
+  {
+    message: "There are opportunities to learn in QMIND everywhere you look.",
+    headshot: SMEET.src,
+    name: "Smeet Chheda",
+    position: "Product Manager",
+    companyLogo: QUEENS.src,
+  },
+  {
+    message:
+      "QMIND is a community of like-minded individuals who are driven and passionate about the work they do.",
+    headshot: KEVIN.src,
+    name: "Kevin Yu",
+    position: "Product Manager",
+    companyLogo: QUEENS.src,
   },
 ];
 
 export const DESIGN_PROJECTS = [
   {
-    image: AI_Banner.src,
-    title: "Innovative City Prediction Analysis",
-    teamMembers: ["Kevin Yu", "Marcelo Chairman", "Bill Nye"],
+    image: VIRTUAL.src,
+    title: "Virtual Assistant Attention Detection",
+    teamMembers: [],
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, in? Maxime iusto repudiandae quis, libero repellat eos dolorum ratione. Molestiae amet qui natus ab perspiciatis fugiat consequuntur veritatis quis debitis.",
+      "The goal of this project was to develop a novel system to provide a more natural interface for interacting with virtual assistant devices.",
   },
   {
-    image: CONFERENCE.src,
-    title: "TD Financial Market Analyzer",
-    teamMembers: ["Rebab Chadwick", "Olivia XuCool4School", "Bill Nye2"],
+    image: QUANTUM.src,
+    title: "Quantum Generative Adversarial Networks",
+    teamMembers: [],
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, in? Maxime iusto repudiandae quis, libero repellat eos dolorum ratione. Molestiae amet qui natus veritatis quis debitis. ratione. Molestiae amet ratione. Molestiae amet is fugiat consequuntur veritatis quis de.",
+      "We examine a significant challenge faced in previous implementations of a QGAN. Specifically, we propose a new method of dimensionality reduction of MNIST handwritten digits such that they could be encoded in a limited number of qubits.",
   },
   {
-    image: AI2.src,
-    title: "Corn Detection Analysis",
-    teamMembers: ["Severn Lorussy", "Bartek From Monsters Inc", "Muhummad Ali"],
+    image: ANDRIOD.src,
+    title: "Android Waste Classification",
+    teamMembers: [],
     description:
-      "Lorem ipsum dolor sit amet  eos dolorum ratione s fugiat consequuntur veritatis quis debitis.. Molestiae s fugiat consequuntur veritatis quis debitis. amet qui natus ab perspiciatis fugiat consequuntur veritatis quis debitis.",
+      "This algorithm was designed help increase the waste diversion rate on campus by reducing the amount of misclassified waste with an achieved 80% accuracy.",
+  },
+  {
+    image: DIABETES.src,
+    title: "Predictive Diabetic Risk Modelling",
+    teamMembers: [],
+    description:
+      "The objective of this study was to develop a wholistic diabetes risk model that has strong predictive ability and maintains interpretability.",
   },
 ];

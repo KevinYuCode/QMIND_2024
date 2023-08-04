@@ -28,12 +28,34 @@ function Footer() {
             Find Us In More Places
           </h2>
           <div className="flex flex-col opacity-[70%] gap-[15px]">
-            <a href="https://www.instagram.com/qmind.ai/?hl=en">Instagram</a>
-            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj81fC7jauAAxUPAjQIHc-JC0YQFnoECBAQAQ&url=https%3A%2F%2Fca.linkedin.com%2Fschool%2Fqmindai%2F&usg=AOvVaw27P1wZHGlB3gwzG5Rw_iyP&opi=89978449">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/qmind.ai/?hl=en"
+            >
+              Instagram
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj81fC7jauAAxUPAjQIHc-JC0YQFnoECBAQAQ&url=https%3A%2F%2Fca.linkedin.com%2Fschool%2Fqmindai%2F&usg=AOvVaw27P1wZHGlB3gwzG5Rw_iyP&opi=89978449"
+            >
               LinkedIn
             </a>
-            <a href="https://medium.com/qmind-ai">QMIND Tech Review</a>
-            <a href="https://discord.gg/UVdQ58KX">Community Discord</a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://medium.com/qmind-ai"
+            >
+              QMIND Tech Review
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://discord.gg/UVdQ58KX"
+            >
+              Community Discord
+            </a>
           </div>
         </div>
       </ContentContainer>

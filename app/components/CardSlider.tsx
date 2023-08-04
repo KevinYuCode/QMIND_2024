@@ -16,17 +16,18 @@ function CardSlider({ cards, slideLeft }: any) {
   }, []);
 
   return (
-    <div className="h-[268px]">
+    <div className={`min-h-[310px] md:min-h-[298px] text-left`}>
       <motion.div
         id="cards-container"
         initial={{ x: 0 }}
         animate={{ x: slideLeft ? -position : position }}
-        transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 55, repeat: Infinity, ease: "linear" }}
         className={`flex gap-[35px] absolute ${slideLeft ? "" : "right-0"}`}
       >
         {cards.map((card: any, i: number) => (
           <>
             <TestimonialCard
+              key={i}
               message={card.message}
               headShot={card.headshot}
               name={card.name}
