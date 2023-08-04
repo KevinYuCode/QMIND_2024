@@ -1,19 +1,15 @@
 "use client";
-import Image from "next/image";
 import CTALink from "./components/CTALink";
 import STRIPES from "../assets/qmind_stripes.svg";
 import ContentContainer from "./components/ContentContainer";
 import QMIND_LOGO from "../assets/qmind_logo.svg";
-import PARTNERS_BANNER from "../assets/partners_banner.svg";
 import styles from "./styles/home.module.scss";
-import TestimonialCard from "./components/TestimonialCard";
 import { TESTIMONIALS } from "./content/content";
 import { DESIGN_PROJECTS } from "./content/content";
 import CONFERENCE from "../assets/conference_image.png";
 import INCUBATOR from "../assets/incubator_image.png";
-import ALUMINI_BANNER from "../assets/alumni_banner.png";
 import CardSlider from "./components/CardSlider";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import CarouselCard from "./components/CarouselCard";
 
 export default function Home() {
