@@ -6,7 +6,7 @@ import AI2 from "../../assets/incubator_image.png";
 import AI_Banner from "../../assets/AI_Banner.png";
 import CONFERENCE from "../../assets/conference_image.png";
 import VIRTUAL from "../../assets/virtual.jpg";
-import DIABETES from "../../assets/Diebetes.jpg";
+import DIABETES from "../../assets/diebetes.jpg";
 import QUANTUM from "../../assets/quantum.jpg";
 import ANDRIOD from "../../assets/andriod.jpg";
 import CHRIS from "../../assets/Testimonials/Chris.png";
@@ -14,7 +14,7 @@ import HILARY from "../../assets/Testimonials/hilary.jpeg";
 import JACOB from "../../assets/Testimonials/Jacob.png";
 import REBAAB from "../../assets/Testimonials/Rebaab.png";
 import SMEET from "../../assets/Testimonials/Smeet.jpg";
-import KEVIN from "../../assets/Testimonials/Kevin.JPG";
+import KEVIN from "../../assets/Testimonials/Kevin.jpg";
 import QUEENS from "../../assets/Testimonials/Queens.png";
 export const TESTIMONIALS = [
   {
