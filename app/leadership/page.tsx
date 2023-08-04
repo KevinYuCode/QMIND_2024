@@ -127,13 +127,13 @@ export default function Leadership() {
                     return (
                         <div key={index} className="flex flex-col items-center mt-[4rem]">
                             <h1 className="font-gothic font-bold text-[30px] md:text-[40px]">{section.title}</h1>
-                            <div className="flex flex-row flex-wrap justify-center gap-[20px] w-[100%] mt-[1.5rem]">
+                            <div className="flex flex-row flex-wrap justify-center gap-[20px] md:justify-evenly w-[100%] mt-[1.5rem]">
                                 {section.cards.map((card,index) => {
                                     return (
-                                        <div key={index} className="w-[210px] md:w-[250px] text-center flex flex-col justify-center items-center rounded-[15px] p-[15px] md:rounded-[25px] md:p-[25px] bg-[#2E2E2E]">
-                                            <Image src={card.img} alt=""/>
-                                            <p className={`${sofia_sans.className} font-semibold font-gothic text-[14px] md:text-[13px] mt-[0.75rem] md:mt-[1rem]`}>{card.name}</p>
-                                            <p className={`${sofia_sans.className} font-light font-gothic text-[11px] mt-[0.1rem]`}>{card.title}</p>
+                                        <div key={index} className="w-[210px] md:w-[260px] text-center flex flex-col justify-center items-center rounded-[15px] p-[20px] md:rounded-[25px] md:p-[25px] bg-[#2E2E2E]">
+                                            <Image src={card.img} alt="" className="w-full rounded-[5px] md:rounded-[10px]"/>
+                                            <p className={`${sofia_sans.className} font-semibold font-gothic text-[14px] md:text-[18px] mt-[0.75rem] md:mt-[1rem]`}>{card.name}</p>
+                                            <p className={`${sofia_sans.className} font-light font-gothic text-[11px] md:text-[15px] mt-[0.1rem]`}>{card.title}</p>
                                         </div>
                                     )
                                 })}
