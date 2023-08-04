@@ -7,7 +7,7 @@
   text-transform: uppercase;
 
   // md in tailwind
-  @media only screen and (min-width: 768px) {
+  @media only screen and (max-width: 768px) {
     background: linear-gradient(224deg, #262626 0%, #161616 65.63%);
     top: 0;
     left: 0;
@@ -15,7 +15,9 @@
     bottom: 0;
   }
 }
-
+.mobileBg{
+  background:transparent !important;
+}
 .navLinks a {
   background: linear-gradient(
     180deg,
@@ -28,9 +30,8 @@
 }
 
 .close svg {
-
 }
 
-.navbarBg{
+.navbarBg {
   background: linear-gradient(224deg, #262626 0%, #161616 65.63%);
 }
