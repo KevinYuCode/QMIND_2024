@@ -137,7 +137,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <ContentContainer className="text-center overflow-hidden relative !max-w-[2000px] ">
-        <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[50px] font-gothic font-bold leading-[40px] md:leading-[60px] lg:leading-[76.46px] text-center">
+        <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[44px] font-gothic font-bold leading-[40px] md:leading-[60px] lg:leading-[76.46px] text-center">
           <h1 className="text-[25px] md:text-[45px] lg:text-[48px]">
             Our Partners Love QMIND
           </h1>
@@ -153,7 +153,7 @@ export default function Home() {
 
       {/* National Conference */}
       <ContentContainer className="text-center flex flex-col justify-center ">
-        <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[50px] font-gothic font-bold  text-center">
+        <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[44px] font-gothic font-bold  text-center">
           <h1 className="text-[25px] md:text-[45px] lg:text-[48px]">
             Our National Conference <br />{" "}
           </h1>
@@ -179,7 +179,7 @@ export default function Home() {
 
       {/* National Conference */}
       <ContentContainer className="text-center flex flex-col justify-center ">
-        <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[50px] font-gothic font-bold text-center">
+        <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[44px] font-gothic font-bold text-center">
           <h1 className="text-[25px] md:text-[45px] lg:text-[48px]">
             Our Product Incubator
             <br />{" "}
