@@ -21,7 +21,13 @@ function Navbar({ navOn = false, setNavOn }: any) {
       fixed z-10 top-0 right-0 left-0 lg:h-[90px] flex items-center `}
     >
       <ContentContainer className="flex justify-start lg:justify-between items-start  lg:items-center font-gothic w-[100%] ">
-        <Link href="/" className={`${navOn ? "hidden" : "block"} left-section`}>
+        {/* QMIND Logo */}
+        <Link
+          href="/"
+          className={`${
+            navOn ? "hidden" : "block"
+          } absolute top-[28px] lg:top-0 left-[30px] lg:left-0  lg:relative lleft-section`}
+        >
           <img
             className="ml-[15px] h-[40px] lg:h-[47px]"
             src={QMIND_NAV_LOGO.src}

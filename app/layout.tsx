@@ -1,5 +1,5 @@
 "use client";
-import "./globals.css";
+import "./globals.scss";
 import { Sofia_Sans } from "next/font/google";
 import localFont from "@next/font/local";
 import Link from "next/link";

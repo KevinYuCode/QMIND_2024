@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.secondary-colour {
+  color: #f0b542 !important;
+}
+
+.primary-colour {
+  color: #f7f7f7 !important;
+}
+
+.tertiary-colour {
+  color: #161616 !important;
+}
+
+body {
+  color: #f7f7f7;
+}
+
+.h1-styles {
+  font-weight: bold;
+  font-size: 30px;
+
+
+  @media only screen and (min-width: 768px) {
+    font-size: 50px;
+  }
+  @media only screen and (min-width: 1536px) {
+    font-size: 60px;
+  }
+  @media only screen and (min-width: 1536px) {
+    line-height: 76.46px;
+    font-size: 70px;
+  }
+}
+
+.h2-styles {
+  line-height: 30px;
+}
+.h3-styles {
+  line-height: 30px;
+}
+
+.li-styles,
+.a-styles,
+.p-styles {
+  line-height: 35px;
+}

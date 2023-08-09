@@ -2,7 +2,6 @@
 import CTALink from "./components/CTALink";
 import STRIPES from "../assets/qmind_stripes.svg";
 import ContentContainer from "./components/ContentContainer";
-import QMIND_LOGO from "../assets/qmind_logo.svg";
 import styles from "./styles/home.module.scss";
 import { TESTIMONIALS } from "./content/content";
 import { DESIGN_PROJECTS } from "./content/content";
@@ -11,9 +10,28 @@ import INCUBATOR from "../assets/incubator_image.png";
 import CardSlider from "./components/CardSlider";
 import { useState } from "react";
 import CarouselCard from "./components/CarouselCard";
+import { useMediaQuery } from "react-responsive";
+import PARTNERS_DESKTOP from "../assets/partners_desktop.svg";
+import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
+import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
+import ALUMNI_MOBILE from "../assets/alumni_mobile.svg";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
+
+  const isMobile = useMediaQuery({
+    query: "(min-width:500px)",
+  });
+  const isLargeMobile = useMediaQuery({
+    query: "(min-width: 640px)",
+  });
+  const isTablet = useMediaQuery({
+    query: "(min-width: 1224px)",
+  });
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 1224px)",
+  });
+
   const settings = {
     dots: true,
     infinite: true,
@@ -38,7 +56,7 @@ export default function Home() {
     <main className="min-h-[100vh] py-[3rem] 2xl:py-[5rem] relative">
       {/* Hero Panel */}
       <ContentContainer className="text-center md:text-left">
-        <div className="flex pt-[0px] 2xl:pt-[75.22px] justify-between">
+        <div className="flex pt-[0px] 2xl:pt-[75.22px] justify-between gap-[24px]">
           {/* Hero Content */}
           <div className=" lg:w-[62%] 2xl:w-[55%] flex flex-col gap-[25px] lg:gap-[50px] relative">
             <img
@@ -46,7 +64,7 @@ export default function Home() {
               src={STRIPES.src}
               alt=""
             />
-            <h1 className="font-gothic font-bold text-[30px] md:text-[50px] xl:text-[60px] 2xl:text-[70px] leading-[45px] md:leading-[60px] 2xl:leading-[76.46px]">
+            <h1 className="font-gothic h1-styles">
               Empowering <br /> future leaders to <br />
               <span className="text-[#F0B542]">disrupt technology</span>
             </h1>
@@ -72,21 +90,23 @@ export default function Home() {
             </div>
           </div>
           {/* QMIND LOGO */}
-          <div className="bg-[white] w-[550px] h-[550px] flex justify-center items-center rounded-[32px]">
-            <img
-              className="hidden md:block lg:h-[350px] xl:h-[450px] 2xl:h-[557px] w-auto rotate-[11.681deg]"
-              src={QMIND_LOGO.src}
-              alt="QMIND LOGO"
-            />
+          <div className="bg-[white] lg:w-[350px] xl:w-[500px] 2xl:w-[550px] lg:h-[350px] xl:h-[500px] 2xl:h-[550px] hidden lg:flex justify-center items-center rounded-[32px]">
+            <video
+              className="w-[250px] xl:w-[400px] 2xl:w-[450px] h-auto rounded-[32px]"
+              autoPlay
+              loop
+              muted
+            >
+              <source src={"./QMIND_logoanim.mp4"} type="video/mp4" />
+            </video>
           </div>
         </div>
         {/* Past Partners & Clients */}
-        <div className="mt-[50px] ">
+        <div className="mt-[50px]">
           <img
-            src={"./partners_banner.svg"}
-            className="w-[100%]"
+            src={isLargeMobile ? PARTNERS_DESKTOP.src : PARTNERS_MOBILE.src}
+            className="w-[85%] m-auto sm:w-[100%]"
             alt="Partners Banner"
-            srcSet="./mobile_partners.svg 640w, ./partners_banner.svg 800w"
           />
         </div>
       </ContentContainer>
@@ -94,12 +114,12 @@ export default function Home() {
       {/* Design Team Projects */}
       <ContentContainer className="mt-[50px] md:mt-[50px] text-mt-[100px] flex flex-col items-center">
         <div className="mb-[30px] md:mb-[50px] text-center">
-          <h1 className="text-[25px] md:text-[45px] lg:text-[48px] font-gothic font-bold  md:leading-[60px] lg:leading-[76.46px] text-center ">
+          <h2 className="h2-styles text-[25px] md:text-[45px] lg:text-[48px] font-gothic font-bold  md:leading-[60px] lg:leading-[76.46px] text-center ">
             Design Team Projects
-          </h1>
-          <p className="text-[15px] md:text-[20px] font-bold font-gothic">
+          </h2>
+          <h3 className="text-[15px] md:text-[20px] font-bold font-gothic">
             In Teams of 4-6 students, we tackle real world problems.
-          </p>
+          </h3>
         </div>
         <CarouselCard project={DESIGN_PROJECTS[activeProject]}></CarouselCard>
         <div className="order-1 md:order-none flex flex-wrap md:flex-nowrap gap-[20px] gap-[70px] justify-center items-center mt-[30px]">
@@ -138,12 +158,12 @@ export default function Home() {
       {/* Testimonials */}
       <ContentContainer className="text-center overflow-hidden relative !max-w-[2000px] ">
         <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[44px] font-gothic font-bold leading-[40px] md:leading-[60px] lg:leading-[76.46px] text-center">
-          <h1 className="text-[25px] md:text-[45px] lg:text-[48px]">
+          <h2 className="h2-styles text-[25px] md:text-[45px] lg:text-[48px]">
             Our Partners Love QMIND
-          </h1>
-          <h2 className="text-[15px] md:text-[28px] lg:mt-[-30px]">
-            Read What They Have To Say!
           </h2>
+          <h3 className="text-[15px] md:text-[28px] lg:mt-[-30px]">
+            Read What They Have To Say!
+          </h3>
         </div>
         <div className="flex flex-col gap-[35px]">
           <CardSlider cards={TESTIMONIALS} slideLeft={true} />
@@ -154,12 +174,12 @@ export default function Home() {
       {/* National Conference */}
       <ContentContainer className="text-center flex flex-col justify-center ">
         <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[44px] font-gothic font-bold  text-center">
-          <h1 className="text-[25px] md:text-[45px] lg:text-[48px]">
+          <h2 className="h2-styles text-[25px] md:text-[45px] lg:text-[48px]">
             Our National Conference <br />{" "}
-          </h1>
-          <h2 className="text-[15px] md:text-[25px] ">
-            CUCAI 2023 had 320+ attendees...
           </h2>
+          <h3 className="text-[15px] md:text-[25px] ">
+            CUCAI 2023 had 320+ attendees...
+          </h3>
         </div>
         <div className="h-[240px] md:h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto]">
           <img
@@ -180,13 +200,13 @@ export default function Home() {
       {/* National Conference */}
       <ContentContainer className="text-center flex flex-col justify-center ">
         <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[44px] font-gothic font-bold text-center">
-          <h1 className="text-[25px] md:text-[45px] lg:text-[48px]">
+          <h2 className="h2-styles text-[25px] md:text-[45px] lg:text-[48px]">
             Our Product Incubator
             <br />{" "}
-          </h1>
-          <h2 className="text-[15px] md:text-[28px] lg:mt-[30px]">
-            InQUbate Was partnered with AWS Activate [‘22-’23]
           </h2>
+          <h3 className="text-[15px] md:text-[28px] lg:mt-[30px]">
+            InQUbate Was partnered with AWS Activate [‘22-’23]
+          </h3>
         </div>
         <div className="h-[240px] md:h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto]">
           <img
@@ -204,12 +224,13 @@ export default function Home() {
           />
         </div>
       </ContentContainer>
+
+      {/* Alumni Placements */}
       <ContentContainer className="mt-[100px]">
         <img
           className="lg:h-auto w-[100%]"
-          src={"./alumni_banner.png 800w"}
+          src={isLargeMobile ? ALUMNI_DESKTOP.src : ALUMNI_MOBILE.src}
           alt="Alumini Placements"
-          srcSet="./mobile_alumni.svg 640w, ./alumni_banner.png 800w"
         />
         <div className="flex justify-center w-[100%] mt-[50px]">
           <CTALink
