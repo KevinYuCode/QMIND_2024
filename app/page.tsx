@@ -15,9 +15,12 @@ import PARTNERS_DESKTOP from "../assets/partners_desktop.svg";
 import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
 import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.svg";
+import react, { useEffect } from "react";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
+  const [partnersImg, setPartnersImg] = useState("");
+  const [alumniImg, setAlumniImg] = useState("");
 
   const isMobile = useMediaQuery({
     query: "(min-width:500px)",
@@ -52,11 +55,21 @@ export default function Home() {
     });
   };
 
+  useEffect(() => {
+    if (isLargeMobile) {
+      setAlumniImg(ALUMNI_DESKTOP.src);
+      setPartnersImg(PARTNERS_DESKTOP.src);
+    } else {
+      setAlumniImg(ALUMNI_MOBILE.src);
+      setPartnersImg(PARTNERS_MOBILE.src);
+    }
+  }, [isLargeMobile]);
+
   return (
     <main className="min-h-[100vh] py-[3rem] 2xl:py-[5rem] relative">
       {/* Hero Panel */}
       <ContentContainer className="text-center md:text-left">
-        <div className="flex pt-[0px] 2xl:pt-[75.22px] justify-between gap-[24px]">
+        <div className="flex pt-[0px] 2xl:pt-[20.22px] justify-between gap-[24px]">
           {/* Hero Content */}
           <div className=" lg:w-[62%] 2xl:w-[55%] flex flex-col gap-[25px] lg:gap-[50px] relative">
             <img
@@ -64,15 +77,17 @@ export default function Home() {
               src={STRIPES.src}
               alt=""
             />
-            <h1 className="font-gothic h1-styles">
-              Empowering <br /> future leaders to <br />
-              <span className="text-[#F0B542]">disrupt technology</span>
-            </h1>
-            <p className="text-[18px] md:text-[20px]">
-              265 undergraduate students building, researching, and exploring
-              artificial intelligence, machine learning, blockchain and quantum
-              computing. We want you to join our community.
-            </p>
+            <div className="flex flex-col gap-[32px]">
+              <h1 className="font-gothic h1-styles">
+                Empowering <br /> future leaders to <br />
+                <span className="text-[#F0B542]">disrupt technology</span>
+              </h1>
+              <p className="p-styles text-[18px] md:text-[20px]">
+                265 undergraduate students building, researching, and exploring
+                artificial intelligence, machine learning, blockchain and
+                quantum computing. We want you to join our community.
+              </p>
+            </div>
 
             <div className="flex flex-col justify-center md:justify-start items-center md:flex-row gap-[24px] justify-center md:justify-start">
               <CTALink
@@ -90,9 +105,9 @@ export default function Home() {
             </div>
           </div>
           {/* QMIND LOGO */}
-          <div className="bg-[white] lg:w-[350px] xl:w-[500px] 2xl:w-[550px] lg:h-[350px] xl:h-[500px] 2xl:h-[550px] hidden lg:flex justify-center items-center rounded-[32px]">
+          <div className="bg-[white] lg:w-[350px] xl:w-[380px] 2xl:w-[400px]   lg:h-[350px] xl:h-[380px] 2xl:h-[400px] hidden lg:flex justify-center items-center rounded-[32px]">
             <video
-              className="w-[250px] xl:w-[400px] 2xl:w-[450px] h-auto rounded-[32px]"
+              className="w-[250px] xl:w-[400px] 2xl:w-[350px] h-auto rounded-[32px]"
               autoPlay
               loop
               muted
@@ -104,7 +119,7 @@ export default function Home() {
         {/* Past Partners & Clients */}
         <div className="mt-[50px]">
           <img
-            src={isLargeMobile ? PARTNERS_DESKTOP.src : PARTNERS_MOBILE.src}
+            src={partnersImg}
             className="w-[85%] m-auto sm:w-[100%]"
             alt="Partners Banner"
           />
@@ -114,10 +129,10 @@ export default function Home() {
       {/* Design Team Projects */}
       <ContentContainer className="mt-[50px] md:mt-[50px] text-mt-[100px] flex flex-col items-center">
         <div className="mb-[30px] md:mb-[50px] text-center">
-          <h2 className="h2-styles text-[25px] md:text-[45px] lg:text-[48px] font-gothic font-bold  md:leading-[60px] lg:leading-[76.46px] text-center ">
+          <h2 className="h2-styles font-gothic text-center ">
             Design Team Projects
           </h2>
-          <h3 className="text-[15px] md:text-[20px] font-bold font-gothic">
+          <h3 className="h3-styles text-[15px] md:text-[20px] font-bold font-gothic">
             In Teams of 4-6 students, we tackle real world problems.
           </h3>
         </div>
@@ -127,7 +142,7 @@ export default function Home() {
             onClick={() => {
               changeCarousel(-1);
             }}
-            className="hidden md:block md:min-w-[160px] bg-[#F7F7F7] rounded-[5px] tertiary-colour py-[6px] px-[35px] font-bold tracking-[1.6px] leading-[27.5px] text-[16px] font-gothic"
+            className={`${styles.btnHover} hidden md:block md:min-w-[160px] bg-[#F7F7F7] rounded-[5px] tertiary-colour py-[6px] px-[35px] font-bold tracking-[1.6px] leading-[27.5px] text-[16px] font-gothic`}
           >
             Previous
           </button>
@@ -148,7 +163,7 @@ export default function Home() {
             onClick={() => {
               changeCarousel(1);
             }}
-            className="hidden md:block md:min-w-[160px] bg-[#F7F7F7] rounded-[5px] tertiary-colour py-[6px] px-[35px] font-bold tracking-[1.6px] leading-[27.5px] text-[16px] font-gothic"
+            className={`${styles.btnHover} hidden md:block md:min-w-[160px] bg-[#F7F7F7] rounded-[5px] tertiary-colour py-[6px] px-[35px] font-bold tracking-[1.6px] leading-[27.5px] text-[16px] font-gothic`}
           >
             Next
           </button>
@@ -161,7 +176,7 @@ export default function Home() {
           <h2 className="h2-styles text-[25px] md:text-[45px] lg:text-[48px]">
             Our Partners Love QMIND
           </h2>
-          <h3 className="text-[15px] md:text-[28px] lg:mt-[-30px]">
+          <h3 className="h3-styles text-[15px] md:text-[28px]">
             Read What They Have To Say!
           </h3>
         </div>
@@ -177,7 +192,7 @@ export default function Home() {
           <h2 className="h2-styles text-[25px] md:text-[45px] lg:text-[48px]">
             Our National Conference <br />{" "}
           </h2>
-          <h3 className="text-[15px] md:text-[25px] ">
+          <h3 className="h3-styles text-[15px] md:text-[25px] ">
             CUCAI 2023 had 320+ attendees...
           </h3>
         </div>
@@ -204,7 +219,7 @@ export default function Home() {
             Our Product Incubator
             <br />{" "}
           </h2>
-          <h3 className="text-[15px] md:text-[28px] lg:mt-[30px]">
+          <h3 className="h3-styles text-[15px] md:text-[28px]">
             InQUbate Was partnered with AWS Activate [‘22-’23]
           </h3>
         </div>
@@ -229,7 +244,7 @@ export default function Home() {
       <ContentContainer className="mt-[100px]">
         <img
           className="lg:h-auto w-[100%]"
-          src={isLargeMobile ? ALUMNI_DESKTOP.src : ALUMNI_MOBILE.src}
+          src={alumniImg}
           alt="Alumini Placements"
         />
         <div className="flex justify-center w-[100%] mt-[50px]">

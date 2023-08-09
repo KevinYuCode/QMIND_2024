@@ -25,9 +25,8 @@ function CardSlider({ cards, slideLeft }: any) {
         className={`flex gap-[35px] absolute ${slideLeft ? "" : "right-0"}`}
       >
         {cards.map((card: any, i: number) => (
-          <>
+          <div key={i}>
             <TestimonialCard
-              key={i}
               message={card.message}
               headShot={card.headshot}
               name={card.name}
@@ -35,7 +34,7 @@ function CardSlider({ cards, slideLeft }: any) {
               companyLogo={card.companyLogo}
               fullImage={card.fullImage}
             ></TestimonialCard>
-          </>
+          </div>
         ))}
       </motion.div>
       <div id="" className="absolute right-0 w-0 h-0"></div>

@@ -27,11 +27,12 @@ body {
 
 .h1-styles {
   font-weight: bold;
-  font-size: 30px;
-
+  font-size: 48px;
+  line-height: 45px;
 
   @media only screen and (min-width: 768px) {
     font-size: 50px;
+    line-height: 60px;
   }
   @media only screen and (min-width: 1536px) {
     font-size: 60px;
@@ -43,14 +44,45 @@ body {
 }
 
 .h2-styles {
-  line-height: 30px;
+  font-weight: bold;
+  font-size: 25px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 30px;
+  }
+  @media only screen and (min-width: 1536px) {
+    font-size: 38px;
+  }
+  @media only screen and (min-width: 1536px) {
+    font-size: 45px;
+  }
 }
 .h3-styles {
+  font-weight: bold;
+  font-size: 20px;
   line-height: 30px;
+  opacity: .6;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 25px;
+  }
+  @media only screen and (min-width: 1536px) {
+    font-size: 30px;
+  }
+  @media only screen and (min-width: 1536px) {
+    font-size: 35px;
+  }
 }
 
 .li-styles,
 .a-styles,
 .p-styles {
-  line-height: 35px;
+  font-size: 18px;
+  @media only screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media only screen and (min-width: 1536px) {
+  }
+  @media only screen and (min-width: 1536px) {
+  }
 }

@@ -9,12 +9,11 @@ function TestimonialCard({
   companyLogo,
   headShot,
   fullImage,
-  key,
 }: any) {
   return (
     <>
       {fullImage ? (
-        <div key={key} className={`${styles.card} `}>
+        <div className={`${styles.card} `}>
           <img
             className="rounded-[inherit] w-[100%] h-[100%] object-cover"
             src={fullImage}
@@ -23,7 +22,6 @@ function TestimonialCard({
         </div>
       ) : (
         <div
-          key={key}
           className={` ${styles.card} p-[35px] flex flex-col justify-between items-start`}
         >
           <img className="h-[20px] lg:h-[30px]" src={QUOTES.src} alt="quotes" />

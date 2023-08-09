@@ -15,7 +15,9 @@ function CarouselCard({ project }: any) {
   };
   return (
     <>
-      <div className={`xl:w-[100%] 2xl:w-[1200px] text-center ${styles.carousel}`}>
+      <div
+        className={`xl:w-[100%] 2xl:w-[1200px] text-center ${styles.carousel}`}
+      >
         <motion.div
           variants={carouselVariants}
           initial="initial"
@@ -31,9 +33,7 @@ function CarouselCard({ project }: any) {
         </motion.div>
         <motion.div className="flex gap-[20px] justify-center">
           <div className="flex items-center flex-col mt-[30px] mb-[20px] w-[100%] lg:w-[70%] ">
-            <p className="text-[35px] font-bold text-center leading-[50px] ">
-              {project.title}
-            </p>
+            <h2 className="h2-styles">{project.title}</h2>
             <p className="hidden mt-[12px] font-light opacity-[.59]">
               By:{" "}
               {project.teamMembers.map((name: string, key: number) => (
@@ -44,7 +44,7 @@ function CarouselCard({ project }: any) {
                 </span>
               ))}
             </p>
-            <p className="text-[16px] mt-[12px] md:text-[21px] opacity-[.59] font-normal text-center">
+            <p className="p-styles opacity-[.59] font-normal text-center">
               {project.description}
             </p>
           </div>
