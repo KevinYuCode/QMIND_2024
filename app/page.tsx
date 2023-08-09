@@ -9,7 +9,7 @@ import { DESIGN_PROJECTS } from "./content/content";
 import CONFERENCE from "../assets/conference_image.png";
 import INCUBATOR from "../assets/incubator_image.png";
 import CardSlider from "./components/CardSlider";
-import {useState } from "react";
+import { useState } from "react";
 import CarouselCard from "./components/CarouselCard";
 
 export default function Home() {
@@ -72,7 +72,7 @@ export default function Home() {
             </div>
           </div>
           {/* QMIND LOGO */}
-          <div>
+          <div className="bg-[white] w-[550px] h-[550px] flex justify-center items-center rounded-[32px]">
             <img
               className="hidden md:block lg:h-[350px] xl:h-[450px] 2xl:h-[557px] w-auto rotate-[11.681deg]"
               src={QMIND_LOGO.src}
