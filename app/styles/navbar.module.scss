@@ -15,8 +15,8 @@
     bottom: 0;
   }
 }
-.mobileBg{
-  background:transparent !important;
+.mobileBg {
+  background: transparent !important;
 }
 .navLinks a {
   background: linear-gradient(
@@ -33,6 +33,5 @@
 }
 
 .navbarBg {
-  background-color: #262626;
-  box-shadow: 0px 5px 3px #161616;
+  filter: drop-shadow(0 0 10px rgba(22, 22, 22, 1));
 }

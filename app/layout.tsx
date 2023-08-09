@@ -41,11 +41,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${tradeGothic.variable} ${sofia_sans.className} ${styles.mainBgColour} `}
+        className={`${tradeGothic.variable} ${
+          sofia_sans.className
+        } ${"w-[100dvw] h-[100dvh]"} ${styles.mainBgColour}`}
       >
-        <Navbar navOn={navOn} setNavOn={setNavOn} />
-        <div className="mt-[140px]">{children}</div>
-        <Footer />
+        <div className="flex flex-col w-[100dvw] h-[100dvh] overflow-scroll">
+          <Navbar navOn={navOn} setNavOn={setNavOn} />
+          <div className="pt-[100px]">{children}</div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
