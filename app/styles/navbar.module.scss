@@ -48,13 +48,17 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.5;
-  filter: drop-shadow(0 0 5px rgba(22, 22, 22, 1));
 }
 
 .close svg {
 }
 
 .navbarBg {
-  background-color: #262626;
-  box-shadow: 0px 5px 3px #161616;
+  filter: drop-shadow(0 0 10px rgba(22, 22, 22, 1));
+}
+
+.navMobileOpenBg {
+  @media only screen and (max-width: 1023px) {
+    background: linear-gradient(224deg, #262626 0%, #161616 65.63%);
+  }
 }
