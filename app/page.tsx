@@ -6,7 +6,7 @@ import styles from "./styles/home.module.scss";
 import { TESTIMONIALS } from "./content/content";
 import { DESIGN_PROJECTS } from "./content/content";
 import CONFERENCE from "../assets/conference_image.png";
-import CONFERENCE_MOBILE from "../assets/conference_mobile.svg";
+import CONFERENCE_MOBILE from "../assets/conference_mobile.png";
 import INCUBATOR from "../assets/incubator_image.png";
 import INCUBATOR_MOBILE from "../assets/aws_mobile.png";
 import CardSlider from "./components/CardSlider";
@@ -16,7 +16,7 @@ import { useMediaQuery } from "react-responsive";
 import PARTNERS_DESKTOP from "../assets/partners_desktop.svg";
 import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
 import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
-import ALUMNI_MOBILE from "../assets/alumni_mobile.svg";
+import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
 
 export default function Home() {
