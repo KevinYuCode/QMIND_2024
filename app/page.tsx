@@ -6,7 +6,9 @@ import styles from "./styles/home.module.scss";
 import { TESTIMONIALS } from "./content/content";
 import { DESIGN_PROJECTS } from "./content/content";
 import CONFERENCE from "../assets/conference_image.png";
+import CONFERENCE_MOBILE from "../assets/conference_mobile.svg";
 import INCUBATOR from "../assets/incubator_image.png";
+import INCUBATOR_MOBILE from "../assets/aws_mobile.png";
 import CardSlider from "./components/CardSlider";
 import { useState } from "react";
 import CarouselCard from "./components/CarouselCard";
@@ -21,6 +23,8 @@ export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
   const [partnersImg, setPartnersImg] = useState("");
   const [alumniImg, setAlumniImg] = useState("");
+  const [conferenceImg, setConferenceImg] = useState("");
+  const [awsImg, setAwsImg] = useState("");
 
   const isMobile = useMediaQuery({
     query: "(min-width:500px)",
@@ -34,14 +38,6 @@ export default function Home() {
   const isDesktop = useMediaQuery({
     query: "(min-width: 1224px)",
   });
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
 
   const changeCarousel = (direction: number) => {
     setActiveProject((index) => {
@@ -59,9 +55,13 @@ export default function Home() {
     if (isLargeMobile) {
       setAlumniImg(ALUMNI_DESKTOP.src);
       setPartnersImg(PARTNERS_DESKTOP.src);
+      setConferenceImg(CONFERENCE.src);
+      setAwsImg(INCUBATOR.src);
     } else {
       setAlumniImg(ALUMNI_MOBILE.src);
       setPartnersImg(PARTNERS_MOBILE.src);
+      setConferenceImg(CONFERENCE_MOBILE.src);
+      setAwsImg(INCUBATOR_MOBILE.src);
     }
   }, [isLargeMobile]);
 
@@ -199,7 +199,7 @@ export default function Home() {
         <div className="h-[240px] md:h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto]">
           <img
             className=" absolute  left-0 right-0  md:relative h-[240px] md:h-[100%] md:w-[100%] md:rounded-[20px] object-cover"
-            src={CONFERENCE.src}
+            src={conferenceImg}
             alt=""
           />
         </div>
@@ -226,7 +226,7 @@ export default function Home() {
         <div className="h-[240px] md:h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto]">
           <img
             className="absolute  left-0 right-0  md:relative h-[240px] md:h-[100%] md:w-[100%] md:rounded-[20px] object-cover"
-            src={INCUBATOR.src}
+            src={awsImg}
             alt=""
           />
         </div>
