@@ -7,6 +7,8 @@ import ContentContainer from "./ContentContainer";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+
 function Navbar({ navOn = false, setNavOn }: any) {
   const closeNav = () => {
     setTimeout(() => {
@@ -14,9 +16,13 @@ function Navbar({ navOn = false, setNavOn }: any) {
     }, 200);
   };
 
+  const pathname = usePathname();
+
   return (
     <nav
-      className={` ${navOn ? "h-[100vh] " : `h-[90px]`} 
+      className={` ${
+        navOn ? `${"h-[100dvh] "} ${styles.navMobileOpenBg}` : `h-[90px]`
+      } 
       ${styles.navbarBg}
       fixed z-10 top-0 right-0 left-0 lg:h-[90px] flex items-center `}
     >
@@ -71,10 +77,18 @@ function Navbar({ navOn = false, setNavOn }: any) {
 
           {/* Nav Links */}
           <div className="flex-col md:mt-[0] bg-transparent w-[100%] lg:flex-row flex items-center gap-[50px]">
-            <Link href="/" onClick={() => closeNav()}>
+            <Link
+              href="/"
+              className={pathname == "/" ? styles.activePage : ""}
+              onClick={() => closeNav()}
+            >
               HOME
             </Link>
-            <Link href="/leadership" onClick={() => closeNav()}>
+            <Link
+              href="/leadership"
+              className={pathname == "/leadership" ? styles.activePage : ""}
+              onClick={() => closeNav()}
+            >
               LEADERSHIP
             </Link>
             <p
@@ -89,12 +103,13 @@ function Navbar({ navOn = false, setNavOn }: any) {
             >
               OUR STORY
             </p>
-            <p
-              className="!text-[#424242] cursor-not-allowed"
+            <Link
               onClick={() => closeNav()}
+              href="https://medium.com/qmind-ai"
+              target="_blank"
             >
               BLOG
-            </p>
+            </Link>
           </div>
         </motion.div>
       </ContentContainer>
