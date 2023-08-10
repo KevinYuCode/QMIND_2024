@@ -172,7 +172,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <div className="flex flex-col gap-6 text-center relative !overflow-hidden">
-        <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%]">
+        <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
           <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
             Our Members Love QMIND
           </h2>
