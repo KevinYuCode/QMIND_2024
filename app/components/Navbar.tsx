@@ -110,6 +110,13 @@ function Navbar({ navOn = false, setNavOn }: any) {
             >
               BLOG
             </Link>
+            <Link
+              onClick={() => closeNav()}
+              href="https://discord.gg/xJx3g7H4"
+              target="_blank"
+            >
+              DISCORD
+            </Link>
           </div>
         </motion.div>
       </ContentContainer>

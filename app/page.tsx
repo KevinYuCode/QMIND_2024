@@ -85,7 +85,15 @@ export default function Home() {
               <p className="p-styles text-[18px] md:text-[20px]">
                 265 undergraduate students building, researching, and exploring
                 artificial intelligence, machine learning, blockchain and
-                quantum computing. We want you to join our community.
+                quantum computing. We want you to{" "}
+                <a
+                  href="https://discord.gg/xJx3g7H4"
+                  className="underline"
+                  target="_blank"
+                >
+                  join our community
+                </a>
+                .
               </p>
             </div>
 
@@ -99,7 +107,7 @@ export default function Home() {
               <CTALink
                 isExternalLink={true}
                 className="min-w-[200px] !text-[13px]"
-                text="OUR PROJECT"
+                text="OUR PROJECTS"
                 href="./2021_Lookbook.pdf"
               />
             </div>

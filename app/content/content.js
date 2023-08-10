@@ -15,7 +15,7 @@ export const TESTIMONIALS = [
       "QMIND has been a great place to find job opportunities, build skills outside of the classroom, and ultimately set me up for a fantastic career directly out of University.",
     headshot: CHRIS.src,
     name: "Chris Gauthier",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
@@ -23,7 +23,7 @@ export const TESTIMONIALS = [
       "As a current member of the executive team, I am lucky to be able to collaborate and learn from a network of inspiring students through QMIND",
     headshot: HILARY.src,
     name: "Hilary Osler",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
@@ -31,7 +31,7 @@ export const TESTIMONIALS = [
       "My experiences as a design team member, project manager, an director were some key talking points in interviews to land internships.",
     headshot: JACOB.src,
     name: "Jacob Laframboise",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
@@ -39,14 +39,14 @@ export const TESTIMONIALS = [
       "QMIND & its community taught me so much that I couldn't have ever learned in the classroom.",
     headshot: REBAAB.src,
     name: "Rabaab Azeem",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
     message: "There are opportunities to learn in QMIND everywhere you look.",
     headshot: SMEET.src,
     name: "Smeet Chheda",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
@@ -54,7 +54,7 @@ export const TESTIMONIALS = [
       "QMIND is a community of like-minded individuals who are driven and passionate about the work they do.",
     headshot: KEVIN.src,
     name: "Kevin Yu",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
@@ -62,7 +62,7 @@ export const TESTIMONIALS = [
       "QMIND has been a great place to find job opportunities, build skills outside of the classroom, and ultimately set me up for a fantastic career directly out of University.",
     headshot: CHRIS.src,
     name: "Chris Gauthier",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
@@ -70,7 +70,7 @@ export const TESTIMONIALS = [
       "As a current member of the executive team, I am lucky to be able to collaborate and learn from a network of inspiring students through QMIND",
     headshot: HILARY.src,
     name: "Hilary Osler",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
@@ -78,7 +78,7 @@ export const TESTIMONIALS = [
       "My experiences as a design team member, project manager, an director were some key talking points in interviews to land internships.",
     headshot: JACOB.src,
     name: "Jacob Laframboise",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
@@ -86,14 +86,14 @@ export const TESTIMONIALS = [
       "QMIND & its community taught me so much that I couldn't have ever learned in the classroom.",
     headshot: REBAAB.src,
     name: "Rabaab Azeem",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
     message: "There are opportunities to learn in QMIND everywhere you look.",
     headshot: SMEET.src,
     name: "Smeet Chheda",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
   {
@@ -101,7 +101,7 @@ export const TESTIMONIALS = [
       "QMIND is a community of like-minded individuals who are driven and passionate about the work they do.",
     headshot: KEVIN.src,
     name: "Kevin Yu",
-    position: "Product Manager",
+    position: "",
     companyLogo: QUEENS.src,
   },
 ];
