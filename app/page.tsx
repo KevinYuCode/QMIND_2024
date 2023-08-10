@@ -174,7 +174,7 @@ export default function Home() {
       <div className="flex flex-col gap-6 text-center relative !overflow-hidden">
         <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%]">
           <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
-            Our Partners Love QMIND
+            Our Members Love QMIND
           </h2>
           <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
             Read What They Have To Say!
