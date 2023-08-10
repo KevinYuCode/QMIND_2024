@@ -13,30 +13,52 @@
     left: 0;
     right: 0;
     bottom: 0;
+    font-size: 24px;
   }
 }
+
 .mobileBg {
   background: transparent !important;
 }
+
 .navLinks a {
-  background: linear-gradient(
-    180deg,
-    #f7f7f7 0%,
-    rgba(247, 247, 247, 0.5) 100%
-  );
+  color: #f7f7f7;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 5px rgba(22, 22, 22, 1));
+}
+.navLinks a:hover {
+  background: linear-gradient(rgba(240, 181, 66, 1), rgba(240, 181, 66, 0.5));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 5px rgba(22, 22, 22, 1));
+  opacity: 1;
+}
+
+.activePage {
+  background: linear-gradient(rgba(240, 181, 66, 1), rgba(240, 181, 66, 0.5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1 !important;
+}
+
+.navLinks a:active {
+  background: linear-gradient(rgba(240, 181, 66, 1), rgba(240, 181, 66, 0.5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.5;
 }
 
 .close svg {
 }
 
 .navbarBg {
-  @media only screen and (max-width: 1023px) {
-    background-color: #262626;
-    box-shadow: 0px 5px 3px #161616;
-  }
   filter: drop-shadow(0 0 10px rgba(22, 22, 22, 1));
+}
+
+.navMobileOpenBg {
+  @media only screen and (max-width: 1023px) {
+    background: linear-gradient(224deg, #262626 0%, #161616 65.63%);
+  }
 }
