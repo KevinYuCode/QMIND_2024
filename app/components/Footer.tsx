@@ -4,7 +4,7 @@ import PILLARS from "../../assets/colourful-pillar.svg";
 import ContentContainer from "./ContentContainer";
 function Footer() {
   return (
-    <div className="pb-[6rem]">
+    <div className="pb-[4rem]">
       <ContentContainer className="flex justify-between gap-[30px] md:gap-[75px] lg:gap-[50px]">
         <div className="flex flex-col self-start ">
           <h2 className="font-bold text-[20px] pb-[30px]">Menu</h2>
@@ -17,11 +17,11 @@ function Footer() {
           </div>
         </div>
         <div className="hidden md:block self-end relative top-[70px] ">
-          <img
+          {/* <img
             className="max-w-[100%] min-w-[120px] h-[158px] object-contain h-auto"
             src={PILLARS.src}
             alt="Why do you care what this is?"
-          />
+          /> */}
         </div>
         <div className="flex flex-col text-right ">
           <h2 className="font-bold text-[20px] pb-[30px]">

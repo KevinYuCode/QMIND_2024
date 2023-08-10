@@ -43,9 +43,11 @@ export default function RootLayout({
       <body
         className={`${tradeGothic.variable} ${sofia_sans.className} ${styles.mainBgColour} `}
       >
-        <Navbar navOn={navOn} setNavOn={setNavOn} />
-        <div className="mt-[140px]">{children}</div>
-        <Footer />
+        <div className="flex flex-col w-[100dvw] h-[100dvh] overflow-scroll">
+          <Navbar navOn={navOn} setNavOn={setNavOn} />
+          <div className="pt-[80px] md:pt-[100px]">{children}</div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
