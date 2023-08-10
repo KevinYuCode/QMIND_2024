@@ -59,18 +59,17 @@ body {
 }
 .h3-styles {
   font-weight: bold;
-  font-size: 20px;
-  line-height: 30px;
-  opacity: .6;
+  font-size: 16px;
+  // opacity: .6;
 
   @media only screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media only screen and (min-width: 1536px) {
     font-size: 25px;
   }
   @media only screen and (min-width: 1536px) {
     font-size: 30px;
-  }
-  @media only screen and (min-width: 1536px) {
-    font-size: 35px;
   }
 }
 

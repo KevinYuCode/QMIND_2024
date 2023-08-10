@@ -69,7 +69,7 @@ export default function RootLayout({
         >
           <div className="flex flex-col w-[100dvw] h-[100dvh] overflow-scroll">
             <Navbar navOn={navOn} setNavOn={setNavOn} />
-            <div className="pt-[100px]">{children}</div>
+            <div className="pt-[72px] md:pt-[100px]">{children}</div>
             <Footer />
           </div>
         </body>

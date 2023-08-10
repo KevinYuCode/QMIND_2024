@@ -5,7 +5,7 @@ import ContentContainer from "./ContentContainer";
 function Footer() {
   return (
     <div className="pb-[4rem]">
-      <ContentContainer className="flex justify-between gap-[30px] md:gap-[75px] lg:gap-[50px]">
+      <ContentContainer className="flex !flex-row justify-between gap-[30px] md:gap-[75px] lg:gap-[50px]">
         <div className="flex flex-col self-start ">
           <h2 className="font-bold text-[20px] pb-[30px]">Menu</h2>
           <div className="flex flex-col opacity-[70%] gap-[15px]">

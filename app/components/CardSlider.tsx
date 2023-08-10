@@ -16,13 +16,13 @@ function CardSlider({ cards, slideLeft }: any) {
   }, []);
 
   return (
-    <div className={`min-h-[310px] md:min-h-[298px] text-left`}>
+    <div className={`min-h-[270px] md:min-h-[280px] text-left`}>
       <motion.div
         id="cards-container"
         initial={{ x: 0 }}
         animate={{ x: slideLeft ? -position : position }}
         transition={{ duration: 55, repeat: Infinity, ease: "linear" }}
-        className={`flex gap-[35px] absolute ${slideLeft ? "" : "right-0"}`}
+        className={`flex gap-[24px] absolute ${slideLeft ? "" : "right-0"}`}
       >
         {cards.map((card: any, i: number) => (
           <div key={i}>
