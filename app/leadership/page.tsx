@@ -168,7 +168,7 @@ export default function Leadership() {
 
   return (
     <>
-      <ContentContainer className="flex flex-col gap-8 md:gap-16 lg:gap-24 pt-[40px]">
+      <ContentContainer className="flex flex-col !gap-12 md:!gap-16 lg:gap-24 pt-[40px] text-center mb-12 md:mb-16">
         <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
           <div className="flex flex-col justify-center gap-5 w-full lg:w-[45%] lg:text-left text-center">
             <h1 className="font-gothic font-bold text-[48px] md:text-[72px]">
@@ -232,8 +232,6 @@ export default function Leadership() {
             </div>
           );
         })}
-
-        <div className="mb-[8rem]"></div>
       </ContentContainer>
     </>
   );

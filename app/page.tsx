@@ -66,10 +66,10 @@ export default function Home() {
   }, [isLargeMobile]);
 
   return (
-    <main className="min-h-[100vh] py-[3rem] 2xl:py-[5rem] relative">
+    <main className="flex flex-col gap-16 md:gap-20 w-full min-h-[100vh] py-[3rem] 2xl:py-[5rem] relative">
       {/* Hero Panel */}
       <ContentContainer className="text-center md:text-left">
-        <div className="flex pt-[0px] 2xl:pt-[20.22px] justify-between gap-[24px]">
+        <div className="flex 2xl:pt-[20.22px] justify-between gap-[24px]">
           {/* Hero Content */}
           <div className=" lg:w-[62%] 2xl:w-[55%] flex flex-col gap-[25px] lg:gap-[50px] relative">
             <img
@@ -85,7 +85,15 @@ export default function Home() {
               <p className="p-styles text-[18px] md:text-[20px]">
                 265 undergraduate students building, researching, and exploring
                 artificial intelligence, machine learning, blockchain and
-                quantum computing. We want you to join our community.
+                quantum computing. We want you to{" "}
+                <a
+                  href="https://discord.gg/xJx3g7H4"
+                  className="underline"
+                  target="_blank"
+                >
+                  join our community
+                </a>
+                .
               </p>
             </div>
 
@@ -99,7 +107,7 @@ export default function Home() {
               <CTALink
                 isExternalLink={true}
                 className="min-w-[200px] !text-[13px]"
-                text="OUR PROJECT"
+                text="OUR PROJECTS"
                 href="./2021_Lookbook.pdf"
               />
             </div>
@@ -120,24 +128,24 @@ export default function Home() {
         <div className="mt-[50px]">
           <img
             src={partnersImg}
-            className="w-[85%] m-auto sm:w-[100%]"
+            className="w-full m-auto sm:w-[100%]"
             alt="Partners Banner"
           />
         </div>
       </ContentContainer>
 
       {/* Design Team Projects */}
-      <ContentContainer className="mt-[50px] md:mt-[50px] text-mt-[100px] flex flex-col items-center">
-        <div className="mb-[30px] md:mb-[50px] text-center">
-          <h2 className="h2-styles font-gothic text-center ">
+      <ContentContainer className="flex flex-col gap-5 items-center">
+        <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2">
+          <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
             Design Team Projects
           </h2>
-          <h3 className="h3-styles text-[15px] md:text-[20px] font-bold font-gothic">
+          <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
             In Teams of 4-6 students, we tackle real world problems.
           </h3>
         </div>
         <CarouselCard project={DESIGN_PROJECTS[activeProject]}></CarouselCard>
-        <div className="order-1 md:order-none flex flex-wrap md:flex-nowrap gap-[20px] gap-[70px] justify-center items-center mt-[30px]">
+        <div className="order-1 md:order-none flex flex-wrap md:flex-nowrap gap-[20px] gap-[70px] justify-center items-center">
           <button
             onClick={() => {
               changeCarousel(-1);
@@ -171,39 +179,41 @@ export default function Home() {
       </ContentContainer>
 
       {/* Testimonials */}
-      <ContentContainer className="text-center overflow-hidden relative !max-w-[2000px] ">
-        <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[44px] font-gothic font-bold leading-[40px] md:leading-[60px] lg:leading-[76.46px] text-center">
-          <h2 className="h2-styles text-[25px] md:text-[45px] lg:text-[48px]">
-            Our Partners Love QMIND
+      <div className="flex flex-col gap-6 text-center relative !overflow-hidden">
+        <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
+          <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
+            Our Members Love QMIND
           </h2>
-          <h3 className="h3-styles text-[15px] md:text-[28px]">
+          <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
             Read What They Have To Say!
           </h3>
         </div>
-        <div className="flex flex-col gap-[35px]">
+        <div className="flex flex-col gap-[24px] w-full">
           <CardSlider cards={TESTIMONIALS} slideLeft={true} />
           <CardSlider cards={TESTIMONIALS} slideLeft={false} />
         </div>
-      </ContentContainer>
+      </div>
 
       {/* National Conference */}
       <ContentContainer className="text-center flex flex-col justify-center ">
-        <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[44px] font-gothic font-bold  text-center">
-          <h2 className="h2-styles text-[25px] md:text-[45px] lg:text-[48px]">
-            Our National Conference <br />{" "}
-          </h2>
-          <h3 className="h3-styles text-[15px] md:text-[25px] ">
-            CUCAI 2023 had 320+ attendees...
-          </h3>
+        <div className="flex flex-col gap-4 text-center relative !overflow-hidden">
+          <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2">
+            <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
+              Our National Conference
+            </h2>
+            <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
+              CUCAI 2023 had 320+ attendees...
+            </h3>
+          </div>
         </div>
         <div className="h-[240px] md:h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto]">
           <img
-            className=" absolute  left-0 right-0  md:relative h-[240px] md:h-[100%] md:w-[100%] md:rounded-[20px] object-cover"
+            className=" absolute  left-0 right-0  md:relative h-[240px] md:h-[100%] md:w-[100%] md:rounded-[20px] object-cover drop-shadow-xl"
             src={conferenceImg}
             alt=""
           />
         </div>
-        <div className="flex justify-center w-[100%] mt-[50px]">
+        <div className="flex justify-center w-[100%]">
           <CTALink
             isExternalLink={true}
             text="LEARN MORE"
@@ -214,23 +224,24 @@ export default function Home() {
 
       {/* National Conference */}
       <ContentContainer className="text-center flex flex-col justify-center ">
-        <div className="flex flex-col text-center mt-[100px] mb-[30px] md:mb-[44px] font-gothic font-bold text-center">
-          <h2 className="h2-styles text-[25px] md:text-[45px] lg:text-[48px]">
-            Our Product Incubator
-            <br />{" "}
-          </h2>
-          <h3 className="h3-styles text-[15px] md:text-[28px]">
-            InQUbate Was partnered with AWS Activate [‘22-’23]
-          </h3>
+        <div className="flex flex-col gap-4 text-center relative !overflow-hidden">
+          <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2">
+            <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
+              Our Product Incubator
+            </h2>
+            <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
+              InQUbate Was partnered with AWS Activate [‘22-’23]
+            </h3>
+          </div>
         </div>
         <div className="h-[240px] md:h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto]">
           <img
-            className="absolute  left-0 right-0  md:relative h-[240px] md:h-[100%] md:w-[100%] md:rounded-[20px] object-cover"
+            className="absolute  left-0 right-0  md:relative h-[240px] md:h-[100%] md:w-[100%] md:rounded-[20px] object-cover drop-shadow-xl"
             src={awsImg}
             alt=""
           />
         </div>
-        <div className="flex justify-center w-[100%] mt-[50px]">
+        <div className="flex justify-center w-[100%]">
           <CTALink
             isExternalLink={true}
             className=""
@@ -241,13 +252,13 @@ export default function Home() {
       </ContentContainer>
 
       {/* Alumni Placements */}
-      <ContentContainer className="mt-[100px]">
+      <ContentContainer className="">
         <img
           className="lg:h-auto w-[100%]"
           src={alumniImg}
           alt="Alumini Placements"
         />
-        <div className="flex justify-center w-[100%] mt-[50px]">
+        <div className="flex justify-center w-[100%]">
           <CTALink
             isExternalLink={true}
             className=""

@@ -22,7 +22,7 @@ function CardSlider({ cards, slideLeft }: any) {
         initial={{ x: 0 }}
         animate={{ x: slideLeft ? -position : position }}
         transition={{ duration: 55, repeat: Infinity, ease: "linear" }}
-        className={`flex gap-[35px] absolute ${slideLeft ? "" : "right-0"}`}
+        className={`flex gap-[24px] absolute ${slideLeft ? "" : "right-0"}`}
       >
         {cards.map((card: any, i: number) => (
           <div key={i}>

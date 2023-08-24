@@ -16,7 +16,7 @@ function CarouselCard({ project }: any) {
   return (
     <>
       <div
-        className={`xl:w-[100%] 2xl:w-[1200px] text-center ${styles.carousel}`}
+        className={`xl:w-[100%] 2xl:w-[1200px] text-center flex flex-col gap-4 bg-[#2e2e2e] p-4 md:p-6 rounded-[2rem] drop-shadow-xl ${styles.carousel}`}
       >
         <motion.div
           variants={carouselVariants}
@@ -27,14 +27,14 @@ function CarouselCard({ project }: any) {
         >
           <img
             src={project.image}
-            className={` w-[100%] h-[180px] md:h-[290px] lg:h-[390px] 2xl:h-[412px] min-w-[200px] object-cover rounded-[20px]`}
+            className={` w-[100%] min-w-[200px] object-cover rounded-[20px] aspect-video lg:aspect-[16/4]`}
             alt="AI Banner"
           />
         </motion.div>
         <motion.div className="flex gap-[20px] justify-center">
-          <div className="flex items-center flex-col mt-[30px] mb-[20px] w-[100%] lg:w-[70%] ">
-            <h2 className="h2-styles">{project.title}</h2>
-            <p className="hidden mt-[12px] font-light opacity-[.59]">
+          <div className="flex items-center flex-col w-[100%] lg:w-[70%] leading-tight ">
+            <h2 className="h3-styles font-gothic">{project.title}</h2>
+            <p className="hidden mt-[12px] font-light">
               By:{" "}
               {project.teamMembers.map((name: string, key: number) => (
                 <span key={key}>
