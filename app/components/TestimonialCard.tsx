@@ -28,17 +28,23 @@ function TestimonialCard({
           <p className="my-[18px] text-left text-[15px] md:text-[18px] font-[600] tracking-[-0.36px]">
             {message}
           </p>
-          <div className="flex ">
-            <img
-              className="object-cover w-[90px] h-[90px] rounded-[10px]"
-              src={headShot}
-              alt="headshot"
-            />
-            <div className="ml-[16px] flex flex-col justify-between items-start">
-              <p>
-                {name} <span>{position}</span>
-              </p>
-              <img className="h-[42px] " src={companyLogo} alt="" />
+          <div className="flex flex-col items-start">
+            <p className="mb-[10px]">
+              {name} | <span className="opacity-[0.5]">{position}</span>
+            </p>
+            <div className="flex">
+              <img
+                className="object-cover w-[90px] h-[90px] rounded-[10px] bg-[#a8a2a2]"
+                src={headShot}
+                alt="headshot"
+              />
+              <div className="ml-[16px] flex flex-col  items-center justify-center">
+                <img
+                  className="w-[90px] h-[90px] rounded-[10px] object-cover"
+                  src={companyLogo}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>

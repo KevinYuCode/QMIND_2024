@@ -16,7 +16,7 @@ function CardSlider({ cards, slideLeft }: any) {
   }, []);
 
   return (
-    <div className={`min-h-[310px] md:min-h-[298px] text-left`}>
+    <div className={`min-h-[340px] md:min-h-[350px] text-left`}>
       <motion.div
         id="cards-container"
         initial={{ x: 0 }}
