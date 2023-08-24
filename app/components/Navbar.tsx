@@ -91,7 +91,7 @@ function Navbar({ navOn = false, setNavOn }: any) {
             >
               LEADERSHIP
             </Link>
-            <p
+            {/* <p
               className="!text-[#424242] cursor-not-allowed"
               onClick={() => closeNav()}
             >
@@ -102,7 +102,7 @@ function Navbar({ navOn = false, setNavOn }: any) {
               onClick={() => closeNav()}
             >
               OUR STORY
-            </p>
+            </p> */}
             <Link
               onClick={() => closeNav()}
               href="https://medium.com/qmind-ai"

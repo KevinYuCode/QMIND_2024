@@ -2,8 +2,8 @@ import VIRTUAL from "../../assets/virtual.jpg";
 import DIABETES from "../../assets/diebetes.jpg";
 import QUANTUM from "../../assets/quantum.jpg";
 import ANDRIOD from "../../assets/andriod.jpg";
-import AMAZON from "../../assets/Companies/Amazon.jpg";
-import PWC from "../../assets/Companies/PWC.webp";
+import AMAZON from "../../assets/Companies/Amazon.png";
+import PWC from "../../assets/Companies/PWC.png";
 import MICROSOFT from "../../assets/Companies/Microsoft.png";
 import TD from "../../assets/Companies/Td.png";
 import RECALC from "../../assets/Companies/Recalc.png";
@@ -30,14 +30,14 @@ export const TESTIMONIALS = [
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     headshot: REBAB.src,
     name: "Rabab Azeem",
-    position: "Software Engineer Intern",
+    position: "Software Eng. Intern",
     companyLogo: AMAZON.src,
   },
   {
     message:
       "QMIND was a place for me to instantly find community while navigating through my first year at Queen’s. I’ve been able to learn so much about tech through the community here!",
     headshot: MARCELO.src,
-    name: "Marcelo Chaman Mallqui",
+    name: "Marcelo Chaman M.",
     position: "AI Research Analyst",
     companyLogo: RECALC.src,
   },
@@ -46,7 +46,7 @@ export const TESTIMONIALS = [
       "Through QMIND I've met an incredible community of passionate and diverse individuals. The friendships and connections I've forged here are invaluable, and I'm excited for what the next year holds with this remarkable team.",
     headshot: DANIEL.src,
     name: "Daniel Wang",
-    position: "Business Program Manager",
+    position: "BPM Intern",
     companyLogo: MICROSOFT.src,
   },
   {
@@ -62,7 +62,7 @@ export const TESTIMONIALS = [
       "QMIND has been an incredible opporunity to learn and work alongside a team of bright and inspiring young people. Being part of QMIND has honed my leadership and communication skills in countless ways.",
     headshot: SAM.src,
     name: "Sam Lin",
-    position: "Growth Strategy Specialist / Fellow",
+    position: "Cansbridge Fellow",
     companyLogo: FELLOW.src,
   },
   {
@@ -86,14 +86,14 @@ export const TESTIMONIALS = [
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     headshot: REBAB.src,
     name: "Rabab Azeem",
-    position: "Software Engineer Intern",
+    position: "Software Eng. Intern",
     companyLogo: AMAZON.src,
   },
   {
     message:
       "QMIND was a place for me to instantly find community while navigating through my first year at Queen’s. I’ve been able to learn so much about tech through the community here!",
     headshot: MARCELO.src,
-    name: "Marcelo Chaman Mallqui",
+    name: "Marcelo Chaman M.",
     position: "AI Research Analyst",
     companyLogo: RECALC.src,
   },
@@ -102,7 +102,7 @@ export const TESTIMONIALS = [
       "Through QMIND I've met an incredible community of passionate and diverse individuals. The friendships and connections I've forged here are invaluable, and I'm excited for what the next year holds with this remarkable team.",
     headshot: DANIEL.src,
     name: "Daniel Wang",
-    position: "Business Program Manager",
+    position: "BPM Intern",
     companyLogo: MICROSOFT.src,
   },
   {
@@ -118,7 +118,7 @@ export const TESTIMONIALS = [
       "QMIND has been an incredible opporunity to learn and work alongside a team of bright and inspiring young people. Being part of QMIND has honed my leadership and communication skills in countless ways.",
     headshot: SAM.src,
     name: "Sam Lin",
-    position: "Growth Strategy Specialist / Fellow",
+    position: "Cansbridge Fellow",
     companyLogo: FELLOW.src,
   },
   {
