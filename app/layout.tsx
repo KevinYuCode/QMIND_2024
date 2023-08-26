@@ -46,7 +46,8 @@ export default function RootLayout({
           href="%PUBLIC_URL%/cropped-New-QMIND-Logo-32x32.png"
         />
         <meta />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content="https://qmind.ca/2023_Preview_Image.png"></meta>
         <meta name="theme-color" content="#000000" />
         <title>QMIND - Queens AI Hub</title>
         <meta property="og:title" content="QMIND - Queens AI Hub" />
