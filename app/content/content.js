@@ -1,8 +1,11 @@
 import VIRTUAL from "../../assets/virtual.jpg";
+import INGENUITY from "../../assets/Companies/IngenuityLabs.png";
 import DIABETES from "../../assets/diebetes.jpg";
 import QUANTUM from "../../assets/quantum.jpg";
 import ANDRIOD from "../../assets/andriod.jpg";
+import DISTRIBUTIVE from "../../assets/Companies/Distributive.png";
 import AMAZON from "../../assets/Companies/Amazon.png";
+import EY from "../../assets/Companies/EY.png";
 import PWC from "../../assets/Companies/PWC.png";
 import MICROSOFT from "../../assets/Companies/Microsoft.png";
 import TD from "../../assets/Companies/Td.png";
@@ -10,10 +13,14 @@ import RECALC from "../../assets/Companies/Recalc.png";
 import UBER from "../../assets/Companies/Uber.png";
 import FELLOW from "../../assets/Companies/cansbridge.png";
 import OLIVIA from "../../assets/Headshots/Olivia_Xu.png";
+import LEVI from "../../assets/Headshots/Levi_Stringer.png";
 import KEVIN from "../../assets/Headshots/Kevin_Yu.png";
 import REBAB from "../../assets/Headshots/Rabab_Azeem.png";
 import DANIEL from "../../assets/Headshots/Daniel_Wang.png";
 import RODRIGO from "../../assets/Headshots/Rodrigo_D.png";
+import ETHAN from "../../assets/Headshots/Ethan_C.png";
+import HANI from "../../assets/Headshots/Hani_Khatib.png";
+import GEORGE from "../../assets/Headshots/George_T.png";
 import SAM from "../../assets/Headshots/Sam_Lin.png";
 import MARCELO from "../../assets/Headshots/Marcelo_Chaman_Mallqui.png";
 export const TESTIMONIALS = [
@@ -75,6 +82,22 @@ export const TESTIMONIALS = [
   },
   {
     message:
+      "QMIND helped me enhance my understanding of AI and provided me with the opportunity to manage a team of highly skilled individuals. I’m excited to see these skills applied in my professional career!",
+    headshot: GEORGE.src,
+    name: "George Trieu",
+    position: "Software Development Engineer",
+    companyLogo: AMAZON.src,
+  },
+  {
+    message:
+      "QMIND was easily the most valuable experience of my undergraduate career. Leading projects pushed me to learn far beyond what was taught in courses, and gave me invaluable experience in overcoming the challenges of building real world applications.",
+    headshot: ETHAN.src,
+    name: "Ethan Callanan",
+    position: "AI Researcher & Vector AI Scholar",
+    companyLogo: INGENUITY.src,
+  },
+  {
+    message:
       "Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
     headshot: OLIVIA.src,
     name: "Olivia Xu",
@@ -129,38 +152,38 @@ export const TESTIMONIALS = [
     position: "Software Engineering Intern",
     companyLogo: PWC.src,
   },
-  // {
-  //   message:
-  //     "QMIND helped me enhance my understanding of AI and provided me with the opportunity to manage a team of highly skilled individuals. I’m excited to see these skills applied in my professional career!",
-  //   headshot: "",
-  //   name: "George Trieu",
-  //   position: "Amazon",
-  //   companyLogo: "",
-  // },
-  // {
-  //   message:
-  //     "QMIND was easily the most valuable experience of my undergraduate career. Leading projects pushed me to learn far beyond what was taught in courses, and gave me invaluable experience in overcoming the challenges of building real world applications.",
-  //   headshot: "",
-  //   name: "Ethan Callanan",
-  //   position: "",
-  //   companyLogo: "",
-  // },
-  // {
-  //   message:
-  //     "My experiences at QMIND largely shaped my career in Cybersecurity Consulting at EY, providing me with the soft skills to connect effectively in a consulting environment, and the hard skills to contribute analytically.",
-  //   headshot: "",
-  //   name: "Hani Khatib",
-  //   position: "Cybersecutiry Consultant",
-  //   companyLogo: "",
-  // },
-  // {
-  //   message:
-  //     "QMIND has had such a pivotal role in my development at Queens. There I acquired skills necessary to take ML problems head on and figure it out as we went. Sometimes with my small tech firm Katarok, it feels very reminiscent of those days.",
-  //   headshot: "",
-  //   name: "Levi Stringer",
-  //   position: "Founder",
-  //   companyLogo: "",
-  // },
+  {
+    message:
+      "QMIND helped me enhance my understanding of AI and provided me with the opportunity to manage a team of highly skilled individuals. I’m excited to see these skills applied in my professional career!",
+    headshot: GEORGE.src,
+    name: "George Trieu",
+    position: "Software Development Engineer",
+    companyLogo: AMAZON.src,
+  },
+  {
+    message:
+      "QMIND was easily the most valuable experience of my undergraduate career. Leading projects pushed me to learn far beyond what was taught in courses, and gave me invaluable experience in overcoming the challenges of building real world applications.",
+    headshot: ETHAN.src,
+    name: "Ethan Callanan",
+    position: "AI Researcher & Vector AI Scholar",
+    companyLogo: INGENUITY.src,
+  },
+  {
+    message:
+      "I came to QMIND with a passion for data science and left with a broad and adaptable approach to problem-solving. My experiences at QMIND largely shaped my career in Cybersecurity Consulting at EY, providing me with the soft skills to connect effectively in a consulting environment, and the hard skills to contribute analytically.",
+    headshot: HANI.src,
+    name: "Hani Khatib",
+    position: "Cybersecurity Consultant",
+    companyLogo: EY.src,
+  },
+  {
+    message:
+      "QMIND has had such a pivotal role in my development at Queens. There I acquired skills necessary to take ML problems head on and figure it out as we went. Sometimes with my small tech firm Katarok, it feels very reminiscent of those days.",
+    headshot: LEVI.src,
+    name: "Levi Stringer",
+    position: "ML Product Manager",
+    companyLogo: DISTRIBUTIVE.src,
+  },
 ];
 
 export const DESIGN_PROJECTS = [
