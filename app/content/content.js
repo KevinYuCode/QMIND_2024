@@ -58,7 +58,7 @@ export const TESTIMONIALS = [
   },
   {
     message:
-      "From being introduced to ML through a project to being able to create my own startup and make valuable connections, QMIND has been key in my professional development.",
+      "From being introduced to ML through a project to being able to create my own startup and make valuable connections, QMIND has been key in my professional development. It's amazing to think about the opportunities and learning experiences I have gotten from being a part of an incredibly talented and driven team in only a couple of years!",
     headshot: RODRIGO.src,
     name: "Rodrigo Del Aguila",
     position: "Cyber Security Intern",
@@ -130,7 +130,7 @@ export const TESTIMONIALS = [
   },
   {
     message:
-      "From being introduced to ML through a project to being able to create my own startup and make valuable connections, QMIND has been key in my professional development.",
+      "From being introduced to ML through a project to being able to create my own startup and make valuable connections, QMIND has been key in my professional development. It's amazing to think about the opportunities and learning experiences I have gotten from being a part of an incredibly talented and driven team in only a couple of years!",
     headshot: RODRIGO.src,
     name: "Rodrigo Del Aguila",
     position: "Cyber Security Intern",
