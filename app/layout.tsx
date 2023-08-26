@@ -45,22 +45,26 @@ export default function RootLayout({
           rel="shortcut icon"
           href="%PUBLIC_URL%/cropped-New-QMIND-Logo-32x32.png"
         />
+
+        {/* Meta Tags */}
         <meta />
-        <meta property="og:title" name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:image" content="https://qmind.ca/2023_Preview_Image.png"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:url" content="https://www.qmind.ca" />
+        <meta
+          property="og:image"
+          content="https://qmind.ca/2023_Preview_Image.png"
+        ></meta>
         <meta name="theme-color" content="#000000" />
-        <title>QMIND - Queens AI Hub</title>
         <meta property="og:title" content="QMIND - Queens AI Hub" />
         <meta
-          name="description"
           property="og:description"
           content="QMIND is Canada’s largest student-run organization. We empower undergraduate student’s at Queen’s University to tackle real-world problems through the use of artificial intelligence, machine learning, and various other disruptive technologies."
         />
-        <meta
-          property="og:image"
-          content="https://www.qmind.ca/preview_logo.jpg"
-        />
-        <meta property="og:url" content="https://www.qmind.ca" />
+
+        {/* Title */}
+        <title>QMIND - Queens AI Hub</title>
+
       </head>
       <html lang="en">
         <body
