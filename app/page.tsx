@@ -80,7 +80,7 @@ export default function Home() {
             <div className="flex flex-col gap-[32px]">
               <h1 className="font-gothic h1-styles">
                 Empowering <br /> future leaders to <br />
-                <span className="text-[#F0B542]">disrupt technology</span>
+                <span className="text-[#F0B542]">unlock the power of AI</span>
               </h1>
               <p className="p-styles text-[18px] md:text-[20px]">
                 265 undergraduate students building, researching, and exploring
