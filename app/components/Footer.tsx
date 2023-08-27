@@ -52,7 +52,7 @@ function Footer() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://discord.gg/UVdQ58KX"
+              href="https://discord.gg/3FHfAs87"
             >
               Community Discord
             </a>

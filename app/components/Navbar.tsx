@@ -112,7 +112,7 @@ function Navbar({ navOn = false, setNavOn }: any) {
             </Link>
             <Link
               onClick={() => closeNav()}
-              href="https://discord.gg/xJx3g7H4"
+              href="https://discord.gg/3FHfAs87"
               target="_blank"
             >
               DISCORD
