@@ -213,11 +213,16 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className="flex justify-center w-[100%]">
+        <div className="flex justify-center items-center flex-col xxs:flex-row gap-[15px] xxs:gap-[25px] w-auto xxs:w-[100%]">
           <CTALink
             isExternalLink={true}
             text="LEARN MORE"
             href="https://www.cucai.ca/"
+          />
+          <CTALink
+            isExternalLink={true}
+            text="PROCEEDINGS"
+            href="https://qmind.ca/CUCAI_Proceedings_2023.pdf"
           />
         </div>
       </ContentContainer>

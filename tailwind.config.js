@@ -17,6 +17,9 @@ module.exports = {
         sofia: ["var(--font-sofia)"],
       },
       screens: {
+        xxs: "340px",
+        // => @media (min-width: 320px) { ... }
+        
         xs: "500px",
         // => @media (min-width: 500px) { ... }
 
