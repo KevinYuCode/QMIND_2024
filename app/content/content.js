@@ -169,6 +169,7 @@ export const TESTIMONIALS = [
     companyLogo: INGENUITY.src,
   },
   {
+    
     message:
       "I came to QMIND with a passion for data science and left with a broad and adaptable approach to problem-solving. My experiences at QMIND largely shaped my career in Cybersecurity Consulting at EY, providing me with the soft skills to connect effectively in a consulting environment, and the hard skills to contribute analytically.",
     headshot: HANI.src,
