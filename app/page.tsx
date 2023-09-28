@@ -18,6 +18,10 @@ import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
 import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
+import MICROSOFT from "../assets/Companies/Microsoft.png";
+import DELOITTE from "../assets/Companies/Deloitte.png";
+import TD from "../assets/Companies/TD_Bank.png";
+import LOBLAWS from "../assets/Companies/Loblaws.png";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
@@ -276,6 +280,16 @@ export default function Home() {
           <CardSlider cards={TESTIMONIALS} slideLeft={false} />
         </div>
       </div>
+
+      <ContentContainer>
+          <div className="bg-[#2E2E2E] w-[100%] h-[106px] rounded-[16px] flex row justify-center items-center gap-[96px]">
+            <div><img src={MICROSOFT.src} alt="" className="h-[42px]"/></div>
+            <div><img src={TD.src} alt="" className="h-[42px]"/></div>
+            <div><img src={LOBLAWS.src} alt="" className="h-[35px]"/></div>
+            <div><img src={DELOITTE.src} alt="" className="h-[35px]"/></div>
+          
+          </div>
+      </ContentContainer>
 
       {/* National Conference */}
       <ContentContainer className="text-center flex flex-col justify-center ">
