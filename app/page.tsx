@@ -218,7 +218,7 @@ export default function Home() {
           </div>
         </div>
         {/*Middele row of the card section */}
-        {/* <div className="flex w-[100%] gap-[37px] ">
+        <div className="flex w-[100%] gap-[37px] ">
             <div
               className={`${styles.blueCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
             >
@@ -241,9 +241,9 @@ export default function Home() {
               <p className="lg:text-[65px] md:text-[45px]">45</p>
               <p className="lg:text-[25px] md:text-[18px]">Tech Articles</p>
             </div>
-          </div> */}
+          </div>
         {/*Bottom row of the card section */}
-        {/* <div className="flex w-[100%] gap-[37px] ">
+        <div className="flex w-[100%] gap-[37px] ">
             <div
               className={`${styles.redCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
             >
@@ -258,7 +258,168 @@ export default function Home() {
                 Hours Read on Medium
               </p>
             </div>
-          </div> */}
+          </div> 
+
+          {/*Hover effect for the widget that brings up a smaller see more button that brings the user to the link */}
+
+          {/*
+
+          <div className="flex w-[100%] gap-[37px]">
+          <div className="group h-[180px] w-[100%]">
+              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] [backface-visibility:hidden] hover:delay-300 leaidng-4">
+                <div className="absolute inset-0"> 
+                <div className={`${styles.yellowCard} h-full w-full rounded-xl object-cover font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[49px] `}>
+                <p className="lg:text-[65px] md:text-[45px]">230+</p>
+                <p className="lg:text-[25px] md:text-[18px]">Software Developers</p>
+                </div>
+                </div>
+                <div className={`${styles.yellowCard} absolute inset-0 h-ful w-full rounded-x px-12 text-center rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]`}>
+                  <div className="flex min-h-full flex-col items-center justify-center">
+                    <h1 className="text-3xl font-bold">Students</h1>
+                    <p className="text-lg">Apply By September 17th</p>
+                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
+                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="group h-[180px] w-[560px] ">
+              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="absolute inset-0"> 
+                <div className={`${styles.redCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
+                <p className="lg:text-[65px] md:text-[45px]">200+</p>
+                <p className="lg:text-[25px] md:text-[18px] ">AI papers & Projects</p>
+                </div>
+                </div>
+                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <div className="flex min-h-full flex-col items-center justify-center">
+                    <h1 className="text-3xl font-bold">Students</h1>
+                    <p className="text-lg">A lot of people</p>
+                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
+                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            */}
+
+          
+
+          {/*
+
+        
+
+
+          <div className="flex w-[100%] gap-[37px]">
+          <div className="group h-[180px] w-[560px] ">
+              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="absolute inset-0"> 
+                <div className={`${styles.blueCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
+                <p className="lg:text-[65px] md:text-[45px]">320+</p>
+                <p className="lg:text-[25px] md:text-[18px] ">Delegates at CUCAI</p>
+                </div>
+                </div>
+                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <div className="flex min-h-full flex-col items-center justify-center">
+                    <h1 className="text-3xl font-bold">Students</h1>
+                    <p className="text-lg">A lot of people</p>
+                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
+                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="group h-[180px] w-[560px] ">
+              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="absolute inset-0"> 
+                <div className={`${styles.yellowCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
+                <p className="lg:text-[65px] md:text-[45px]">25+</p>
+                <p className="lg:text-[25px] md:text-[18px] ">Industry Clients</p>
+                </div>
+                </div>
+                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <div className="flex min-h-full flex-col items-center justify-center">
+                    <h1 className="text-3xl font-bold">Students</h1>
+                    <p className="text-lg">A lot of people</p>
+                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
+                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="group h-[180px] w-[560px] ">
+              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="absolute inset-0"> 
+                <div className={`${styles.blueCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
+                <p className="lg:text-[65px] md:text-[45px]">45</p>
+                <p className="lg:text-[25px] md:text-[18px] ">Tech Articles</p>
+                </div>
+                </div>
+                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <div className="flex min-h-full flex-col items-center justify-center">
+                    <h1 className="text-3xl font-bold">Students</h1>
+                    <p className="text-lg">A lot of people</p>
+                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
+                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+
+        <div className="flex w-[100%] gap-[37px]">
+        <div className="group h-[180px] w-[100%] ">
+              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="absolute inset-0"> 
+                <div className={`${styles.redCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[50px]`}>
+                <p className="lg:text-[65px] md:text-[45px]">35</p>
+                <p className="lg:text-[25px] md:text-[18px] ">Projects in 2023</p>
+                </div>
+                </div>
+                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <div className="flex min-h-full flex-col items-center justify-center">
+                    <h1 className="text-3xl font-bold">Students</h1>
+                    <p className="text-lg">A lot of people</p>
+                    <p className="text-base">From Diabetic Risk Modelling to Cancer Prediction, QMIND has done it all!</p>
+                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="group h-[180px] w-[100%] ">
+              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="absolute inset-0"> 
+                <div className={`${styles.yellowCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[50px]`}>
+                <p className="lg:text-[65px] md:text-[45px]">325+</p>
+                <p className="lg:text-[25px] md:text-[18px] ">Hours Read on Medium</p>
+                </div>
+                </div>
+                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <div className="flex min-h-full flex-col items-center justify-center">
+                    <h1 className="text-3xl font-bold">Students</h1>
+                    <p className="text-lg">A lot of people</p>
+                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
+                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+          */}
+
+          
+
+             
+           
+          
+   
+         
+
       </ContentContainer>
 
       {/* Testimonials */}
