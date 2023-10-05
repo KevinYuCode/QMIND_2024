@@ -5,7 +5,9 @@ import QUANTUM from "../../assets/quantum.jpg";
 import ANDRIOD from "../../assets/andriod.jpg";
 import DISTRIBUTIVE from "../../assets/Companies/Distributive.png";
 import AMAZON from "../../assets/Companies/Amazon.png";
+import DELOITTE from "../../assets/Companies/deloitte.png";
 import EY from "../../assets/Companies/EY.png";
+import LOBLAWS from "../../assets/Companies/Loblaws.png";
 import PWC from "../../assets/Companies/PWC.png";
 import MICROSOFT from "../../assets/Companies/Microsoft.png";
 import TD from "../../assets/Companies/Td.png";
@@ -216,4 +218,136 @@ export const DESIGN_PROJECTS = [
     description:
       "The objective of this study was to develop a wholistic diabetes risk model that has strong predictive ability and maintains interpretability.",
   },
+];
+
+export const COMPANIES = [
+  {
+    image: AMAZON.src,
+  },
+  {
+    image: UBER.src,
+  },
+  {
+    image: DELOITTE.src,
+  },
+  {
+    image: EY.src,
+  },
+  {
+    image: TD.src,
+  },
+  {
+    image: MICROSOFT.src,
+  },
+  {
+    image: LOBLAWS.src,
+  },
+  {
+    image: AMAZON.src,
+  },
+  {
+    image: UBER.src,
+  },
+  {
+    image: DELOITTE.src,
+  },
+  {
+    image: EY.src,
+  },
+  {
+    image: TD.src,
+  },
+  {
+    image: MICROSOFT.src,
+  },
+  {
+    image: LOBLAWS.src,
+  },
+  {
+    image: AMAZON.src,
+  },
+  {
+    image: UBER.src,
+  },
+  {
+    image: DELOITTE.src,
+  },
+  {
+    image: EY.src,
+  },
+  {
+    image: TD.src,
+  },
+  {
+    image: MICROSOFT.src,
+  },
+  {
+    image: LOBLAWS.src,
+  },
+  {
+    image: AMAZON.src,
+  },
+  {
+    image: UBER.src,
+  },
+  {
+    image: DELOITTE.src,
+  },
+  {
+    image: EY.src,
+  },
+  {
+    image: TD.src,
+  },
+  {
+    image: MICROSOFT.src,
+  },
+  {
+    image: LOBLAWS.src,
+  },
+  {
+    image: AMAZON.src,
+  },
+  {
+    image: UBER.src,
+  },
+  {
+    image: DELOITTE.src,
+  },
+  {
+    image: EY.src,
+  },
+  {
+    image: TD.src,
+  },
+  {
+    image: MICROSOFT.src,
+  },
+  {
+    image: LOBLAWS.src,
+  },
+  {
+    image: AMAZON.src,
+  },
+  {
+    image: UBER.src,
+  },
+  {
+    image: DELOITTE.src,
+  },
+  {
+    image: EY.src,
+  },
+  {
+    image: TD.src,
+  },
+  {
+    image: MICROSOFT.src,
+  },
+  {
+    image: LOBLAWS.src,
+  },
+
+
+
 ];
