@@ -12,7 +12,9 @@ function CompanySlider({ cards, slideLeft }: any) {
   }, []);
 
   return (
-    <div className={`bg-[#2E2E2E] w-[100%] h-[106px] rounded-[16px] flex row justify-center items-center gap-[40px]`}>
+    <div
+      className={`bg-[#2E2E2E] w-[100%] h-[106px] rounded-[16px] flex row justify-center items-center gap-[40px]`}
+    >
       <motion.div
         id="cards-container"
         initial={{ x: 0 }}
@@ -20,10 +22,14 @@ function CompanySlider({ cards, slideLeft }: any) {
         transition={{ duration: 55, repeat: Infinity, ease: "linear" }}
         className={`flex gap-[96px] absolute ${slideLeft ? "" : "right-0"}`}
       >
+        <img src={cards[0].image} alt="" className="w-[100px] h-[auto]" />
         {cards.map((card: any, i: number) => (
-          <div key={i} className={` ${styles.company}  flex flex-col justify-center`}>
+          <div
+            key={i}
+            className={` ${styles.company} w-[100%] flex flex-col justify-center`}
+          >
             <div className="flex items-center h-[90px] md:h-[110px] w-full">
-              <img src={card.image} alt="" className="h-[42px] w-[100%]"/>
+              <img src={card.image} alt="" className="h-[42px] !w-[auto] !max-w-none" />
             </div>
           </div>
         ))}
