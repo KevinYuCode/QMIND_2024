@@ -4,12 +4,14 @@ import STRIPES from "../assets/qmind_stripes.svg";
 import ContentContainer from "./components/ContentContainer";
 import styles from "./styles/home.module.scss";
 import { TESTIMONIALS } from "./content/content";
+import { COMPANIES } from "./content/content";
 import { DESIGN_PROJECTS } from "./content/content";
 import CONFERENCE from "../assets/conference_image.png";
 import CONFERENCE_MOBILE from "../assets/conference_mobile.png";
 import INCUBATOR from "../assets/incubator_image.png";
 import INCUBATOR_MOBILE from "../assets/aws_mobile.png";
 import CardSlider from "./components/CardSlider";
+import CompanySlider from "./components/CompanySlider";
 import { useState } from "react";
 import CarouselCard from "./components/CarouselCard";
 import { useMediaQuery } from "react-responsive";
@@ -222,7 +224,7 @@ export default function Home() {
           </div>
         </div>
         {/*Middele row of the card section */}
-        {/* <div className="flex w-[100%] gap-[37px] ">
+        <div className="flex w-[100%] gap-[37px] ">
             <div
               className={`${styles.blueCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
             >
@@ -245,9 +247,9 @@ export default function Home() {
               <p className="lg:text-[65px] md:text-[45px]">45</p>
               <p className="lg:text-[25px] md:text-[18px]">Tech Articles</p>
             </div>
-          </div> */}
+          </div>
         {/*Bottom row of the card section */}
-        {/* <div className="flex w-[100%] gap-[37px] ">
+        <div className="flex w-[100%] gap-[37px] ">
             <div
               className={`${styles.redCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
             >
@@ -262,7 +264,7 @@ export default function Home() {
                 Hours Read on Medium
               </p>
             </div>
-          </div> */}
+          </div>
       </ContentContainer>
 
       {/* Testimonials */}
@@ -282,13 +284,21 @@ export default function Home() {
       </div>
 
       <ContentContainer>
-          <div className="bg-[#2E2E2E] w-[100%] h-[106px] rounded-[16px] flex row justify-center items-center gap-[96px]">
+      <div className="flex flex-col gap-6 text-center relative !overflow-hidden">
+        <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
+          <p>QMIND ALUMNI HAVE WORKED AT INNOVATIVE COMPANIES ACROSS THE WORLD</p>
+        </div>
+        <div className="flex flex-col gap-[24px] w-full">
+          <CompanySlider cards={COMPANIES} slideLeft={true} />
+        </div>
+      </div>
+          {/* <div className={`${styles.company} bg-[#2E2E2E] w-[100%] h-[106px] rounded-[16px] flex row justify-center items-center gap-[96px]` }>
             <div><img src={MICROSOFT.src} alt="" className="h-[42px]"/></div>
             <div><img src={TD.src} alt="" className="h-[42px]"/></div>
             <div><img src={LOBLAWS.src} alt="" className="h-[35px]"/></div>
             <div><img src={DELOITTE.src} alt="" className="h-[35px]"/></div>
           
-          </div>
+          </div> */}
       </ContentContainer>
 
       {/* National Conference */}
