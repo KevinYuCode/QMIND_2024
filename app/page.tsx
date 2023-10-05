@@ -18,6 +18,7 @@ import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
 import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
+import AI_ILLUSTRATION from "../assets/ai_illustration.png";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
@@ -130,6 +131,27 @@ export default function Home() {
             src={partnersImg}
             className="w-full m-auto sm:w-[100%]"
             alt="Partners Banner"
+          />
+        </div>
+      </ContentContainer>
+
+      {/* About Us */}
+      <ContentContainer className="flex flex-col gap-5 items-center">
+        <div className="text-center flex flex-col leading-tight gap-5">
+          <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
+            What is QMIND?
+          </h2>
+          <h3 className="text-[16px] md:text-[22px] lg:px-[40px] text-[#d0d0d0] italic">
+            QMIND is a student run club at Queen’s University that fosters
+            students passionate about changing the world using AI and data
+            science. We have over 240 members each year that work on AI
+            research, AI ethics and policy, design team projects, consulting
+            projects, CUCAI, and more!
+          </h3>
+          <img
+            src={AI_ILLUSTRATION.src}
+            alt=""
+            className={`${styles.aiImage} object-cover rounded-[20px] w-[100%] lg:w-[65%] mx-auto`}
           />
         </div>
       </ContentContainer>

@@ -3,7 +3,9 @@
   // background-color: #222222;
   // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+.aiImage {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 .carousel_dots {
   content: "";
   display: block;
@@ -17,6 +19,6 @@
   z-index: -1;
   height: auto;
 }
-.btnHover:hover{
+.btnHover:hover {
   background: linear-gradient(to bottom, #5f91ff, #a4bffe);
 }
