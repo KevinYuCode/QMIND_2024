@@ -148,11 +148,11 @@ export default function Home() {
             research, AI ethics and policy, design team projects, consulting
             projects, CUCAI, and more!
           </h3>
-          <img
+          {/* <img
             src={AI_ILLUSTRATION.src}
             alt=""
             className={`${styles.aiImage} object-cover rounded-[20px] w-[100%] lg:w-[65%] mx-auto`}
-          />
+          /> */}
         </div>
       </ContentContainer>
 
