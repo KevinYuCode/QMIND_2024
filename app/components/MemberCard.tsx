@@ -3,12 +3,12 @@ import Image from 'next/image'
 import barcode from "../../assets/barcode.png";
 import styles from "../styles/MemberCard.module.scss";
 
-function CarouselCard({ company, headshot, team, name, position, spotlight, className, style }: any) {
+function CarouselCard({ company, headshot, onClick, name, position, spotlight, className, style }: any) {
   return (
     <>
     {spotlight ? (
       <> 
-        <div style={style} className={`${className} 
+        <div style={style} onClick={onClick} className={`${className} 
             h-[400px] w-[275px] rounded-[23px] px-[10px] py-[15px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]`
         }>
             <div className={`scale-[175%] h-[3px] w-[33px] bg-[#707070] rounded-[33px]`}></div>
@@ -23,8 +23,8 @@ function CarouselCard({ company, headshot, team, name, position, spotlight, clas
       </>
     ) : (
       <>
-        <div style={style} className={`${className} 
-            scale-[105%] hover:scale-[115%] hover:drop-shadow-2xl hover:z-10 hover:bg-[#E7E7E7] h-[210px] w-[140px] rounded-[9px]
+        <div style={style} onClick={onClick} className={`${className} 
+            scale-[105%] z-0 hover:scale-[115%] hover:drop-shadow-2xl hover:z-10 hover:bg-[#FCFCFC] h-[210px] w-[140px] rounded-[9px]
             px-[10px] py-[10px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]`
         }>
           <div className={`h-[3px] w-[33px] bg-[#707070] rounded-[33px]`}></div>

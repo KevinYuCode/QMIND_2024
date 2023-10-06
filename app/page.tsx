@@ -232,15 +232,14 @@ export default function Home() {
         <div className="flex flex-row flex-wrap items-center justify-center gap-[10px]">
           {TESTIMONIALS.map((card, key) => {
             return(
-              <div key={key} onClick={()=>{setSpotlight(key)}}>
-                <MemberCard 
-                className={`${card.angle}`}
-                company={card.companyLogo} 
-                team={card.team} 
-                position={card.position} 
-                name={card.name} 
-                headshot={card.headshot}/>
-              </div>
+              <MemberCard 
+              className={`${card.angle}`}
+              key={key}
+              onClick={()=>{setSpotlight(key)}}
+              company={card.companyLogo}
+              position={card.position} 
+              name={card.name} 
+              headshot={card.headshot}/>
             )
           })}
         </div>
