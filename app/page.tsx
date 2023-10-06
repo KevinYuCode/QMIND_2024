@@ -3,7 +3,7 @@ import CTALink from "./components/CTALink";
 import STRIPES from "../assets/qmind_stripes.svg";
 import ContentContainer from "./components/ContentContainer";
 import styles from "./styles/home.module.scss";
-import { TESTIMONIALS } from "./content/content";
+import { old_TESTIMONIALS, TESTIMONIALS } from "./content/content";
 import { DESIGN_PROJECTS } from "./content/content";
 import CONFERENCE from "../assets/conference_image.png";
 import CONFERENCE_MOBILE from "../assets/conference_mobile.png";
@@ -18,6 +18,8 @@ import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
 import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
+import MemberCard from "./components/MemberCard";
+import { tradeGothic } from "./font";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
@@ -25,6 +27,8 @@ export default function Home() {
   const [alumniImg, setAlumniImg] = useState("");
   const [conferenceImg, setConferenceImg] = useState("");
   const [awsImg, setAwsImg] = useState("");
+
+  const [spotlight, setSpotlight] = useState(8);
 
   const isMobile = useMediaQuery({
     query: "(min-width:500px)",
@@ -189,10 +193,58 @@ export default function Home() {
           </h3>
         </div>
         <div className="flex flex-col gap-[24px] w-full">
-          <CardSlider cards={TESTIMONIALS} slideLeft={true} />
-          <CardSlider cards={TESTIMONIALS} slideLeft={false} />
+          <CardSlider cards={old_TESTIMONIALS} slideLeft={true} />
+          <CardSlider cards={old_TESTIMONIALS} slideLeft={false} />
         </div>
       </div>
+
+      <ContentContainer className="flex flex-col items-center gap-[50px]">
+        <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
+          <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
+            Our Members Love QMIND
+          </h2>
+          <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
+            Click On Them To See What They Think
+          </h3>
+        </div>
+        <div className="flex flex-row justify-center items-center">
+          <MemberCard 
+            spotlight={true} 
+            className="rotate-6" 
+            company={TESTIMONIALS[spotlight].companyLogo} 
+            team={TESTIMONIALS[spotlight].team} 
+            position={TESTIMONIALS[spotlight].position} 
+            name={TESTIMONIALS[spotlight].name} 
+            headshot={TESTIMONIALS[spotlight].headshot}>
+          </MemberCard>
+          <div className="member-spotlight flex flex-col justify-center bg-[#2E2E2E] w-[685px] rounded-tr-[16px] rounded-br-[16px] py-[30px] pr-[32px] pl-[60px] ml-[-30px]">
+            <div className="flex flex-row flex-start items-center text-[#F7F7F7]">
+              <div className={`!font-kontrapunkt font-bold text-[24px]`}>{TESTIMONIALS[spotlight].name}</div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                <path opacity="0.5" d="M13.5 16.009H2.5C1.39543 16.009 0.5 15.1136 0.5 14.009V3.00903C0.5 1.90446 1.39543 1.00903 2.5 1.00903H6.5V3.00903H2.5V14.009H13.5V10.009H15.5V14.009C15.5 15.1136 14.6046 16.009 13.5 16.009ZM8.2 9.71603L6.79 8.30203L13.083 2.00903H9.5V0.0090332H16.5V7.00903H14.5V3.42403L8.2 9.71603Z" fill="white"/>
+              </svg>
+              <div className="!font-kontrapunkt opacity-50 text-[24px] ml-auto">{`Computer Science '25`}</div>
+            </div>
+            <div className="!font-kontrapunkt text-[24px] text-left mt-[-10px]">{TESTIMONIALS[spotlight].position} @ {TESTIMONIALS[spotlight].company}</div>
+            <div className="font-sofia font-semibold text-[18px] text-left mt-[16px]">{TESTIMONIALS[spotlight].message}</div>
+          </div>
+        </div>
+        <div className="flex flex-row flex-wrap items-center justify-center gap-[10px]">
+          {TESTIMONIALS.map((card, key) => {
+            return(
+              <div key={key} onClick={()=>{setSpotlight(key)}}>
+                <MemberCard 
+                className={`${card.angle}`}
+                company={card.companyLogo} 
+                team={card.team} 
+                position={card.position} 
+                name={card.name} 
+                headshot={card.headshot}/>
+              </div>
+            )
+          })}
+        </div>
+      </ContentContainer>
 
       {/* National Conference */}
       <ContentContainer className="text-center flex flex-col justify-center ">

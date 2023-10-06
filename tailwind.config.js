@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         gothic: ["var(--font-trade-gothic)"],
         sofia: ["var(--font-sofia)"],
+        kontrapunkt: ["var(--font-kontrapunkt)"],
       },
       screens: {
         xxs: "340px",
