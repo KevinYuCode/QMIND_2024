@@ -24,7 +24,7 @@ function CarouselCard({ company, headshot, onClick, name, position, spotlight, c
     ) : (
       <>
         <div style={style} onClick={onClick} className={`${className} 
-            scale-[105%] z-0 hover:scale-[115%] hover:drop-shadow-2xl hover:z-10 hover:bg-[#FCFCFC] h-[210px] w-[140px] rounded-[9px]
+            scale-[105%] z-0 hover:scale-[115%] hover:drop-shadow-2xl hover:z-10 hover:bg-[#FCFCFC] transition-transform h-[210px] w-[140px] rounded-[9px]
             px-[10px] py-[10px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]`
         }>
           <div className={`h-[3px] w-[33px] bg-[#707070] rounded-[33px]`}></div>
