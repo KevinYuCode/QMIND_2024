@@ -222,7 +222,7 @@ export const TESTIMONIALS = [
     message:
       "Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
     position: "Business Program Manager",
-    companyLogo: MICROSOFT.src,
+    companyLogo: {img: {src: MICROSOFT.src, style: "h-[23px]"}},
     company: "Microsoft",
     angle: `rotate-[3deg]`
   },
@@ -233,7 +233,7 @@ export const TESTIMONIALS = [
     message:
       "Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
     position: "Software Developer",
-    companyLogo: AMAZON_BLACK.src,
+    companyLogo: {img: {src: AMAZON_BLACK.src, style: "h-[30px]"}},
     company: "Amazon",
     angle: `rotate-[-4deg]`
   },
@@ -244,7 +244,7 @@ export const TESTIMONIALS = [
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     position: "AI Systems Engineer",
-    companyLogo: SKYMOUNT.src,
+    companyLogo: {name: "Skymount Drones", img: {src:SKYMOUNT.src , style: "h-[50px]"}},
     company: "Skymount Drones",
     angle: `rotate-[0deg]`
   },
@@ -255,7 +255,7 @@ export const TESTIMONIALS = [
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     position: "Software Developer",
-    companyLogo: PWC_BLACK.src,
+    companyLogo: {img: {src: PWC_BLACK.src, style: "mt-[-13px] h-[50px]"}},
     company: "PricewaterhouseCoopers",
     angle: `rotate-[3deg]`
   },
@@ -266,7 +266,7 @@ export const TESTIMONIALS = [
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     position: "AI Systems Engineer",
-    companyLogo: RIPPLE.src,
+    companyLogo: {img: {src: RIPPLE.src, style: "mt-[3px] h-[20px]"}},
     company: "RippleX Fellowship",
     angle: `rotate-[-2deg]`
   },
@@ -277,7 +277,7 @@ export const TESTIMONIALS = [
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     position: "Tax Analyst",
-    companyLogo: DELOITTE.src,
+    companyLogo: {img: {src: DELOITTE.src, style: "mt-[-14px] h-[50px]"}},
     company: "Deloitte",
     angle: `rotate-[1deg]`
   },
@@ -288,7 +288,7 @@ export const TESTIMONIALS = [
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     position: "Quantitative Trading Analyst",
-    companyLogo: RBC.src,
+    companyLogo: {img: {src: RBC.src, style: "mt-[-5px] h-[40px]"}},
     company: "RBC",
     angle: `rotate-[-2deg]`
   },
@@ -299,7 +299,7 @@ export const TESTIMONIALS = [
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     position: "Software Engineer",
-    companyLogo: UBER_BLACK.src,
+    companyLogo: {img: {src: UBER_BLACK.src, style: "mt-[-5px] h-[25px]"}},
     company: "Uber",
     angle: `rotate-[-4deg]`
   },
@@ -310,7 +310,7 @@ export const TESTIMONIALS = [
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     position: "Software Engineer",
-    companyLogo: ROBLOX.src,
+    companyLogo: {name: "Roblox", img: {src:ROBLOX.src ,style: "h-[50px]"}},
     company: "Roblox",
     angle: `rotate-[5deg]`
   },
@@ -321,7 +321,7 @@ export const TESTIMONIALS = [
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     position: "Wealth Management",
-    companyLogo: BMO.src,
+    companyLogo: {name: "BMO", img: {src:BMO.src, style: "h-[30px] mt-[2px]"}},
     company: "BMO",
     angle: `rotate-[-2deg]`
   },
@@ -331,8 +331,8 @@ export const TESTIMONIALS = [
     team: "design",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
-    position: "Software Development Engineer",
-    companyLogo: AMAZON_BLACK.src,
+    position: "Software Developer",
+    companyLogo: {img: {src: AMAZON_BLACK.src, style: "h-[30px]"}},
     company: "Amazon",
     angle: `rotate-[4deg]`
   },
@@ -343,7 +343,7 @@ export const TESTIMONIALS = [
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     position: "Data Analyst",
-    companyLogo: IRVING.src,
+    companyLogo: {img: {src: IRVING.src, style: "mt-[-20px] h-[60px]"}},
     company: "Irving",
     angle: `rotate-[-2deg]`
   },
@@ -353,8 +353,8 @@ export const TESTIMONIALS = [
     team: "design",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
-    position: "Cybersecurity Buisness Systems Analyst",
-    companyLogo: TD.src,
+    position: "Cybersecurity Analyst",
+    companyLogo: {img: {src: TD.src, style: "mt-[-5px] h-[25px]"}},
     company: "TD",
     angle: `rotate-[1deg]`
   },
@@ -365,7 +365,7 @@ export const TESTIMONIALS = [
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
     position: "Growth Strategy Analyst",
-    companyLogo: CANSBRIDGE.src,
+    companyLogo: {name: "Cansbridge Fellowship", img: {src:CANSBRIDGE.src , style: "h-[25px] mt-[1px]"}},
     company: "Cansbridge Fellowship",
     angle: `rotate-[3deg]`
   },
