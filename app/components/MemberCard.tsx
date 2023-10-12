@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from 'next/image'
 import barcode from "../../assets/barcode.png";
 import styles from "../styles/MemberCard.module.scss";
-import { Textfit } from 'react-textfit';
+// const fitty = require('fitty/dist/fitty.min.js')
+import fitty from "fitty";
+import { ReactFitty } from "react-fitty";
 
 function CompanyLogo({companyLogo, companyName, className}: any) {
   return (
@@ -38,9 +40,15 @@ function MemberCard({ company, headshot, onClick, name, position, spotlight, cla
               <img src={headshot} alt={name} className="w-[60%] z-10"/>
             </div>
             
-            <div className="absolute w-full left-0 top-[285px] flex flex-col items-center">
-              <Textfit mode="single" max={22} min={17} forceSingleModeWidth={true} className="w-[80%] font-sofia text-black text-center uppercase leading-[120%]">{name}</Textfit>
-              <Textfit max={22} min={17} mode="single" className="w-[80%] font-sofia text-black font-bold text-center leading-[108%]">{position}</Textfit>
+            <div className="absolute w-full left-0 top-[290px] flex flex-col items-center">
+              {/* <Textfit mode="single" max={22} min={17} forceSingleModeWidth={true} className="w-[80%] font-sofia text-black text-center uppercase leading-[120%]">{name}</Textfit>
+              <Textfit max={22} min={17} mode="single" className="w-[80%] font-sofia text-black font-bold text-center leading-[108%]">{position}</Textfit> */}
+              <div className="w-[80%] font-sofia text-black text-center uppercase leading-[120%]">
+                <ReactFitty maxSize={22} minSize={17}>{name}</ReactFitty>
+              </div>
+              <div className="w-[80%] font-sofia text-black font-bold text-center leading-[110%]">
+                <ReactFitty maxSize={22} minSize={17}>{position}</ReactFitty>
+              </div>
             </div>
             <Image src={barcode} alt="" className={`absolute bottom-[15px] left-[50%] ml-[-27%] w-[54%]`}/>
         </div>
@@ -61,8 +69,16 @@ function MemberCard({ company, headshot, onClick, name, position, spotlight, cla
             {/* <p className="mt-[5px] whitespace-nowrap font-kontrapunkt text-black text-[9px] text-center uppercase">{name}</p> */}
           </div>
           <div className="absolute w-full left-0 top-[140px] flex flex-col items-center">
-            <Textfit mode="single" max={11} min={9} forceSingleModeWidth={true} className="w-[80%] font-sofia text-black text-center uppercase leading-[120%]">{name}</Textfit>
-            <Textfit max={11} min={9} mode="single" className="w-[80%] font-sofia text-black font-bold text-center leading-[108%]">{position}</Textfit>
+            {/* <Textfit mode="single" max={11} min={9} forceSingleModeWidth={true} className="w-[80%] font-sofia text-black text-center uppercase leading-[120%]">{name}</Textfit>
+            <Textfit max={11} min={9} mode="single" className="w-[80%] font-sofia text-black font-bold text-center leading-[108%]">{position}</Textfit> */}
+            {/* <ReactFitty maxSize={11} minSize={9} style={{ width: '80%', lineHeight: '120%', textTransform: "uppercase" }}>{name}</ReactFitty>
+            <ReactFitty maxSize={11} minSize={9} style={{ width: '80%', lineHeight: '108%', textTransform: "uppercase", fontWeight: 700 }}>{position}</ReactFitty> */}
+            <div className="w-[80%] font-sofia text-black text-center uppercase leading-[90%]">
+              <ReactFitty maxSize={11} minSize={9}>{name}</ReactFitty>
+            </div>
+            <div className="w-[80%] font-sofia text-black font-bold text-center leading-[30%]">
+              <ReactFitty maxSize={11} minSize={9}>{position}</ReactFitty>
+            </div>
           </div>
           <Image src={barcode} alt="" className={`absolute bottom-[15px] left-[50%] ml-[-27%] w-[54%]`}/>
         </div>

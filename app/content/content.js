@@ -27,23 +27,33 @@ import BMO from "../../assets/MemberCardImages/BMO.png";
 import IRVING from "../../assets/MemberCardImages/Irving.png";
 import CANSBRIDGE from "../../assets/MemberCardImages/Cansbridge_Fellowship.png";
 
-import OLIVIA_XU from "../../assets/MemberCardImages/Olivia_Xu.png";
-import LEVI from "../../assets/Headshots/Levi_Stringer.png";
-import KEVIN from "../../assets/MemberCardImages/Kevin_Yu.png";
-import REBAB from "../../assets/MemberCardImages/Rabab_Azeem.png";
-import DANIEL from "../../assets/MemberCardImages/Daniel_Wang.png";
-import LUKE from "../../assets/MemberCardImages/Luke_Major.png"
-import RODRIGO from "../../assets/MemberCardImages/Rodrigo_D.png";
 import ETHAN from "../../assets/Headshots/Ethan_C.png";
 import HANI from "../../assets/Headshots/Hani_Khatib.png";
-import GEORGE from "../../assets/MemberCardImages/George_Trieu.png";
-import SAM from "../../assets/MemberCardImages/Sam_Lin.png";
-import MARCELO from "../../assets/MemberCardImages/Marcelo_M.png";
-import RAMY from "../../assets/MemberCardImages/Ramy_Mahfouz.png";
-import THOMAS from "../../assets/MemberCardImages/Thomas_Tesselaar.png";
-import JOSHUA from "../../assets/MemberCardImages/Joshua_Geddes.png";
-import OLIVIA_ANGLIN from "../../assets/MemberCardImages/Olivia_Anglin.png"
-import JORDAN from "../../assets/MemberCardImages/Jordan_Capello.png";
+import LEVI from "../../assets/Headshots/Levi_Stringer.png";
+import OLIVIA_XU from "../../assets/Headshots/Olivia_Xu.png";
+import REBAB from "../../assets/Headshots/Rabab_Azeem.png";
+import MARCELO from "../../assets/Headshots/Marcelo_Chaman_Mallqui.png";
+import DANIEL from "../../assets/Headshots/Daniel_Wang.png";
+import RODRIGO from "../../assets/Headshots/Rodrigo_D.png";
+import SAM from "../../assets/Headshots/Sam_Lin.png";
+import KEVIN from "../../assets/Headshots/Kevin_Yu.png";
+import GEORGE from "../../assets/Headshots/George_T.png";
+
+
+import MEMBER_OLIVIA_XU from "../../assets/MemberCardImages/Olivia_Xu.png";
+import MEMBER_KEVIN from "../../assets/MemberCardImages/Kevin_Yu.png";
+import MEMBER_REBAB from "../../assets/MemberCardImages/Rabab_Azeem.png";
+import MEMBER_DANIEL from "../../assets/MemberCardImages/Daniel_Wang.png";
+import MEMBER_LUKE from "../../assets/MemberCardImages/Luke_Major.png"
+import MEMBER_RODRIGO from "../../assets/MemberCardImages/Rodrigo_D.png";
+import MEMBER_GEORGE from "../../assets/MemberCardImages/George_Trieu.png";
+import MEMBER_SAM from "../../assets/MemberCardImages/Sam_Lin.png";
+import MEMBER_MARCELO from "../../assets/MemberCardImages/Marcelo_M.png";
+import MEMBER_RAMY from "../../assets/MemberCardImages/Ramy_Mahfouz.png";
+import MEMBER_THOMAS from "../../assets/MemberCardImages/Thomas_Tesselaar.png";
+import MEMBER_JOSHUA from "../../assets/MemberCardImages/Joshua_Geddes.png";
+import MEMBER_OLIVIA_ANGLIN from "../../assets/MemberCardImages/Olivia_Anglin.png"
+import MEMBER_JORDAN from "../../assets/MemberCardImages/Jordan_Capello.png";
 
 
 import BLUE from "../../assets/MemberCardImages/vectorblue.png"
@@ -217,7 +227,7 @@ export const old_TESTIMONIALS = [
 export const TESTIMONIALS = [
   {
     name: "Daniel Wang",
-    headshot: DANIEL.src,
+    headshot: MEMBER_DANIEL.src,
     team: "development",
     message:
       "Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
@@ -228,7 +238,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Rebab Azeem",
-    headshot: REBAB.src,
+    headshot: MEMBER_REBAB.src,
     team: "design",
     message:
       "Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
@@ -239,7 +249,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Luke Major",
-    headshot: LUKE.src,
+    headshot: MEMBER_LUKE.src,
     team: "design",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -250,7 +260,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Kevin Yu",
-    headshot: KEVIN.src,
+    headshot: MEMBER_KEVIN.src,
     team: "operations",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -261,7 +271,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Marcelo Chaman Mallqui",
-    headshot: MARCELO.src,
+    headshot: MEMBER_MARCELO.src,
     team: "operations",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -272,7 +282,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Ramy Mahfouz",
-    headshot: RAMY.src,
+    headshot: MEMBER_RAMY.src,
     team: "design",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -283,7 +293,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Thomas Tesselaar",
-    headshot: THOMAS.src,
+    headshot: MEMBER_THOMAS.src,
     team: "design",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -294,7 +304,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Olivia Xu",
-    headshot: OLIVIA_XU.src,
+    headshot: MEMBER_OLIVIA_XU.src,
     team: "development",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -305,7 +315,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Joshua Geddes",
-    headshot: JOSHUA.src,
+    headshot: MEMBER_JOSHUA.src,
     team: "design",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -316,7 +326,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Olivia Anglin",
-    headshot: OLIVIA_ANGLIN.src,
+    headshot: MEMBER_OLIVIA_ANGLIN.src,
     team: "development",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -327,7 +337,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "George Trieu",
-    headshot: GEORGE.src,
+    headshot: MEMBER_GEORGE.src,
     team: "design",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -338,7 +348,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Jordan Capello",
-    headshot: JORDAN.src,
+    headshot: MEMBER_JORDAN.src,
     team: "design",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -349,7 +359,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Rodrigo Del Aguila",
-    headshot: RODRIGO.src,
+    headshot: MEMBER_RODRIGO.src,
     team: "design",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
@@ -360,7 +370,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Sam Lin",
-    headshot: SAM.src,
+    headshot: MEMBER_SAM.src,
     team: "development",
     message:
       "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
