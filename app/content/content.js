@@ -7,12 +7,29 @@ import DISTRIBUTIVE from "../../assets/Companies/Distributive.png";
 import AMAZON from "../../assets/Companies/Amazon.png";
 import DELOITTE from "../../assets/Companies/deloitte.png";
 import EY from "../../assets/Companies/EY.png";
-import LOBLAWS from "../../assets/Companies/Loblaws.png";
 import PWC from "../../assets/Companies/PWC.png";
 import MICROSOFT from "../../assets/Companies/Microsoft.png";
 import TD from "../../assets/Companies/Td.png";
 import RECALC from "../../assets/Companies/Recalc.png";
 import UBER from "../../assets/Companies/Uber.png";
+import AMAZON1 from "../../assets/Companies/Amazon1.png";
+import GOVERNMENT from "../../assets/Companies/Government.png";
+import CIBC from "../../assets/Companies/CIBC.png";
+import TD1 from "../../assets/Companies/TD1.png";
+import META from "../../assets/Companies/Meta.png";
+import AMD from "../../assets/Companies/AMD.png";
+import RBC from "../../assets/Companies/RBC.png";
+import BELL from "../../assets/Companies/Bell.png";
+import SCOTIABANK from "../../assets/Companies/Scotiabank.png";
+import UBER1 from "../../assets/Companies/Uber1.png";
+import ACCENTURE from "../../assets/Companies/Accenture.png";
+import IBM from "../../assets/Companies/IBM.png";
+import KONRAD from "../../assets/Companies/Konrad.png";
+import MCKINSEY from "../../assets/Companies/McKinsey.png"
+import NATIONAL from "../../assets/Companies/National.png";
+import PWC1 from "../../assets/Companies/PWC1.png";
+import EY1 from "../../assets/Companies/EY1.png";
+import PG from "../../assets/Companies/PG.png";
 import FELLOW from "../../assets/Companies/cansbridge.png";
 import OLIVIA from "../../assets/Headshots/Olivia_Xu.png";
 import LEVI from "../../assets/Headshots/Levi_Stringer.png";
@@ -221,133 +238,193 @@ export const DESIGN_PROJECTS = [
 ];
 
 export const COMPANIES = [
-  {
-    image: AMAZON.src,
-  },
-  {
-    image: UBER.src,
-  },
-  {
-    image: DELOITTE.src,
-  },
-  {
-    image: EY.src,
-  },
-  {
-    image: TD.src,
-  },
-  {
-    image: MICROSOFT.src,
-  },
-  {
-    image: LOBLAWS.src,
-  },
-  {
-    image: AMAZON.src,
-  },
-  {
-    image: UBER.src,
-  },
-  {
-    image: DELOITTE.src,
-  },
-  {
-    image: EY.src,
-  },
-  {
-    image: TD.src,
-  },
-  {
-    image: MICROSOFT.src,
-  },
-  {
-    image: LOBLAWS.src,
-  },
-  {
-    image: AMAZON.src,
-  },
-  {
-    image: UBER.src,
-  },
-  {
-    image: DELOITTE.src,
-  },
-  {
-    image: EY.src,
-  },
-  {
-    image: TD.src,
-  },
-  {
-    image: MICROSOFT.src,
-  },
-  {
-    image: LOBLAWS.src,
-  },
-  {
-    image: AMAZON.src,
-  },
-  {
-    image: UBER.src,
-  },
-  {
-    image: DELOITTE.src,
-  },
-  {
-    image: EY.src,
-  },
-  {
-    image: TD.src,
-  },
-  {
-    image: MICROSOFT.src,
-  },
-  {
-    image: LOBLAWS.src,
-  },
-  {
-    image: AMAZON.src,
-  },
-  {
-    image: UBER.src,
-  },
-  {
-    image: DELOITTE.src,
-  },
-  {
-    image: EY.src,
-  },
-  {
-    image: TD.src,
-  },
-  {
-    image: MICROSOFT.src,
-  },
-  {
-    image: LOBLAWS.src,
-  },
-  {
-    image: AMAZON.src,
-  },
-  {
-    image: UBER.src,
-  },
-  {
-    image: DELOITTE.src,
-  },
-  {
-    image: EY.src,
-  },
-  {
-    image: TD.src,
-  },
-  {
-    image: MICROSOFT.src,
-  },
-  {
-    image: LOBLAWS.src,
-  },
-
-
-
+{
+  image: AMAZON1.src,
+},
+{
+  image: MICROSOFT.src,
+},
+{
+  image: GOVERNMENT.src,
+},
+{
+  image: DELOITTE.src,
+},
+{
+  image: CIBC.src,
+},
+{
+  image: TD1.src,
+},
+{
+  image: META.src,
+},
+{
+  image: AMD.src,
+},
+{
+  image: BELL.src,
+},
+{
+  image: RBC.src,
+},
+{
+  image: SCOTIABANK.src,
+},
+{
+  image: UBER1.src,
+},
+{
+  image: ACCENTURE.src,
+},
+{
+  image: IBM.src,
+},
+{
+  image: KONRAD.src,
+},
+{
+  image: MCKINSEY.src,
+},
+{
+  image: NATIONAL.src,
+},
+{
+  image: PWC1.src,
+},
+{
+  image: EY1.src,
+},
+{
+  image: PG.src,
+},
+{
+  image: AMAZON1.src,
+},
+{
+  image: MICROSOFT.src,
+},
+{
+  image: GOVERNMENT.src,
+},
+{
+  image: DELOITTE.src,
+},
+{
+  image: CIBC.src,
+},
+{
+  image: TD1.src,
+},
+{
+  image: META.src,
+},
+{
+  image: AMD.src,
+},
+{
+  image: BELL.src,
+},
+{
+  image: RBC.src,
+},
+{
+  image: SCOTIABANK.src,
+},
+{
+  image: UBER1.src,
+},
+{
+  image: ACCENTURE.src,
+},
+{
+  image: IBM.src,
+},
+{
+  image: KONRAD.src,
+},
+{
+  image: MCKINSEY.src,
+},
+{
+  image: NATIONAL.src,
+},
+{
+  image: PWC1.src,
+},
+{
+  image: EY1.src,
+},
+{
+  image: PG.src,
+},
+{
+  image: AMAZON1.src,
+},
+{
+  image: MICROSOFT.src,
+},
+{
+  image: GOVERNMENT.src,
+},
+{
+  image: DELOITTE.src,
+},
+{
+  image: CIBC.src,
+},
+{
+  image: TD1.src,
+},
+{
+  image: META.src,
+},
+{
+  image: AMD.src,
+},
+{
+  image: BELL.src,
+},
+{
+  image: RBC.src,
+},
+{
+  image: SCOTIABANK.src,
+},
+{
+  image: UBER1.src,
+},
+{
+  image: ACCENTURE.src,
+},
+{
+  image: IBM.src,
+},
+{
+  image: KONRAD.src,
+},
+{
+  image: MCKINSEY.src,
+},
+{
+  image: NATIONAL.src,
+},
+{
+  image: PWC1.src,
+},
+{
+  image: EY1.src,
+},
+{
+  image: PG.src,
+},
+{
+  image: NATIONAL.src,
+},
+{
+  image: PWC1.src,
+},
+{
+  image: EY1.src,
+},
 ];
