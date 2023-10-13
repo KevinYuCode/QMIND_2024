@@ -18,6 +18,12 @@ import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
 import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
+import { render } from "react-dom";
+import { motion, AnimatePresence} from 'framer-motion';
+
+
+
+
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
@@ -25,6 +31,8 @@ export default function Home() {
   const [alumniImg, setAlumniImg] = useState("");
   const [conferenceImg, setConferenceImg] = useState("");
   const [awsImg, setAwsImg] = useState("");
+
+ 
 
   const isMobile = useMediaQuery({
     query: "(min-width:500px)",
@@ -38,6 +46,18 @@ export default function Home() {
   const isDesktop = useMediaQuery({
     query: "(min-width: 1224px)",
   });
+
+  const [scaleUp, setScaleUp] = useState(false);
+  const [scaleUp1, setScaleUp1] = useState(false);
+  const [scaleUp2, setScaleUp2] = useState(false);
+  const [scaleUp3, setScaleUp3] = useState(false);
+  const [scaleUp4, setScaleUp4] = useState(false);
+  const [scaleUp5, setScaleUp5] = useState(false);
+  const [scaleUp6, setScaleUp6] = useState(false);
+  const [scaleUp7, setScaleUp7] = useState(false);
+
+
+  
 
   const changeCarousel = (direction: number) => {
     setActiveProject((index) => {
@@ -64,6 +84,10 @@ export default function Home() {
       setAwsImg(INCUBATOR_MOBILE.src);
     }
   }, [isLargeMobile]);
+
+ 
+
+
 
   return (
     <main className="flex flex-col gap-16 md:gap-20 w-full min-h-[100vh] py-[3rem] 2xl:py-[5rem] relative">
@@ -132,6 +156,21 @@ export default function Home() {
             alt="Partners Banner"
           />
         </div>
+
+
+
+        {/*Do the same thing from the tutorial and in DATA.js create classes for the infromation of each of the widgets, 
+          using items call each of the classes for whichever div is currently being worked on 
+          then in each div change the colour of the widget to match the figma design
+        
+        
+        
+        */}
+
+
+
+
+
       </ContentContainer>
 
       {/* Design Team Projects */}
@@ -197,228 +236,187 @@ export default function Home() {
 
       {/* Stats card */}
       <ContentContainer>
-        {/* First Row */}
+        
+
         <div className="flex w-[100%] gap-[37px]">
-          {/*Top Row of the cards section */}
-          <div
-            className={`${styles.yellowCard} rounded-[17px] w-[100%]  h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[30px] md:leading-[50px]`}
-          >
+          <motion.div 
+            whileHover={{
+              scale: 1.05,
+              transition: {duration: 0.5},
+            }} 
+            
+            onClick ={() => {
+              setScaleUp(!scaleUp);
+            
+            }}
+            animate={{
+              scaleY: scaleUp ? 2.5 : 1,
+            
+          
+              x: scaleUp ? "200px" : "0px",
+              y: scaleUp ? "200px" : "0px"
+            }}
+
+            className={`${styles.yellowCard} rounded-[17px] w-[100%]  h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[30px] md:leading-[50px]`
+          
+          
+          }
+           >
             <p className="text-[35px] md:text-[45px] lg:text-[65px]">230+</p>
             <p className="text-[20px] md:text-[22px] text-left">
               Software Developers
             </p>
-          </div>
-          <div
-            className={`${styles.redCard}  rounded-[17px] w-[100%] max-w-[380px] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-end pr-[50px] leading-[30px] md:leading-[50px]`}
+          </motion.div>
+          <motion.div
+           whileHover={{
+            scale: 1.05,
+            transition: {duration: 0.5},
+          }}     
+          onClick ={() => {
+            
+            setScaleUp1(!scaleUp1);
+          }}
+          animate={{
+
+            scaleY: scaleUp1 ? 2.5 : 1,
+            
+            x: scaleUp1 ? "-125%" : "0px",
+            y: scaleUp1 ? "200px" : "0px"
+          }}
+       
+            className={`${styles.redCard}  rounded-[17px] w-[100%] max-w-[380px] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-end pr-[50px] leading-[30px] md:leading-[50px]
+            
+           `} 
+           
+        
           >
-            <p className="text-[35px] md:text-[45px] lg:text-[65px]">200+</p>
+            {scaleUp1 && <p> hello wolrd</p>}
+            <p className="text-[35px] md:text-[45px] lg:text-[65px]"
+            >
+            200+</p>
             <p className="text-[20px] md:text-[22px] text-right">
               AI papers & Projects
             </p>
-          </div>
+          </motion.div>
         </div>
-        {/*Middele row of the card section */}
+       
         <div className="flex w-[100%] gap-[37px] ">
-            <div
+            <motion.div
+            whileHover={{
+              scale: 1.05,
+              transition: {duration: 0.5},
+            }}  
+
+            onClick ={() => {
+              setScaleUp2(!scaleUp2);
+            
+            }}
+            animate={{
+              scaleY: scaleUp2 ? 2.5 : 1,
+            
+          
+              x: scaleUp2 ? "450px" : "0px",
+             
+            }}
+                
               className={`${styles.blueCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
-            >
+           >
               <p className="lg:text-[65px] md:text-[45px]">320+</p>
               <p className="lg:text-[25px] md:text-[18px]">
                 Delegates at CUCAI
               </p>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
+             whileHover={{
+              scale: 1.05,
+              transition: {duration: 0.5},
+            }}  
+            onClick ={() => {
+              setScaleUp3(!scaleUp3);
+            
+            }}
+            animate={{
+              scaleY: scaleUp3 ? 2.5 : 1,
+            }}     
               className={`${styles.yellowCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
             >
               <p className="lg:text-[65px] md:text-[45px]">25+</p>
               <p className="lg:text-[25px] md:text-[18px]">Industry Clients</p>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
+             whileHover={{
+              scale: 1.05,
+              transition: {duration: 0.5},
+            }}  
+            onClick ={() => {
+              setScaleUp4(!scaleUp4);
+            
+            }}
+            animate={{
+              scaleY: scaleUp4 ? 2.5 : 1,
+            
+          
+              x: scaleUp4 ? "-450px" : "0px",
+             
+            }}     
               className={`${styles.blueCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-end pr-[50px] leading-[50px]`}
             >
               <p className="lg:text-[65px] md:text-[45px]">45</p>
               <p className="lg:text-[25px] md:text-[18px]">Tech Articles</p>
-            </div>
+            </motion.div>
           </div>
-        {/*Bottom row of the card section */}
+     
         <div className="flex w-[100%] gap-[37px] ">
-            <div
+            <motion.div 
+             whileHover={{
+              scale: 1.05,
+              transition: {duration: 0.5},
+            }}   
+            onClick ={() => {
+              setScaleUp5(!scaleUp5);
+            
+            }}
+            animate={{
+              scaleY: scaleUp5 ? 2.5 : 1,
+            
+          
+              x: scaleUp5 ? "350px" : "0px",
+              y: scaleUp5 ? "-225px" : "0px"
+            }}    
               className={`${styles.redCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
             >
               <p className="lg:text-[65px] md:text-[45px]">35</p>
               <p className="lg:text-[25px] md:text-[22px]">Projects in 2023</p>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
+             whileHover={{
+              scale: 1.05,
+              transition: {duration: 0.5},
+            }}   
+            onClick ={() => {
+              setScaleUp6(!scaleUp6);
+            
+            }}
+            animate={{
+              scaleY: scaleUp6 ? 2.5 : 1,
+
+              
+            
+          
+              x: scaleUp6 ? "-350px" : "0px",
+              y: scaleUp6 ? "-225px" : "0px"
+            }}    
               className={`${styles.yellowCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-end pr-[50px] leading-[50px]`}
             >
               <p className="lg:text-[65px] md:text-[45px]">325+</p>
               <p className="lg:text-[25px] md:text-[22px]">
                 Hours Read on Medium
               </p>
-            </div>
-          </div> 
-
-          {/*Hover effect for the widget that brings up a smaller see more button that brings the user to the link */}
-
-          {/*
-
-          <div className="flex w-[100%] gap-[37px]">
-          <div className="group h-[180px] w-[100%]">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] [backface-visibility:hidden] hover:delay-300 leaidng-4">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.yellowCard} h-full w-full rounded-xl object-cover font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[49px] `}>
-                <p className="lg:text-[65px] md:text-[45px]">230+</p>
-                <p className="lg:text-[25px] md:text-[18px]">Software Developers</p>
-                </div>
-                </div>
-                <div className={`${styles.yellowCard} absolute inset-0 h-ful w-full rounded-x px-12 text-center rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]`}>
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">Apply By September 17th</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="group h-[180px] w-[560px] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.redCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">200+</p>
-                <p className="lg:text-[25px] md:text-[18px] ">AI papers & Projects</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
-            */}
 
-          
-
-          {/*
-
-        
-
-
-          <div className="flex w-[100%] gap-[37px]">
-          <div className="group h-[180px] w-[560px] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.blueCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">320+</p>
-                <p className="lg:text-[25px] md:text-[18px] ">Delegates at CUCAI</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="group h-[180px] w-[560px] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.yellowCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">25+</p>
-                <p className="lg:text-[25px] md:text-[18px] ">Industry Clients</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="group h-[180px] w-[560px] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.blueCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">45</p>
-                <p className="lg:text-[25px] md:text-[18px] ">Tech Articles</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-       
-
-        <div className="flex w-[100%] gap-[37px]">
-        <div className="group h-[180px] w-[100%] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.redCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[50px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">35</p>
-                <p className="lg:text-[25px] md:text-[18px] ">Projects in 2023</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">From Diabetic Risk Modelling to Cancer Prediction, QMIND has done it all!</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="group h-[180px] w-[100%] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.yellowCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[50px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">325+</p>
-                <p className="lg:text-[25px] md:text-[18px] ">Hours Read on Medium</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-          */}
-
-          
-
-             
-           
-          
-   
-         
 
       </ContentContainer>
 

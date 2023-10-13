@@ -217,3 +217,47 @@ export const DESIGN_PROJECTS = [
       "The objective of this study was to develop a wholistic diabetes risk model that has strong predictive ability and maintains interpretability.",
   },
 ];
+
+
+export const DATA = [
+  {
+    id: 1,
+    main_text:"230+",
+    subtitle: "Software Developers"
+  },
+  {
+    id: 2,
+    main_text:"200+",
+    subtitle: "AI papers & Projects"
+  },
+ 
+  {
+    id: 3,
+    main_text:"320+",
+    subtitle: "Delegates at CUCAI"
+  },
+  
+  {
+    id: 4,
+    main_text:"25+",
+    subtitle: "Industry Clients"
+  },
+  {
+    id: 5,
+    main_text:"45",
+    subtitle: "Tech Articles"
+  },
+  {
+    id: 6,
+    main_text:"35",
+    subtitle: "Projects in 2023"
+  },
+  {
+    id: 7,
+    main_text:"325+",
+    subtitle: "Hours Read on Medium"
+  },
+  
+
+]
+
