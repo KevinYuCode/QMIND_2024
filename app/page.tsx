@@ -20,10 +20,6 @@ import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
 import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
-import MICROSOFT from "../assets/Companies/Microsoft.png";
-import DELOITTE from "../assets/Companies/Deloitte.png";
-import TD from "../assets/Companies/TD_Bank.png";
-import LOBLAWS from "../assets/Companies/Loblaws.png";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
@@ -204,9 +200,9 @@ export default function Home() {
       {/* Stats card */}
       <ContentContainer>
         {/* First Row */}
-        <div className="flex w-[100%] gap-[37px]">
+        {/* <div className="flex w-[100%] gap-[37px]"> */}
           {/*Top Row of the cards section */}
-          <div
+          {/* <div
             className={`${styles.yellowCard} rounded-[17px] w-[100%]  h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[30px] md:leading-[50px]`}
           >
             <p className="text-[35px] md:text-[45px] lg:text-[65px]">230+</p>
@@ -222,9 +218,9 @@ export default function Home() {
               AI papers & Projects
             </p>
           </div>
-        </div>
+        </div> */}
         {/*Middele row of the card section */}
-        <div className="flex w-[100%] gap-[37px] ">
+        {/* <div className="flex w-[100%] gap-[37px] ">
           <div
             className={`${styles.blueCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
           >
@@ -245,9 +241,9 @@ export default function Home() {
             <p className="lg:text-[65px] md:text-[45px]">45</p>
             <p className="lg:text-[25px] md:text-[18px]">Tech Articles</p>
           </div>
-        </div>
+        </div> */}
         {/*Bottom row of the card section */}
-        <div className="flex w-[100%] gap-[37px] ">
+        {/* <div className="flex w-[100%] gap-[37px] ">
           <div
             className={`${styles.redCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
           >
@@ -262,7 +258,7 @@ export default function Home() {
               Hours Read on Medium
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/*Hover effect for the widget that brings up a smaller see more button that brings the user to the link */}
 

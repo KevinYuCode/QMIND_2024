@@ -7,4 +7,28 @@
   // width: auto;
   justify-content: center;
   align-items: center;
+  
+}
+
+.companyblur{
+  
+  background-color: white;
+
+}
+
+.companyParent {
+  position: relative;
+}
+
+.companyRight {
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(81, 56, 56, 0) 90%, #2E2E2E);
+  
+}
+
+.companyLeft {
+  position: absolute;
+
+  background-image: linear-gradient(to left, rgba(255,0,0,0) 90%, #2E2E2E );
+  
 }

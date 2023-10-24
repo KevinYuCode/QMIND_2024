@@ -421,10 +421,4 @@ export const COMPANIES = [
 {
   image: NATIONAL.src,
 },
-{
-  image: PWC1.src,
-},
-{
-  image: EY1.src,
-},
 ];
