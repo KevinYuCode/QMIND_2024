@@ -19,13 +19,14 @@ import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
 import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
-  const [partnersImg, setPartnersImg] = useState("");
-  const [alumniImg, setAlumniImg] = useState("");
-  const [conferenceImg, setConferenceImg] = useState("");
-  const [awsImg, setAwsImg] = useState("");
+  const [partnersImg, setPartnersImg]: any = useState(null);
+  const [alumniImg, setAlumniImg]: any = useState(null);
+  const [conferenceImg, setConferenceImg]: any = useState(null);
+  const [awsImg, setAwsImg]: any = useState(null);
 
   const isMobile = useMediaQuery({
     query: "(min-width:500px)",
@@ -42,15 +43,15 @@ export default function Home() {
 
   useEffect(() => {
     if (isLargeMobile) {
-      setAlumniImg(ALUMNI_DESKTOP.src);
-      setPartnersImg(PARTNERS_DESKTOP.src);
-      setConferenceImg(CONFERENCE.src);
-      setAwsImg(INCUBATOR.src);
+      setAlumniImg(ALUMNI_DESKTOP);
+      setPartnersImg(PARTNERS_DESKTOP);
+      setConferenceImg(CONFERENCE);
+      setAwsImg(INCUBATOR);
     } else {
-      setAlumniImg(ALUMNI_MOBILE.src);
-      setPartnersImg(PARTNERS_MOBILE.src);
-      setConferenceImg(CONFERENCE_MOBILE.src);
-      setAwsImg(INCUBATOR_MOBILE.src);
+      setAlumniImg(ALUMNI_MOBILE);
+      setPartnersImg(PARTNERS_MOBILE);
+      setConferenceImg(CONFERENCE_MOBILE);
+      setAwsImg(INCUBATOR_MOBILE);
     }
   }, [isLargeMobile]);
 
@@ -61,11 +62,11 @@ export default function Home() {
         <div className="flex 2xl:pt-[20.22px] justify-between gap-[24px]">
           {/* Hero Content */}
           <div className=" lg:w-[62%] 2xl:w-[55%] flex flex-col gap-[25px] lg:gap-[50px] relative">
-            <img
+            <Image
               className={`${styles.stripes} hidden md:block w-[auto]`}
-              src={STRIPES.src}
-              alt=""
-            />
+              src={STRIPES}
+              alt="Stripes"
+            ></Image>
             <div className="flex flex-col gap-[32px]">
               <h1 className="font-gothic h1-styles">
                 Empowering <br /> future leaders to <br />
@@ -115,11 +116,27 @@ export default function Home() {
         </div>
         {/* Past Partners & Clients */}
         <div className="mt-[50px]">
-          <img
-            src={partnersImg}
+          <Image
+            src={partnersImg ?? ""}
             className="w-full m-auto sm:w-[100%]"
             alt="Partners Banner"
-          />
+          ></Image>
+        </div>
+      </ContentContainer>
+
+      {/* About Us */}
+      <ContentContainer className="flex flex-col gap-5 items-center">
+        <div className="text-center flex flex-col leading-tight gap-5">
+          <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
+            What is QMIND?
+          </h2>
+          <h3 className="text-[16px] md:text-[22px] lg:px-[40px] text-[#d0d0d0] italic">
+            QMIND is a student run club at Queen’s University that fosters
+            students passionate about changing the world using AI and data
+            science. We have over 240 members each year that work on AI
+            research, AI ethics and policy, design team projects, consulting
+            projects, CUCAI, and more!
+          </h3>
         </div>
       </ContentContainer>
 
@@ -441,9 +458,9 @@ export default function Home() {
           </div>
         </div>
         <div className="h-[240px] md:h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto]">
-          <img
+          <Image
             className=" absolute  left-0 right-0  md:relative h-[240px] md:h-[100%] md:w-[100%] md:rounded-[20px] object-cover drop-shadow-xl"
-            src={conferenceImg}
+            src={conferenceImg ?? ""}
             alt=""
           />
         </div>
@@ -474,11 +491,11 @@ export default function Home() {
           </div>
         </div>
         <div className="h-[240px] md:h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto]">
-          <img
+          <Image
             className="absolute  left-0 right-0  md:relative h-[240px] md:h-[100%] md:w-[100%] md:rounded-[20px] object-cover drop-shadow-xl"
-            src={awsImg}
+            src={awsImg ?? ""}
             alt=""
-          />
+          ></Image>
         </div>
         <div className="flex justify-center w-[100%]">
           <CTALink
@@ -492,11 +509,7 @@ export default function Home() {
 
       {/* Alumni Placements */}
       <ContentContainer className="">
-        <img
-          className="lg:h-auto w-[100%]"
-          src={alumniImg}
-          alt="Alumini Placements"
-        />
+        <Image src={alumniImg ?? ""} alt="Alumini Placements"></Image>
         <div className="flex justify-center w-[100%]">
           <CTALink
             isExternalLink={true}

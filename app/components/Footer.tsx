@@ -13,7 +13,18 @@ function Footer() {
             <Link href="/design">Design</Link>
             <Link href="/leadership">Leadership</Link>
             <Link href="/blog">Blog</Link>
-            <Link href="/our-story">Our Story</Link>
+            <Link
+              target="_none"
+              href="https://www.queensu.ca/alumni/supporting-queens/stories-of-impact/qmind"
+            >
+              Our Story
+            </Link>
+            <Link
+              target="_none"
+              href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiR5OHriJKCAxXspIkEHQR_B1wQwqsBegQICRAG&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU&opi=89978449"
+            >
+              Myspace
+            </Link>
           </div>
         </div>
         <div className="hidden md:block self-end relative top-[70px] ">
