@@ -20,6 +20,8 @@ import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
 import MemberCard from "./components/MemberCard";
 import { tradeGothic } from "./font";
+import Link from "next/link";
+import { ReactFitty } from "react-fitty";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
@@ -198,16 +200,16 @@ export default function Home() {
         </div>
       </div>
 
-      <ContentContainer className="flex flex-col items-center gap-[50px]">
+      <ContentContainer className="items-center gap-[50px] w-[100%]">
         <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
-          <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
+          <h2 className="h2-styles !text-[20px] md:text-[45px] lg:text-[45px] font-gothic">
             Our Members Love QMIND
           </h2>
-          <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
+          <h3 className="h3-styles !text-[13px] md:text-[15px] lg:text-[20px] font-bold font-gothic">
             Click On Them To See What They Think
           </h3>
         </div>
-        <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-start md:justify-center items-center mt-[-65px]">
           <MemberCard 
             spotlight={true} 
             className="rotate-6" 
@@ -217,23 +219,37 @@ export default function Home() {
             name={TESTIMONIALS[spotlight].name} 
             headshot={TESTIMONIALS[spotlight].headshot}>
           </MemberCard>
-          <div className="member-spotlight flex flex-col justify-center bg-[#2E2E2E] w-[685px] rounded-tr-[16px] rounded-br-[16px] py-[30px] pr-[32px] pl-[60px] ml-[-30px]">
+          <div className="member-spotlight flex flex-col justify-center bg-[#2E2E2E] w-[370px] md:w-[685px] rounded-[16px] md:rounded-tr-[16px] md:rounded-br-[16px] py-[20px] md:py-[30px] px-[20px] md:px-0 md:pr-[32px] md:pl-[60px] mt-[-70px] md:mt-0 md:ml-[-30px]">
             <div className="flex flex-row flex-start items-center text-[#F7F7F7]">
               <div className={`!font-kontrapunkt font-bold text-[24px]`}>{TESTIMONIALS[spotlight].name}</div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+              {/* <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                 <path opacity="0.5" d="M13.5 16.009H2.5C1.39543 16.009 0.5 15.1136 0.5 14.009V3.00903C0.5 1.90446 1.39543 1.00903 2.5 1.00903H6.5V3.00903H2.5V14.009H13.5V10.009H15.5V14.009C15.5 15.1136 14.6046 16.009 13.5 16.009ZM8.2 9.71603L6.79 8.30203L13.083 2.00903H9.5V0.0090332H16.5V7.00903H14.5V3.42403L8.2 9.71603Z" fill="white"/>
-              </svg>
-              <div className="!font-kontrapunkt opacity-50 text-[24px] ml-auto">{`Computer Science '25`}</div>
+              </svg> */}
+              {TESTIMONIALS[spotlight].linkedin ? 
+              (
+                <Link href={TESTIMONIALS[spotlight].linkedin!} target="_blank" rel="noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="cursor-pointer ml-[10px]" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                  </svg>
+                </Link>
+              ) : (
+                <>
+                </>
+              )}
+              
+              <div className="hidden md:block !font-kontrapunkt opacity-50 text-[20px] md:text-[24px] ml-auto">{`Computer Science '25`}</div>
             </div>
-            <div className="!font-kontrapunkt text-[24px] text-left mt-[-10px]">{TESTIMONIALS[spotlight].position} @ {TESTIMONIALS[spotlight].company}</div>
-            <div className="font-sofia font-semibold text-[18px] text-left mt-[16px]">{TESTIMONIALS[spotlight].message}</div>
+            <div className="!font-kontrapunkt text-left w-[100%] mt-[-8px]">
+              <ReactFitty maxSize={24} minSize={14}>{TESTIMONIALS[spotlight].position} @ {TESTIMONIALS[spotlight].company}</ReactFitty>
+            </div>
+            <div className="font-sofia font-semibold text-[16px] md:text-[18px] text-left mt-[16px]">{TESTIMONIALS[spotlight].message}</div>
           </div>
         </div>
-        <div className="flex flex-row flex-wrap items-center justify-center gap-[10px]">
+        <div className="flex flex-row flex-wrap items-center justify-center md:gap-[10px]">
           {TESTIMONIALS.map((card, key) => {
             return(
               <MemberCard 
-              className={`${card.angle}`}
+              className={`${card.angle} cursor-pointer`}
               key={key}
               onClick={()=>{setSpotlight(key)}}
               company={card.companyLogo}
