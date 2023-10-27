@@ -22,7 +22,6 @@ import react, { useEffect } from "react";
 import Image from "next/image";
 
 export default function Home() {
-  const [activeProject, setActiveProject] = useState(0);
   const [partnersImg, setPartnersImg]: any = useState(null);
   const [alumniImg, setAlumniImg]: any = useState(null);
   const [conferenceImg, setConferenceImg]: any = useState(null);
