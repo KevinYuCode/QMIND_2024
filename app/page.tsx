@@ -13,17 +13,12 @@ import INCUBATOR_MOBILE from "../assets/aws_mobile.png";
 import CardSlider from "./components/CardSlider";
 import CompanySlider from "./components/CompanySlider";
 import { useState } from "react";
-import CarouselCard from "./components/CarouselCard";
 import { useMediaQuery } from "react-responsive";
 import PARTNERS_DESKTOP from "../assets/partners_desktop.svg";
 import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
 import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
-import MICROSOFT from "../assets/Companies/Microsoft.png";
-import DELOITTE from "../assets/Companies/Deloitte.png";
-import TD from "../assets/Companies/TD_Bank.png";
-import LOBLAWS from "../assets/Companies/Loblaws.png";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
@@ -44,18 +39,6 @@ export default function Home() {
   const isDesktop = useMediaQuery({
     query: "(min-width: 1224px)",
   });
-
-  const changeCarousel = (direction: number) => {
-    setActiveProject((index) => {
-      let newIndex = index + direction;
-      if (newIndex >= DESIGN_PROJECTS.length) {
-        newIndex = 0;
-      } else if (newIndex < 0) {
-        newIndex = DESIGN_PROJECTS.length - 1;
-      }
-      return newIndex;
-    });
-  };
 
   useEffect(() => {
     if (isLargeMobile) {
@@ -431,6 +414,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Sliding Logos Animation */}
       <ContentContainer>
         <div className="flex flex-col gap-6 text-center relative !overflow-hidden">
           <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
@@ -442,13 +426,6 @@ export default function Home() {
             <CompanySlider cards={COMPANIES} slideLeft={true} />
           </div>
         </div>
-        {/* <div className={`${styles.company} bg-[#2E2E2E] w-[100%] h-[106px] rounded-[16px] flex row justify-center items-center gap-[96px]` }>
-            <div><img src={MICROSOFT.src} alt="" className="h-[42px]"/></div>
-            <div><img src={TD.src} alt="" className="h-[42px]"/></div>
-            <div><img src={LOBLAWS.src} alt="" className="h-[35px]"/></div>
-            <div><img src={DELOITTE.src} alt="" className="h-[35px]"/></div>
-          
-          </div> */}
       </ContentContainer>
 
       {/* National Conference */}
