@@ -22,10 +22,10 @@ import Image from "next/image";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(0);
-  const [partnersImg, setPartnersImg] = useState(null);
-  const [alumniImg, setAlumniImg] = useState(null);
-  const [conferenceImg, setConferenceImg] = useState(null);
-  const [awsImg, setAwsImg] = useState(null);
+  const [partnersImg, setPartnersImg]: any = useState(null);
+  const [alumniImg, setAlumniImg]: any = useState(null);
+  const [conferenceImg, setConferenceImg]: any = useState(null);
+  const [awsImg, setAwsImg]: any = useState(null);
 
   const isMobile = useMediaQuery({
     query: "(min-width:500px)",
