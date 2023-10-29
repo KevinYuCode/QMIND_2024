@@ -30,7 +30,7 @@ function HeadlineCard({ project }: any) {
   return (
     <div className="flex flex-col gap-5">
       <div
-        className={`xl:w-[100%] 2xl:w-[1200px] p-[24px] max-h-[390px] text-center flex justify-between gap-[32px] bg-[#2e2e2e] rounded-[2rem] drop-shadow-xl ${styles.carousel}`}
+        className={`xl:w-[100%] 2xl:w-[1200px] p-[24px] lg:max-h-[390px] text-center flex flex-col lg:flex-row justify-between gap-[32px] bg-[#2e2e2e] rounded-[2rem] drop-shadow-xl ${styles.carousel}`}
       >
         {/* Image */}
         <motion.div
@@ -40,7 +40,7 @@ function HeadlineCard({ project }: any) {
           animate={controls}
           className={`flex flex-col items-center ${styles.img_container}`}
         >
-          <div className="overflow-hidden h-[300px] w-[510px] relative object-cover">
+          <div className="overflow-hidden h-[300px] w-[100%] lg:w-[510px] relative object-cover">
             <Image
               src={selectedProject.image}
               alt="project info"
@@ -52,20 +52,24 @@ function HeadlineCard({ project }: any) {
 
         {/* Content */}
         <motion.div className="flex gap-[20px] justify-center">
-          <div className="flex flex-col justify-between items-start gap-[18px]">
-            <div className="flex flex-col items-start gap-[18px]">
+          <div className="flex flex-col justify-between items-center lg:items-start gap-[18px]">
+            <div className="flex flex-col items-center lg:items-start gap-[18px]">
               <Head3
-                className={`${roboto_slab.className} !font-normal text-left`}
+                className={`${roboto_slab.className} !font-normal text-center lg:text-left`}
               >
                 {selectedProject.title}
               </Head3>
 
-              <Text className="text-left overflow-ellipsis max-h-[160px]">
+              <Text className="text-center lg:text-left overflow-ellipsis max-h-[160px]">
                 {selectedProject.description}{" "}
               </Text>
             </div>
 
-            <Link href={"/#"} className="text-[#387BFF] underline text-[20px]">
+            <Link
+              href={selectedProject.href}
+              target="_blank"
+              className="text-[#387BFF] underline text-[20px]"
+            >
               View the research project here!
             </Link>
           </div>
