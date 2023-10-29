@@ -13,6 +13,7 @@
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
+    "aos": "^2.3.4",
     "autoprefixer": "10.4.14",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
@@ -33,5 +34,7 @@
   "main": "next.config.js",
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/aos": "^3.0.6"
+  }
 }

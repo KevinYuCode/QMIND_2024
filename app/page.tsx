@@ -17,9 +17,10 @@ import PARTNERS_DESKTOP from "../assets/partners_desktop.svg";
 import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
 import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
-import react, { useEffect } from "react";
-import { render } from "react-dom";
-import { motion, AnimatePresence} from 'framer-motion';
+import react, { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation} from 'framer-motion';
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 
 
@@ -47,14 +48,7 @@ export default function Home() {
     query: "(min-width: 1224px)",
   });
 
-  const [scaleUp, setScaleUp] = useState(false);
-  const [scaleUp1, setScaleUp1] = useState(false);
-  const [scaleUp2, setScaleUp2] = useState(false);
-  const [scaleUp3, setScaleUp3] = useState(false);
-  const [scaleUp4, setScaleUp4] = useState(false);
-  const [scaleUp5, setScaleUp5] = useState(false);
-  const [scaleUp6, setScaleUp6] = useState(false);
-  const [scaleUp7, setScaleUp7] = useState(false);
+  
 
 
   
@@ -85,10 +79,13 @@ export default function Home() {
     }
   }, [isLargeMobile]);
 
+  useEffect(()=> {
+    AOS.init({duration:1200})
+  })
+
+  
+
  
-
-
-
   return (
     <main className="flex flex-col gap-16 md:gap-20 w-full min-h-[100vh] py-[3rem] 2xl:py-[5rem] relative">
       {/* Hero Panel */}
@@ -238,59 +235,55 @@ export default function Home() {
       <ContentContainer>
         
 
-        <div className="flex w-[100%] gap-[37px]">
+        <div  className="flex w-[100%] gap-[37px]">
+      
           <motion.div 
             whileHover={{
               scale: 1.05,
               transition: {duration: 0.5},
             }} 
-            
-            onClick ={() => {
-              setScaleUp(!scaleUp);
-            
+            variants={ {
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y:0 },
             }}
-            animate={{
-              scaleY: scaleUp ? 2.5 : 1,
-            
-          
-              x: scaleUp ? "200px" : "0px",
-              y: scaleUp ? "200px" : "0px"
-            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{duration: 0.5, delay: 0.25}}
 
-            className={`${styles.yellowCard} rounded-[17px] w-[100%]  h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[30px] md:leading-[50px]`
-          
+
+
+            className={`${styles.yellowCard} rounded-[17px] w-[100%]  h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[30px] md:leading-[50px]` 
+           
           
           }
            >
             <p className="text-[35px] md:text-[45px] lg:text-[65px]">230+</p>
-            <p className="text-[20px] md:text-[22px] text-left">
+            <p className="text-[20px] md:text-[22px] text-left" >
               Software Developers
             </p>
           </motion.div>
+        
           <motion.div
            whileHover={{
             scale: 1.05,
             transition: {duration: 0.5},
           }}     
-          onClick ={() => {
-            
-            setScaleUp1(!scaleUp1);
-          }}
-          animate={{
-
-            scaleY: scaleUp1 ? 2.5 : 1,
-            
-            x: scaleUp1 ? "-125%" : "0px",
-            y: scaleUp1 ? "200px" : "0px"
-          }}
+         
        
-            className={`${styles.redCard}  rounded-[17px] w-[100%] max-w-[380px] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-end pr-[50px] leading-[30px] md:leading-[50px]
+            className= {`${styles.redCard}  rounded-[17px] w-[100%] max-w-[380px] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-end pr-[50px] leading-[30px] md:leading-[50px]
             
            `} 
-           
+           variants={ {
+            hidden: {opacity: 0, y: 75},
+            visible: {opacity: 1, y:0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{duration: 0.5, delay: 0.25}}
+
         
           >
-            {scaleUp1 && <p> hello wolrd</p>}
+            
             <p className="text-[35px] md:text-[45px] lg:text-[65px]"
             >
             200+</p>
@@ -306,20 +299,14 @@ export default function Home() {
               scale: 1.05,
               transition: {duration: 0.5},
             }}  
-
-            onClick ={() => {
-              setScaleUp2(!scaleUp2);
-            
+            variants={ {
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y:0 },
             }}
-            animate={{
-              scaleY: scaleUp2 ? 2.5 : 1,
-            
-          
-              x: scaleUp2 ? "450px" : "0px",
-             
-            }}
-                
-              className={`${styles.blueCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
+            initial="hidden"
+            whileInView="visible"
+            transition={{duration: 0.5, delay: 0.25}}
+              className={`${styles.blueCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]  `}
            >
               <p className="lg:text-[65px] md:text-[45px]">320+</p>
               <p className="lg:text-[25px] md:text-[18px]">
@@ -332,13 +319,13 @@ export default function Home() {
               scale: 1.05,
               transition: {duration: 0.5},
             }}  
-            onClick ={() => {
-              setScaleUp3(!scaleUp3);
-            
+            variants={ {
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y:0 },
             }}
-            animate={{
-              scaleY: scaleUp3 ? 2.5 : 1,
-            }}     
+            initial="hidden"
+            whileInView="visible"
+            transition={{duration: 0.5, delay: 0.25}}
               className={`${styles.yellowCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
             >
               <p className="lg:text-[65px] md:text-[45px]">25+</p>
@@ -350,17 +337,15 @@ export default function Home() {
               scale: 1.05,
               transition: {duration: 0.5},
             }}  
-            onClick ={() => {
-              setScaleUp4(!scaleUp4);
-            
+            variants={ {
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y:0 },
             }}
-            animate={{
-              scaleY: scaleUp4 ? 2.5 : 1,
-            
+            initial="hidden"
+            whileInView="visible"
+            transition={{duration: 0.5, delay: 0.25}}
+
           
-              x: scaleUp4 ? "-450px" : "0px",
-             
-            }}     
               className={`${styles.blueCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-end pr-[50px] leading-[50px]`}
             >
               <p className="lg:text-[65px] md:text-[45px]">45</p>
@@ -374,17 +359,15 @@ export default function Home() {
               scale: 1.05,
               transition: {duration: 0.5},
             }}   
-            onClick ={() => {
-              setScaleUp5(!scaleUp5);
-            
+            variants={ {
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y:0 },
             }}
-            animate={{
-              scaleY: scaleUp5 ? 2.5 : 1,
-            
-          
-              x: scaleUp5 ? "350px" : "0px",
-              y: scaleUp5 ? "-225px" : "0px"
-            }}    
+            initial="hidden"
+            whileInView="visible"
+            transition={{duration: 0.5, delay: 0.25}}
+
+           
               className={`${styles.redCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[50px]`}
             >
               <p className="lg:text-[65px] md:text-[45px]">35</p>
@@ -395,19 +378,13 @@ export default function Home() {
               scale: 1.05,
               transition: {duration: 0.5},
             }}   
-            onClick ={() => {
-              setScaleUp6(!scaleUp6);
-            
+            variants={ {
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y:0 },
             }}
-            animate={{
-              scaleY: scaleUp6 ? 2.5 : 1,
-
-              
-            
-          
-              x: scaleUp6 ? "-350px" : "0px",
-              y: scaleUp6 ? "-225px" : "0px"
-            }}    
+            initial="hidden"
+            whileInView="visible"
+            transition={{duration: 0.5, delay: 0.25}}
               className={`${styles.yellowCard} rounded-[17px] w-[100%] h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-end pr-[50px] leading-[50px]`}
             >
               <p className="lg:text-[65px] md:text-[45px]">325+</p>
