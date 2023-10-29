@@ -1,8 +1,6 @@
 import "./globals.scss";
 import { Roboto_Slab, Sofia_Sans } from "next/font/google";
 import { kontrapunkt, tradeGothic } from "./font";
-import localFont from "@next/font/local";
-import Link from "next/link";
 import Navbar from "./components/Navbar";
 import styles from "./styles/layout.module.scss";
 import Footer from "./components/Footer";
