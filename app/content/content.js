@@ -5,31 +5,68 @@ import QUANTUM from "../../assets/quantum.jpg";
 import ANDRIOD from "../../assets/andriod.jpg";
 import DISTRIBUTIVE from "../../assets/Companies/Distributive.png";
 import AMAZON from "../../assets/Companies/Amazon.png";
-import DELOITTE from "../../assets/Companies/deloitte.png";
+// import DELOITTE from "../../assets/Companies/deloitte.png";
 import EY from "../../assets/Companies/EY.png";
 import LOBLAWS from "../../assets/Companies/Loblaws.png";
 import PWC from "../../assets/Companies/PWC.png";
-import MICROSOFT from "../../assets/Companies/Microsoft.png";
-import TD from "../../assets/Companies/Td.png";
+// import MICROSOFT from "../../assets/Companies/Microsoft.png";
+// import TD from "../../assets/Companies/Td.png";
 import RECALC from "../../assets/Companies/Recalc.png";
 import UBER from "../../assets/Companies/Uber.png";
 import FELLOW from "../../assets/Companies/cansbridge.png";
-import OLIVIA from "../../assets/Headshots/Olivia_Xu.png";
-import LEVI from "../../assets/Headshots/Levi_Stringer.png";
-import KEVIN from "../../assets/Headshots/Kevin_Yu.png";
-import REBAB from "../../assets/Headshots/Rabab_Azeem.png";
-import DANIEL from "../../assets/Headshots/Daniel_Wang.png";
-import RODRIGO from "../../assets/Headshots/Rodrigo_D.png";
+
+import MICROSOFT from "../../assets/MemberCardImages/Microsoft.png";
+import TD from "../../assets/MemberCardImages/TD.png";
+import AMAZON_BLACK from "../../assets/MemberCardImages/Amazon.png";
+import SKYMOUNT from "../../assets/MemberCardImages/Skymount Drones.png";
+import PWC_BLACK from "../../assets/MemberCardImages/PWC.png";
+import RIPPLE from "../../assets/MemberCardImages/Ripple.png";
+import DELOITTE from "../../assets/MemberCardImages/Deloitte.png";
+import RBC from "../../assets/MemberCardImages/RBC.png";
+import UBER_BLACK from "../../assets/MemberCardImages/Uber.png";
+import ROBLOX from "../../assets/MemberCardImages/Roblox.png";
+import BMO from "../../assets/MemberCardImages/BMO.png";
+import IRVING from "../../assets/MemberCardImages/Irving.png";
+import CANSBRIDGE from "../../assets/MemberCardImages/Cansbridge_Fellowship.png";
+
 import ETHAN from "../../assets/Headshots/Ethan_C.png";
 import HANI from "../../assets/Headshots/Hani_Khatib.png";
-import GEORGE from "../../assets/Headshots/George_T.png";
-import SAM from "../../assets/Headshots/Sam_Lin.png";
+import LEVI from "../../assets/Headshots/Levi_Stringer.png";
+import OLIVIA_XU from "../../assets/Headshots/Olivia_Xu.png";
+import REBAB from "../../assets/Headshots/Rabab_Azeem.png";
 import MARCELO from "../../assets/Headshots/Marcelo_Chaman_Mallqui.png";
-export const TESTIMONIALS = [
+import DANIEL from "../../assets/Headshots/Daniel_Wang.png";
+import RODRIGO from "../../assets/Headshots/Rodrigo_D.png";
+import SAM from "../../assets/Headshots/Sam_Lin.png";
+import KEVIN from "../../assets/Headshots/Kevin_Yu.png";
+import GEORGE from "../../assets/Headshots/George_T.png";
+
+
+import MEMBER_OLIVIA_XU from "../../assets/MemberCardImages/Olivia_Xu.png";
+import MEMBER_KEVIN from "../../assets/MemberCardImages/Kevin_Yu.png";
+import MEMBER_REBAB from "../../assets/MemberCardImages/Rabab_Azeem.png";
+import MEMBER_DANIEL from "../../assets/MemberCardImages/Daniel_Wang.png";
+import MEMBER_LUKE from "../../assets/MemberCardImages/Luke_Major.png"
+import MEMBER_RODRIGO from "../../assets/MemberCardImages/Rodrigo_D.png";
+import MEMBER_GEORGE from "../../assets/MemberCardImages/George_Trieu.png";
+import MEMBER_SAM from "../../assets/MemberCardImages/Sam_Lin.png";
+import MEMBER_MARCELO from "../../assets/MemberCardImages/Marcelo_M.png";
+import MEMBER_RAMY from "../../assets/MemberCardImages/Ramy_Mahfouz.png";
+import MEMBER_THOMAS from "../../assets/MemberCardImages/Thomas_Tesselaar.png";
+import MEMBER_JOSHUA from "../../assets/MemberCardImages/Joshua_Geddes.png";
+import MEMBER_OLIVIA_ANGLIN from "../../assets/MemberCardImages/Olivia_Anglin.png"
+import MEMBER_JORDAN from "../../assets/MemberCardImages/Jordan_Capello.png";
+
+
+import BLUE from "../../assets/MemberCardImages/vectorblue.png"
+import YELLOW from "../../assets/MemberCardImages/vectoryellow.png"
+import RED from "../../assets/MemberCardImages/vectorred.png"
+
+export const old_TESTIMONIALS = [
   {
     message:
       "Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
-    headshot: OLIVIA.src,
+    headshot: OLIVIA_XU.src,
     name: "Olivia Xu",
     position: "Software Engineer Intern",
     companyLogo: UBER.src,
@@ -101,7 +138,7 @@ export const TESTIMONIALS = [
   {
     message:
       "Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
-    headshot: OLIVIA.src,
+    headshot: OLIVIA_XU.src,
     name: "Olivia Xu",
     position: "Software Engineer Intern",
     companyLogo: UBER.src,
@@ -185,6 +222,175 @@ export const TESTIMONIALS = [
     name: "Levi Stringer",
     position: "ML Product Manager",
     companyLogo: DISTRIBUTIVE.src,
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    name: "Daniel Wang",
+    headshot: MEMBER_DANIEL.src,
+    linkedin: "https://www.linkedin.com/in/itsdanielwang/",
+    team: "development",
+    message:
+      "Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
+    position: "Business Program Manager",
+    companyLogo: {img: {src: MICROSOFT.src, style: "h-[20px] md:h-[23px]"}},
+    company: "Microsoft",
+    angle: `rotate-[3deg]`
+  },
+  {
+    name: "Rebab Azeem",
+    headshot: MEMBER_REBAB.src,
+    team: "design",
+    message:
+      "Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
+    position: "Software Developer",
+    companyLogo: {img: {src: AMAZON_BLACK.src, style: "h-[25px] md:h-[30px]"}},
+    company: "Amazon",
+    angle: `rotate-[-4deg]`
+  },
+  {
+    name: "Luke Major",
+    headshot: MEMBER_LUKE.src,
+    linkedin: "https://www.linkedin.com/in/luke-major-4ab297116/",
+    team: "design",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "AI Systems Engineer",
+    companyLogo: {name: "Skymount Drones", img: {src:SKYMOUNT.src , style: "h-[50px]"}},
+    company: "Skymount Drones",
+    angle: `rotate-[0deg]`
+  },
+  {
+    name: "Kevin Yu",
+    headshot: MEMBER_KEVIN.src,
+    team: "operations",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "Software Developer",
+    companyLogo: {img: {src: PWC_BLACK.src, style: "mt-[-10px] h-[40px] md:mt-[-13px] md:h-[50px]"}},
+    company: "PricewaterhouseCoopers",
+    angle: `rotate-[3deg]`
+  },
+  {
+    name: "Marcelo Chaman Mallqui",
+    headshot: MEMBER_MARCELO.src,
+    linkedin: "https://www.linkedin.com/in/marc-cham/",
+    team: "operations",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "AI Systems Engineer",
+    companyLogo: {img: {src: RIPPLE.src, style: "mt-[3px] h-[15px] md:h-[20px]"}},
+    company: "RippleX Fellowship",
+    angle: `rotate-[-2deg]`
+  },
+  {
+    name: "Ramy Mahfouz",
+    headshot: MEMBER_RAMY.src,
+    linkedin: "https://www.linkedin.com/in/ramy-mahfouz-086a0922b/",
+    team: "design",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "Tax Analyst",
+    companyLogo: {img: {src: DELOITTE.src, style: "mt-[-7px] md:mt-[-14px] h-[30px] md:h-[50px]"}},
+    company: "Deloitte",
+    angle: `rotate-[1deg]`
+  },
+  {
+    name: "Thomas Tesselaar",
+    headshot: MEMBER_THOMAS.src,
+    linkedin: "https://www.linkedin.com/in/thomas-tesselaar/",
+    team: "design",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "Quantitative Trading Analyst",
+    companyLogo: {img: {src: RBC.src, style: "mt-[-5px] h-[40px]"}},
+    company: "RBC",
+    angle: `rotate-[-2deg]`
+  },
+  {
+    name: "Olivia Xu",
+    headshot: MEMBER_OLIVIA_XU.src,
+    linkedin: "https://www.linkedin.com/in/olivia-chen-xu/",
+    team: "development",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "Software Engineer",
+    companyLogo: {img: {src: UBER_BLACK.src, style: "mt-[-5px] h-[25px]"}},
+    company: "Uber",
+    angle: `rotate-[-4deg]`
+  },
+  {
+    name: "Joshua Geddes",
+    headshot: MEMBER_JOSHUA.src,
+    linkedin: "https://www.linkedin.com/in/joshuageddes/",
+    team: "design",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "Software Engineer",
+    companyLogo: {name: "Roblox", img: {src:ROBLOX.src ,style: "!mt-[-5px] h-[50px]"}},
+    company: "Roblox",
+    angle: `rotate-[5deg]`
+  },
+  {
+    name: "Olivia Anglin",
+    headshot: MEMBER_OLIVIA_ANGLIN.src,
+    linkedin: "https://www.linkedin.com/in/olivia-anglin/",
+    team: "development",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "Wealth Management",
+    companyLogo: {name: "BMO", img: {src:BMO.src, style: "h-[30px] mt-[5px]"}},
+    company: "BMO",
+    angle: `rotate-[-2deg]`
+  },
+  {
+    name: "George Trieu",
+    headshot: MEMBER_GEORGE.src,
+    linkedin: "https://www.linkedin.com/in/georgetrieu/",
+    team: "design",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "Software Developer",
+    companyLogo: {img: {src: AMAZON_BLACK.src, style: "h-[25px] md:h-[30px]"}},
+    company: "Amazon",
+    angle: `rotate-[4deg]`
+  },
+  {
+    name: "Jordan Capello",
+    headshot: MEMBER_JORDAN.src,
+    linkedin: "https://www.linkedin.com/in/jordancapello/",
+    team: "design",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "Data Analyst",
+    companyLogo: {img: {src: IRVING.src, style: "mt-[-20px] h-[60px]"}},
+    company: "Irving",
+    angle: `rotate-[-2deg]`
+  },
+  {
+    name: "Rodrigo Del Aguila",
+    headshot: MEMBER_RODRIGO.src,
+    linkedin: "https://www.linkedin.com/in/rodrigo-delaguila/",
+    team: "design",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "Cybersecurity Analyst",
+    companyLogo: {img: {src: TD.src, style: "mt-[-5px] h-[25px]"}},
+    company: "TD",
+    angle: `rotate-[1deg]`
+  },
+  {
+    name: "Sam Lin",
+    headshot: MEMBER_SAM.src,
+    linkedin: "https://www.linkedin.com/in/samlin12/",
+    team: "development",
+    message:
+      "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
+    position: "Growth Strategy Analyst",
+    companyLogo: {name: "Cansbridge Fellowship", img: {src:CANSBRIDGE.src , style: "h-[25px] mt-[1px]"}},
+    company: "Cansbridge Fellowship",
+    angle: `rotate-[3deg]`
   },
 ];
 
