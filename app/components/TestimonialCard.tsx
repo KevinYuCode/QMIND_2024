@@ -1,6 +1,7 @@
 import React from "react";
 import QUOTES from "../../assets/quotes.svg";
 import styles from "../styles/testimonialCard.module.scss";
+import Image from "next/image";
 function TestimonialCard({
   children,
   message,
@@ -9,16 +10,23 @@ function TestimonialCard({
   companyLogo,
   headShot,
   fullImage,
+  imgDescription,
 }: any) {
   return (
     <>
       {fullImage ? (
-        <div className={`${styles.card} `}>
-          <img
-            className="rounded-[inherit] w-[100%] h-[100%] object-cover"
+        <div className={`${styles.card} relative`}>
+          <Image
+            className="rounded-[inherit] object-cover"
             src={fullImage}
             alt="Testimonial Image"
+            fill={true}
           />
+          <p
+            className={`${styles.img_description} py-[8px] px-[10px] absolute w-[90%] text-center bottom-[20px] left-[50%] translate-x-[-50%] bg-[#161616] opacity-[0.75] rounded-[10px]`}
+          >
+            {imgDescription}
+          </p>
         </div>
       ) : (
         <div

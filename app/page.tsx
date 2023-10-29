@@ -3,7 +3,7 @@ import BtnLink from "./components/BtnLink";
 import STRIPES from "../assets/qmind_stripes.svg";
 import ContentContainer from "./components/ContentContainer";
 import styles from "./styles/home.module.scss";
-import { old_TESTIMONIALS, TESTIMONIALS } from "./content/content";
+import { EVENTS, old_TESTIMONIALS, TESTIMONIALS } from "./content/content";
 import { COMPANIES } from "./content/content";
 import { DESIGN_PROJECTS } from "./content/content";
 import CONFERENCE from "../assets/conference_image.png";
@@ -142,7 +142,7 @@ export default function Home() {
       </ContentContainer>
 
       {/* What is QMIND? */}
-      <ContentContainer className="flex flex-col items-center my-[100px]">
+      <ContentContainer className="flex flex-col items-center">
         <Title title="What is QMIND?">
           <Head3 className="text-[16px] md:text-[22px] lg:px-[40px] text-[#d0d0d0] italic">
             <Text className="mt-[20px] leading-[30px] lg:leading-[40px]">
@@ -183,13 +183,12 @@ export default function Home() {
       {/* Industry and Events Sliding Cards */}
       <div className="gap-7 flex flex-col text-center relative !overflow-hidden">
         <Title
-          title="Our Members Love QMIND"
-          subtitle="Read What They Have To Say!"
+          title="QMIND Events & Industry Speakers"
+          subtitle="Checkout our events!"
         ></Title>
 
-        <div className="flex flex-col gap-[24px] w-full">
-          <CardSlider cards={old_TESTIMONIALS} slideLeft={true} />
-          <CardSlider cards={old_TESTIMONIALS} slideLeft={false} />
+        <div className="flex flex-col items-start gap-[24px] w-full">
+          <CardSlider cards={EVENTS} slideLeft={true} />
         </div>
       </div>
 
@@ -268,6 +267,19 @@ export default function Home() {
               activeCard={TESTIMONIALS[spotlight].name == card.name}
             />
           ))}
+        </div>
+      </ContentContainer>
+
+      <ContentContainer>
+        <div className="flex flex-col gap-6 text-center relative !overflow-hidden">
+          <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
+            <p>
+              QMIND ALUMNI HAVE WORKED AT INNOVATIVE COMPANIES ACROSS THE WORLD
+            </p>
+          </div>
+          <div className="flex flex-col gap-[24px] w-full">
+            <CompanySlider cards={COMPANIES} slideLeft={true} />
+          </div>
         </div>
       </ContentContainer>
 
