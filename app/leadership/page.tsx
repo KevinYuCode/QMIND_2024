@@ -27,6 +27,7 @@ import sunghoon_k from "../../assets/Headshots/Sunghoon_Kim.png";
 import mercy_d from "../../assets/Headshots/Mercy_Doan.png";
 
 import { sofia_sans } from "../font";
+import Link from "next/link";
 
 export default function Leadership() {
   const leadership = [
@@ -38,18 +39,21 @@ export default function Leadership() {
           title: "Managing Director, Design",
           img: rabab_azeem,
           class: "leadershipCardDesign",
+          social: "https://www.linkedin.com/in/rabab-azeem/",
         },
         {
           name: "Olivia Xu",
           title: "Managing Director, Development",
           img: olivia_xu,
           class: "leadershipCardDevelopment",
+          social: "https://www.linkedin.com/in/olivia-chen-xu/",
         },
         {
           name: "Marcelo Chaman Mallqui",
           title: "Managing Director, Operations",
           img: marcello_mallqui,
           class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/marc-cham/",
         },
       ],
     },
@@ -61,48 +65,56 @@ export default function Leadership() {
           title: "Director of AI Research",
           img: bartek_k,
           class: "leadershipCardDesign",
+          social: "https://www.linkedin.com/in/bartek-kowalski-68117b1ab/",
         },
         {
           name: "Max Kang",
           title: "Director of Disruptive Technology",
           img: max_k,
           class: "leadershipCardDesign",
+          social: "https://www.linkedin.com/in/2001mk2001/",
         },
         {
           name: "Leo Sandler",
           title: "Director of AI Ethics",
           img: leo_s,
           class: "leadershipCardDesign",
+          social: "https://www.linkedin.com/in/leo-sandler/",
         },
         {
           name: "Sandindie Silva",
           title: "Director of Design, Healthcare",
           img: sanindie_s,
           class: "leadershipCardDesign",
+          social: "https://www.linkedin.com/in/sanindie-silva/",
         },
         {
           name: "Hunter Hoogendijk",
           title: "Director of Design, Finance",
           img: hunter_h,
           class: "leadershipCardDesign",
+          social: "https://www.linkedin.com/in/hunterhoogendijk/",
         },
         {
           name: "Khoa Nguyen",
           title: "Director of Design, Computer Vision",
           img: khoa_n,
           class: "leadershipCardDesign",
+          social: "https://www.linkedin.com/in/khoa-qd-nguyen/",
         },
         {
           name: "Mercy Doan",
           title: "Director of Design, NLP",
           img: mercy_d,
           class: "leadershipCardDesign",
+          social: "https://www.linkedin.com/in/merd/",
         },
         {
           name: "Rodrigo Del Aguila",
           title: "Director of Design, RL",
           img: rodrigo_d,
           class: "leadershipCardDesign",
+          social: "https://www.linkedin.com/in/rodrigo-delaguila/",
         },
       ],
     },
@@ -114,30 +126,35 @@ export default function Leadership() {
           title: "Director of Marketing",
           img: aren_jo,
           class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/arenjo/",
         },
         {
           name: "Rowan McDonald",
           title: "Director of Finance",
           img: rowan_m,
           class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/rowan-m/",
         },
         {
           name: "Kevin Yu",
           title: "Director of Web Development",
           img: kevin_yu,
           class: "leadershipCardOperations",
+          social: "https://kevinyu.ca/",
         },
         {
           name: "Jenn Yang",
           title: "Executive Director of InQUbate",
           img: jenn_y,
           class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/jenniferluyang/",
         },
         {
           name: "Sunghoon Kim",
           title: "Executive Director of InQUbate",
           img: sunghoon_k,
           class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/sunghoonkim17/",
         },
       ],
     },
@@ -149,18 +166,21 @@ export default function Leadership() {
           title: "Director of External Relations",
           img: daniel_w,
           class: "leadershipCardDevelopment",
+          social: "https://www.linkedin.com/in/itsdanielwang/",
         },
         {
           name: "Sara Laker",
           title: "Director of Internal Affairs",
           img: sara_l,
           class: "leadershipCardDevelopment",
+          social: "https://www.linkedin.com/in/sara-laker/",
         },
         {
           name: "Sam Lin",
           title: "Director of QMIND Tech Review",
           img: sam_l,
           class: "leadershipCardDevelopment",
+          social: "https://www.linkedin.com/in/samlin12/",
         },
       ],
     },
@@ -200,7 +220,11 @@ export default function Leadership() {
               <div className="flex flex-row flex-wrap justify-center gap-4 md:gap-8 w-[100%]  leading-none">
                 {section.cards.map((card, index) => {
                   return (
-                    <div
+
+
+
+
+                    <Link href={card.social}
                       key={index}
                       className={`${card.class} w-[150px] md:w-[225px] lg:w-[275px] text-center flex flex-col gap-5 justify-center items-center rounded-[16px] p-[12px] md:p-[20px] md:rounded-[24px]  bg-[#2E2E2E]`}
                     >
@@ -214,18 +238,24 @@ export default function Leadership() {
                         />
                       </div>
                       <div className="flex flex-col gap-2">
-                        <p
-                          className={`${sofia_sans.className} font-semibold font-gothic tracking-tight text-[16px] md:text-[20px]`}
+
+                        
+                        
+                        
+                        <p 
+                          className={`${sofia_sans.className} font-semibold font-gothic tracking-tight text-[16px] md:text-[20px] hover:cursor-pointer`}
                         >
                           {card.name}
                         </p>
+
+
                         <p
                           className={`${sofia_sans.className} font-light font-gothic text-[12px] xl:text-[16px]`}
                         >
                           {card.title}
                         </p>
                       </div>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>

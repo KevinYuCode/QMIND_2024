@@ -14,6 +14,7 @@
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "@types/react-slick": "^0.23.10",
+    "aos": "^2.3.4",
     "autoprefixer": "10.4.14",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
@@ -27,12 +28,20 @@
     "react-fitty": "^1.0.1",
     "react-icons": "^4.10.1",
     "react-responsive": "^9.0.2",
-    "sass": "^1.69.0",
     "react-slick": "^0.29.0",
+    "sass": "^1.69.0",
     "sharp": "^0.32.4",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.2",
+    "taos": "^1.0.5",
     "typescript": "5.1.6"
+  },
+  "description": "- Next.js\r - Tailwind\r - SASS",
+  "main": "next.config.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aos": "^3.0.6"
   }
 }

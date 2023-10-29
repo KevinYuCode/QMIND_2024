@@ -3,7 +3,7 @@ import BtnLink from "./components/BtnLink";
 import STRIPES from "../assets/qmind_stripes.svg";
 import ContentContainer from "./components/ContentContainer";
 import styles from "./styles/home.module.scss";
-import { EVENTS, old_TESTIMONIALS, TESTIMONIALS } from "./content/content";
+import { EVENTS, TESTIMONIALS } from "./content/content";
 import { COMPANIES } from "./content/content";
 import { DESIGN_PROJECTS } from "./content/content";
 import CONFERENCE from "../assets/conference_image.png";
@@ -33,6 +33,8 @@ import TD from "../assets/Companies/TD_Bank.png";
 import LOBLAWS from "../assets/Companies/Loblaws.png";
 import StatsCards from "./components/StatsCards";
 import Text from "./components/Text";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const [partnersImg, setPartnersImg]: any = useState(null);
@@ -68,6 +70,10 @@ export default function Home() {
       setAwsImg(INCUBATOR_MOBILE);
     }
   }, [isLargeMobile]);
+
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  });
 
   return (
     <main className="flex flex-col gap-16 md:gap-20 w-full min-h-[100vh] py-[3rem] 2xl:py-[5rem] relative">
