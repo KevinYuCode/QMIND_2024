@@ -1,9 +1,8 @@
-import React from 'react'
+"use client";
+import React from "react";
 
-function NavWrapper() {
-  return (
-    <div>NavWrapper</div>
-  )
+function NavWrapper({ children }: any) {
+  return <div>{children}</div>;
 }
 
-export default NavWrapper
+export default NavWrapper;
