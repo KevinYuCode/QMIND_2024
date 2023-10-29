@@ -1,8 +1,8 @@
 import React from "react";
-import { CTAProps } from "../interfaces/ICTALink";
+import { CTAProps } from "../interfaces/IBtnLink";
 import styles from "../styles/cta.module.scss";
 import Link from "next/link";
-function CTALink({ text, href, className, isExternalLink }: CTAProps) {
+function BtnLink({ text, href, className, isExternalLink }: CTAProps) {
   return (
     <Link
       rel={isExternalLink ? "noreferrer" : ""}
@@ -15,4 +15,4 @@ function CTALink({ text, href, className, isExternalLink }: CTAProps) {
   );
 }
 
-export default CTALink;
+export default BtnLink;

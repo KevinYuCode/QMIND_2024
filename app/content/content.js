@@ -190,28 +190,28 @@ export const TESTIMONIALS = [
 
 export const DESIGN_PROJECTS = [
   {
-    image: VIRTUAL.src,
+    image: VIRTUAL,
     title: "Virtual Assistant Attention Detection",
     teamMembers: [],
     description:
       "The goal of this project was to develop a novel system to provide a more natural interface for interacting with virtual assistant devices.",
   },
   {
-    image: QUANTUM.src,
+    image: QUANTUM,
     title: "Quantum Generative Adversarial Networks",
     teamMembers: [],
     description:
       "We examine a significant challenge faced in previous implementations of a QGAN. Specifically, we propose a new method of dimensionality reduction of MNIST handwritten digits such that they could be encoded in a limited number of qubits.",
   },
   {
-    image: ANDRIOD.src,
+    image: ANDRIOD,
     title: "Android Waste Classification",
     teamMembers: [],
     description:
       "This algorithm was designed help increase the waste diversion rate on campus by reducing the amount of misclassified waste with an achieved 80% accuracy.",
   },
   {
-    image: DIABETES.src,
+    image: DIABETES,
     title: "Predictive Diabetic Risk Modelling",
     teamMembers: [],
     description:
@@ -346,7 +346,4 @@ export const COMPANIES = [
   {
     image: LOBLAWS.src,
   },
-
-
-
 ];

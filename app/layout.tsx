@@ -1,13 +1,12 @@
 "use client";
 import "./globals.scss";
-import { Sofia_Sans } from "next/font/google";
+import { Roboto_Slab, Sofia_Sans } from "next/font/google";
 import localFont from "@next/font/local";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import styles from "./styles/layout.module.scss";
 import Footer from "./components/Footer";
 import { useState } from "react";
-
 const sofia_sans = Sofia_Sans({ subsets: ["latin"], variable: "--font-sofia" });
 
 // const sofiaSans =
@@ -64,7 +63,6 @@ export default function RootLayout({
 
         {/* Title */}
         <title>QMIND - Queens AI Hub</title>
-
       </head>
       <html lang="en">
         <body

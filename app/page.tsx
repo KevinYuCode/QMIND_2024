@@ -1,5 +1,5 @@
 "use client";
-import CTALink from "./components/CTALink";
+import BtnLink from "./components/BtnLink";
 import STRIPES from "../assets/qmind_stripes.svg";
 import ContentContainer from "./components/ContentContainer";
 import styles from "./styles/home.module.scss";
@@ -20,6 +20,9 @@ import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
 import Image from "next/image";
+import CarouselCard from "./components/HeadlineCard";
+import Title from "./components/Title";
+import Head3 from "./components/Head3";
 
 export default function Home() {
   const [partnersImg, setPartnersImg]: any = useState(null);
@@ -87,13 +90,13 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col justify-center md:justify-start items-center md:flex-row gap-[24px] justify-center md:justify-start">
-              <CTALink
+              <BtnLink
                 isExternalLink={true}
                 className="min-w-[200px] !text-[13px]"
                 text="WORK WITH US"
                 href="mailto:partnerships@qmind.ca"
               />
-              <CTALink
+              <BtnLink
                 isExternalLink={true}
                 className="min-w-[200px] !text-[13px]"
                 text="OUR PROJECTS"
@@ -124,79 +127,26 @@ export default function Home() {
       </ContentContainer>
 
       {/* About Us */}
-      <ContentContainer className="flex flex-col gap-5 items-center">
-        <div className="text-center flex flex-col leading-tight gap-5">
-          <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
-            What is QMIND?
-          </h2>
-          <h3 className="text-[16px] md:text-[22px] lg:px-[40px] text-[#d0d0d0] italic">
+      <ContentContainer className="flex flex-col items-center">
+        <Title title="What is QMIND?">
+          <Head3 className="text-[16px] md:text-[22px] lg:px-[40px] text-[#d0d0d0] italic">
             QMIND is a student run club at Queen’s University that fosters
             students passionate about changing the world using AI and data
             science. We have over 240 members each year that work on AI
             research, AI ethics and policy, design team projects, consulting
-            projects, CUCAI, and more!
-          </h3>
-        </div>
+            projects, CUCAI, and more!"
+          </Head3>
+        </Title>
       </ContentContainer>
 
       {/* Design Team Projects */}
-      <ContentContainer className="flex flex-col gap-5 items-center">
+      <ContentContainer className="flex flex-col items-center">
+        <Title
+          title="Design Team Projects"
+          subtitle="In Teams of 4-6 students, we tackle real world problems."
+        ></Title>
         <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2">
-          <h2 className="h2-styles md:text-[45px] lg:text-[45px] font-gothic">
-            Design Team Projects
-          </h2>
-          <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
-            In Teams of 4-6 students, we tackle real world problems.
-          </h3>
-
-          <div className="bg-[#2E2E2E] flex gap-[32px] p-[20px] rounded-[24px]">
-            {/* image */}
-            <div>
-              <img
-                src={DESIGN_PROJECTS[0].image}
-                alt=""
-                className="rounded-[8px]"
-              />
-            </div>
-
-            {/* Content for the card */}
-            <div className="text-[white] text-left flex flex-col ">
-              <h3 className="text-[30px] mb-[10px]">Diabetic Risk Modelling</h3>
-              <p>
-                Amidst rising global diabetes rates, we developed a
-                comprehensive diabetes risk model using recurrent neural
-                networks on EMR data, successfully predicting ten
-                diabetes-related complications and predicting the results of six
-                essential diabetes tests. We achieved AUC scores greater than 85
-                for 5 out of ten complication onset models, and lab value
-                forecasting for risk stratification achieve satisfactory RMSE
-                values.
-              </p>
-              <a href="/" className="mt-[10px] text-[#387BFF] underline">
-                View the research paper here!
-              </a>
-            </div>
-          </div>
-          {/* Project Links */}
-          <div className="mt-[20px] flex gap-[40px] flex-wrap justify-center">
-            {[
-              "test1fsdafjdslakf;",
-              "Test2fdsafdfsdafdasfsdasa",
-              "Test3fdsa",
-              "Test4fdsafdsa",
-              "Test5fdsagdsafdsafadsdsfasadf",
-            ].map((item) => (
-              <div className="p-[10px] bg-[#2E2E2E] rounded-[8px]">{item}</div>
-            ))}
-          </div>
-          {/* Button */}
-          <div className="mt-[20px]">
-            <CTALink
-              isExternalLink={true}
-              text="VIEW PROJECT LOOKBOOKS"
-              href="https://www.cucai.ca/"
-            />
-          </div>
+          <CarouselCard></CarouselCard>
         </div>
       </ContentContainer>
 
@@ -262,168 +212,15 @@ export default function Home() {
             </p>
           </div>
         </div>
-
-        {/*Hover effect for the widget that brings up a smaller see more button that brings the user to the link */}
-
-        {/*
-
-          <div className="flex w-[100%] gap-[37px]">
-          <div className="group h-[180px] w-[100%]">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] [backface-visibility:hidden] hover:delay-300 leaidng-4">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.yellowCard} h-full w-full rounded-xl object-cover font-family: Kontrapunkt; flex flex-col justify-center items-start pl-[50px] leading-[49px] `}>
-                <p className="lg:text-[65px] md:text-[45px]">230+</p>
-                <p className="lg:text-[25px] md:text-[18px]">Software Developers</p>
-                </div>
-                </div>
-                <div className={`${styles.yellowCard} absolute inset-0 h-ful w-full rounded-x px-12 text-center rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]`}>
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">Apply By September 17th</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="group h-[180px] w-[560px] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.redCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">200+</p>
-                <p className="lg:text-[25px] md:text-[18px] ">AI papers & Projects</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-            */}
-
-        {/*
-
-        
-
-
-          <div className="flex w-[100%] gap-[37px]">
-          <div className="group h-[180px] w-[560px] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.blueCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">320+</p>
-                <p className="lg:text-[25px] md:text-[18px] ">Delegates at CUCAI</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="group h-[180px] w-[560px] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.yellowCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">25+</p>
-                <p className="lg:text-[25px] md:text-[18px] ">Industry Clients</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="group h-[180px] w-[560px] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.blueCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[175px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">45</p>
-                <p className="lg:text-[25px] md:text-[18px] ">Tech Articles</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-       
-
-        <div className="flex w-[100%] gap-[37px]">
-        <div className="group h-[180px] w-[100%] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.redCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[50px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">35</p>
-                <p className="lg:text-[25px] md:text-[18px] ">Projects in 2023</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">From Diabetic Risk Modelling to Cancer Prediction, QMIND has done it all!</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="group h-[180px] w-[100%] ">
-              <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute inset-0"> 
-                <div className={`${styles.yellowCard} h-full w-full rounded-xl object-cover shadow-xl shadow-black/40 pl-[50px]`}>
-                <p className="lg:text-[65px] md:text-[45px]">325+</p>
-                <p className="lg:text-[25px] md:text-[18px] ">Hours Read on Medium</p>
-                </div>
-                </div>
-                <div className="absolute inset-0 h-ful w-full rounded-xl bg-black/40 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                  <div className="flex min-h-full flex-col items-center justify-center">
-                    <h1 className="text-3xl font-bold">Students</h1>
-                    <p className="text-lg">A lot of people</p>
-                    <p className="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere eaque fuga molestiae.</p>
-                    <button className="mt-2 rounded-md bg-neutral-800 py-1 px-1 text-sm hover:bg-neutral-900">See More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-          */}
       </ContentContainer>
 
       {/* Testimonials */}
-      <div className="flex flex-col gap-6 text-center relative !overflow-hidden">
-        <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
-          <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
-            Our Members Love QMIND
-          </h2>
-          <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
-            Read What They Have To Say!
-          </h3>
-        </div>
+      <div className="gap-7 flex flex-col text-center relative !overflow-hidden">
+        <Title
+          title="Our Members Love QMIND"
+          subtitle="Read What They Have To Say!"
+        ></Title>
+
         <div className="flex flex-col gap-[24px] w-full">
           <CardSlider cards={TESTIMONIALS} slideLeft={true} />
           <CardSlider cards={TESTIMONIALS} slideLeft={false} />
@@ -432,7 +229,7 @@ export default function Home() {
 
       {/* Sliding Logos Animation */}
       <ContentContainer>
-        <div className="flex flex-col gap-6 text-center relative !overflow-hidden">
+        <div className="flex flex-col text-center relative !overflow-hidden">
           <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
             <p>
               QMIND ALUMNI HAVE WORKED AT INNOVATIVE COMPANIES ACROSS THE WORLD
@@ -447,14 +244,10 @@ export default function Home() {
       {/* National Conference */}
       <ContentContainer className="text-center flex flex-col justify-center ">
         <div className="flex flex-col gap-4 text-center relative !overflow-hidden">
-          <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2">
-            <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
-              Our National Conference
-            </h2>
-            <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
-              CUCAI 2023 had 320+ attendees...
-            </h3>
-          </div>
+          <Title
+            title="Our National Conference"
+            subtitle="CUCAI 2023 had 320+ attendees..."
+          ></Title>
         </div>
         <div className="h-[240px] md:h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto]">
           <Image
@@ -464,12 +257,12 @@ export default function Home() {
           />
         </div>
         <div className="flex justify-center items-center flex-col xxs:flex-row gap-[15px] xxs:gap-[25px] w-auto xxs:w-[100%]">
-          <CTALink
+          <BtnLink
             isExternalLink={true}
             text="LEARN MORE"
             href="https://www.cucai.ca/"
           />
-          <CTALink
+          <BtnLink
             isExternalLink={true}
             text="PROCEEDINGS"
             href="https://qmind.ca/CUCAI_Proceedings_2023.pdf"
@@ -480,14 +273,10 @@ export default function Home() {
       {/* National Conference */}
       <ContentContainer className="text-center flex flex-col justify-center ">
         <div className="flex flex-col gap-4 text-center relative !overflow-hidden">
-          <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2">
-            <h2 className="h2-styles  text-[25px] md:text-[45px] lg:text-[45px] font-gothic">
-              Our Product Incubator
-            </h2>
-            <h3 className="h3-styles text-[15px] lg:text-[20px] font-bold font-gothic">
-              InQUbate Was partnered with AWS Activate [‘22-’23]
-            </h3>
-          </div>
+          <Title
+            title="Our Product Incubator"
+            subtitle="InQUbate Was partnered with AWS Activate [‘22-’23]"
+          ></Title>
         </div>
         <div className="h-[240px] md:h-[290px] lg:h-[400px] 2xl:h-[437px] w-[auto]">
           <Image
@@ -497,7 +286,7 @@ export default function Home() {
           ></Image>
         </div>
         <div className="flex justify-center w-[100%]">
-          <CTALink
+          <BtnLink
             isExternalLink={true}
             className=""
             text="LEARN MORE"
@@ -507,17 +296,17 @@ export default function Home() {
       </ContentContainer>
 
       {/* Alumni Placements */}
-      <ContentContainer className="">
+      {/* <ContentContainer className="">
         <Image src={alumniImg ?? ""} alt="Alumini Placements"></Image>
         <div className="flex justify-center w-[100%]">
-          <CTALink
+          <BtnLink
             isExternalLink={true}
             className=""
             text="WORK WITH US"
             href="mailto:partnerships@qmind.ca"
           />
         </div>
-      </ContentContainer>
+      </ContentContainer> */}
     </main>
   );
 }
