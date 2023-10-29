@@ -105,7 +105,7 @@ function MemberCard({
             onClick={onClick}
             className={`${className} 
             relative z-0 h-[190px] min-w-[120px] w-[120px] md:h-[220px] md:w-[140px] md:scale-[105%] md:hover:scale-[115%] hover:drop-shadow-2xl hover:z-10 hover:bg-[#FCFCFC] transition-transform rounded-[9px]
-            px-[10px] py-[10px] ${activeCard? 'bg-gradient-to-b from-[#f0b542] to-[#f0b54280]':'bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]'}`}
+            px-[10px] py-[10px]  ${activeCard? 'bg-gradient-to-b from-[#f0b542] to-[#E7E7E7]':'bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]'} `}
           >
             <div
               className={`absolute left-[50%] ml-[-17px] h-[3px] w-[34px] bg-[#707070] rounded-[33px]`}
@@ -123,7 +123,7 @@ function MemberCard({
                   <div className="text-[12px] w-[90%] font-sofia text-black text-center uppercase ">
                     {name}
                   </div>
-                  <div className="text-[11px] mt-[10px] w-[90%] font-sofia text-black font-bold text-center">
+                  <div className="text-[11px] mt-[5px] w-[90%] font-sofia text-black font-bold text-center">
                     {position}
                   </div>
                 </>
@@ -132,7 +132,7 @@ function MemberCard({
                   <div className=" text-[12px] w-[90%] font-sofia text-black text-center uppercase">
                     {name}
                   </div>
-                  <div className=" text-[12px] mt-[10px] w-[90%] font-sofia text-black font-bold text-center">
+                  <div className=" text-[12px] mt-[5px] w-[90%] font-sofia text-black font-bold text-center">
                     {position}
                   </div>
                 </>
@@ -150,47 +150,5 @@ function MemberCard({
     </>
   );
 }
-
-// function MemberCard({ company, headshot, onClick, name, position, spotlight, className, style }: any) {
-//   return (
-//     <>
-//     {spotlight ? (
-//       <>
-//         <div style={style} onClick={onClick} className={`${className}
-//             h-[400px] w-[275px] rounded-[23px] px-[10px] py-[15px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]`
-//         }>
-//             <div className={`scale-[175%] h-[3px] w-[33px] bg-[#707070] rounded-[33px]`}></div>
-//             <img src={company} alt="company" className="mb-[-40px] h-[40px]"/>
-//             <img src={headshot} alt={name} className="w-[70%]"/>
-//             <div className="flex flex-col items-center justify-center">
-//               <p className="mt-[5px] font-kontrapunkt text-black text-[20px] text-center uppercase">{name}</p>
-//               <p className="font-kontrapunkt text-black text-[20px] font-bold text-center">{position}</p>
-//             </div>
-//             <Image src={barcode} alt="" className={`w-[60%]`}/>
-//         </div>
-//       </>
-//     ) : (
-//       <>
-//         <div style={style} onClick={onClick} className={`${className}
-//             scale-[105%] z-0 hover:scale-[115%] hover:drop-shadow-2xl hover:z-10 hover:bg-[#FCFCFC] transition-transform h-[210px] w-[140px] rounded-[9px]
-//             px-[10px] py-[10px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]`
-//         }>
-//           <div className={`h-[3px] w-[33px] bg-[#707070] rounded-[33px]`}></div>
-//           <div className="h-[10%]">
-//             <img src={company} alt="company" className="mb-[-15px] h-[25px]"/>
-//           </div>
-//           <div className="flex flex-col items-center">
-//             <img src={headshot} alt={name} className="w-[55%]"/>
-//             <Textfit mode="single" max={11} className="w-[90%] mt-[5px] font-kontrapunkt text-black text-center uppercase">{name}</Textfit>
-//             {/* <p className="mt-[5px] whitespace-nowrap font-kontrapunkt text-black text-[9px] text-center uppercase">{name}</p> */}
-//           </div>
-//           <Textfit max={11} min={9} mode="multi" className="w-[95%] font-sofia text-black font-bold text-center">{position}</Textfit>
-//           <Image src={barcode} alt="" className={`w-[60%]`}/>
-//         </div>
-//       </>
-//     )}
-//     </>
-//   );
-// }
 
 export default MemberCard;

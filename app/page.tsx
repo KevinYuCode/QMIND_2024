@@ -213,7 +213,7 @@ export default function Home() {
             headshot={TESTIMONIALS[spotlight].headshot}
           ></MemberCard>
 
-          <div className="member-spotlight flex flex-col justify-center bg-[#2E2E2E] w-[100%] lg:w-[685px] rounded-[16px] md:rounded-tr-[16px] md:rounded-br-[16px] py-[20px] md:py-[30px] px-[20px] md:px-0 md:pr-[32px] md:pl-[60px] mt-[-70px] md:mt-0 md:ml-[-30px]">
+          <div className="member-spotlight flex flex-col justify-center bg-[#2E2E2E] min-h-[320px] lg:min-h-[auto] w-[100%] lg:w-[685px] rounded-[16px] md:rounded-tr-[16px] md:rounded-br-[16px] py-[20px] md:py-[30px] px-[20px] md:px-0 md:pr-[32px] md:pl-[60px] mt-[-70px] md:mt-0 md:ml-[-30px]">
             <div className="flex flex-row flex-start items-center text-[#F7F7F7]">
               <div className={`!font-kontrapunkt font-bold text-[24px]`}>
                 {TESTIMONIALS[spotlight].name}
@@ -239,7 +239,9 @@ export default function Home() {
                 <></>
               )}
 
-              <div className="hidden md:block !font-kontrapunkt opacity-50 text-[20px] md:text-[24px] ml-auto">{`Computer Science '25`}</div>
+              <div className="hidden md:block !font-kontrapunkt opacity-50 text-[20px] md:text-[24px] ml-auto">
+                {TESTIMONIALS[spotlight].education}
+              </div>
             </div>
             <div className="!font-kontrapunkt text-[24px] text-left w-[100%] mt-[-8px]">
               {/* <ReactFitty maxSize={24} minSize={14}> */}

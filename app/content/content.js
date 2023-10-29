@@ -210,10 +210,12 @@ export const TESTIMONIALS = [
     companyLogo: { img: { src: MICROSOFT.src, style: "h-[20px] md:h-[20px]" } },
     company: "Microsoft",
     angle: `rotate-[0deg] md:rotate-[3deg]`,
+    education: `Commerce '26`
   },
   {
     name: "Rebab Azeem",
     headshot: MEMBER_REBAB.src,
+    linkedin: "https://www.linkedin.com/in/rabab-azeem/",
     team: "design",
     message:
       "Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
@@ -223,6 +225,7 @@ export const TESTIMONIALS = [
     },
     company: "Amazon",
     angle: `rotate-[0deg] md:rotate-[-4deg]`,
+    education: `Applied Sciences '25`
   },
   // {
   //   name: "Luke Major",
@@ -242,6 +245,7 @@ export const TESTIMONIALS = [
   {
     name: "Kevin Yu",
     headshot: MEMBER_KEVIN.src,
+    linkedin: "https://kevinyu.ca/",
     team: "operations",
     message:
       "QMIND provided me the opportunity to learn and develop my technical and interpersonal skills which allowed me to become a better leader and engineer throughout my undergraduate journey.",
@@ -254,6 +258,7 @@ export const TESTIMONIALS = [
     },
     company: "PricewaterhouseCoopers",
     angle: `rotate-[0deg] md:rotate-[3deg]`,
+    education:`Applied Sciences '25`
   },
   {
     name: "Marcelo Chaman Mallqui",
@@ -268,6 +273,7 @@ export const TESTIMONIALS = [
     },
     company: "RippleX Fellowship",
     angle: `rotate-[0deg] md:rotate-[-2deg]`,
+    education:`Commerce '26`
   },
   // {
   //   name: "Ramy Mahfouz",
@@ -310,6 +316,7 @@ export const TESTIMONIALS = [
     companyLogo: { img: { src: UBER_BLACK.src, style: "mt-[-5px] h-[30px]" } },
     company: "Uber",
     angle: `rotate-[0deg] md:rotate-[-4deg]`,
+    education:`Computer Science '24`
   },
   // {
   //   name: "Joshua Geddes",
@@ -355,6 +362,7 @@ export const TESTIMONIALS = [
     },
     company: "BMO",
     angle: `rotate-[0deg] md:rotate-[-2deg]`,
+    education: "Computer Science '23"
   },
   {
     name: "George Trieu",
@@ -369,11 +377,12 @@ export const TESTIMONIALS = [
     },
     company: "Amazon",
     angle: `rotate-[0deg] md:rotate-[4deg]`,
+    education:"Applied Sciences '23"
   },
   {
     name: "Ethan Callanan",
     headshot: MEMBER_ETHAN.src,
-    linkedin: "https://www.linkedin.com/in/jordancapello/",
+    linkedin: "https://www.linkedin.com/in/ethan-callanan/",
     team: "design",
     message:
       "QMIND was easily the most valuable experience of my undergraduate career. Leading projects pushed me to learn far beyond what was taught in courses, and gave me invaluable experience in overcoming the challenges of building real world applications.",
@@ -383,6 +392,7 @@ export const TESTIMONIALS = [
     },
     company: "Ingenuity Labs",
     angle: `rotate-[0deg] md:rotate-[-2deg]`,
+    education: `Computer Science '23`
   },
   // {
   //   name: "Jordan Capello",
@@ -407,6 +417,7 @@ export const TESTIMONIALS = [
     companyLogo: { img: { src: EY_LOGO.src, style: "mt-[-5px] h-[35px]" } },
     company: "EY",
     angle: `rotate-[0deg] md:rotate-[2deg]`,
+    education: `Commerce '22`
   },
   {
     name: "Rodrigo Del Aguila",
@@ -419,6 +430,7 @@ export const TESTIMONIALS = [
     companyLogo: { img: { src: TD.src, style: "mt-[-5px] h-[25px]" } },
     company: "TD",
     angle: `rotate-[0deg] md:rotate-[1deg]`,
+    education: `Applied Science '25`
   },
   {
     name: "LEVI Stringer",
@@ -434,6 +446,7 @@ export const TESTIMONIALS = [
     },
     company: "Katarok",
     angle: `rotate-[0deg] md:rotate-[3deg]`,
+    education:`Applied Science '20`
   },
   {
     name: "Sam Lin",
@@ -449,6 +462,7 @@ export const TESTIMONIALS = [
     },
     company: "Cansbridge Fellowship",
     angle: `rotate-[0deg] md:rotate-[3deg]`,
+    education: `Ivy Business '25`
   },
 ];
 
