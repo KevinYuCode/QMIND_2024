@@ -95,39 +95,38 @@ import EVENT_CONNECT3 from "../../assets/Industry/connect_3.jpg";
 const EVENTS_HALF = [
   {
     fullImage: EVENT_SHOPIFY1,
-    imgDescription: "Kaz Nejatian, Shopify COO & VP Product (160 attendees)",
+    imgDescription: "Kaz Nejatian, Shopify COO & VP Product – 160 Attendees",
   },
   {
     fullImage: EVENT_SHOPIFY2,
-    imgDescription: "Kaz Nejatian, Shopify COO & VP Product (160 attendees)",
+    imgDescription: "Kaz Nejatian, Shopify COO & VP Product – 160 Attendees",
   },
   {
     fullImage: EVENT_SHOPIFY3,
-    imgDescription: "Kaz Nejatian, Shopify COO & VP Product (160 attendees)",
+    imgDescription: "Kaz Nejatian, Shopify COO & VP Product – 160 Attendees",
   },
   {
     fullImage: EVENT_SMITH1,
-    imgDescription: "Smith Digital PM Master Program x Inqubate panel, product leaders (80 attendees)",
+    imgDescription:
+      "inQUbate's Product Leaders Panel with Smith Digital Product Management Master Program – 80 Attendees",
   },
   {
     fullImage: EVENT_SMITH2,
-    imgDescription: "Smith Digital PM Master Program x Inqubate panel, product leaders (80 attendees)",
+    imgDescription:
+      "inQUbate's Product Leaders Panel with Smith Digital Product Management Master Program – 80 Attendees",
   },
   {
     fullImage: EVENT_SMITH3,
-    imgDescription: "Smith Digital PM Master Program x Inqubate panel, product leaders (80 attendees)",
+    imgDescription:
+      "inQUbate's Product Leaders Panel with Smith Digital Product Management Master Program – 80 Attendees",
   },
   {
     fullImage: EVENT_CONNECT1,
-    imgDescription: "Qmind Connect (80 attendees)",
+    imgDescription: "QMIND Connect (Monthly Townhall) – 80 attendees",
   },
   {
     fullImage: EVENT_CONNECT2,
-    imgDescription: "Qmind Connect (80 attendees)",
-  },
-  {
-    fullImage: EVENT_CONNECT3,
-    imgDescription: "Qmind Connect (80 attendees)",
+    imgDescription: "QMIND Connect (Monthly Townhall) – 80 attendees",
   },
 ];
 
@@ -210,7 +209,7 @@ export const TESTIMONIALS = [
     companyLogo: { img: { src: MICROSOFT.src, style: "h-[20px] md:h-[20px]" } },
     company: "Microsoft",
     angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Commerce '26`
+    education: `Commerce '26`,
   },
   {
     name: "Rebab Azeem",
@@ -225,7 +224,7 @@ export const TESTIMONIALS = [
     },
     company: "Amazon",
     angle: `rotate-[0deg] md:rotate-[-4deg]`,
-    education: `Applied Sciences '25`
+    education: `Applied Sciences '25`,
   },
   // {
   //   name: "Luke Major",
@@ -258,7 +257,7 @@ export const TESTIMONIALS = [
     },
     company: "PricewaterhouseCoopers",
     angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education:`Applied Sciences '25`
+    education: `Applied Sciences '25`,
   },
   {
     name: "Marcelo Chaman Mallqui",
@@ -273,7 +272,7 @@ export const TESTIMONIALS = [
     },
     company: "RippleX Fellowship",
     angle: `rotate-[0deg] md:rotate-[-2deg]`,
-    education:`Commerce '26`
+    education: `Commerce '26`,
   },
   // {
   //   name: "Ramy Mahfouz",
@@ -311,12 +310,12 @@ export const TESTIMONIALS = [
     linkedin: "https://www.linkedin.com/in/olivia-chen-xu/",
     team: "development",
     message:
-      "QMIND is a place where you can expect to be intellectually stimulated every day.",
+      "QMIND is a place where you can expect to be intellectually stimulated every day. Some of the best opportunities I have been given in my undergrad were snowballed from QMIND. This is such a great place to meet amazing people, grow my leadership skills and learn a ton about AI!",
     position: "Software Engineer",
     companyLogo: { img: { src: UBER_BLACK.src, style: "mt-[-5px] h-[30px]" } },
     company: "Uber",
     angle: `rotate-[0deg] md:rotate-[-4deg]`,
-    education:`Computer Science '24`
+    education: `Computer Science '24`,
   },
   // {
   //   name: "Joshua Geddes",
@@ -362,7 +361,7 @@ export const TESTIMONIALS = [
     },
     company: "BMO",
     angle: `rotate-[0deg] md:rotate-[-2deg]`,
-    education: "Computer Science '23"
+    education: "Computer Science '23",
   },
   {
     name: "George Trieu",
@@ -377,7 +376,7 @@ export const TESTIMONIALS = [
     },
     company: "Amazon",
     angle: `rotate-[0deg] md:rotate-[4deg]`,
-    education:"Applied Sciences '23"
+    education: "Applied Sciences '23",
   },
   {
     name: "Ethan Callanan",
@@ -392,7 +391,7 @@ export const TESTIMONIALS = [
     },
     company: "Ingenuity Labs",
     angle: `rotate-[0deg] md:rotate-[-2deg]`,
-    education: `Computer Science '23`
+    education: `Computer Science '23`,
   },
   // {
   //   name: "Jordan Capello",
@@ -417,7 +416,7 @@ export const TESTIMONIALS = [
     companyLogo: { img: { src: EY_LOGO.src, style: "mt-[-5px] h-[35px]" } },
     company: "EY",
     angle: `rotate-[0deg] md:rotate-[2deg]`,
-    education: `Commerce '22`
+    education: `Commerce '22`,
   },
   {
     name: "Rodrigo Del Aguila",
@@ -430,7 +429,7 @@ export const TESTIMONIALS = [
     companyLogo: { img: { src: TD.src, style: "mt-[-5px] h-[25px]" } },
     company: "TD",
     angle: `rotate-[0deg] md:rotate-[1deg]`,
-    education: `Applied Science '25`
+    education: `Applied Science '25`,
   },
   {
     name: "LEVI Stringer",
@@ -446,7 +445,7 @@ export const TESTIMONIALS = [
     },
     company: "Katarok",
     angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education:`Applied Science '20`
+    education: `Applied Science '20`,
   },
   {
     name: "Sam Lin",
@@ -462,7 +461,7 @@ export const TESTIMONIALS = [
     },
     company: "Cansbridge Fellowship",
     angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Ivy Business '25`
+    education: `Ivy Business '25`,
   },
 ];
 
@@ -501,46 +500,42 @@ export const DESIGN_PROJECTS = [
   },
 ];
 
-
 export const DATA = [
   {
     id: 1,
-    main_text:"230+",
-    subtitle: "Software Developers"
+    main_text: "230+",
+    subtitle: "Software Developers",
   },
   {
     id: 2,
-    main_text:"200+",
-    subtitle: "AI papers & Projects"
+    main_text: "200+",
+    subtitle: "AI papers & Projects",
   },
- 
+
   {
     id: 3,
-    main_text:"320+",
-    subtitle: "Delegates at CUCAI"
+    main_text: "320+",
+    subtitle: "Delegates at CUCAI",
   },
-  
+
   {
     id: 4,
-    main_text:"25+",
-    subtitle: "Industry Clients"
+    main_text: "25+",
+    subtitle: "Industry Clients",
   },
   {
     id: 5,
-    main_text:"45",
-    subtitle: "Tech Articles"
+    main_text: "45",
+    subtitle: "Tech Articles",
   },
   {
     id: 6,
-    main_text:"35",
-    subtitle: "Projects in 2023"
+    main_text: "35",
+    subtitle: "Projects in 2023",
   },
   {
     id: 7,
-    main_text:"325+",
-    subtitle: "Hours Read on Medium"
+    main_text: "325+",
+    subtitle: "Hours Read on Medium",
   },
-  
-
-]
-
+];

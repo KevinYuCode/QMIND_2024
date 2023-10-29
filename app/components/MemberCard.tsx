@@ -47,7 +47,7 @@ function MemberCard({
   spotlight,
   className,
   style,
-  activeCard
+  activeCard,
 }: any) {
   const isMobile = useMediaQuery({
     query: "(min-width:600px)",
@@ -105,7 +105,11 @@ function MemberCard({
             onClick={onClick}
             className={`${className} 
             relative z-0 h-[190px] min-w-[120px] w-[120px] md:h-[220px] md:w-[140px] md:scale-[105%] md:hover:scale-[115%] hover:drop-shadow-2xl hover:z-10 hover:bg-[#FCFCFC] transition-transform rounded-[9px]
-            px-[10px] py-[10px]  ${activeCard? 'bg-gradient-to-b from-[#f0b542] to-[#E7E7E7]':'bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]'} `}
+            px-[10px] py-[10px]  ${
+              activeCard
+                ? "bg-gradient-to-b from-[#f0b542] to-[#E7E7E7]"
+                : "bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]"
+            } `}
           >
             <div
               className={`absolute left-[50%] ml-[-17px] h-[3px] w-[34px] bg-[#707070] rounded-[33px]`}
@@ -117,7 +121,7 @@ function MemberCard({
             <div className="absolute left-0 top-[30px] md:top-[45px] flex flex-col items-center">
               <img src={headshot} alt={name} className="w-[50%]" />
             </div>
-            <div className="absolute w-full left-0 top-[110px] md:top-[140px]  flex flex-col items-center leading-[10px]">
+            <div className="absolute w-full left-0 top-[110px] md:top-[140px] flex flex-col items-center leading-[10px]">
               {isMobile ? (
                 <>
                   <div className="text-[12px] w-[90%] font-sofia text-black text-center uppercase ">

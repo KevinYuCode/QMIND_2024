@@ -42,7 +42,7 @@ export default function Home() {
   const [conferenceImg, setConferenceImg]: any = useState(null);
   const [awsImg, setAwsImg]: any = useState(null);
 
-  const [spotlight, setSpotlight] = useState(8);
+  const [spotlight, setSpotlight] = useState(4);
 
   const isMobile = useMediaQuery({
     query: "(min-width:500px)",
@@ -148,26 +148,29 @@ export default function Home() {
       </ContentContainer>
 
       {/* What is QMIND? */}
-      <ContentContainer className="flex flex-col items-center">
+      <ContentContainer className="flex flex-col items-center gap-4">
         <Title title="What is QMIND?">
-          <Head3 className="text-[16px] md:text-[22px] lg:px-[40px] text-[#d0d0d0] italic">
+          <Head3 className="text-[16px] md:text-[22px] lg:px-[40px] text-[#d0d0d0] !font-normal">
             <Text className="mt-[20px] leading-[30px] lg:leading-[40px]">
-              QMIND is a student run club at Queen’s University that fosters
-              students passionate about changing the world using AI and data
-              science. We have over 240 members each year that work on AI
-              research, AI ethics and policy, design team projects, consulting
-              projects, CUCAI, and more!"
+              QMIND is Canada's largest organization on AI. Each year we lead
+              250+ students on 30+ teams of 5 students through AI Research, AI
+              Ethics papers, Disruptive Technology Projects, and Consulting
+              projects, solving real world problems for industry clients. We
+              foster students passionate about changing the world using AI and
+              data science. We host CUCAI, Canada's largest AI conference, with
+              320 delegates and industry leading companies. We incubate startups
+              from ground up. We disrupt & innovate.
             </Text>
           </Head3>
         </Title>
         {/* View Project Lookbooks */}
-        <div className="mt-[30px]">
+        {/* <div>
           <BtnLink
             isExternalLink={true}
             text="VIEW PROJECT LOOKBOOKS"
             href="https://www.cucai.ca/"
           />
-        </div>
+        </div> */}
       </ContentContainer>
 
       {/* Design Team Projects */}
@@ -219,9 +222,9 @@ export default function Home() {
             headshot={TESTIMONIALS[spotlight].headshot}
           ></MemberCard>
 
-          <div className="member-spotlight flex flex-col justify-center bg-[#2E2E2E] min-h-[320px] lg:min-h-[auto] w-[100%] lg:w-[685px] rounded-[16px] md:rounded-tr-[16px] md:rounded-br-[16px] py-[20px] md:py-[30px] px-[20px] md:px-0 md:pr-[32px] md:pl-[60px] mt-[-70px] md:mt-0 md:ml-[-30px]">
-            <div className="flex flex-row flex-start items-center text-[#F7F7F7]">
-              <div className={`!font-kontrapunkt font-bold text-[24px]`}>
+          <div className="member-spotlight flex flex-col justify-center bg-[#2E2E2E] md:min-h-[320px] lg:min-h-[auto] w-[100%] lg:w-[685px] rounded-[16px] md:rounded-tr-[16px] md:rounded-br-[16px] py-[20px] md:py-[30px] px-[20px] md:px-0 md:pr-[32px] md:pl-[60px] mt-[-70px] md:mt-0 md:ml-[-30px]">
+            <div className="flex flex-row flex-start items-center text-[#F7F7F7] ">
+              <div className={`!font-kontrapunkt font-bold text-[24px]  `}>
                 {TESTIMONIALS[spotlight].name}
               </div>
               {TESTIMONIALS[spotlight].linkedin ? (
@@ -235,7 +238,7 @@ export default function Home() {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    className="cursor-pointer ml-[10px]"
+                    className="cursor-pointer ml-[10px] cursor-pointer"
                     viewBox="0 0 16 16"
                   >
                     <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -245,22 +248,22 @@ export default function Home() {
                 <></>
               )}
 
-              <div className="hidden md:block !font-kontrapunkt opacity-50 text-[20px] md:text-[24px] ml-auto">
+              <div className="hidden md:block !font-kontrapunkt opacity-50 text-[20px] md:text-[24px] ml-auto ">
                 {TESTIMONIALS[spotlight].education}
               </div>
             </div>
-            <div className="!font-kontrapunkt text-[24px] text-left w-[100%] mt-[-8px]">
+            <div className="!font-kontrapunkt text-[24px] text-left w-[100%] mt-[-8px] ">
               {/* <ReactFitty maxSize={24} minSize={14}> */}
               {TESTIMONIALS[spotlight].position} @{" "}
               {TESTIMONIALS[spotlight].company}
               {/* </ReactFitty> */}
             </div>
-            <div className="font-sofia font-semibold text-[16px] md:text-[18px] text-left mt-[16px]">
+            <div className="font-sofia font-normal text-[16px] md:text-[18px] text-left mt-[16px] ">
               {TESTIMONIALS[spotlight].message}
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-start md:justify-center mx-[20px] md:mx-0 overflow-x-scroll md:overflow-visible w-[100%] md:flex-wrap lg:max-w-[1000px] items-center gap-[5px] md:gap-[15px]">
+        <div className="flex flex-row justify-start md:justify-center mx-[20px] md:mx-0 overflow-x-scroll md:overflow-visible w-[100dvw] md:w-[100%] md:flex-wrap lg:max-w-[1000px] items-center gap-[5px] md:gap-[15px] px-8 appearance-none	md:px-0 ">
           {TESTIMONIALS.map((card, key) => (
             <MemberCard
               className={`${card.angle} cursor-pointer`}

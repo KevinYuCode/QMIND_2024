@@ -113,7 +113,7 @@ function Navbar() {
             </Link>
             <Link
               onClick={() => closeNav()}
-              href="https://discord.gg/3FHfAs87"
+              href="https://discord.gg/jw94EEGyJR"
               target="_blank"
             >
               DISCORD

@@ -40,11 +40,11 @@ function HeadlineCard({ project }: any) {
           animate={controls}
           className={`flex flex-col items-center ${styles.img_container}`}
         >
-          <div className="overflow-hidden h-[300px] w-[100%] lg:w-[510px] relative object-cover">
+          <div className="overflow-hidden h-[200px] md:h-[300px] w-[100%] lg:w-[510px] relative object-cover">
             <Image
               src={selectedProject.image}
               alt="project info"
-              className="rounded-[10px]"
+              className="rounded-[10px] md:aspect-none "
               fill={true}
             ></Image>
           </div>
@@ -55,12 +55,12 @@ function HeadlineCard({ project }: any) {
           <div className="flex flex-col justify-between items-center lg:items-start gap-[18px]">
             <div className="flex flex-col items-center lg:items-start gap-[18px]">
               <Head3
-                className={`${roboto_slab.className} !font-normal text-center lg:text-left`}
+                className={`!font-kontrapunkt !font-normal text-center lg:text-left`}
               >
                 {selectedProject.title}
               </Head3>
 
-              <Text className="text-center lg:text-left overflow-ellipsis max-h-[160px]">
+              <Text className="text-center lg:text-left overflow-ellipsis max-h-[160px] !font-normal">
                 {selectedProject.description}{" "}
               </Text>
             </div>
@@ -68,9 +68,9 @@ function HeadlineCard({ project }: any) {
             <Link
               href={selectedProject.href}
               target="_blank"
-              className="text-[#387BFF] underline text-[20px]"
+              className="text-[#387BFF] underline text-[20px] cursor-pointer hover:opacity-60"
             >
-              View the research project here!
+              View the research paper here!
             </Link>
           </div>
         </motion.div>

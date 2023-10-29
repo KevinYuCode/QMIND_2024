@@ -42,7 +42,7 @@ export default function RootLayout({
             kontrapunkt.variable
           } ${"w-[100dvw] h-[100dvh]"} ${styles.mainBgColour}`}
         >
-          <div className="flex flex-col w-[100dvw] h-[100dvh] overflow-scroll">
+          <div className="flex flex-col w-[100dvw] h-[100dvh] overflow-y-scroll overflow-x-hidden">
             <Navbar />
             <div className="pt-[72px] md:pt-[100px]">{children}</div>
             <Footer />

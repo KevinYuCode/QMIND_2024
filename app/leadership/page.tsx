@@ -195,9 +195,10 @@ export default function Leadership() {
               Leadership
             </h1>
             <div className="text-xl flex flex-col gap-4">
-              <p
-                className={`${sofia_sans.className}`}
-              >{`Our leadership team consists of the brightest minds from Queen's University, from all faculties and years.`}</p>
+              <p className={`${sofia_sans.className}`}>
+                Our leadership team consists of the brightest minds from Queen's
+                University, from all faculties and years.
+              </p>
               <p className={`${sofia_sans.className}`}>
                 Below you can see our team and click to connect with them.
               </p>
@@ -217,19 +218,16 @@ export default function Leadership() {
               <h1 className="font-gothic font-bold text-[30px] md:text-[40px]">
                 {section.title}
               </h1>
-              <div className="flex flex-row flex-wrap justify-center gap-4 md:gap-8 w-[100%]  leading-none">
+              <div className="flex flex-row flex-wrap justify-center gap-4 md:gap-8 w-[100%] leading-none">
                 {section.cards.map((card, index) => {
                   return (
-
-
-
-
-                    <Link href={card.social}
+                    <Link
+                      href={card.social}
                       key={index}
                       className={`${card.class} w-[150px] md:w-[225px] lg:w-[275px] text-center flex flex-col gap-5 justify-center items-center rounded-[16px] p-[12px] md:p-[20px] md:rounded-[24px]  bg-[#2E2E2E]`}
                     >
                       <div
-                        className={`${card.class}-img rounded-[5px] md:rounded-[10px] w-full `}
+                        className={`${card.class}-img rounded-[5px] md:rounded-[10px] w-full`}
                       >
                         <Image
                           src={card.img}
@@ -238,16 +236,11 @@ export default function Leadership() {
                         />
                       </div>
                       <div className="flex flex-col gap-2">
-
-                        
-                        
-                        
-                        <p 
-                          className={`${sofia_sans.className} font-semibold font-gothic tracking-tight text-[16px] md:text-[20px] hover:cursor-pointer`}
+                        <p
+                          className={`${sofia_sans.className} font-semibold font-gothic tracking-tight text-[16px] md:text-[20px]`}
                         >
                           {card.name}
                         </p>
-
 
                         <p
                           className={`${sofia_sans.className} font-light font-gothic text-[12px] xl:text-[16px]`}
