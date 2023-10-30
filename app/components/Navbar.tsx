@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/navbar.module.scss";
 import QMIND_NAV_LOGO from "../../assets/qmind_nav_logo.svg";
 import ContentContainer from "./ContentContainer";
@@ -9,7 +9,7 @@ import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-function Navbar({ navOn = false, setNavOn }: any) {
+function Navbar() {
   const closeNav = () => {
     setTimeout(() => {
       setNavOn(false);
@@ -17,6 +17,7 @@ function Navbar({ navOn = false, setNavOn }: any) {
   };
 
   const pathname = usePathname();
+  const [navOn, setNavOn] = useState(false);
 
   return (
     <nav

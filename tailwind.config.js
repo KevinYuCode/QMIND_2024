@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+
+  
+  
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    
   ],
   theme: {
     extend: {
@@ -15,6 +19,8 @@ module.exports = {
       fontFamily: {
         gothic: ["var(--font-trade-gothic)"],
         sofia: ["var(--font-sofia)"],
+        roboto_slab: ["var(--font-roboto-slab)"],
+        kontrapunkt: ["var(--font-kontrapunkt)"],
       },
       screens: {
         xxs: "340px",
@@ -40,5 +46,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+
+  plugins: [
+    
+  
+  ],
+ 
 };

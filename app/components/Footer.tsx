@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import PILLARS from "../../assets/colourful-pillar.svg";
 import ContentContainer from "./ContentContainer";
+import Image from "next/image";
 function Footer() {
   return (
     <div className="pb-[4rem]">
@@ -13,15 +14,26 @@ function Footer() {
             <Link href="/design">Design</Link>
             <Link href="/leadership">Leadership</Link>
             <Link href="/blog">Blog</Link>
-            <Link href="/our-story">Our Story</Link>
+            <Link
+              target="_none"
+              href="https://www.queensu.ca/alumni/supporting-queens/stories-of-impact/qmind"
+            >
+              Our Story
+            </Link>
+            <Link
+              target="_none"
+              href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiR5OHriJKCAxXspIkEHQR_B1wQwqsBegQICRAG&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU&opi=89978449"
+            >
+              Myspace
+            </Link>
           </div>
         </div>
-        <div className="hidden md:block self-end relative top-[70px] ">
-          {/* <img
-            className="max-w-[100%] min-w-[120px] h-[158px] object-contain h-auto"
-            src={PILLARS.src}
+        <div className="hidden md:block self-end relative top-[50px] h-[210px] overflow-y-hidden ">
+          <Image
+            className="object-contain relative bottom-[-5px]"
+            src={PILLARS}
             alt="Why do you care what this is?"
-          /> */}
+          />
         </div>
         <div className="flex flex-col text-right ">
           <h2 className="font-bold text-[20px] pb-[30px]">

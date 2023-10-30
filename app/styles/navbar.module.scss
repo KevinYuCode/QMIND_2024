@@ -27,7 +27,7 @@
   filter: drop-shadow(0 0 5px rgba(22, 22, 22, 1));
 }
 .navLinks a:hover {
-  background: linear-gradient(rgba(240, 181, 66, 1), rgba(240, 181, 66, 0.5));
+  background: linear-gradient(#f0b542, #f0b54280);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -35,7 +35,7 @@
 }
 
 .activePage {
-  background: linear-gradient(rgba(240, 181, 66, 1), rgba(240, 181, 66, 0.5));
+  background: linear-gradient(#f0b542, rgba(240, 181, 66, 0.5));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
