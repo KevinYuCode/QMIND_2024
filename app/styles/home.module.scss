@@ -6,6 +6,32 @@
 .aiImage {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
+.yellowBanner {
+  width: 100%;
+  padding: 3% 8%;
+  
+  border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(180deg, #F0B542 0%, rgba(240, 181, 66, 0.00) 100%);
+  
+}
+.yellowBannerImage {
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // align-items: flex-start;
+  display: grid;
+  @media only screen and (max-width: 770px) {
+    // display: flex;
+    padding: 3% 8%;
+    // justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    row-gap: 24px;
+    // align-self: stretch;
+    // flex-wrap: wrap;
+  }
+}
 .carousel_dots {
   content: "";
   display: block;
@@ -22,6 +48,7 @@
 .btnHover:hover {
   background: linear-gradient(to bottom, #5f91ff, #a4bffe);
 }
+
 
 .member-spotlight {
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
