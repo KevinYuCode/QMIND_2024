@@ -106,7 +106,7 @@ export default function Home() {
             </div>
 
             {/* Landing Page Buttons */}
-            <div className="flex flex-col justify-center md:justify-start items-center md:flex-row gap-[24px] justify-center md:justify-start">
+            <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-[24px]">
               <BtnLink
                 isExternalLink={true}
                 className="min-w-[200px] !text-[13px]"
@@ -194,7 +194,7 @@ export default function Home() {
       </div>
 
       {/* Our Members Love QMIND */}
-      <ContentContainer className="items-center gap-[50px] w-[100%]">
+      <ContentContainer className="items-center gap-[30px] md:gap-[10px] w-[100%]">
         <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
           <h2 className="font-bold text-[20px] md:text-[45px] lg:text-[45px] font-gothic">
             Our Members Love QMIND

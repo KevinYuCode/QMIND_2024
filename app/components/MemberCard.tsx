@@ -60,7 +60,7 @@ function MemberCard({
             style={style}
             onClick={onClick}
             className={`${className} 
-              mb-[60px] md:mb-0 mt-[50px] md:mt-0 scale-[100%] h-[400px] md:h-[440px] w-[275px] rounded-[23px] px-[10px] py-[15px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]
+              mb-[5px] md:mb-[60px] md:mb-0 mt-[20px] md:mt-[50px] md:mt-0 scale-[75%] h-[400px] md:h-[440px] w-[275px] rounded-[23px] px-[10px] py-[15px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]
             transition-transform md:scale-[100%] lg:hover:scale-[101%] hover:drop-shadow-2xl hover:bg-[#FCFCFC]`}
           >
             {/* black horizontal line */}
@@ -85,7 +85,7 @@ function MemberCard({
                 {name}
                 {/* </ReactFitty> */}
               </div>
-              <div className="whitespace-normal w-[90%] text-[20px] font-sofia text-black font-bold text-center leading-[110%]">
+              <div className="whitespace-normal w-[90%] text-[20px] font-sofia text-black font-bold text-center leading-[110%] md:mt-[10px]">
                 {/* <ReactFitty maxSize={22} minSize={17}> */}
                 {position}
                 {/* </ReactFitty> */}
@@ -94,7 +94,7 @@ function MemberCard({
             <Image
               src={barcode}
               alt=""
-              className={`absolute bottom-[15px] left-[50%] ml-[-27%] w-[54%]`}
+              className={`absolute bottom-[10px] md:bottom-[20px] left-[50%] ml-[-27%] w-[54%]`}
             />
           </div>
         </>
@@ -121,13 +121,13 @@ function MemberCard({
             <div className="absolute left-0 top-[30px] md:top-[45px] flex flex-col items-center">
               <img src={headshot} alt={name} className="w-[50%]" />
             </div>
-            <div className="absolute w-full left-0 top-[110px] md:top-[140px] flex flex-col items-center leading-[10px]">
+            <div className="absolute w-full left-0 top-[118px] md:top-[142px] flex flex-col items-center leading-[10px]">
               {isMobile ? (
                 <>
                   <div className="text-[12px] w-[90%] font-sofia text-black text-center uppercase ">
                     {name}
                   </div>
-                  <div className="text-[11px] mt-[5px] w-[90%] font-sofia text-black font-bold text-center">
+                  <div className="text-[11px] mt-[7px] w-[90%] font-sofia text-black font-bold text-center">
                     {position}
                   </div>
                 </>
@@ -136,8 +136,8 @@ function MemberCard({
                   <div className=" text-[12px] w-[90%] font-sofia text-black text-center uppercase">
                     {name}
                   </div>
-                  <div className=" text-[12px] mt-[5px] w-[90%] font-sofia text-black font-bold text-center">
-                    {position}
+                  <div className=" text-[12px] mt-[6px] w-[90%] font-sofia text-black font-bold text-center">
+                    <ReactFitty maxSize={12} minSize={10} wrapText={true}> {position} </ReactFitty>
                   </div>
                 </>
               )}
@@ -146,7 +146,7 @@ function MemberCard({
               src={barcode}
               alt=""
               height={19}
-              className={`absolute bottom-[5px] md:bottom-[15px] left-[50%] translate-x-[-50%]`}
+              className={`absolute bottom-[10px] md:bottom-[15px] left-[50%] translate-x-[-50%]`}
             />
           </div>
         </>

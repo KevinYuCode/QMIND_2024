@@ -77,9 +77,10 @@ function HeadlineCard({ project }: any) {
       </div>
       {/* Project Selection */}
       <div className="flex gap-5 justify-center flex-wrap ">
-        {DESIGN_PROJECTS.map((project) => (
+        {DESIGN_PROJECTS.map((project, key) => (
           <button
             onClick={() => setSelectedProject(project)}
+            key={key}
             className={`bg-[#2E2E2E] rounded-[16px] py-2 px-5 ${
               project.title == selectedProject.title
                 ? styles.active_project

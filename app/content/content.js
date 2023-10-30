@@ -412,7 +412,7 @@ export const TESTIMONIALS = [
     team: "design",
     message:
       "At QMIND, leading a team to develop a multi-modal deep learning pipeline and co-authoring an acclaimed bioinformatics research paper were highlights that pushed my career to new heights. I came to QMIND with a passion for data science and left with a broad and adaptable approach to problem-solving. My experiences at QMIND largely shaped my career in Cybersecurity Consulting at EY, providing me with the soft skills to connect effectively in a consulting environment, and the hard skills to contribute analytically.",
-    position: "Cybersecutiry Consultant",
+    position: "Cybersecurity Consultant",
     companyLogo: { img: { src: EY_LOGO.src, style: "mt-[-5px] h-[35px]" } },
     company: "EY",
     angle: `rotate-[0deg] md:rotate-[2deg]`,
