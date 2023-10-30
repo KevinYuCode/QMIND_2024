@@ -15,20 +15,21 @@
   
 }
 .yellowBannerImage {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // align-items: flex-start;
+  display: grid;
   @media only screen and (max-width: 770px) {
-    display: flex;
+    // display: flex;
     padding: 3% 8%;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     align-content: center;
     row-gap: 24px;
-    align-self: stretch;
-    flex-wrap: wrap;
+    // align-self: stretch;
+    // flex-wrap: wrap;
   }
 }
 .carousel_dots {

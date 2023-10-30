@@ -20,21 +20,19 @@ import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
 import MemberCard from "./components/MemberCard";
-import { tradeGothic } from "./font";
+import MICROSOFT from "../assets/Companies/Microsoft.png";
 import Link from "next/link";
 import { ReactFitty } from "react-fitty";
 import Image from "next/image";
 import HeadlineCard from "./components/HeadlineCard";
 import Title from "./components/Title";
 import Head3 from "./components/Head3";
-import MICROSOFT from "../assets/Companies/Microsoft.png";
-import DELOITTE from "../assets/Companies/Deloitte.png";
-import TD from "../assets/Companies/TD_Bank.png";
-import LOBLAWS from "../assets/Companies/Loblaws.png";
+
 import StatsCards from "./components/StatsCards";
 import Text from "./components/Text";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PartnersAndClients from "./components/PartnersAndClients";
 
 export default function Home() {
   const [partnersImg, setPartnersImg]: any = useState(null);
@@ -137,48 +135,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Past Partners & Clients (Yellow Banner) */}
-        {/* <div className="mt-[50px]">
-          <Image
-            src={partnersImg ?? ""}
-            className="w-full m-auto sm:w-[100%]"
-            alt="Partners Banner"
-          ></Image>
-        </div> */}
         {/* Yellow banner */}
-        <div className="">
-          <div className="pb-[20px]">
-            <p>PAST PARTNERS & CLIENTS</p>
-          </div>
-          
-          <div className={`${styles.yellowBanner}`}>
-            <div className={`${styles.yellowBannerImage}`}>
-              <Image
-              className={`2xl:h-[42px] xl:h-[34px] lg:h-[28px] md:h-[20px] sm:h-[30px] xs:h-[24px]  w-[auto] `}
-              src={MICROSOFT}
-              alt="Stripes"
-              ></Image>
-              <Image
-              className={`2xl:h-[42px] xl:h-[34px] lg:h-[28px] md:h-[20px] sm:h-[30px] xs:h-[24px] w-[auto] `}
-              src={TD}
-              alt="Stripes"
-              ></Image>
-              <Image
-              className={`2xl:h-[42px] xl:h-[34px] lg:h-[28px] md:h-[20px] sm:h-[30px] xs:h-[24px] w-[auto] `}
-              src={LOBLAWS}
-              alt="Stripes"
-              ></Image>
-              <Image
-              className={`2xl:h-[42px] xl:h-[34px] lg:h-[28px] md:h-[20px] sm:h-[30x] xs:h-[24px] w-[auto] `}
-              src={DELOITTE}
-              alt="Stripes"
-              ></Image>
-            </div>
-          </div>
-        </div>
+        <PartnersAndClients />
 
       </ContentContainer>
-
       {/* What is QMIND? */}
       <ContentContainer className="flex flex-col items-center">
         <Title title="What is QMIND?">
