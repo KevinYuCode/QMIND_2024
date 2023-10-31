@@ -21,8 +21,8 @@ function StatsCards() {
           transition={{ duration: 0.5, delay: 0.25 }}
           className={`${styles.yellowCard} rounded-[17px] w-[100%] h-[100px] sm:h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-center lg:items-start lg:pl-[50px] leading-[30px] md:leading-[50px]`}
         >
-          <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[65px]">230+</p>
-          <p className="leading-tight text-[15px] sm:text-[20px] md:text-[22px] text-center lg:text-left">
+          <p className="text-[35px] md:text-[45px] lg:text-[65px]">230+</p>
+          <p className="leading-tight text-[15px] sm:text-[20px] md:text-[22px] text-left lg:text-left">
             Software Developers
           </p>
         </motion.div>
@@ -42,7 +42,7 @@ function StatsCards() {
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[65px]">200+</p>
+          <p className="text-[35px] md:text-[45px] lg:text-[65px]">200+</p>
           <p className="leading-tight text-[15px] sm:text-[20px] md:text-[22px] text-center lg:text-right">
             AI papers & Projects
           </p>
@@ -65,7 +65,7 @@ function StatsCards() {
           transition={{ duration: 0.5, delay: 0.25 }}
           className={`${styles.blueCard} rounded-[17px] w-[100%] h-[100px] sm:h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-center px-[10px] lg:px-0 lg:items-start lg:pl-[50px] md:leading-[30px] lg:leading-[50px]  `}
         >
-          <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[65px] ">320+</p>
+          <p className="text-[35px] md:text-[45px] lg:text-[65px] ">320+</p>
           <p className="leading-tight text-[15px] sm:text-[20px] md:text-[22px] text-center lg:text-left">
             Delegates at CUCAI
           </p>
@@ -85,7 +85,7 @@ function StatsCards() {
           transition={{ duration: 0.5, delay: 0.25 }}
           className={`${styles.yellowCard} rounded-[17px] w-[100%] h-[100px] sm:h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-center px-[10px] lg:px-0 lg:items-start lg:pl-[50px] md:leading-[30px] lg:leading-[50px]`}
         >
-          <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[65px]">25+</p>
+          <p className="text-[35px] md:text-[45px] lg:text-[65px]">25+</p>
           <p className="leading-tight text-[15px] sm:text-[20px] md:text-[22px] text-center lg:text-right">
             Industry Clients
           </p>
@@ -105,7 +105,7 @@ function StatsCards() {
           transition={{ duration: 0.5, delay: 0.25 }}
           className={`${styles.blueCard} rounded-[17px] w-[100%] h-[100px] sm:h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-center lg:items-end lg:pr-[50px] md:leading-[30px] lg:leading-[50px] col-span-2`}
         >
-          <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[65px]">45</p>
+          <p className="text-[35px] md:text-[45px] lg:text-[65px]">45</p>
           <p className="leading-tight text-[15px] sm:text-[20px] md:text-[22px] text-center lg:text-right">
             Tech Articles
           </p>
@@ -128,7 +128,7 @@ function StatsCards() {
           transition={{ duration: 0.5, delay: 0.25 }}
           className={`${styles.redCard} rounded-[17px] w-[100%] h-[100px] sm:h-[180px] font-family: Kontrapunkt; flex flex-col justify-center px-[10px] lg:px-0 items-center lg:items-start lg:pl-[50px] md:leading-[30px] lg:leading-[50px]`}
         >
-          <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[65px]">35</p>
+          <p className="text-[35px] md:text-[45px] lg:text-[65px]">35</p>
           <p className="leading-tight text-[15px] sm:text-[20px] md:text-[22px] text-center lg:text-right">
             Projects in 2023
           </p>
@@ -147,7 +147,7 @@ function StatsCards() {
           transition={{ duration: 0.5, delay: 0.25 }}
           className={`${styles.yellowCard} rounded-[17px] w-[100%] h-[100px] sm:h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-center lg:items-end lg:pr-[50px] md:leading-[30px] lg:leading-[50px]`}
         >
-          <p className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[65px]">325+</p>
+          <p className="text-[35px] md:text-[45px] lg:text-[65px]">325+</p>
           <p className="leading-tight text-[15px] sm:text-[20px] md:text-[22px] text-center lg:text-right">
             Hours Read on Medium
           </p>
