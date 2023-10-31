@@ -106,7 +106,7 @@ export default function Home() {
             </div>
 
             {/* Landing Page Buttons */}
-            <div className="flex flex-col justify-center md:justify-start items-center md:flex-row gap-[24px] justify-center md:justify-start">
+            <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-[24px]">
               <BtnLink
                 isExternalLink={true}
                 className="min-w-[200px] !text-[13px]"

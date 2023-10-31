@@ -82,6 +82,7 @@ function HeadlineCard({ project }: any) {
           <button
             key={key}
             onClick={() => setSelectedProject(project)}
+            key={key}
             className={`bg-[#2E2E2E] rounded-[16px] py-2 px-5 ${
               project.title == selectedProject.title
                 ? styles.active_project
