@@ -22,7 +22,6 @@ import react, { useEffect } from "react";
 import MemberCard from "./components/MemberCard";
 import MICROSOFT from "../assets/Companies/Microsoft.png";
 import Link from "next/link";
-import { ReactFitty } from "react-fitty";
 import Image from "next/image";
 import HeadlineCard from "./components/HeadlineCard";
 import Title from "./components/Title";
