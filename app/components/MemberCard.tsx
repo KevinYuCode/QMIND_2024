@@ -79,10 +79,10 @@ function MemberCard({
             </div>
 
             <div className="absolute w-full left-0 top-[290px] flex flex-col items-center">
-              <div className="w-[90%] text-[23px] font-sofia text-black text-center uppercase leading-[120%]">
+              <div className="w-[90%] text-[19px] sm:text-[23px] font-sofia text-black text-center uppercase leading-[120%]">
                 {name}
               </div>
-              <div className="whitespace-normal w-[90%] text-[20px] font-sofia text-black font-bold text-center leading-[110%] md:mt-[10px]">
+              <div className="whitespace-normal w-[90%] text-[18px] sm:text-[20px] font-sofia text-black font-bold text-center leading-[110%] md:mt-[10px]">
                 {position}
               </div>
             </div>
