@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import QUOTES from "../../assets/quotes.svg";
 import styles from "../styles/testimonialCard.module.scss";

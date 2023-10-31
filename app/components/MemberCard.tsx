@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import barcode from "../../assets/barcode.png";
 import styles from "../styles/MemberCard.module.scss";
-// const fitty = require('fitty/dist/fitty.min.js')
 import fitty from "fitty";
 import { ReactFitty } from "react-fitty";
 import { useMediaQuery } from "react-responsive";
@@ -50,8 +49,9 @@ function MemberCard({
   activeCard,
 }: any) {
   const isMobile = useMediaQuery({
-    query: "(min-width:600px)",
+    query: "(min-width: 600px)",
   });
+
   return (
     <>
       {spotlight ? (
@@ -84,7 +84,6 @@ function MemberCard({
                 {name}
               </div>
               <div className="whitespace-normal w-[90%] text-[20px] font-sofia text-black font-bold text-center leading-[110%] md:mt-[10px]">
-                {/* <ReactFitty maxSize={22} minSize={17}> */}
                 {position}
               </div>
             </div>
@@ -112,34 +111,25 @@ function MemberCard({
             <div
               className={`absolute left-[50%] ml-[-17px] h-[3px] w-[34px] bg-[#707070] rounded-[33px]`}
             ></div>
+            {/* Company Logo */}
             <CompanyLogo
               companyLogo={company.img}
               companyName={company.name}
             ></CompanyLogo>
+            {/* Headshot */}
             <div className="absolute left-0 top-[30px] md:top-[45px] flex flex-col items-center">
               <img src={headshot} alt={name} className="w-[50%]" />
             </div>
+            {/* Name and Position */}
             <div className="absolute w-full left-0 top-[118px] md:top-[142px] flex flex-col items-center leading-[10px]">
-              {isMobile ? (
-                <>
-                  <div className="text-[12px] w-[90%] font-sofia text-black text-center uppercase ">
-                    {name}
-                  </div>
-                  <div className="text-[11px] mt-[7px] w-[90%] font-sofia text-black font-bold text-center">
-                    {position}
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className=" text-[12px] w-[90%] font-sofia text-black text-center uppercase">
-                    {name}
-                  </div>
-                  <div className=" text-[12px] mt-[6px] w-[90%] font-sofia text-black font-bold text-center">
-                    <ReactFitty maxSize={12} minSize={10} wrapText={true}> {position} </ReactFitty>
-                  </div>
-                </>
-              )}
+              <div className="text-[12px] w-[90%] font-sofia text-black text-center uppercase ">
+                {name}
+              </div>
+              <div className="text-[11px] mt-[7px] w-[90%] font-sofia text-black font-bold text-center">
+                {position}
+              </div>
             </div>
+            {/* BarCode */}
             <Image
               src={barcode}
               alt=""

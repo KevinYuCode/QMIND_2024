@@ -139,6 +139,7 @@ export default function Home() {
         <PartnersAndClients />
 
       </ContentContainer>
+
       {/* What is QMIND? */}
       <ContentContainer className="flex flex-col items-center gap-4">
         <Title title="What is QMIND?">
@@ -247,6 +248,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-row justify-start md:justify-center mx-[20px] md:mx-0 overflow-x-scroll md:overflow-visible w-[100dvw] md:w-[100%] md:flex-wrap lg:max-w-[1000px] items-center gap-[5px] md:gap-[15px] px-8 appearance-none	md:px-0 ">
+
           {TESTIMONIALS.map((card, key) => (
             <MemberCard
               className={`${card.angle} cursor-pointer`}
@@ -264,6 +266,7 @@ export default function Home() {
         </div>
       </ContentContainer>
 
+      {/* Company Slider */}
       <ContentContainer>
         <div className="flex flex-col gap-6 text-center relative !overflow-hidden">
           <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
@@ -306,7 +309,7 @@ export default function Home() {
         </div>
       </ContentContainer>
 
-      {/* National Conference */}
+      {/* Incubator*/}
       <ContentContainer className="text-center flex flex-col justify-center ">
         <div className="flex flex-col gap-4 text-center relative !overflow-hidden">
           <Title
@@ -331,18 +334,6 @@ export default function Home() {
         </div>
       </ContentContainer>
 
-      {/* Alumni Placements */}
-      {/* <ContentContainer className="">
-        <Image src={alumniImg ?? ""} alt="Alumini Placements"></Image>
-        <div className="flex justify-center w-[100%]">
-          <BtnLink
-            isExternalLink={true}
-            className=""
-            text="WORK WITH US"
-            href="mailto:partnerships@qmind.ca"
-          />
-        </div>
-      </ContentContainer> */}
     </main>
   );
 }

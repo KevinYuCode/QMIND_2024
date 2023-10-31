@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import HEADSHOT from "../../assets/headshot_test.png";
@@ -28,7 +29,9 @@ function CardSlider({ cards, slideLeft }: any) {
 
   // { x: slideLeft ? -position : position }
   return (
-    <div className={`min-h-[200px] sm:min-h-[290px] md:min-h-[350px] text-left`}>
+    <div
+      className={`min-h-[200px] sm:min-h-[290px] md:min-h-[350px] text-left`}
+    >
       <motion.div
         id="events-id"
         initial={{ x: 0 }}
