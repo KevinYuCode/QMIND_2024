@@ -20,28 +20,28 @@ function PartnersAndClients() {
             <Image
               className={`2xl:h-[42px] xl:h-[34px] lg:h-[28px] md:h-[20px] sm:h-[30px] h-[30px]  w-[auto] object-contain `}
               src={MICROSOFT}
-              alt="Stripes"
+              alt="Companies"
             ></Image>
           </div>
           <div className="flex justify-center items-center">
             <Image
               className={`2xl:h-[42px] xl:h-[34px] lg:h-[28px] md:h-[20px] sm:h-[30px] h-[30px] w-[auto] object-contain `}
               src={TD}
-              alt="Stripes"
+              alt="Companies"
             ></Image>
           </div>
           <div className="flex justify-center items-center">
             <Image
               className={`2xl:h-[39px] xl:h-[31px] lg:h-[26px] md:h-[20px] sm:h-[25px] h-[20px] w-[auto] object-contain `}
               src={LOBLAWS}
-              alt="Stripes"
+              alt="Companies"
             ></Image>
           </div>
           <div className="flex justify-center items-center">
             <Image
               className={`2xl:h-[39px] xl:h-[31px] lg:h-[26px] md:h-[20px] sm:h-[25px] h-[20px] w-[auto] object-contain `}
               src={DELOITTE}
-              alt="Stripes"
+              alt="Companies"
             ></Image>
           </div>
         </div>

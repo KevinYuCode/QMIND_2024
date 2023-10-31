@@ -1,6 +1,5 @@
 "use client";
 import BtnLink from "./components/BtnLink";
-import STRIPES from "../assets/qmind_stripes.svg";
 import ContentContainer from "./components/ContentContainer";
 import styles from "./styles/home.module.scss";
 import { EVENTS, TESTIMONIALS } from "./content/content";
@@ -79,11 +78,6 @@ export default function Home() {
         <div className="flex 2xl:pt-[20.22px] justify-between gap-[24px]">
           {/* Hero Content */}
           <div className=" lg:w-[62%] 2xl:w-[55%] flex flex-col gap-[25px] lg:gap-[50px] relative">
-            <Image
-              className={`${styles.stripes} hidden md:block w-[auto]`}
-              src={STRIPES}
-              alt="Stripes"
-            ></Image>
             <div className="flex flex-col gap-[32px]">
               <h1 className="font-gothic h1-styles">
                 Empowering <br /> future leaders to <br />
