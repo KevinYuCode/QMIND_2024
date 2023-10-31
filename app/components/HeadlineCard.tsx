@@ -30,7 +30,7 @@ function HeadlineCard({ project }: any) {
   return (
     <div className="flex flex-col gap-5">
       <div
-        className={`xl:w-[100%] 2xl:w-[1200px] p-[24px] min-h-[560px] sm:min-h-[auto] lg:max-h-[390px] text-center flex flex-col lg:flex-row justify-between gap-[32px] bg-[#2e2e2e] rounded-[2rem] drop-shadow-xl ${styles.carousel}`}
+        className={`xl:w-[100%] 2xl:w-[1200px] p-[24px]  sm:min-h-[auto] lg:max-h-[390px] text-center flex flex-col lg:flex-row justify-between gap-[32px] bg-[#2e2e2e] rounded-[2rem] drop-shadow-xl ${styles.carousel}`}
       >
         {/* Image */}
         <motion.div

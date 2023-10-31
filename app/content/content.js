@@ -255,7 +255,7 @@ export const TESTIMONIALS = [
         style: "mt-[-10px] h-[40px] md:mt-[-13px] md:h-[40px]",
       },
     },
-    company: "PricewaterhouseCoopers",
+    company: "PWC",
     angle: `rotate-[0deg] md:rotate-[3deg]`,
     education: `Applied Sciences '25`,
   },
@@ -270,7 +270,7 @@ export const TESTIMONIALS = [
     companyLogo: {
       img: { src: RECALC_LOGO.src, style: "mt-[3px] h-[15px] md:h-[20px]" },
     },
-    company: "RippleX Fellowship",
+    company: "Recalc Academy",
     angle: `rotate-[0deg] md:rotate-[-2deg]`,
     education: `Commerce '26`,
   },
@@ -354,12 +354,12 @@ export const TESTIMONIALS = [
     team: "development",
     message:
       "My experiences as a design team member, project manager, an director were some key talking points in interviews to land internships.",
-    position: "Wealth Management",
+    position: "Software Engineer",
     companyLogo: {
       name: "",
       img: { src: AMAZON_BLACK.src, style: "h-[25px] mt-[5px]" },
     },
-    company: "BMO",
+    company: "Amazon",
     angle: `rotate-[0deg] md:rotate-[-2deg]`,
     education: "Computer Science '23",
   },
