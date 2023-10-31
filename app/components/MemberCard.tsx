@@ -79,7 +79,7 @@ function MemberCard({
               <img src={headshot} alt={name} className="w-[60%] z-10" />
             </div>
 
-            <div className="absolute w-full left-0 top-[270px] flex flex-col items-center">
+            <div className="absolute w-full left-0 top-[290px] flex flex-col items-center">
               <div className="w-[90%] text-[23px] font-sofia text-black text-center uppercase leading-[120%]">
                 {name}
               </div>
