@@ -23,7 +23,7 @@ function TestimonialCard({
             fill={true}
           />
           <p
-            className={`${styles.img_description} py-[8px] px-[10px] absolute w-[90%] text-center bottom-[20px] left-[50%] translate-x-[-50%] bg-[#161616] opacity-[0.75] rounded-[10px]`}
+            className={`${styles.img_description} text-[10px] sm:text-[12px] py-[8px] px-[10px] absolute w-[90%] text-center bottom-[20px] left-[50%] translate-x-[-50%] bg-[#161616] opacity-[0.75] rounded-[10px]`}
           >
             {imgDescription}
           </p>

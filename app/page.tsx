@@ -177,7 +177,7 @@ export default function Home() {
       </ContentContainer>
 
       {/* Stats card */}
-      <ContentContainer>
+      <ContentContainer >
         <StatsCards />
       </ContentContainer>
 
@@ -195,14 +195,7 @@ export default function Home() {
 
       {/* Our Members Love QMIND */}
       <ContentContainer className="items-center gap-[50px] w-[100%]">
-        <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
-          <h2 className="font-bold text-[20px] md:text-[45px] lg:text-[45px] font-gothic">
-            Our Members Love QMIND
-          </h2>
-          <h3 className="font-bold text-[13px] lg:text-[20px] font-bold font-gothic">
-            Click On Them To See What They Think
-          </h3>
-        </div>
+        <Title title="Our Members Love QMIND" subtitle="Click On Them To See What They Think"/>
         <div className="flex flex-col lg:flex-row justify-start md:justify-center items-center mt-[-65px] md:mt-0">
           <MemberCard
             spotlight={true}
@@ -245,10 +238,8 @@ export default function Home() {
               </div>
             </div>
             <div className="!font-kontrapunkt text-[24px] text-left w-[100%] mt-[-8px] ">
-              {/* <ReactFitty maxSize={24} minSize={14}> */}
               {TESTIMONIALS[spotlight].position} @{" "}
               {TESTIMONIALS[spotlight].company}
-              {/* </ReactFitty> */}
             </div>
             <div className="font-sofia font-normal text-[16px] md:text-[18px] text-left mt-[16px] ">
               {TESTIMONIALS[spotlight].message}

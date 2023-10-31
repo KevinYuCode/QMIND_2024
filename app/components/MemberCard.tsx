@@ -60,7 +60,7 @@ function MemberCard({
             style={style}
             onClick={onClick}
             className={`${className} 
-              mb-[60px] md:mb-0 mt-[50px] md:mt-0 scale-[100%] h-[400px] md:h-[440px] w-[275px] rounded-[23px] px-[10px] py-[15px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]
+              mb-[60px] md:mb-0 mt-[50px] md:mt-0 scale-[100%] h-[400px] md:h-[440px] w-[245px] rounded-[23px] px-[10px] py-[15px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]
             transition-transform md:scale-[100%] lg:hover:scale-[101%] hover:drop-shadow-2xl hover:bg-[#FCFCFC]`}
           >
             {/* black horizontal line */}
@@ -79,22 +79,19 @@ function MemberCard({
               <img src={headshot} alt={name} className="w-[60%] z-10" />
             </div>
 
-            <div className="absolute w-full left-0 top-[290px] flex flex-col items-center">
+            <div className="absolute w-full left-0 top-[270px] flex flex-col items-center">
               <div className="w-[90%] text-[23px] font-sofia text-black text-center uppercase leading-[120%]">
-                {/* <ReactFitty maxSize={22} minSize={17}> */}
                 {name}
-                {/* </ReactFitty> */}
               </div>
               <div className="whitespace-normal w-[90%] text-[20px] font-sofia text-black font-bold text-center leading-[110%]">
-                {/* <ReactFitty maxSize={22} minSize={17}> */}
                 {position}
-                {/* </ReactFitty> */}
               </div>
             </div>
             <Image
               src={barcode}
               alt=""
-              className={`absolute bottom-[15px] left-[50%] ml-[-27%] w-[54%]`}
+              width={100}
+              className={`absolute bottom-[15px] left-[50%] translate-x-[-50%]`}
             />
           </div>
         </>

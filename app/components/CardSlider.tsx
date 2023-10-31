@@ -28,12 +28,12 @@ function CardSlider({ cards, slideLeft }: any) {
 
   // { x: slideLeft ? -position : position }
   return (
-    <div className={`min-h-[290px] md:min-h-[350px] text-left`}>
+    <div className={`min-h-[200px] sm:min-h-[290px] md:min-h-[350px] text-left`}>
       <motion.div
         id="events-id"
         initial={{ x: 0 }}
         animate={controls}
-        transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 55, repeat: Infinity, ease: "linear" }}
         className={`flex gap-[24px] absolute ${slideLeft ? "" : "right-0"}`}
         onHoverStart={pauseAnimation}
         onHoverEnd={resumeAnimation}

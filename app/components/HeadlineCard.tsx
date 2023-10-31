@@ -30,7 +30,7 @@ function HeadlineCard({ project }: any) {
   return (
     <div className="flex flex-col gap-5">
       <div
-        className={`xl:w-[100%] 2xl:w-[1200px] p-[24px] lg:max-h-[390px] text-center flex flex-col lg:flex-row justify-between gap-[32px] bg-[#2e2e2e] rounded-[2rem] drop-shadow-xl ${styles.carousel}`}
+        className={`xl:w-[100%] 2xl:w-[1200px] p-[24px] min-h-[560px] sm:min-h-[auto] lg:max-h-[390px] text-center flex flex-col lg:flex-row justify-between gap-[32px] bg-[#2e2e2e] rounded-[2rem] drop-shadow-xl ${styles.carousel}`}
       >
         {/* Image */}
         <motion.div
@@ -40,11 +40,11 @@ function HeadlineCard({ project }: any) {
           animate={controls}
           className={`flex flex-col items-center ${styles.img_container}`}
         >
-          <div className="overflow-hidden h-[200px] md:h-[300px] w-[100%] lg:w-[510px] relative object-cover">
+          <div className="overflow-hidden min-h-[200px] sm:h-[300px] w-[100%] lg:w-[510px] relative object-cover">
             <Image
               src={selectedProject.image}
               alt="project info"
-              className="rounded-[10px] md:aspect-none "
+              className="rounded-[10px] object-cover"
               fill={true}
             ></Image>
           </div>
@@ -60,7 +60,7 @@ function HeadlineCard({ project }: any) {
                 {selectedProject.title}
               </Head3>
 
-              <Text className="text-center lg:text-left overflow-ellipsis max-h-[160px] !font-normal">
+              <Text className="text-center lg:text-left overflow-ellipsis !font-normal">
                 {selectedProject.description}{" "}
               </Text>
             </div>
@@ -68,7 +68,8 @@ function HeadlineCard({ project }: any) {
             <Link
               href={selectedProject.href}
               target="_blank"
-              className="text-[#387BFF] underline text-[20px] cursor-pointer hover:opacity-60"
+              rel="noreferrer"
+              className="text-[#387BFF] underline pt-[10px] lg:pt-[0] text-[20px] cursor-pointer hover:opacity-60"
             >
               View the research paper here!
             </Link>
@@ -77,8 +78,9 @@ function HeadlineCard({ project }: any) {
       </div>
       {/* Project Selection */}
       <div className="flex gap-5 justify-center flex-wrap ">
-        {DESIGN_PROJECTS.map((project) => (
+        {DESIGN_PROJECTS.map((project, key) => (
           <button
+            key={key}
             onClick={() => setSelectedProject(project)}
             className={`bg-[#2E2E2E] rounded-[16px] py-2 px-5 ${
               project.title == selectedProject.title

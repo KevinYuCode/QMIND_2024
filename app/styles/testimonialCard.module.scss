@@ -8,6 +8,10 @@
     width: 425px;
     height: 290px;
   }
+  @media only screen and (max-width: 640px) {
+    width: 425px;
+    height: 200px;
+  }
 }
 
 .headshot {

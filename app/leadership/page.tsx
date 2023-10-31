@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import ContentContainer from "../components/ContentContainer";
 import Image from "next/image";
-import leadership_image from "../../assets/leadership_team.png";
+import leadership_image from "../../assets/Leadership_image.jpg";
 import "./page.scss";
 
 import rabab_azeem from "../../assets/Headshots/Rabab_Azeem.png";
@@ -208,7 +208,7 @@ export default function Leadership() {
             src={leadership_image}
             alt=""
             width={500}
-            className="w-full lg:w-[45%]"
+            className="w-full lg:w-[45%] rounded-[20px]"
           ></Image>
         </div>
 
@@ -224,6 +224,8 @@ export default function Leadership() {
                     <Link
                       href={card.social}
                       key={index}
+                      target="_blank"
+                      rel="noreferrer"
                       className={`${card.class} w-[150px] md:w-[225px] lg:w-[275px] text-center flex flex-col gap-5 justify-center items-center rounded-[16px] p-[12px] md:p-[20px] md:rounded-[24px]  bg-[#2E2E2E]`}
                     >
                       <div

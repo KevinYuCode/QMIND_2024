@@ -479,7 +479,7 @@ export const DESIGN_PROJECTS = [
     title: "Quantum Generative Adversarial Networks",
     teamMembers: [],
     description:
-      "We examine a significant challenge faced in previous implementations of a QGAN. Specifically, we propose a new method of dimensionality reduction of MNIST handwritten digits such that they could be encoded in a limited number of qubits.",
+      "Examining a challenge in prior QGAN implementations, we propose a novel method for reducing MNIST dimensions, enabling encoding in limited qubits.",
     href: "/Quantum_Generative.pdf",
   },
   {
