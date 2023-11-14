@@ -62,7 +62,7 @@ import GEORGE from "../../assets/Headshots/George_T.png";
 
 import MEMBER_OLIVIA_XU from "../../assets/MemberCardImages/Olivia_Xu.png";
 import MEMBER_KEVIN from "../../assets/MemberCardImages/Kevin_Yu.png";
-import MEMBER_REBAB from "../../assets/MemberCardImages/Rabab_Azeem.png";
+import MEMBER_RABAB from "../../assets/MemberCardImages/Rabab_Azeem.png";
 import MEMBER_DANIEL from "../../assets/MemberCardImages/Daniel_Wang.png";
 import MEMBER_LUKE from "../../assets/MemberCardImages/Luke_Major.png";
 import MEMBER_RODRIGO from "../../assets/MemberCardImages/Rodrigo_D.png";
@@ -212,8 +212,8 @@ export const TESTIMONIALS = [
     education: `Commerce '26`,
   },
   {
-    name: "Rebab Azeem",
-    headshot: MEMBER_REBAB.src,
+    name: "Rabab Azeem",
+    headshot: MEMBER_RABAB.src,
     linkedin: "https://www.linkedin.com/in/rabab-azeem/",
     team: "design",
     message:
@@ -224,7 +224,7 @@ export const TESTIMONIALS = [
     },
     company: "Amazon",
     angle: `rotate-[0deg] md:rotate-[-4deg]`,
-    education: `Applied Sciences '25`,
+    education: `Applied Sciences '24`,
   },
   // {
   //   name: "Luke Major",
