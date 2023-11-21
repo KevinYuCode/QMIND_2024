@@ -204,7 +204,7 @@ export const TESTIMONIALS = [
     linkedin: "https://www.linkedin.com/in/itsdanielwang/",
     team: "development",
     message:
-      "QMIND that enhanced my first-year experience far more than any classes or competition. My experience from QMIND were key talking points that played a pivotal role in landing an internship at Microsoft. Moreover, QMIND brought me closer to my lifelong friend, co-founder, and now house-mate. It's easy to say that QMIND has shaped my career and personal relationships.",
+      "QMIND enhanced my first-year experience far more than any classes or competition. My experience from QMIND were key talking points that played a pivotal role in landing an internship at Microsoft. Moreover, QMIND brought me closer to my lifelong friend, co-founder, and now house-mate. It's easy to say that QMIND has shaped my career and personal relationships.",
     position: "Business Program Manager",
     companyLogo: { img: { src: MICROSOFT.src, style: "h-[20px] md:h-[20px]" } },
     company: "Microsoft",
