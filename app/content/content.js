@@ -257,7 +257,7 @@ export const TESTIMONIALS = [
     },
     company: "PWC",
     angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Applied Sciences '25`,
+    education: `Applied Sciences '24`,
   },
   {
     name: "Marcelo Chaman Mallqui",
