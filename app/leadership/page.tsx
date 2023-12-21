@@ -274,13 +274,13 @@ export default function Leadership() {
                       </div>
                       <div className="flex flex-col gap-2">
                         <p
-                          className={`${sofia_sans.className} font-semibold font-gothic tracking-tight text-[8px] md:text-[10px]`}
+                          className={`${sofia_sans.className} font-semibold font-gothic tracking-tight text-[16px] md:text-[20px]`}
                         >
                           {card.name}
                         </p>
 
                         <p
-                          className={`${sofia_sans.className} font-light font-gothic text-[6px] xl:text-[8px]`}
+                          className={`${sofia_sans.className} font-light font-gothic text-[12px] xl:text-[16px]`}
                         >
                           {card.title}
                         </p>
