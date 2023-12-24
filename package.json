@@ -20,7 +20,7 @@
     "eslint-config-next": "13.4.7",
     "fitty": "^2.3.7",
     "framer-motion": "^10.14.0",
-    "next": "13.4.7",
+    "next": "^13.4.7",
     "node-sass": "^9.0.0",
     "postcss": "8.4.24",
     "react": "18.2.0",
