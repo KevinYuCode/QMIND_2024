@@ -92,6 +92,13 @@ function Navbar() {
             >
               LEADERSHIP
             </Link>
+            <Link
+              href="/projects"
+              className={pathname == "/leadership" ? styles.activePage : ""}
+              onClick={() => closeNav()}
+            >
+              PROJECTS
+            </Link>
             {/* <p
               className="!text-[#424242] cursor-not-allowed"
               onClick={() => closeNav()}
