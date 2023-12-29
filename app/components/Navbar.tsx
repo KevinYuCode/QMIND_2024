@@ -8,6 +8,9 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import DISCORD from "@/../assets/icons/Discord.png";
+import INSTAGRAM from "@/../assets/icons/Instagram.png";
+import Image from "next/image";
 
 function Navbar() {
   const closeNav = () => {
@@ -113,10 +116,17 @@ function Navbar() {
             </Link>
             <Link
               onClick={() => closeNav()}
+              href="https://www.instagram.com/p/CFZ_tICAi0i/"
+              target="_blank"
+            >
+              <Image src={INSTAGRAM} width={22} height={16} alt="Discord" />
+            </Link>
+            <Link
+              onClick={() => closeNav()}
               href="https://discord.gg/jw94EEGyJR"
               target="_blank"
             >
-              DISCORD
+              <Image src={DISCORD} width={22} height={16} alt="Discord" />
             </Link>
           </div>
         </motion.div>
