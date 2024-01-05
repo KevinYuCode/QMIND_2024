@@ -9,6 +9,38 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          first_name: string | null
+          id: number
+          last_name: string | null
+          user_id: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          first_name?: string | null
+          id?: number
+          last_name?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          first_name?: string | null
+          id?: number
+          last_name?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "profiles_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
       Projects: {
         Row: {
           created_at: string
@@ -37,14 +69,17 @@ export interface Database {
         Row: {
           created_at: string
           id: number
+          user_id: string | null
         }
         Insert: {
           created_at?: string
           id?: number
+          user_id?: string | null
         }
         Update: {
           created_at?: string
           id?: number
+          user_id?: string | null
         }
         Relationships: []
       }
