@@ -1,5 +1,5 @@
 "use client";
-import BtnLink from "./components/BtnLink";
+import BtnLink from "./components/Buttons/BtnLink";
 import ContentContainer from "./components/ContentContainer";
 import styles from "./styles/home.module.scss";
 import { EVENTS, TESTIMONIALS } from "./content/content";

@@ -1,6 +1,6 @@
 import React from "react";
-import { CTAProps } from "../interfaces/IBtnLink";
-import styles from "../styles/cta.module.scss";
+import { CTAProps } from "../../interfaces/IBtnLink";
+import styles from "../../styles/cta.module.scss";
 import Link from "next/link";
 function BtnLink({ text, href, className, isExternalLink }: CTAProps) {
   return (
