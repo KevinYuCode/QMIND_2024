@@ -29,13 +29,13 @@ function Users() {
           </div>
           <div className="users-img">
           {images.map((image, index) => (
-        <Image
-          key={index}
-          className="w-[338px] h-[253.5px] rounded-[12px] border-[1.5px] border-[#4E4E4E]"
-          src={image}
-          alt=""
-        />
-      ))}
+            <Image
+              key={index}
+              className="w-[338px] h-[253.5px] rounded-[12px] border-[1.5px] border-[#4E4E4E]"
+              src={image}
+              alt=""
+            />
+          ))}
           </div>
         </div>
     </ContentContainer>
