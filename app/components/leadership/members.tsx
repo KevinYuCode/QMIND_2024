@@ -160,7 +160,7 @@ function Members() {
   ];
 
   return (
-    <div>
+    <>
       {leadership.map((section, index) => {
         return (
           <div key={index} className="flex flex-col gap-4 items-center">
@@ -208,7 +208,7 @@ function Members() {
           </div>
         );
       })}
-    </div>
+    </>
   );
 }
 
