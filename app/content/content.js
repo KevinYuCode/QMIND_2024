@@ -38,27 +38,12 @@ import TD from "../../assets/MemberCardImages/TD.png";
 import AMAZON_BLACK from "../../assets/MemberCardImages/Amazon.png";
 import SKYMOUNT from "../../assets/MemberCardImages/Skymount Drones.png";
 import PWC_BLACK from "../../assets/MemberCardImages/PWC.png";
-import RIPPLE from "../../assets/MemberCardImages/Ripple.png";
-import DELOITTE from "../../assets/MemberCardImages/Deloitte.png";
+
 import DELOITTE_WHITE from "../../assets/MemberCardImages/Deloitte_white.png";
-import RBC from "../../assets/MemberCardImages/RBC.png";
 import UBER_BLACK from "../../assets/MemberCardImages/Uber.png";
-import ROBLOX from "../../assets/MemberCardImages/Roblox.png";
-import BMO from "../../assets/MemberCardImages/BMO.png";
-import IRVING from "../../assets/MemberCardImages/Irving.png";
+
 import CANSBRIDGE from "../../assets/MemberCardImages/Cansbridge_Fellowship.png";
 import KATAROK from "../../assets/Companies/Katarok.png";
-import ETHAN from "../../assets/Headshots/Ethan_C.png";
-import HANI from "../../assets/Headshots/Hani_Khatib.png";
-import LEVI from "../../assets/Headshots/Levi_Stringer.png";
-import OLIVIA_XU from "../../assets/Headshots/Olivia_Xu.png";
-import REBAB from "../../assets/Headshots/Rabab_Azeem.png";
-import MARCELO from "../../assets/Headshots/Marcelo_Chaman_Mallqui.png";
-import DANIEL from "../../assets/Headshots/Daniel_Wang.png";
-import RODRIGO from "../../assets/Headshots/Rodrigo_D.png";
-import SAM from "../../assets/Headshots/Sam_Lin.png";
-import KEVIN from "../../assets/Headshots/Kevin_Yu.png";
-import GEORGE from "../../assets/Headshots/George_T.png";
 
 import MEMBER_OLIVIA_XU from "../../assets/MemberCardImages/Olivia_Xu.png";
 import MEMBER_KEVIN from "../../assets/MemberCardImages/Kevin_Yu.png";
