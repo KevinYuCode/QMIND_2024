@@ -59,7 +59,7 @@ function MemberCard({
             style={style}
             onClick={onClick}
             className={`${className} 
-              mb-[5px] md:mb-[60px] md:mb-0 mt-[20px] md:mt-[50px] md:mt-0 scale-[75%] h-[400px] md:h-[440px] w-[275px] rounded-[23px] px-[10px] py-[15px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]
+              mb-[5px] md:mb-[60px] mt-[20px] md:mt-[50px] scale-[75%] h-[400px] md:h-[440px] w-[275px] rounded-[23px] px-[10px] py-[15px] flex flex-col justify-between items-center bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]
             transition-transform md:scale-[100%] lg:hover:scale-[101%] hover:drop-shadow-2xl hover:bg-[#FCFCFC]`}
           >
             {/* black horizontal line */}

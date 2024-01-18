@@ -12,7 +12,6 @@ function Footer() {
           <h2 className="font-bold text-[20px] pb-[30px]">Menu</h2>
           <div className="flex flex-col opacity-[70%] gap-[15px]">
             <Link href="/">Home</Link>
-            <Link href="/design">Design</Link>
             <Link href="/leadership">Leadership</Link>
             <Link href="/blog">Blog</Link>
             <Link

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/navbar.module.scss";
 import QMIND_NAV_LOGO from "../../assets/qmind_nav_logo.svg";
 import ContentContainer from "./ContentContainer";
@@ -11,16 +11,23 @@ import { usePathname } from "next/navigation";
 import DISCORD from "@/../assets/icons/Discord.png";
 import INSTAGRAM from "@/../assets/icons/Instagram.png";
 import Image from "next/image";
+import { useGlobalContext } from "@/Context/store";
+import PROFILE from "@/../assets/icons/profile.svg";
+import SignInModal from "./Modals/SignInModal";
 
 function Navbar() {
-  const closeNav = () => {
+  const { navOn, setNavOn } = useGlobalContext();
+
+  const setNav = (value: boolean) => {
     setTimeout(() => {
-      setNavOn(false);
-    }, 200);
+      setNavOn(value);
+    }, 10);
   };
 
+  const [loginModalOn, setLoginModalOn] = useState(false);
+
+  const { user } = useGlobalContext();
   const pathname = usePathname();
-  const [navOn, setNavOn] = useState(false);
 
   return (
     <nav
@@ -50,9 +57,7 @@ function Navbar() {
           className={`${
             navOn ? "hidden" : "flex"
           } absolute top-[33px] right-[30px] lg:hidden text-[30px]`}
-          onClick={() => {
-            setNavOn(true);
-          }}
+          onClick={() => setNav(true)}
         >
           <HiMenuAlt3 />
         </button>
@@ -72,9 +77,7 @@ function Navbar() {
             } lg:hidden text-[30px] absolute top-[33px] right-[30px] text-blue ${
               styles.close
             }`}
-            onClick={() => {
-              setNavOn(false);
-            }}
+            onClick={() => setNav(false)}
           >
             <MdClose />
           </button>
@@ -84,59 +87,59 @@ function Navbar() {
             <Link
               href="/"
               className={pathname == "/" ? styles.activePage : ""}
-              onClick={() => closeNav()}
+              onClick={() => setNav(false)}
             >
               HOME
             </Link>
             <Link
               href="/leadership"
               className={pathname == "/leadership" ? styles.activePage : ""}
-              onClick={() => closeNav()}
+              onClick={() => setNav(false)}
             >
               LEADERSHIP
             </Link>
             <Link
-              href="/projects"
-              className={pathname == "/leadership" ? styles.activePage : ""}
-              onClick={() => closeNav()}
-            >
-              PROJECTS
-            </Link>
-            {/* <p
-              className="!text-[#424242] cursor-not-allowed"
-              onClick={() => closeNav()}
-            >
-              DESIGN
-            </p>
-            <p
-              className="!text-[#424242] cursor-not-allowed"
-              onClick={() => closeNav()}
-            >
-              OUR STORY
-            </p> */}
-            <Link
-              onClick={() => closeNav()}
+              onClick={() => setNav(false)}
               href="https://medium.com/qmind-ai"
               target="_blank"
             >
               BLOG
             </Link>
             <Link
-              onClick={() => closeNav()}
+              href="/projects"
+              className={pathname == "/projects" ? styles.activePage : ""}
+              onClick={() => setNav(false)}
+            >
+              PROJECTS
+            </Link>
+            <Link
+              onClick={() => setNav(false)}
               href="https://www.instagram.com/p/CFZ_tICAi0i/"
               target="_blank"
             >
-              <Image src={INSTAGRAM} width={22} height={16} alt="Discord" />
+              <Image src={INSTAGRAM} alt="Instagram" width={24} height={18} />
             </Link>
             <Link
-              onClick={() => closeNav()}
+              onClick={() => setNav(false)}
               href="https://discord.gg/jw94EEGyJR"
               target="_blank"
             >
-              <Image src={DISCORD} width={22} height={16} alt="Discord" />
+              <Image src={DISCORD} alt="Discord" width={25} height={25} />
             </Link>
+
+            {!user ? (
+              <button onClick={() => setLoginModalOn(true)}>
+                <Image src={PROFILE} height={30} width={30} alt="profile" />
+              </button>
+            ) : (
+              <Link href={"/account"}>
+                <Image src={PROFILE} height={30} width={30} alt="profile" />
+              </Link>
+            )}
           </div>
         </motion.div>
+
+        {loginModalOn && <SignInModal />}
       </ContentContainer>
     </nav>
   );

@@ -34,24 +34,6 @@ export default async function Projects({ props }: any) {
                         </Link>
                     </div>
                 </div>
-                
-                <div className="flex flex-row gap-[20px]">
-                    {/* <button className="w-[140px] text-center bg-[#F7F7F7] rounded-[5px] tertiary-colour pt-[14px] pb-[12px] px-[15px] font-bold tracking-[1.6px] leading-none text-[16px] font-gothic"
-                            onClick={() => setShowSignIn(true)}
-                    >
-                        Sign In
-                    </button>
-                    <button className="w-[140px] text-center bg-[#F7F7F7] rounded-[5px] tertiary-colour pt-[14px] pb-[12px] px-[15px] font-bold tracking-[1.6px] leading-none text-[16px] font-gothic"
-                            onClick={() => setShowSignUp(true)}
-                    >
-                        Sign Up
-                    </button>
-                    <button className="w-[140px] text-center bg-[#F7F7F7] rounded-[5px] tertiary-colour pt-[14px] pb-[12px] px-[15px] font-bold tracking-[1.6px] leading-none text-[16px] font-gothic"
-                            onClick={ logOut }
-                    >
-                        Log Out
-                    </button> */}
-                </div>
                 <pre>{JSON.stringify(projects, null, 2)}</pre>
                 <pre>{JSON.stringify(user, null, 2)}</pre>
             </div>
