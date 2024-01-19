@@ -6,6 +6,7 @@ import { sofia_sans } from "../font";
 import Members from "@/components/leadership/members";
 
 export default function Leadership() {
+
   return (
     <>
       <ContentContainer className="flex flex-col !gap-12 md:!gap-16 lg:gap-24 pt-[40px] text-center mb-12 md:mb-16">

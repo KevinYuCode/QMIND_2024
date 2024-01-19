@@ -148,10 +148,8 @@ function StatsCards() {
           transition={{ duration: 0.5, delay: 0.25 }}
           className={`${styles.yellowCard} rounded-[17px] w-[100%] h-[100px] sm:h-[180px] font-family: Kontrapunkt; flex flex-col justify-center items-center lg:items-end lg:pr-[50px] md:leading-[30px] lg:leading-[50px]`}
         >
-          <p className="text-[35px] md:text-[45px] lg:text-[65px]">325+</p>
-          <p className="leading-tight text-[15px] sm:text-[20px] md:text-[22px] text-center lg:text-right">
-            Hours Read on Medium
-          </p>
+          <p className="lg:text-[65px] text-[35px]">2600+</p>
+          <p className="lg:text-[25px] text-[22px] text-center lg:text-right">Hours Read on Medium</p>
         </motion.div>
       </div>
     </div>
