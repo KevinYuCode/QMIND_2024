@@ -4,6 +4,7 @@ import leadership_image from "../../assets/Leadership_image.jpg";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { sofia_sans } from "../font";
+import { kontrapunkt, tradeGothic } from "./font";
 import Link from "next/link";
 
 
@@ -51,17 +52,28 @@ const page = () => {
   </div>
 </div>
 </div>
-<div className="shrink w-full h-[362px] p-8 bg-stone-900 rounded-2xl border border-neutral-600 justify-start items-center gap-8 ">
+<div className="shrink w-full h-[300px] md:h-[362px] p-8 bg-stone-900 rounded-2xl border border-neutral-600 justify-start items-center gap-8 ">
   <div className="w-full h-full rounded-2xl flex justify-start items-center  ">
     <div className="w-[35%] h-[65%] md:w-[30%] md:h-[80%] bg-black rounded-2xl border border-neutral ">
 
     </div>
-    <div className='pl-4 w-[60%] h-full justify-start items-start bg-stone-900'>
-      Lorem impsum
+    <div className=' pl-4 h-full place-items-left bg-stone-900'>
+    Secure Shell Communication using Quantum Key Distribution
     </div>
 
   </div>
-</div>
+  
+</div>  
+{/* <div className="shrink w-full h-[362px] p-8 bg-stone-900 rounded-2xl border border-neutral-600 justify-start items-center gap-8 ">
+  <div className="w-full h-full rounded-2xl flex justify-start items-center">
+    <div className="w-[35%] h-[65%] md:w-[30%] md:h-[80%] bg-black rounded-2xl border border-neutral ">
+
+    </div>
+    <div className='flex pl-4 !font-kontrapunkt text-2xl h-full bg-stone-900'>
+      Secure Shell Communication using Quantum Key Distribution
+    </div>
+  </div>
+</div> */}
 
         </ContentContainer>
   )
