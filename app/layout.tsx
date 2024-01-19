@@ -6,7 +6,7 @@ import styles from "./styles/layout.module.scss";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import type { Metadata } from "next";
-import { GlobalContextProvider } from "./Context/store";
+import { GlobalContextProvider } from "./context/store";
 
 const sofia_sans = Sofia_Sans({ subsets: ["latin"], variable: "--font-sofia" });
 

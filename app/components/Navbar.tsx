@@ -11,9 +11,8 @@ import { usePathname } from "next/navigation";
 import DISCORD from "@/../assets/icons/Discord.png";
 import INSTAGRAM from "@/../assets/icons/Instagram.png";
 import Image from "next/image";
-import { useGlobalContext } from "@/Context/store";
+import { useGlobalContext } from "@/context/store";
 import PROFILE from "@/../assets/icons/profile.svg";
-import SignInModal from "./Modals/SignInModal";
 
 function Navbar() {
   const { navOn, setNavOn } = useGlobalContext();

@@ -11,7 +11,7 @@ import INCUBATOR from "../assets/incubator_image.png";
 import INCUBATOR_MOBILE from "../assets/aws_mobile.png";
 import CardSlider from "./components/CardSlider";
 import CompanySlider from "./components/CompanySlider";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import PARTNERS_DESKTOP from "../assets/partners_desktop.svg";
 import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
@@ -19,7 +19,6 @@ import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
 import MemberCard from "./components/MemberCard";
-import MICROSOFT from "../assets/Companies/Microsoft.png";
 import Link from "next/link";
 import Image from "next/image";
 import HeadlineCard from "./components/HeadlineCard";
@@ -37,7 +36,6 @@ export default function Home() {
   const [alumniImg, setAlumniImg]: any = useState(null);
   const [conferenceImg, setConferenceImg]: any = useState(null);
   const [awsImg, setAwsImg]: any = useState(null);
-
   const [spotlight, setSpotlight] = useState(4);
 
   const isMobile = useMediaQuery({
@@ -130,7 +128,6 @@ export default function Home() {
 
         {/* Yellow banner */}
         <PartnersAndClients />
-
       </ContentContainer>
 
       {/* What is QMIND? */}
@@ -171,7 +168,7 @@ export default function Home() {
       </ContentContainer>
 
       {/* Stats card */}
-      <ContentContainer >
+      <ContentContainer>
         <StatsCards />
       </ContentContainer>
 
@@ -189,7 +186,10 @@ export default function Home() {
 
       {/* Our Members Love QMIND */}
       <ContentContainer className="items-center gap-[50px] w-[100%]">
-        <Title title="Our Members Love QMIND" subtitle="Click On Them To See What They Think"/>
+        <Title
+          title="Our Members Love QMIND"
+          subtitle="Click On Them To See What They Think"
+        />
         <div className="flex flex-col lg:flex-row justify-start md:justify-center items-center mt-[-65px] md:mt-0">
           <MemberCard
             spotlight={true}
@@ -241,7 +241,6 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-row justify-start md:justify-center mx-[20px] md:mx-0 overflow-x-scroll md:overflow-visible w-[100dvw] md:w-[100%] md:flex-wrap lg:max-w-[1000px] items-center gap-[5px] md:gap-[15px] px-8 appearance-none	md:px-0 ">
-
           {TESTIMONIALS.map((card, key) => (
             <MemberCard
               className={`${card.angle} cursor-pointer`}
@@ -326,7 +325,6 @@ export default function Home() {
           />
         </div>
       </ContentContainer>
-
     </main>
   );
 }
