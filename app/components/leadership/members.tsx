@@ -157,6 +157,39 @@ function Members() {
         },
       ],
     },
+    {
+      title: "Web Developers",
+      cards: [
+        {
+          name: "Ryan Su",
+          title: "Web Developer",
+          img: "/headshots/Ryan_Su.png",
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/ryan-z-su/",
+        },
+        {
+          name: "Kayne Lee",
+          title: "Web Developer",
+          img: "/headshots/Kayne_Lee.png",
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/kaynelee/",
+        },
+        {
+          name: "Adwait Srivastava",
+          title: "Web Developer",
+          img: "/headshots/Adwait_Srivastava.png",
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/adwait-srivastava/",
+        },
+        {
+          name: "Stefan Pitigoi",
+          title: "Web Developer",
+          img: "/headshots/Stefan_Pitigoi.png",
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/stefan-pitigoi/",
+        },
+      ],
+    },
   ];
 
   return (
