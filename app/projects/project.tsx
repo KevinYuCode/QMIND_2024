@@ -7,7 +7,7 @@ import Link from "next/link";
 import EXAMPLE from "../../assets/Users/example.png";
 import rabab_azeem from "../../assets/Headshots/Rabab_Azeem.png";
 import olivia_xu from "../../assets/Headshots/Olivia_Xu.png";
-import marcello_mallqui from "../../assets/Headshots/Marcelo_Chaman_Mallqui.png";
+import { kontrapunkt } from "../font";
 import "./page.scss";
 import { sofia_sans } from "../font";
 
@@ -20,28 +20,42 @@ function Project() {
         {
           name: "Marcelo Chaman Mallqui",
           title: "Managing Director, Operations",
-          img: marcello_mallqui,
+          img: "/headshots/Marcelo_Chaman_Mallqui.png",
           class: "leadershipCardOperations",
           social: "https://www.linkedin.com/in/marc-cham/",
         },
         {
           name: "Marcelo Chaman Mallqui",
           title: "Managing Director, Operations",
-          img: marcello_mallqui,
+          img: "/headshots/Marcelo_Chaman_Mallqui.png",
           class: "leadershipCardOperations",
           social: "https://www.linkedin.com/in/marc-cham/",
         },
         {
           name: "Marcelo Chaman Mallqui",
           title: "Managing Director, Operations",
-          img: marcello_mallqui,
+          img: "/headshots/Marcelo_Chaman_Mallqui.png",
           class: "leadershipCardOperations",
           social: "https://www.linkedin.com/in/marc-cham/",
         },
         {
           name: "Marcelo Chaman Mallqui",
           title: "Managing Director, Operations",
-          img: marcello_mallqui,
+          img: "/headshots/Marcelo_Chaman_Mallqui.png",
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/marc-cham/",
+        },
+        {
+          name: "Marcelo Chaman Mallqui",
+          title: "Managing Director, Operations",
+          img: "/headshots/Marcelo_Chaman_Mallqui.png",
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/marc-cham/",
+        },
+        {
+          name: "Marcelo Chaman Mallqui",
+          title: "Managing Director, Operations",
+          img: "/headshots/Marcelo_Chaman_Mallqui.png",
           class: "leadershipCardOperations",
           social: "https://www.linkedin.com/in/marc-cham/",
         },
@@ -73,7 +87,9 @@ function Project() {
                 key={index}
                 className="w-[338px] h-[253.5px] rounded-[12px] border-[1.5px] border-[#4E4E4E]"
                 src={image}
-                alt=""
+                height={300}
+                width={300}
+                alt="test"
               />
             ))}
           </div>
@@ -109,7 +125,7 @@ function Project() {
               {/*Full Description */}
               <div>
                 <h1>FULL PROJECT DESCRIPTION</h1>
-                <p>
+                <p className={`${kontrapunkt.variable}`}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Aliquet lectus proin nibh nisl condimentum. Euismod elementum
@@ -162,7 +178,7 @@ function Project() {
                       key={index}
                       className="flex flex-col gap-4 items-center"
                     >
-                      <div className="flex flex-row flex-wrap justify-center gap-4 md:gap-8 w-[100%] leading-none">
+                      <div className="grid grid-cols-3 justify-center gap-4 md:gap-8 w-[100%] leading-none">
                         {section.cards.map((card, index) => {
                           return (
                             <Link
@@ -177,6 +193,8 @@ function Project() {
                                   src={card.img}
                                   alt=""
                                   className={`md:rounded-[8px] aspect-square w-full rounded-[5px]`}
+                                  height={300}
+                                  width={300}
                                 />
                               </div>
                               <div className="flex flex-col gap-2">

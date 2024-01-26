@@ -126,7 +126,7 @@ function Navbar() {
               <Image src={DISCORD} alt="Discord" width={25} height={25} />
             </Link>
 
-            {/* {!user ? (
+            {!user ? (
               <button onClick={() => setLoginModalOn(true)}>
                 <Image src={PROFILE} height={30} width={30} alt="profile" />
               </button>
@@ -134,7 +134,7 @@ function Navbar() {
               <Link href={"/account"}>
                 <Image src={PROFILE} height={30} width={30} alt="profile" />
               </Link>
-            )} */}
+            )}
           </div>
         </motion.div>
 

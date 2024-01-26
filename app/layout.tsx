@@ -30,9 +30,9 @@ export default function RootLayout({
             href="%PUBLIC_URL%/cropped-New-QMIND-Logo-32x32.png"
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="theme-color" content="#000000" />
           <meta property="og:type" content="website"></meta>
           <meta property="og:url" content="https://www.qmind.ca" />
-          <meta name="theme-color" content="#000000" />
           <meta
             property="og:image"
             content="https://qmind.ca/2023_Preview_Image.png"
