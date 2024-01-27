@@ -11,6 +11,8 @@
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
     "@next/font": "^13.4.12",
+    "@radix-ui/react-alert-dialog": "^1.0.5",
+    "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
@@ -32,7 +34,9 @@
     "eslint-config-next": "13.4.7",
     "fitty": "^2.3.7",
     "framer-motion": "^10.14.0",
+    "lucide-react": "^0.316.0",
     "next": "^13.4.7",
+    "next-themes": "^0.2.1",
     "node-sass": "^9.0.0",
     "postcss": "8.4.24",
     "react": "18.2.0",

@@ -30,6 +30,7 @@ import Text from "./components/Text";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PartnersAndClients from "./components/PartnersAndClients";
+import Modal from "./components/modal/modal";
 
 export default function Home() {
   const [partnersImg, setPartnersImg]: any = useState(null);
@@ -95,6 +96,7 @@ export default function Home() {
                 .
               </p>
             </div>
+            <Modal>Hello wolrd</Modal>
 
             {/* Landing Page Buttons */}
             <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-[24px]">

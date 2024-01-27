@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/navbar.module.scss";
@@ -11,12 +11,13 @@ import { usePathname } from "next/navigation";
 import DISCORD from "@/../assets/icons/Discord.png";
 import INSTAGRAM from "@/../assets/icons/Instagram.png";
 import Image from "next/image";
-import { useGlobalContext } from "@/context/store";
+// import { useGlobalContext } from "@/Context/store";
 import PROFILE from "@/../assets/icons/profile.svg";
+import Modal from "./modal/modal";
 
 function Navbar() {
-  const { navOn, setNavOn } = useGlobalContext();
-
+  // const { navOn, setNavOn } = useGlobalContext();
+  const [navOn, setNavOn] = useState(false);
   const setNav = (value: boolean) => {
     setTimeout(() => {
       setNavOn(value);
@@ -25,7 +26,7 @@ function Navbar() {
 
   const [loginModalOn, setLoginModalOn] = useState(false);
 
-  const { user } = useGlobalContext();
+  // const { user } = useGlobalContext();
   const pathname = usePathname();
 
   return (
@@ -126,15 +127,9 @@ function Navbar() {
               <Image src={DISCORD} alt="Discord" width={25} height={25} />
             </Link>
 
-            {!user ? (
-              <button onClick={() => setLoginModalOn(true)}>
-                <Image src={PROFILE} height={30} width={30} alt="profile" />
-              </button>
-            ) : (
-              <Link href={"/account"}>
-                <Image src={PROFILE} height={30} width={30} alt="profile" />
-              </Link>
-            )}
+            <Modal>
+              <Image src={PROFILE} height={30} width={30} alt="profile" />
+            </Modal>
           </div>
         </motion.div>
 
