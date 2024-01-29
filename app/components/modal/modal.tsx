@@ -62,7 +62,7 @@ export default function Modal({ children }: any) {
                 <Input id="username" placeholder="12ty6@queensu.ca" />
               </div>
               <div className="space-y-1">
-                <Label htmlFor="current_password">New Password</Label>
+                <Label htmlFor="current_password">Password</Label>
                 <Input id="current_password" type="password" />
               </div>
               <div className="space-y-1">
