@@ -1,8 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-
-  
-  
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,7 +17,7 @@ module.exports = {
         gothic: ["var(--font-trade-gothic)"],
         sofia: ["var(--font-sofia)"],
         roboto_slab: ["var(--font-roboto-slab)"],
-        kontrapunkt: ["var(--font-kontrapunkt)"],
+        kontrapunkt: ["kontrapunkt"],
       },
       screens: {
         xxs: "340px",
@@ -42,6 +39,9 @@ module.exports = {
         // => @media (min-width: 1280px) { ... }
 
         "2xl": "1536px",
+        // => @media (min-width: 1536px) { ... }
+        
+        "3xl": "1800px",
         // => @media (min-width: 1536px) { ... }
       },
     },

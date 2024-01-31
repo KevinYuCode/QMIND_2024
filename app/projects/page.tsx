@@ -7,8 +7,8 @@ import Link from 'next/link';
 import EXAMPLE from "../../assets/Users/example.png";
 import rabab_azeem from "../../assets/Headshots/Rabab_Azeem.png";
 import olivia_xu from "../../assets/Headshots/Olivia_Xu.png";
-import marcello_mallqui from "../../assets/Headshots/Marcelo_Chaman_Mallqui.png";
 import "./page.scss";
+import { kontrapunkt } from "../font";
 import { sofia_sans } from "../font";
 
 const images = [EXAMPLE, EXAMPLE, EXAMPLE, EXAMPLE, EXAMPLE]
@@ -21,28 +21,42 @@ function Users() {
         {
           name: "Marcelo Chaman Mallqui",
           title: "Managing Director, Operations",
-          img: marcello_mallqui,
+          img: "/headshot.png",
           class: "leadershipCardOperations",
           social: "https://www.linkedin.com/in/marc-cham/",
         },
         {
           name: "Marcelo Chaman Mallqui",
           title: "Managing Director, Operations",
-          img: marcello_mallqui,
+          img: "/headshot.png",
           class: "leadershipCardOperations",
           social: "https://www.linkedin.com/in/marc-cham/",
         },
         {
           name: "Marcelo Chaman Mallqui",
           title: "Managing Director, Operations",
-          img: marcello_mallqui,
+          img: "/headshot.png",
           class: "leadershipCardOperations",
           social: "https://www.linkedin.com/in/marc-cham/",
         },
         {
           name: "Marcelo Chaman Mallqui",
           title: "Managing Director, Operations",
-          img: marcello_mallqui,
+          img: "/headshot.png",
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/marc-cham/",
+        },
+        {
+          name: "Marcelo Chaman Mallqui",
+          title: "Managing Director, Operations",
+          img: "/headshot.png",
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/marc-cham/",
+        },
+        {
+          name: "Marcelo Chaman Mallqui",
+          title: "Managing Director, Operations",
+          img: "/headshot.png",
           class: "leadershipCardOperations",
           social: "https://www.linkedin.com/in/marc-cham/",
         },
@@ -51,13 +65,12 @@ function Users() {
   ]
   return (
     <ContentContainer>
-      <Link href="/projects">
         
         <div className="users-container">
 
           {/*Project title*/}
           <div className="users-title">
-            <h1>Secure Shell Communication using Quantum Key Distribution</h1>
+            <h1 className='!font-kontrapunkt'>Secure Shell Communication using Quantum Key Distribution</h1>
             <p>Disruptive technologies</p>
           </div>
 
@@ -97,7 +110,7 @@ function Users() {
 
             {/*Project Summary*/}
             <div>
-              <h1 className={`${sofia_sans.className}`}>PROJECT SUMMARY</h1>
+              <h1 className={`${kontrapunkt.className}`}>PROJECT SUMMARY</h1>
              
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores unde delectus est veniam ipsum obcaecati, totam laboriosam commodi facere, enim similique deserunt fugit vel.
@@ -130,42 +143,43 @@ function Users() {
          
 
             {/*Right side socials*/}
-          <div className="flexbox-item2 item-social">
+          <div className="flex  item-social">
 
             {/*Linkedin Icons from leadership */}
 
             <div>
           <h1>Contributing Team - Click to connect!</h1>
-          {leadership.map((section, index) => {
-          return (
+
+          {leadership.map((section, index) => 
+          (   
             <div key={index} className="flex flex-col gap-4 items-center">
-             
-              <div className="flex flex-row flex-wrap justify-center gap-4 md:gap-8 w-[100%] leading-none">
+              <div className="grid grid-cols-3 flex-wrap justify-center gap-[10px] w-[100%] leading-none">
                 {section.cards.map((card, index) => {
                   return (
                     <Link
                       href={card.social}
                       key={index}
-                      className={`${card.class} w-[150px] md:w-[225px] lg:w-[150px] text-center flex flex-col gap-5 justify-center items-center rounded-[16px] p-[12px] md:p-[20px] md:rounded-[24px]  bg-[#2E2E2E]`}
+                      className={`${card.class}  text-center flex flex-col gap-5 justify-center items-center rounded-[15px] p-[12.1px] bg-[#2E2E2E]`}
                     >
                       <div
-                        className={`${card.class}-img rounded-[5px] md:rounded-[10px] w-full`}
+                        className={`${card.class}-img rounded-[5px] md:rounded-[10px] relative w-[100%] min-h-[121px]`}
                       >
                         <Image
                           src={card.img}
-                          alt=""
-                          className={`md:rounded-[8px] aspect-square w-full rounded-[5px]`}
+                          alt="Project Image"
+                          fill
+                          className={`aspect-square rounded-[5px] object-cover`}
                         />
                       </div>
                       <div className="flex flex-col gap-2">
                         <p
-                          className={`${sofia_sans.className} font-semibold font-gothic tracking-tight text-[12px] md:text-[12px]`}
+                          className={` font-semibold font-gothic tracking-tight text-[12px] md:text-[12px]`}
                         >
                           {card.name}
                         </p>
 
                         <p
-                          className={`${sofia_sans.className} font-light font-gothic text-[8px] xl:text-[8px]`}
+                          className={` font-light font-gothic text-[9px]`}
                         >
                           {card.title}
                         </p>
@@ -175,8 +189,8 @@ function Users() {
                 })}
               </div>
             </div>
-          );
-        })}
+          )
+      )}
 
           </div>
             {/*Link to github and other socials */}
@@ -199,7 +213,6 @@ function Users() {
 
 
         </div>
-      </Link>
     </ContentContainer>
   )
 }
