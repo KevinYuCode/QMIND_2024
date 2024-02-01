@@ -88,7 +88,7 @@ export default function Home() {
                 artificial intelligence, machine learning, blockchain and
                 quantum computing. We want you to{" "}
                 <a
-                  href="https://discord.gg/3FHfAs87"
+                  href="https://discord.gg/jw94EEGyJR"
                   className="underline"
                   target="_blank"
                 >
