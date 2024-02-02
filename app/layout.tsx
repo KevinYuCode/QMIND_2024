@@ -42,9 +42,7 @@ export default function RootLayout({
         </head>
 
         <body
-          className={`${tradeGothic.variable} ${sofia_sans.className} ${
-            kontrapunkt.variable
-          } ${"w-[100dvw] h-[100dvh]"} ${styles.mainBgColour}`}
+          className={` ${sofia_sans.className}  ${"w-[100dvw] h-[100dvh]"} ${styles.mainBgColour}`}
         >
           <div className="flex flex-col w-[100dvw] h-[100dvh] overflow-y-scroll overflow-x-hidden">
             <GlobalContextProvider>
