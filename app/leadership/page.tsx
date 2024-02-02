@@ -25,6 +25,10 @@ import sanindie_s from "../../assets/Headshots/Sanindie_Silva.png";
 import sara_l from "../../assets/Headshots/Sara_Laker.png";
 import sunghoon_k from "../../assets/Headshots/Sunghoon_Kim.png";
 import mercy_d from "../../assets/Headshots/Mercy_Doan.png";
+import ryan_s from "../../assets/Headshots/Ryan_Su.png";
+import kayne_l from "../../assets/Headshots/Kayne_Lee.png";
+import stefan_p from "../../assets/Headshots/Stefan_Pitigoi.png";
+import adwait_s from "../../assets/Headshots/Adwait_Srivastava.png"
 
 import { sofia_sans } from "../font";
 import Link from "next/link";
@@ -184,6 +188,39 @@ export default function Leadership() {
         },
       ],
     },
+    {
+      title: "Web Developers",
+      cards: [
+        {
+          name: "Ryan Su",
+          title: "Web Developer",
+          img: ryan_s,
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/ryan-z-su/",
+        },
+        {
+          name: "Kayne Lee",
+          title: "Web Developer",
+          img: kayne_l,
+          class:"leadershipCardOperations",
+          social: "https://www.linkedin.com/in/kaynelee/",
+        },
+        {
+          name: "Adwait Srivastava",
+          title: "Web Developer",
+          img: adwait_s,
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/adwait-srivastava/",
+        },
+        {
+          name: "Stefan Pitigoi",
+          title: "Web Developer",
+          img: stefan_p,
+          class: "leadershipCardOperations",
+          social: "https://www.linkedin.com/in/stefan-pitigoi/",
+        },
+      ]
+    }
   ];
 
   return (
