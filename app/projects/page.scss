@@ -16,22 +16,29 @@
     align-self: stretch;
     h1 {
         color: #FFF;
-        text-align: center;
-        // font-family: Kontrapunkt;
+        text-align: lwft;
+        //font-family: Kontrapunkt;
         font-size: 32px;
         font-style: normal;
         font-weight: 300;
         line-height: 100%; /* 32px */
+        @media only screen and (max-width: 390px) {
+            font-size: 14px;
+        }
+
     }
     p {
         color: #3F69FF;
-        text-align: center;
+        text-align: right;
         // font-family: Sofia Sans;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 100%; /* 16px */
         text-transform: uppercase;
+        @media only screen and (max-width: 390px) {
+            font-size: 10px;
+        }
     }
 }
 .users-tech {
@@ -62,6 +69,9 @@
     font-weight: 400;
     line-height: 100%; /* 14px */
     text-transform: uppercase;
+    @media only screen and (max-width: 390px) {
+        font-size: 10px;
+    }
 }
 .users-img-title {
     color: #6E6E6E;
@@ -72,6 +82,9 @@ font-weight: 600;
 line-height: 100%; /* 16px */
 text-transform: uppercase;
 margin-bottom: 10px;
+@media only screen and (max-width: 390px) {
+    font-size: 12px;
+}
 }
 .users-img {
     display: flex;
@@ -87,35 +100,60 @@ margin-bottom: 10px;
     &::-webkit-scrollbar { 
         display: none; // for Chrome, Safari and Opera
     }
+    
+}
+.contributors {
+    @media only screen and (max-width: 390px) {
+        display: flex;
+    padding: 12px;
+    align-items: center;
+    overflow: scroll;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid #4E4E4E;
+    background: #161616;
+    scrollbar-width: none; // for Firefox
+    &::-webkit-scrollbar { 
+        display: none; // for Chrome, Safari and Opera
+    }
+    }
 }
 
 .content-flexbox{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 32px;
+    
 
 }
 
 .flexbox-item1{
- 
     background-color: transparent;
-    width: 750px;
-    height: 700px;
-   
+    width: 60%;
+    @media only screen and (max-width: 391px) {
+        width: 50%;
+    }
 }
 
 .flexbox-item2{
-    width: 460px;
-    height: 600px;
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    
     background-color: transparent;
 
- 
+    @media only screen and (max-width: 391px) {
+        width: 100%;
+    }
 }
 
 .item-desc{
     h1{
-        margin: 20px;
+        // margin: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         color: #6E6E6E;
         // font-family: Sofia Sans;
         font-size: 14px;
@@ -123,10 +161,14 @@ margin-bottom: 10px;
         font-weight: 600;
         line-height: 100%; /* 16px */
         text-transform: uppercase;
+        @media only screen and (max-width: 390px) {
+            font-size: 12px;
+        }
     }
 
     p{
-        padding-left: 20px;
+        // padding-left: 20px;
+        padding-right: 20px;
         color: #FFF;
 
         // font-family: Sofia Sans;
@@ -134,12 +176,15 @@ margin-bottom: 10px;
         font-style: normal;
         font-weight: 400;
         line-height: 125%; /* 20px */
+        @media only screen and (max-width: 390px) {
+            font-size: 12px;
+        }
     }
 }
 
 .item-social{
     h1{
-        margin: 20px;
+        // margin: 20px;
         color: #6E6E6E;
         // font-family: Sofia Sans;
         font-size: 14px;
@@ -147,7 +192,9 @@ margin-bottom: 10px;
         font-weight: 600;
         line-height: 100%; /* 16px */
         text-transform: uppercase;
-
+        @media only screen and (max-width: 390px) {
+            font-size: 12px;
+        }
     }
 }
 
@@ -212,8 +259,8 @@ margin-bottom: 10px;
     .flexbox-item1{
  
         background-color: transparent;
-        width: 900px;
-        height: 500px;
+        // width: 900px;
+        // height: 500px;
         font-size: 12px;
            
         }
@@ -222,7 +269,7 @@ margin-bottom: 10px;
         display: flex;
         flex-direction: row;
         width: 460px;
-        height: 600px;
+        // height: 600px;
         
     }    
 

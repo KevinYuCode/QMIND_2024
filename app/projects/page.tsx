@@ -70,7 +70,7 @@ function Users() {
 
           {/*Project title*/}
           <div className="users-title">
-            <h1 className='!font-kontrapunkt'>Secure Shell Communication using Quantum Key Distribution</h1>
+            <h1 className={`${kontrapunkt.className}`}>Secure Shell Communication using Quantum Key Distribution</h1>
             <p>Disruptive technologies</p>
           </div>
 
@@ -96,38 +96,28 @@ function Users() {
 
         <Image
           key={index}
-          className="w-[338px] h-[253.5px] rounded-[12px] border-[1.5px] border-[#4E4E4E]"
+          className="w-[338px] xxs:w-[150px] h-auto rounded-[12px] border-[1.5px] border-[#4E4E4E]"
           src={image}
           alt=""
         />
       ))}
     </div>
         
-          <div className="content-flexbox">
-           
+          <div className="flex justify-between">
           {/*Left side desc*/}
           <div className="flexbox-item1 item-desc">
 
             {/*Project Summary*/}
-            <div>
-              <h1 className={`${kontrapunkt.className}`}>PROJECT SUMMARY</h1>
+            <div className="flex-wrap w-[100%]">
+              <h1 className="">PROJECT SUMMARY</h1>
              
-              <p>
+              <p className="">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores unde delectus est veniam ipsum obcaecati, totam laboriosam commodi facere, enim similique deserunt fugit vel.
               </p>
-            </div>
-
-            {/*Real World Impact */}
-            <div>
-            
-            <h1>Real World Impact - What Impact will this project have on the world of AI?</h1>
-            <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            </div>
-
-            {/*Full Description */}
-            <div>
+              <h1>Real World Impact - What Impact will this project have on the world of AI?</h1>
+              <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
             <h1>FULL PROJECT DESCRIPTION</h1>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet lectus proin nibh nisl condimentum. Euismod elementum nisi quis eleifend quam. Accumsan lacus vel facilisis volutpat. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan. Lobortis mattis aliquam faucibus purus in massa. Est lorem ipsum dolor sit amet consectetur. Suspendisse interdum consectetur libero id faucibus nisl tincidunt. At elementum eu facilisis sed odio morbi. Nibh ipsum consequat nisl vel pretium lectus quam id. Eget arcu dictum varius duis at consectetur lorem donec. Eu scelerisque felis imperdiet proin. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Enim facilisis gravida neque convallis a cras. Tempor orci dapibus ultrices in iaculis nunc. Ut consequat semper viverra nam libero. Lectus nulla at volutpat diam. Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam. Vel facilisis volutpat est velit egestas dui id ornare arcu.
@@ -143,17 +133,17 @@ function Users() {
          
 
             {/*Right side socials*/}
-          <div className="flex  item-social">
+          <div className="flexbox-item2  item-social">
 
             {/*Linkedin Icons from leadership */}
 
             <div>
-          <h1>Contributing Team - Click to connect!</h1>
-
-          {leadership.map((section, index) => 
-          (   
-            <div key={index} className="flex flex-col gap-4 items-center">
-              <div className="grid grid-cols-3 flex-wrap justify-center gap-[10px] w-[100%] leading-none">
+              <h1>Contributing Team - Click to connect!</h1>
+              <div className="contributors">
+              {leadership.map((section, index) => 
+              (   
+                <div key={index} className="flex flex-col items-center contributors">
+                <div className="grid grid-cols-3 flex-wrap justify-center gap-[10px] w-[100%] leading-none">
                 {section.cards.map((card, index) => {
                   return (
                     <Link
@@ -187,14 +177,14 @@ function Users() {
                     </Link>
                   );
                 })}
+                </div>
               </div>
-            </div>
+            
           )
       )}
-
-          </div>
-            {/*Link to github and other socials */}
-            <div className="item-social2">
+      </div>
+          {/*Link to github and other socials */}
+          <div className="item-social2">
               <div className="info">GITHUB REPOSITORY</div>
               <Link href="https://github.com/">https://github.io/ssh-qkd-am-11</Link>
               <div className="info">CONTACT QMIND</div>
@@ -204,6 +194,8 @@ function Users() {
               <Link href="https://github.com/">Linkedin</Link>
 
             </div>
+          </div>
+            
           </div>
           <div>    
         </div>
