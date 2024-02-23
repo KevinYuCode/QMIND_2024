@@ -6,13 +6,14 @@ import { kontrapunkt, tradeGothic } from "../font";
 import Link from "next/link";
 
 import ContentContainer from "@/components/ContentContainer";
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import Project from "./project";
+import { createClient } from "@/utils/supabase/server";
 
 export default async function Projects({ props }: any) {
-  const supabase = createServerComponentClient({ cookies });
+  const cookieStore = cookies()
+  const supabase = createClient(cookieStore);
 
   const { data: projects } = await supabase.from("Projects").select("*");
   const { data: user, error: userError } = await supabase.auth.getUser();

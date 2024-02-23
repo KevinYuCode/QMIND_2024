@@ -14,6 +14,10 @@ import Image from "next/image";
 // import { useGlobalContext } from "@/Context/store";
 import PROFILE from "@/../assets/icons/profile.svg";
 import Modal from "./modal/modal";
+import { Database } from "../../database.types";
+
+import { createClient } from "@/utils/supabase/client";
+import { User } from "@supabase/supabase-js";
 
 function Navbar() {
   // const { navOn, setNavOn } = useGlobalContext();
@@ -24,10 +28,20 @@ function Navbar() {
     }, 10);
   };
 
-  const [loginModalOn, setLoginModalOn] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
 
   // const { user } = useGlobalContext();
   const pathname = usePathname();
+
+  const supabase = createClient();
+  const [user, setUser] = useState<User | null>();
+  useEffect(() => {
+    async function getUser() {
+      const { data, error } = await supabase.auth.getUser()
+      setUser(data.user);
+    }
+    getUser();
+  })
 
   return (
     <nav
@@ -127,9 +141,20 @@ function Navbar() {
               <Image src={DISCORD} alt="Discord" width={25} height={25} />
             </Link>
 
+            { user ?
+            <div className="flex flex-col">
+              <button onClick={() => setDropDown(true)}>
+                <Image src={PROFILE} height={30} width={30} alt="profile" />
+              </button>
+              <div className="relative w-[100px] h-[30px] rounded-sm flex flex-col p-[10px]">
+                ACCOUNT
+              </div>
+            </div>
+            :
             <Modal>
               <Image src={PROFILE} height={30} width={30} alt="profile" />
             </Modal>
+            }
           </div>
         </motion.div>
 
