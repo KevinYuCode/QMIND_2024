@@ -96,7 +96,6 @@ export default function Home() {
                 .
               </p>
             </div>
-            <Modal>Hello wolrd</Modal>
 
             {/* Landing Page Buttons */}
             <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-[24px]">
