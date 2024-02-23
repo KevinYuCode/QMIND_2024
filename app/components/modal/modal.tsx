@@ -10,6 +10,7 @@ import {
 } from "../ui/card";
 import {
   Dialog,
+  DialogClose,
   DialogTitle,
   DialogContent,
   DialogTrigger,
@@ -19,12 +20,24 @@ import {
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import PROFILE from "@/../assets/icons/profile.svg";
+import Image from "next/image";
+
+import { useEffect, useState } from "react";
+import { useRouter, redirect } from "next/navigation";
+
+import { login } from './actions';
 
 export default function Modal({ children }: any) {
+  const [ email, setEmail ] = useState('')
+  const [ password, setPassword ] = useState('')
+
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button>{children}</button>
+        <button>
+          {children}
+        </button>
       </DialogTrigger>
 
       <DialogContent className="">
@@ -37,19 +50,23 @@ export default function Modal({ children }: any) {
             <CardHeader>
               <CardTitle>Login</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-2">
-              <div className="space-y-1">
-                <Label htmlFor="username">Email</Label>
-                <Input id="username" placeholder="12ty6@queensu.ca" />
-              </div>
-              <div className="space-y-1">
-                <Label htmlFor="password">Password</Label>
-                <Input id="password" type="password" />
-              </div>
-            </CardContent>
-            <CardFooter className="flex justify-center items-center">
-              <Button className="w-[100%]">Login</Button>
-            </CardFooter>
+            <form>
+              <CardContent className="space-y-2">
+                <div className="space-y-1">
+                  <Label htmlFor="username">Email</Label>
+                  <Input id="email" name="email" type="email" placeholder="12ty6@queensu.ca" required={true} value={email || ''} onChange={(event:any) => {setEmail(event.target.value)}}/>
+                </div>
+                <div className="space-y-1">
+                  <Label htmlFor="password">Password</Label>
+                  <Input id="password" name="password" type="password" required={true} value={password || ''} onChange={(event:any) => {setPassword(event.target.value)}}/>
+                </div>
+              </CardContent>
+              <CardFooter className="flex justify-center items-center">
+                <DialogClose asChild>
+                  <Button className="w-[100%]" formAction={login}>Login</Button>
+                </DialogClose>
+              </CardFooter>
+            </form>
           </TabsContent>
           <TabsContent value="password">
             <CardHeader>

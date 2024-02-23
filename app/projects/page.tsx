@@ -14,7 +14,19 @@ import { kontrapunkt } from "../font";
 import { sofia_sans } from "../font";
 import plasma from "../../assets/plasma.png";
 
-function Users() {
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import Project from "./project";
+import { createClient } from "@/utils/supabase/server";
+
+export default async function Projects({ props }: any) {
+  const cookieStore = cookies()
+   const supabase = createClient(cookieStore);
+
+  const { data: projects } = await supabase.from("Projects").select("*");
+  const { data: user, error: userError } = await supabase.auth.getUser();
+  const { data: session, error: sessionError } =
+    await supabase.auth.getSession();
   return (
     <ContentContainer>
       <div className="flex flex-col justify-start items-center gap-8">
@@ -115,4 +127,3 @@ function Users() {
     </ContentContainer>
   );
 }
-export default Users;

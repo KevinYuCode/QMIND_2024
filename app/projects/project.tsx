@@ -64,7 +64,6 @@ function Project() {
   ];
   return (
     <ContentContainer>
-      <Link href="/projects">
         <div className="users-container">
           {/*Project title*/}
           <div className="users-title">
@@ -234,7 +233,6 @@ function Project() {
             <div></div>
           </div>
         </div>
-      </Link>
     </ContentContainer>
   );
 }
