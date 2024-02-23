@@ -7,7 +7,7 @@ import Container from "./Container";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import DISCORD from "@/../assets/icons/Discord.png";
 import INSTAGRAM from "@/../assets/icons/Instagram.png";
 import Image from "next/image";
@@ -27,6 +27,8 @@ import {
   DialogTitle,
 } from "./ui/dialog";
 import { logout } from "@/actions/authActions";
+import { revalidatePath } from "next/cache";
+import { useGlobalContext } from "@/Context/store";
 
 function Navbar() {
   // const { navOn, setNavOn } = useGlobalContext();
@@ -38,11 +40,10 @@ function Navbar() {
   };
 
   const [dropDown, setDropDown] = useState(false);
-
   const pathname = usePathname();
-
+  const router = useRouter();
   const supabase = createClient();
-  const [user, setUser] = useState<User | null>();
+  const { user, setUser, loading, setLoading } = useGlobalContext();
 
   useEffect(() => {
     async function getUser() {
@@ -50,11 +51,14 @@ function Navbar() {
       setUser(data.user);
     }
     getUser();
-  }, []);
+  }, [router, pathname]);
 
   const handleLogout = async () => {
-    const status = await logout();
-    console.log("status", status);
+    setLoading(true);
+    await logout();
+    const { data, error } = await supabase.auth.getUser();
+    setUser(data.user);
+    setLoading(false);
   };
 
   return (
@@ -155,10 +159,12 @@ function Navbar() {
               <Image src={DISCORD} alt="Discord" width={25} height={25} />
             </Link>
 
-            {user ? (
+            {user && !loading ? (
               <Dialog>
                 <DialogTrigger asChild>
-                  <Image src={PROFILE} height={30} width={30} alt="profile" />
+                  <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-[#f0b542] shadow-lg cursor-pointer">
+                    PM
+                  </div>
                 </DialogTrigger>
                 <DialogContent
                   onOpenAutoFocus={(e) => e.preventDefault()}
@@ -180,14 +186,17 @@ function Navbar() {
                 </DialogContent>
               </Dialog>
             ) : (
-              <Button asChild>
-                <Link href="/login">Login</Link>
+              <Button
+                asChild
+                className="bg-[#f0b542] hover:bg-transparent  border-[#f0b542] border-[2px] !transition-all cursor-pointer "
+              >
+                <Link href="/login" className="!opacity-100">
+                  Login
+                </Link>
               </Button>
             )}
           </div>
         </motion.div>
-
-        {/* {loginModalOn && <SignInModal />} */}
       </Container>
     </nav>
   );

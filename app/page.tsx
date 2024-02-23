@@ -1,10 +1,8 @@
 "use client";
 import BtnLink from "@/components/Buttons/BtnLink";
 import Container from "@/components/Container";
-import styles from "./styles/home.module.scss";
 import { EVENTS, TESTIMONIALS } from "./content/content";
 import { COMPANIES } from "./content/content";
-import { DESIGN_PROJECTS } from "./content/content";
 import CONFERENCE from "../assets/conference_image.png";
 import CONFERENCE_MOBILE from "../assets/conference_mobile.png";
 import INCUBATOR from "../assets/incubator_image.png";
@@ -32,7 +30,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import PartnersAndClients from "./components/PartnersAndClients";
 import { cn } from "./lib/utils";
-
+import localFont from "next/font/local";
+import { tradeGothic } from "./font";
 export default function Home() {
   const [partnersImg, setPartnersImg]: any = useState(null);
   const [alumniImg, setAlumniImg]: any = useState(null);
@@ -70,7 +69,7 @@ export default function Home() {
 
   useEffect(() => {
     AOS.init({ duration: 1200 });
-  });
+  },[]);
 
   return (
     <main className="flex flex-col gap-16 md:gap-20 w-full min-h-[100vh] py-[3rem] 2xl:py-[5rem] relative">
@@ -103,13 +102,13 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-[24px]">
               <BtnLink
                 isExternalLink={true}
-                className="min-w-[200px] !text-[13px]"
+                className={`min-w-[200px] !text-[13px] ${tradeGothic.className}`}
                 text="WORK WITH US"
                 href="mailto:partnerships@qmind.ca"
               />
               <BtnLink
                 isExternalLink={true}
-                className="min-w-[200px] !text-[13px]"
+                className={`min-w-[200px] !text-[13px] ${tradeGothic.className}`}
                 text="OUR PROJECTS"
                 href="./2021_Lookbook.pdf"
               />

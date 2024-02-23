@@ -20,7 +20,8 @@ export async function login(formData: FormData) {
   if (error) {
     redirect("/error");
   }
+  const res = await supabase.auth.getUser();
 
   revalidatePath("/", "layout");
-  redirect("/");
+  redirect("/")
 }

@@ -14,13 +14,11 @@ import { kontrapunkt } from "../font";
 import { sofia_sans } from "../font";
 import plasma from "../../assets/plasma.png";
 
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
-import Project from "./project";
-import { createClient } from "../utils/supabase/server";
+// import { cookies } from "next/headers";
+
 
 export default async function Projects({ props }: any) {
-  const cookieStore = cookies()
+  // const cookieStore = cookies()
   //  const supabase = createClient(cookieStore);
 
   // const { data: projects } = await supabase.from("Projects").select("*");

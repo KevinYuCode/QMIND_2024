@@ -15,6 +15,8 @@ interface ContextProps {
   setProjects: Dispatch<SetStateAction<any>>;
   navOn: Boolean;
   setNavOn: Dispatch<SetStateAction<any>>;
+  loading: Boolean;
+  setLoading: Dispatch<SetStateAction<any>>;
 }
 
 const GlobalContext = createContext<ContextProps>({
@@ -24,16 +26,28 @@ const GlobalContext = createContext<ContextProps>({
   setProjects: () => {},
   navOn: false,
   setNavOn: () => {},
+  loading: false,
+  setLoading: () => {},
 });
 
 export const GlobalContextProvider = ({ children }: any) => {
   const [user, setUser] = useState();
   const [projects, setProjects] = useState([]);
   const [navOn, setNavOn] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   return (
     <GlobalContext.Provider
-      value={{ user, setUser, projects, setProjects, navOn, setNavOn }}
+      value={{
+        user,
+        setUser,
+        projects,
+        setProjects,
+        navOn,
+        setNavOn,
+        loading,
+        setLoading,
+      }}
     >
       {children}
     </GlobalContext.Provider>
