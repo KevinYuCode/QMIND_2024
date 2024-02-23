@@ -1,9 +1,9 @@
-'use client'
+"use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/navbar.module.scss";
 import QMIND_NAV_LOGO from "../../assets/qmind_nav_logo.svg";
-import ContentContainer from "./ContentContainer";
+import Container from "./Container";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
@@ -16,8 +16,17 @@ import PROFILE from "@/../assets/icons/profile.svg";
 import Modal from "./modal/modal";
 import { Database } from "../../database.types";
 
-import { createClient } from "@/utils/supabase/client";
+import { createClient } from "../utils/supabase/client";
 import { User } from "@supabase/supabase-js";
+import { Button } from "./ui/button";
+import {
+  Dialog,
+  DialogHeader,
+  DialogContent,
+  DialogTrigger,
+  DialogTitle,
+} from "./ui/dialog";
+import { logout } from "@/actions/authActions";
 
 function Navbar() {
   // const { navOn, setNavOn } = useGlobalContext();
@@ -30,18 +39,23 @@ function Navbar() {
 
   const [dropDown, setDropDown] = useState(false);
 
-  // const { user } = useGlobalContext();
   const pathname = usePathname();
 
   const supabase = createClient();
   const [user, setUser] = useState<User | null>();
+
   useEffect(() => {
     async function getUser() {
-      const { data, error } = await supabase.auth.getUser()
+      const { data, error } = await supabase.auth.getUser();
       setUser(data.user);
     }
     getUser();
-  })
+  }, []);
+
+  const handleLogout = async () => {
+    const status = await logout();
+    console.log("status", status);
+  };
 
   return (
     <nav
@@ -51,7 +65,7 @@ function Navbar() {
       ${styles.navbarBg}
       fixed z-10 top-0 right-0 left-0 lg:h-[90px] flex items-center `}
     >
-      <ContentContainer className="flex !flex-row justify-start lg:justify-between items-start  lg:items-center font-gothic w-[100%] ">
+      <Container className="flex !flex-row justify-start lg:justify-between items-start  lg:items-center font-gothic w-[100%] ">
         {/* QMIND Logo */}
         <Link
           href="/"
@@ -141,25 +155,40 @@ function Navbar() {
               <Image src={DISCORD} alt="Discord" width={25} height={25} />
             </Link>
 
-            { user ?
-            <div className="flex flex-col">
-              <button onClick={() => setDropDown(true)}>
-                <Image src={PROFILE} height={30} width={30} alt="profile" />
-              </button>
-              <div className="relative w-[100px] h-[30px] rounded-sm flex flex-col p-[10px]">
-                ACCOUNT
-              </div>
-            </div>
-            :
-            <Modal>
-              <Image src={PROFILE} height={30} width={30} alt="profile" />
-            </Modal>
-            }
+            {user ? (
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Image src={PROFILE} height={30} width={30} alt="profile" />
+                </DialogTrigger>
+                <DialogContent
+                  onOpenAutoFocus={(e) => e.preventDefault()}
+                  className="p-[50px]"
+                >
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl text-center">
+                      Settings:
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className="w-[100%] flex justify-center mt-[30px]">
+                    <Button
+                      className="px-[20px]"
+                      onClick={() => handleLogout()}
+                    >
+                      Logout
+                    </Button>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            ) : (
+              <Button asChild>
+                <Link href="/login">Login</Link>
+              </Button>
+            )}
           </div>
         </motion.div>
 
         {/* {loginModalOn && <SignInModal />} */}
-      </ContentContainer>
+      </Container>
     </nav>
   );
 }

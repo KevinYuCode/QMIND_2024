@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ContentContainer from "../components/ContentContainer";
+import Container from "../components/Container";
 import Image from "next/image";
 import Link from "next/link";
 import EXAMPLE from "../../assets/Users/example.png";
@@ -63,7 +63,7 @@ function Project() {
     },
   ];
   return (
-    <ContentContainer>
+    <Container>
         <div className="users-container">
           {/*Project title*/}
           <div className="users-title">
@@ -233,7 +233,7 @@ function Project() {
             <div></div>
           </div>
         </div>
-    </ContentContainer>
+    </Container>
   );
 }
 

@@ -7,7 +7,7 @@ import styles from "./styles/layout.module.scss";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import type { Metadata } from "next";
-import { GlobalContextProvider } from "./context/store";
+import { GlobalContextProvider } from "@/Context/store";
 import { ThemeProvider } from "./providers/theme-provider";
 
 const sofia_sans = Sofia_Sans({ subsets: ["latin"], variable: "--font-sofia" });
@@ -42,7 +42,9 @@ export default function RootLayout({
         </head>
 
         <body
-          className={` ${sofia_sans.className}  ${"w-[100dvw] h-[100dvh]"} ${styles.mainBgColour}`}
+          className={` ${sofia_sans.className} ${"w-[100dvw] h-[100dvh]"} ${
+            styles.mainBgColour
+          }`}
         >
           <div className="flex flex-col w-[100dvw] h-[100dvh] overflow-y-scroll overflow-x-hidden">
             <GlobalContextProvider>
@@ -53,10 +55,12 @@ export default function RootLayout({
                 disableTransitionOnChange
               >
                 <Navbar />
-                <div className="pt-[72px] md:pt-[100px]">{children}</div>
+                <div className="flex flex-col min-h-[100vh] h-[100%] justify-between">
+                  <div className="pt-[72px] md:pt-[100px]">{children}</div>
+                  <Footer />
+                </div>
               </ThemeProvider>
             </GlobalContextProvider>
-            <Footer />
           </div>
         </body>
       </html>

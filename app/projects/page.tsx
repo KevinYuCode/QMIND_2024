@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import ContentContainer from "../components/ContentContainer";
+import Container from "../components/Container";
 import leadership_image from "../../assets/Leadership_image.jpg";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -17,18 +17,18 @@ import plasma from "../../assets/plasma.png";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import Project from "./project";
-import { createClient } from "@/utils/supabase/server";
+import { createClient } from "../utils/supabase/server";
 
 export default async function Projects({ props }: any) {
   const cookieStore = cookies()
-   const supabase = createClient(cookieStore);
+  //  const supabase = createClient(cookieStore);
 
-  const { data: projects } = await supabase.from("Projects").select("*");
-  const { data: user, error: userError } = await supabase.auth.getUser();
-  const { data: session, error: sessionError } =
-    await supabase.auth.getSession();
+  // const { data: projects } = await supabase.from("Projects").select("*");
+  // const { data: user, error: userError } = await supabase.auth.getUser();
+  // const { data: session, error: sessionError } =
+  //   await supabase.auth.getSession();
   return (
-    <ContentContainer>
+    <Container>
       <div className="flex flex-col justify-start items-center gap-8">
         <div className="w-full h-[30px] justify-start items-center gap-8 inline-flex">
           <div className="grow shrink basis-0 h-[30px] justify-start items-center gap-2 flex">
@@ -124,6 +124,6 @@ export default async function Projects({ props }: any) {
           </div>
         </div>
       </div>
-    </ContentContainer>
+    </Container>
   );
 }

@@ -38,12 +38,27 @@ import TD from "../../assets/MemberCardImages/TD.png";
 import AMAZON_BLACK from "../../assets/MemberCardImages/Amazon.png";
 import SKYMOUNT from "../../assets/MemberCardImages/Skymount Drones.png";
 import PWC_BLACK from "../../assets/MemberCardImages/PWC.png";
-
+import RIPPLE from "../../assets/MemberCardImages/Ripple.png";
+import DELOITTE from "../../assets/MemberCardImages/Deloitte.png";
 import DELOITTE_WHITE from "../../assets/MemberCardImages/Deloitte_white.png";
+import RBC from "../../assets/MemberCardImages/RBC.png";
 import UBER_BLACK from "../../assets/MemberCardImages/Uber.png";
-
+import ROBLOX from "../../assets/MemberCardImages/Roblox.png";
+import BMO from "../../assets/MemberCardImages/BMO.png";
+import IRVING from "../../assets/MemberCardImages/Irving.png";
 import CANSBRIDGE from "../../assets/MemberCardImages/Cansbridge_Fellowship.png";
 import KATAROK from "../../assets/Companies/Katarok.png";
+import ETHAN from "../../assets/Headshots/Ethan_C.png";
+import HANI from "../../assets/Headshots/Hani_Khatib.png";
+import LEVI from "../../assets/Headshots/Levi_Stringer.png";
+import OLIVIA_XU from "../../assets/Headshots/Olivia_Xu.png";
+import REBAB from "../../assets/Headshots/Rabab_Azeem.png";
+import MARCELO from "../../assets/Headshots/Marcelo_Chaman_Mallqui.png";
+import DANIEL from "../../assets/Headshots/Daniel_Wang.png";
+import RODRIGO from "../../assets/Headshots/Rodrigo_D.png";
+import SAM from "../../assets/Headshots/Sam_Lin.png";
+import KEVIN from "../../assets/Headshots/Kevin_Yu.png";
+import GEORGE from "../../assets/Headshots/George_T.png";
 
 import MEMBER_OLIVIA_XU from "../../assets/MemberCardImages/Olivia_Xu.png";
 import MEMBER_KEVIN from "../../assets/MemberCardImages/Kevin_Yu.png";
@@ -193,8 +208,8 @@ export const TESTIMONIALS = [
     position: "Business Program Manager",
     companyLogo: { img: { src: MICROSOFT.src, style: "h-[20px] md:h-[20px]" } },
     company: "Microsoft",
-    angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Commerce '26`,
+    angle: "rotate-[-10deg] !md:rotate-[3deg]",
+    education: "Commerce '26",
   },
   {
     name: "Rabab Azeem",
@@ -208,8 +223,8 @@ export const TESTIMONIALS = [
       img: { src: AMAZON_BLACK.src, style: "h-[25px]" },
     },
     company: "Amazon",
-    angle: `rotate-[0deg] md:rotate-[-4deg]`,
-    education: `Applied Sciences '24`,
+    angle: "!rotate-[5deg] md:rotate-[-4deg]",
+    education: "Applied Sciences '24",
   },
   // {
   //   name: "Luke Major",
@@ -224,7 +239,7 @@ export const TESTIMONIALS = [
   //     img: { src: SKYMOUNT.src, style: "h-[50px]" },
   //   },
   //   company: "Skymount Drones",
-  //   angle: `rotate-[0deg] md:rotate-[0deg]`,
+  //   angle: "!rotate-[5deg] md:rotate-[0deg]",
   // },
   {
     name: "Kevin Yu",
@@ -241,8 +256,8 @@ export const TESTIMONIALS = [
       },
     },
     company: "PWC",
-    angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Applied Sciences '24`,
+    angle: "!rotate-[5deg] !md:rotate-[3deg]",
+    education: "Applied Sciences '24",
   },
   {
     name: "Marcelo Chaman Mallqui",
@@ -256,8 +271,8 @@ export const TESTIMONIALS = [
       img: { src: RECALC_LOGO.src, style: "mt-[3px] h-[15px] md:h-[20px]" },
     },
     company: "Recalc Academy",
-    angle: `rotate-[0deg] md:rotate-[-2deg]`,
-    education: `Commerce '26`,
+    angle: "!rotate-[5deg] md:rotate-[-2deg]",
+    education: "Commerce '26",
   },
   // {
   //   name: "Ramy Mahfouz",
@@ -274,7 +289,7 @@ export const TESTIMONIALS = [
   //     },
   //   },
   //   company: "Deloitte",
-  //   angle: `rotate-[0deg] md:rotate-[1deg]`,
+  //   angle: "!rotate-[5deg] md:rotate-[1deg]",
   // },
   // {
   //   name: "Thomas Tesselaar",
@@ -286,7 +301,7 @@ export const TESTIMONIALS = [
   //   position: "Quantitative Trading Analyst",
   //   companyLogo: { img: { src: RBC.src, style: "mt-[-5px] h-[40px]" } },
   //   company: "RBC",
-  //   angle: `rotate-[0deg] md:rotate-[-2deg]`,
+  //   angle: "!rotate-[5deg] md:rotate-[-2deg]",
   // },
 
   {
@@ -299,8 +314,8 @@ export const TESTIMONIALS = [
     position: "Software Engineer",
     companyLogo: { img: { src: UBER_BLACK.src, style: "mt-[-5px] h-[30px]" } },
     company: "Uber",
-    angle: `rotate-[0deg] md:rotate-[-4deg]`,
-    education: `Computer Science '24`,
+    angle: "!rotate-[5deg] md:rotate-[-4deg]",
+    education: "Computer Science '24",
   },
   // {
   //   name: "Joshua Geddes",
@@ -315,7 +330,7 @@ export const TESTIMONIALS = [
   //     img: { src: ROBLOX.src, style: "!mt-[-5px] h-[60px]" },
   //   },
   //   company: "Roblox",
-  //   angle: `rotate-[0deg] md:rotate-[5deg]`,
+  //   angle: "!rotate-[5deg] md:rotate-55deg]",
   // },
   // {
   //   name: "Olivia Anglin",
@@ -330,7 +345,7 @@ export const TESTIMONIALS = [
   //     img: { src: BMO.src, style: "h-[30px] mt-[5px]" },
   //   },
   //   company: "BMO",
-  //   angle: `rotate-[0deg] md:rotate-[-2deg]`,
+  //   angle: "!rotate-[5deg] md:rotate-[-2deg]",
   // },
   {
     name: "Jacob Laframboise",
@@ -345,7 +360,7 @@ export const TESTIMONIALS = [
       img: { src: AMAZON_BLACK.src, style: "h-[25px] mt-[5px]" },
     },
     company: "Amazon",
-    angle: `rotate-[0deg] md:rotate-[-2deg]`,
+    angle: "!rotate-[5deg] md:rotate-[-2deg]",
     education: "Computer Science '23",
   },
   {
@@ -360,7 +375,7 @@ export const TESTIMONIALS = [
       img: { src: AMAZON_BLACK.src, style: "h-[25px]" },
     },
     company: "Amazon",
-    angle: `rotate-[0deg] md:rotate-[4deg]`,
+    angle: "!rotate-[5deg] md:rotate-[4deg]",
     education: "Applied Sciences '23",
   },
   {
@@ -375,8 +390,8 @@ export const TESTIMONIALS = [
       img: { src: INGENUITY_LOGO.src, style: "mt-[0px] h-[35px]" },
     },
     company: "Ingenuity Labs",
-    angle: `rotate-[0deg] md:rotate-[-2deg]`,
-    education: `Computer Science '23`,
+    angle: "!rotate-[5deg] md:rotate-[-2deg]",
+    education: "Computer Science '23",
   },
   // {
   //   name: "Jordan Capello",
@@ -388,7 +403,7 @@ export const TESTIMONIALS = [
   //   position: "Data Analyst",
   //   companyLogo: { img: { src: IRVING.src, style: "mt-[-20px] h-[60px]" } },
   //   company: "Irving",
-  //   angle: `rotate-[0deg] md:rotate-[-2deg]`,
+  //   angle: "!rotate-[5deg] md:rotate-[-2deg]",
   // },
   {
     name: "Hani Khatib",
@@ -400,8 +415,8 @@ export const TESTIMONIALS = [
     position: "Cybersecurity Consultant",
     companyLogo: { img: { src: EY_LOGO.src, style: "mt-[-5px] h-[35px]" } },
     company: "EY",
-    angle: `rotate-[0deg] md:rotate-[2deg]`,
-    education: `Commerce '22`,
+    angle: "!rotate-[5deg] md:rotate-[2deg]",
+    education: "Commerce '22",
   },
   {
     name: "Rodrigo Del Aguila",
@@ -413,8 +428,8 @@ export const TESTIMONIALS = [
     position: "Cybersecurity Analyst",
     companyLogo: { img: { src: TD.src, style: "mt-[-5px] h-[25px]" } },
     company: "TD",
-    angle: `rotate-[0deg] md:rotate-[1deg]`,
-    education: `Applied Science '25`,
+    angle: "!rotate-[5deg] md:rotate-[1deg]",
+    education: "Applied Science '25",
   },
   {
     name: "LEVI Stringer",
@@ -429,8 +444,8 @@ export const TESTIMONIALS = [
       img: { src: KATAROK.src, style: "h-[50px] !mt-[-22px]" },
     },
     company: "Katarok",
-    angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Applied Science '20`,
+    angle: "!rotate-[5deg] !md:rotate-[3deg]",
+    education: "Applied Science '20",
   },
   {
     name: "Sam Lin",
@@ -445,8 +460,8 @@ export const TESTIMONIALS = [
       img: { src: CANSBRIDGE.src, style: "h-[25px] mt-[1px]" },
     },
     company: "Cansbridge Fellowship",
-    angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Ivy Business '25`,
+    angle: "!rotate-[5deg] !md:rotate-[3deg]",
+    education: "Ivy Business '25",
   },
 ];
 

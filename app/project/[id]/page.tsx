@@ -1,5 +1,5 @@
 import React from "react";
-import ContentContainer from "../../components/ContentContainer";
+import Container from "../../components/Container";
 import leadership_image from "../../assets/Leadership_image.jpg";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -66,7 +66,7 @@ function page() {
     },
   ];
   return (
-    <ContentContainer>
+    <Container>
       <div className="users-container">
         {/*Project title*/}
         <div className="users-title">
@@ -223,7 +223,7 @@ function page() {
           </div>
         </div>
       </div>
-    </ContentContainer>
+    </Container>
   );
 }
 

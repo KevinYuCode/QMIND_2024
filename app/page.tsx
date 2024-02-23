@@ -1,6 +1,6 @@
 "use client";
-import BtnLink from "./components/Buttons/BtnLink";
-import ContentContainer from "./components/ContentContainer";
+import BtnLink from "@/components/Buttons/BtnLink";
+import Container from "@/components/Container";
 import styles from "./styles/home.module.scss";
 import { EVENTS, TESTIMONIALS } from "./content/content";
 import { COMPANIES } from "./content/content";
@@ -11,7 +11,7 @@ import INCUBATOR from "../assets/incubator_image.png";
 import INCUBATOR_MOBILE from "../assets/aws_mobile.png";
 import CardSlider from "./components/CardSlider";
 import CompanySlider from "./components/CompanySlider";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import PARTNERS_DESKTOP from "../assets/partners_desktop.svg";
 import PARTNERS_MOBILE from "../assets/partners_mobile.svg";
@@ -19,6 +19,7 @@ import ALUMNI_DESKTOP from "../assets/alumni_desktop.svg";
 import ALUMNI_MOBILE from "../assets/alumni_mobile.png";
 import react, { useEffect } from "react";
 import MemberCard from "./components/MemberCard";
+import MICROSOFT from "../assets/Companies/Microsoft.png";
 import Link from "next/link";
 import Image from "next/image";
 import HeadlineCard from "./components/HeadlineCard";
@@ -30,13 +31,14 @@ import Text from "./components/Text";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PartnersAndClients from "./components/PartnersAndClients";
-import Modal from "./components/modal/modal";
+import { cn } from "./lib/utils";
 
 export default function Home() {
   const [partnersImg, setPartnersImg]: any = useState(null);
   const [alumniImg, setAlumniImg]: any = useState(null);
   const [conferenceImg, setConferenceImg]: any = useState(null);
   const [awsImg, setAwsImg]: any = useState(null);
+
   const [spotlight, setSpotlight] = useState(4);
 
   const isMobile = useMediaQuery({
@@ -73,7 +75,7 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-16 md:gap-20 w-full min-h-[100vh] py-[3rem] 2xl:py-[5rem] relative">
       {/* Hero Panel */}
-      <ContentContainer className="text-center md:text-left">
+      <Container className="text-center md:text-left">
         <div className="flex 2xl:pt-[20.22px] justify-between gap-[24px]">
           {/* Hero Content */}
           <div className=" lg:w-[62%] 2xl:w-[55%] flex flex-col gap-[25px] lg:gap-[50px] relative">
@@ -87,7 +89,7 @@ export default function Home() {
                 artificial intelligence, machine learning, blockchain and
                 quantum computing. We want you to{" "}
                 <a
-                  href="https://discord.gg/3FHfAs87"
+                  href="https://discord.gg/jw94EEGyJR"
                   className="underline"
                   target="_blank"
                 >
@@ -129,10 +131,10 @@ export default function Home() {
 
         {/* Yellow banner */}
         <PartnersAndClients />
-      </ContentContainer>
+      </Container>
 
       {/* What is QMIND? */}
-      <ContentContainer className="flex flex-col items-center gap-4">
+      <Container className="flex flex-col items-center gap-4">
         <Title title="What is QMIND?">
           <Head3 className="text-[16px] md:text-[22px] lg:px-[40px] text-[#d0d0d0] !font-normal">
             <Text className="mt-[20px] leading-[30px] lg:leading-[40px]">
@@ -155,10 +157,10 @@ export default function Home() {
             href="https://www.cucai.ca/"
           />
         </div> */}
-      </ContentContainer>
+      </Container>
 
       {/* Design Team Projects */}
-      <ContentContainer className="flex flex-col items-center">
+      <Container className="flex flex-col items-center">
         <Title
           title="Design Team Projects"
           subtitle="In Teams of 4-6 students, we tackle real world problems."
@@ -166,12 +168,12 @@ export default function Home() {
         <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2">
           <HeadlineCard />
         </div>
-      </ContentContainer>
+      </Container>
 
       {/* Stats card */}
-      <ContentContainer>
+      <Container>
         <StatsCards />
-      </ContentContainer>
+      </Container>
 
       {/* Industry and Events Sliding Cards */}
       <div className="gap-7 flex flex-col text-center relative !overflow-hidden">
@@ -186,7 +188,7 @@ export default function Home() {
       </div>
 
       {/* Our Members Love QMIND */}
-      <ContentContainer className="items-center gap-[50px] w-[100%]">
+      <Container className="items-center gap-[50px] w-[100%]">
         <Title
           title="Our Members Love QMIND"
           subtitle="Click On Them To See What They Think"
@@ -218,7 +220,7 @@ export default function Home() {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    className="cursor-pointer ml-[10px] cursor-pointer"
+                    className="cursor-pointer ml-[10px]"
                     viewBox="0 0 16 16"
                   >
                     <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -244,7 +246,7 @@ export default function Home() {
         <div className="flex flex-row justify-start md:justify-center mx-[20px] md:mx-0 overflow-x-scroll md:overflow-visible w-[100dvw] md:w-[100%] md:flex-wrap lg:max-w-[1000px] items-center gap-[5px] md:gap-[15px] px-8 appearance-none	md:px-0 ">
           {TESTIMONIALS.map((card, key) => (
             <MemberCard
-              className={`${card.angle} cursor-pointer`}
+              className={`${card.angle}`}
               key={key}
               onClick={() => {
                 setSpotlight(key);
@@ -257,10 +259,10 @@ export default function Home() {
             />
           ))}
         </div>
-      </ContentContainer>
+      </Container>
 
       {/* Company Slider */}
-      <ContentContainer>
+      <Container>
         <div className="flex flex-col gap-6 text-center relative !overflow-hidden">
           <div className="text-center flex flex-col leading-tight lg:gap-0 gap-2 w-[90%] self-center">
             <p>
@@ -271,10 +273,10 @@ export default function Home() {
             <CompanySlider cards={COMPANIES} slideLeft={true} />
           </div>
         </div>
-      </ContentContainer>
+      </Container>
 
       {/* National Conference */}
-      <ContentContainer className="text-center flex flex-col justify-center ">
+      <Container className="text-center flex flex-col justify-center ">
         <div className="flex flex-col gap-4 text-center relative !overflow-hidden">
           <Title
             title="Our National Conference"
@@ -300,10 +302,10 @@ export default function Home() {
             href="https://qmind.ca/CUCAI_Proceedings_2023.pdf"
           />
         </div>
-      </ContentContainer>
+      </Container>
 
       {/* Incubator*/}
-      <ContentContainer className="text-center flex flex-col justify-center ">
+      <Container className="text-center flex flex-col justify-center ">
         <div className="flex flex-col gap-4 text-center relative !overflow-hidden">
           <Title
             title="Our Product Incubator"
@@ -325,7 +327,7 @@ export default function Home() {
             href="https://www.instagram.com/inqubate.ai/?hl=en"
           />
         </div>
-      </ContentContainer>
+      </Container>
     </main>
   );
 }

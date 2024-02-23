@@ -1,11 +1,12 @@
 import { Label } from "@/components/ui/label";
-import { login } from "./actions";
+import { login, signup } from "./actions";
 import Container from "@/components/Container";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-export default function LoginPage() {
+export default function LoginPage({ searchParams }: any) {
+  const { error, email } = searchParams;
   return (
     <Container className="flex justify-center items-center md:py-[90px]">
       <Card className="p-[30px] border-transparent md:border-white">
@@ -20,6 +21,8 @@ export default function LoginPage() {
                 id="email"
                 name="email"
                 type="email"
+                placeholder="Email Address"
+                defaultValue={email}
                 required
                 className="w-[100%] min-h-[58px] text-lg"
               />
@@ -30,15 +33,28 @@ export default function LoginPage() {
                 id="password"
                 name="password"
                 type="password"
+                placeholder="Password"
                 required
                 className="w-[100%] min-h-[58px] text-lg"
               />
             </div>
+            <div className="w-[100%]">
+              <label htmlFor="confirm_password">Confirm Password:</label>
+              <Input
+                id="confirm_password"
+                name="confirm_password"
+                type="password"
+                placeholder="Confirm Password"
+                required
+                className="w-[100%] min-h-[58px] text-lg"
+              />
+            </div>
+            {error === "password" && <p>Passwords Don't Match</p>}
             <Button
-              formAction={login}
+              formAction={signup}
               className="mt-[15px] w-[100%] text-lg py-[25px]"
             >
-              Log in
+              Sign Up
             </Button>
           </form>
         </CardContent>

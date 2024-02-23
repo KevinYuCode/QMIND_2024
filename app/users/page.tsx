@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentContainer from "../components/ContentContainer";
+import Container from "../components/Container";
 import "./pages.scss";
 import Image from "next/image";
 import EXAMPLE from "../../assets/Users/example.png";
@@ -7,7 +7,7 @@ import EXAMPLE from "../../assets/Users/example.png";
 const images = [EXAMPLE, EXAMPLE, EXAMPLE, EXAMPLE, EXAMPLE]
 function Users() {
   return (
-    <ContentContainer>
+    <Container>
         <div className="users-container">
           <div className="users-title">
             <h1>Secure Shell Communication using Quantum Key Distribution</h1>
@@ -38,7 +38,7 @@ function Users() {
           ))}
           </div>
         </div>
-    </ContentContainer>
+    </Container>
   )
 }
 
