@@ -70,7 +70,7 @@ export const GlobalContextProvider = ({ children }: any) => {
   const [navLoading, setNavLoading] = useState(true);
   const supabase = createClient();
 
-  const handleSaveProject = async (project) => {
+  const handleSaveProject = async (project:any) => {
     if (!githubUrl.includes("https://github.com/")) {
       alert("Invalid GitHub Url");
       return;

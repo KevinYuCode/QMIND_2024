@@ -1,30 +1,10 @@
 import React from "react";
 import Container from "../components/Container";
-import leadership_image from "../../assets/Leadership_image.jpg";
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import EXAMPLE from "../../assets/Users/example.png";
-import rabab_azeem from "../../assets/Headshots/Rabab_Azeem.png";
-import olivia_xu from "../../assets/Headshots/Olivia_Xu.png";
-import link from "../../public/external_link.png";
 import "@/styles/page.scss";
-import { kontrapunkt, tradeGothic } from "../font";
-import { sofia_sans } from "../font";
-import plasma from "../../assets/plasma.png";
+import { tradeGothic } from "../font";
 import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
-import {
-  DropdownMenuLabel,
-  DropdownMenuTrigger,
-} from "@radix-ui/react-dropdown-menu";
 import ProjectFilters from "@/components/ui/projectFilters";
-// import { cookies } from "next/headers";
 import PLACEHOLDER from "@/assets/Leadership_image.jpg";
 import ProjectCard from "@/components/ui/projectCard";
 import { createClient, downloadImage } from "@/utils/supabase/server";
@@ -32,7 +12,6 @@ import AddProject from "@/components/AddProject/addProject";
 import { Card } from "@/components/ui/card";
 export default async function Projects({ props, searchParams }: any) {
   const supabase = createClient();
-  // const { data } = await supabase.from("projects").select();
   const { data } = await supabase
     .from("projects")
     .select("*")

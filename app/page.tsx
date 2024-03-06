@@ -84,7 +84,6 @@ import EVENT_SMITH2 from "@/assets/industry/inqu_smith_2.jpg";
 import EVENT_SMITH3 from "@/assets/industry/inqu_smith_3.jpg";
 import EVENT_CONNECT1 from "@/assets/industry/connect_1.jpg";
 import EVENT_CONNECT2 from "@/assets/industry/connect_2.jpg";
-import EVENT_CONNECT3 from "@/assets/industry/connect_3.jpg";
 const EVENTS_HALF = [
   {
     fullImage: EVENT_SHOPIFY1,
@@ -370,46 +369,6 @@ const TESTIMONIALS = [
     company: "Cansbridge Fellowship",
     angle: "rotate-[5deg] md:rotate-[3deg]",
     education: "Ivey Business '25",
-  },
-];
-
-const DATA = [
-  {
-    id: 1,
-    main_text: "230+",
-    subtitle: "Software Developers",
-  },
-  {
-    id: 2,
-    main_text: "200+",
-    subtitle: "AI papers & Projects",
-  },
-
-  {
-    id: 3,
-    main_text: "320+",
-    subtitle: "Delegates at CUCAI",
-  },
-
-  {
-    id: 4,
-    main_text: "25+",
-    subtitle: "Industry Clients",
-  },
-  {
-    id: 5,
-    main_text: "45",
-    subtitle: "Tech Articles",
-  },
-  {
-    id: 6,
-    main_text: "35",
-    subtitle: "Projects in 2023",
-  },
-  {
-    id: 7,
-    main_text: "325+",
-    subtitle: "Hours Read on Medium",
   },
 ];
 
