@@ -5,8 +5,15 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { createClient } from "@/utils/supabase/client";
+import { redirect } from "next/navigation";
 
-export default function LoginPage() {
+export default async function LoginPage() {
+  const supabase = createClient();
+  const user = await supabase.auth.getUser();
+
+  if (user) redirect(`/`);
+
   return (
     <Container className="flex justify-center items-center md:py-[90px]">
       <Card className="border-transparent md:border-white border-none p-0 m-0">

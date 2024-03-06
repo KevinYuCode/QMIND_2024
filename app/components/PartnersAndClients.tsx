@@ -1,11 +1,11 @@
-'use client'
+"use client";
 import React from "react";
 import styles from "../styles/home.module.scss";
 import Image from "next/image";
-import MICROSOFT from "../../assets/companies/Microsoft.png";
-import DELOITTE from "../../assets/companies/Deloitte.png";
-import TD from "../../assets/companies/TD_Bank.png";
-import LOBLAWS from "../../assets/companies/Loblaws.png";
+import MICROSOFT from "@/../assets/companies/Microsoft.png";
+import DELOITTE from "@/../assets/companies/Deloitte.png";
+import TD from "@/../assets/companies/TD_Bank.png";
+import LOBLAWS from "@/../assets/companies/Loblaws.png";
 function PartnersAndClients() {
   return (
     <div className="min-w-[250px]">
