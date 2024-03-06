@@ -1,6 +1,6 @@
 import Container from "../components/Container";
 import Image from "next/image";
-import leadership_image from "../../assets/Leadership_image.jpg";
+import leadership_image from "@/assets/Leadership_image.jpg";
 import "./page.scss";
 import { sofia_sans } from "../font";
 import Members from "@/components/leadership/members";

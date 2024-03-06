@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { Database } from "../../../database.types";
+import { Database } from "@/database.types";
 
 export default function SignOut() {
   const router = useRouter();

@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Card, CardContent } from "./card";
 import Image from "next/image";
-import plasma from "../../../assets/plasma.png";
+import plasma from "@/assets/plasma.png";
 import { Label } from "./label";
 
 function ProjectCard({ project, previewMap }: any) {
