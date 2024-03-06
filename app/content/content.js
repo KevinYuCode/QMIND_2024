@@ -1,5 +1,4 @@
 import VIRTUAL from "@/assets/virtual.jpg";
-import INGENUITY from "@/assets/companies/IngenuityLabs.png";
 import DIABETES from "@/assets/diebetes.jpg";
 import QUANTUM from "@/assets/quantum.jpg";
 import ANDRIOD from "@/assets/andriod.jpg";
@@ -49,15 +48,15 @@ import MEMBER_HANI from "@/assets/Hani_khatib.png";
 import MEMBER_ETHAN from "@/assets/Ethan_Callanan.png";
 import MEMBER_JACOB from "@/assets/Jacob_Laframboise.png";
 
-import EVENT_SHOPIFY1 from "@/assets/Industry/Shopify_1.jpg";
-import EVENT_SHOPIFY2 from "@/assets/Industry/Shopify_2.jpg";
-import EVENT_SHOPIFY3 from "@/assets/Industry/Shopify_3.jpg";
-import EVENT_SMITH1 from "@/assets/Industry/inqu_smith_1.jpg";
-import EVENT_SMITH2 from "@/assets/Industry/inqu_smith_2.jpg";
-import EVENT_SMITH3 from "@/assets/Industry/inqu_smith_3.jpg";
-import EVENT_CONNECT1 from "@/assets/Industry/connect_1.jpg";
-import EVENT_CONNECT2 from "@/assets/Industry/connect_2.jpg";
-import EVENT_CONNECT3 from "@/assets/Industry/connect_3.jpg";
+import EVENT_SHOPIFY1 from "@/assets/industry/Shopify_1.jpg";
+import EVENT_SHOPIFY2 from "@/assets/industry/Shopify_2.jpg";
+import EVENT_SHOPIFY3 from "@/assets/industry/Shopify_3.jpg";
+import EVENT_SMITH1 from "@/assets/industry/inqu_smith_1.jpg";
+import EVENT_SMITH2 from "@/assets/industry/inqu_smith_2.jpg";
+import EVENT_SMITH3 from "@/assets/industry/inqu_smith_3.jpg";
+import EVENT_CONNECT1 from "@/assets/industry/connect_1.jpg";
+import EVENT_CONNECT2 from "@/assets/industry/connect_2.jpg";
+import EVENT_CONNECT3 from "@/assets/industry/connect_3.jpg";
 const EVENTS_HALF = [
   {
     fullImage: EVENT_SHOPIFY1,
