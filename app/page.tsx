@@ -123,7 +123,7 @@ const EVENTS_HALF = [
   },
 ];
 
-export const EVENTS = [...EVENTS_HALF, ...EVENTS_HALF];
+const EVENTS = [...EVENTS_HALF, ...EVENTS_HALF];
 
 const COMPANIES_HALF = [
   {
