@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Button } from "../ui/button";
-import PENCIL from "@/../assets/icons/pencil.png";
+import PENCIL from "@/assets/icons/pencil.png";
 import Image from "next/image";
 import { useGlobalContext } from "@/Context/store";
 import { Dialog, DialogContent, DialogHeader } from "../ui/dialog";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { useDebounce, useDebouncedCallback } from "use-debounce";
-import LOADING from "@/../assets/icons/loading.png";
+import LOADING from "@/assets/icons/loading.png";
 import { cn } from "@/lib/utils";
 function EditProject({ project }: any) {
   const {

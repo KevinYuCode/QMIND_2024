@@ -1,6 +1,6 @@
 'use client'
 import React from "react";
-import QUOTES from "../../assets/quotes.svg";
+import QUOTES from "@/assets/quotes.svg";
 import styles from "../styles/testimonialCard.module.scss";
 import Image from "next/image";
 function TestimonialCard({
@@ -50,7 +50,7 @@ function TestimonialCard({
                 {name} <span className="font-light">| {position}</span>
               </p>
               <img
-                className="md:h-[55px] mt-2 h-[40px] w-fit object-cover w-auto max-w-[70%] object-scale-down"
+                className="md:h-[55px] mt-2 h-[40px] w-auto max-w-[70%] object-scale-down"
                 src={companyLogo}
                 alt=""
               />

@@ -25,7 +25,7 @@ import {
 } from "@radix-ui/react-dropdown-menu";
 import ProjectFilters from "@/components/ui/projectFilters";
 // import { cookies } from "next/headers";
-import PLACEHOLDER from "@/../assets/Leadership_image.jpg";
+import PLACEHOLDER from "@/assets/Leadership_image.jpg";
 import ProjectCard from "@/components/ui/projectCard";
 import { createClient, downloadImage } from "@/utils/supabase/server";
 import AddProject from "@/components/AddProject/addProject";

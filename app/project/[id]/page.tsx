@@ -13,7 +13,7 @@ import { sofia_sans } from "../../font";
 import plasma from "../../../assets/plasma.png";
 import { createClient, downloadAllTeamImages } from "@/utils/supabase/server";
 import { Card } from "@/components/ui/card";
-import PLUS from "@/../assets/icons/add-image.png";
+import PLUS from "@/assets/icons/add-image.png";
 import PhotoGallary from "@/components/photoGallery";
 import { downloadAllImages } from "@/utils/supabase/server";
 import Markdown from "@/components/ProjectDescription/ProjectDescription";

@@ -1,5 +1,5 @@
 .leadershipCardOperations-img {
-  background: url(../../assets/noise.png),
+  background: url(../assets/noise.png),
     linear-gradient(224deg, #553800 0%, #000 100%);
 }
 .leadershipCardOperations:hover {
@@ -8,7 +8,7 @@
 }
 
 .leadershipCardDesign-img {
-  background: url(../../assets/noise.png),
+  background: url(../assets/noise.png),
     linear-gradient(224deg, #02256a 0%, #000 100%);
 }
 .leadershipCardDesign:hover {
@@ -17,7 +17,7 @@
 }
 
 .leadershipCardDevelopment-img {
-  background: url(../../assets/noise.png),
+  background: url(../assets/noise.png),
     linear-gradient(224deg, #5e022e 0%, #000 100%);
 }
 .leadershipCardDevelopment:hover {
@@ -26,6 +26,6 @@
 }
 
 .noise {
-  background: url(../../assets/noise.png);
+  background: url(../assets/noise.png);
   background-blend-mode: screen;
 }

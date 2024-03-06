@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Card } from "../ui/card";
-import PLUS from "@/../assets/icons/add-image.png";
+import PLUS from "@/assets/icons/add-image.png";
 import {
   Dialog,
   DialogContent,
@@ -15,7 +15,7 @@ import { Input } from "../ui/input";
 import { useEffect, useRef, useState } from "react";
 import { useGlobalContext } from "@/Context/store";
 import { Label } from "../ui/label";
-import CLOSE from "@/../assets/icons/Close.png";
+import CLOSE from "@/assets/icons/Close.png";
 import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
 

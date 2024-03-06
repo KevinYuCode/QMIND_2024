@@ -20,7 +20,7 @@ import {
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import PROFILE from "@/../assets/icons/profile.svg";
+import PROFILE from "@/assets/icons/profile.svg";
 import Image from "next/image";
 
 import { useEffect, useState } from "react";

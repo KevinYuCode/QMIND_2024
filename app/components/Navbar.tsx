@@ -2,17 +2,17 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/navbar.module.scss";
-import QMIND_NAV_LOGO from "../../assets/qmind_nav_logo.svg";
+import QMIND_NAV_LOGO from "@/assets/qmind_nav_logo.svg";
 import Container from "./Container";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
-import DISCORD from "@/../assets/icons/Discord.png";
-import INSTAGRAM from "@/../assets/icons/Instagram.png";
+import DISCORD from "@/assets/icons/Discord.png";
+import INSTAGRAM from "@/assets/icons/Instagram.png";
 import Image from "next/image";
 // import { useGlobalContext } from "@/Context/store";
-import PROFILE from "@/../assets/icons/profile.svg";
+import PROFILE from "@/assets/icons/profile.svg";
 import Modal from "./modal/modal";
 import { Database } from "../../database.types";
 

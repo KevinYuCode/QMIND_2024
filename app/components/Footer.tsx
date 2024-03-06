@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import React from "react";
-import PILLARS from "../../assets/colourful-pillar.png";
+import PILLARS from "@/assets/colourful-pillar.png";
 import Container from "./Container";
 import Image from "next/image";
 function Footer() {

@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import barcode from "../../assets/barcode.png";
+// import barcode from "@../../assets/barcode.png";
+import barcode from "@/assets/barcode.png";
 import styles from "../styles/MemberCard.module.scss";
 import fitty from "fitty";
 import { useMediaQuery } from "react-responsive";

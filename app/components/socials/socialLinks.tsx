@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import EXTERNAL_LINK from "@/../assets/icons/external_link.png";
+import EXTERNAL_LINK from "@/assets/icons/external_link.png";
 import { useGlobalContext } from "@/Context/store";
 import { Input } from "../ui/input";
 import { useEffect, useState } from "react";
