@@ -23,6 +23,6 @@
       "@/*": ["./app/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/CompanySlider.js", "app/components/CompanySlider.tsx", "app/components/CompanySlider.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/CompanySlider.js", "app/components/CompanySlider.tsx", "app/components/CompanySlider.tsx", "app/my-mdx-page/page.mdx"],
   "exclude": ["node_modules"]
 }

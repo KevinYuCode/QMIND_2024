@@ -22,6 +22,7 @@ export function SupabaseProvider({ children }: { children: React.ReactNode }) {
   const supabase = createClientComponentClient<Database>();
   const [email, setEmail] = useState("Email");
   const [password, setPassword] = useState("");
+  const [githubUrl, setGithubUrl] = useState("");
 
   const handleSignIn = async () => {
     await supabase.auth.signInWithPassword({
@@ -33,7 +34,7 @@ export function SupabaseProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <Context.Provider
-      value={{ supabase, email, setEmail, handleSignIn, password, setPassword }}
+      value={{ supabase, email, setEmail, handleSignIn, password, setPassword}}
     >
       {children}
     </Context.Provider>

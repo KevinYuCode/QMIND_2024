@@ -4,16 +4,26 @@ import Container from "@/components/Container";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function LoginPage() {
   return (
     <Container className="flex justify-center items-center md:py-[90px]">
-      <Card className="p-[30px] border-transparent md:border-white">
-        <CardHeader>
-          <CardTitle className="text-4xl">Welcome Back.</CardTitle>
+      <Card className="border-transparent md:border-white border-none p-0 m-0">
+        <CardHeader className="">
+          <div className="flex gap-[20px] items-center">
+            <Image
+              src={"/icons/qmind_logo.png"}
+              height={34}
+              width={20}
+              alt="logo"
+            />
+
+            <CardTitle className="text-4xl">Welcome Back.</CardTitle>
+          </div>
         </CardHeader>
         <CardContent>
-          <form className="flex flex-col max-w-[700px] w-[80vw] items-center gap-[15px]">
+          <form className="flex flex-col max-w-[500px] w-[80vw] items-center gap-[15px]">
             <div className="w-full">
               <Label htmlFor="email">Email:</Label>
               <Input

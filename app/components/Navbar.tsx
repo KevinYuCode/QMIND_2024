@@ -31,7 +31,6 @@ import { revalidatePath } from "next/cache";
 import { useGlobalContext } from "@/Context/store";
 
 function Navbar() {
-  // const { navOn, setNavOn } = useGlobalContext();
   const [navOn, setNavOn] = useState(false);
   const setNav = (value: boolean) => {
     setTimeout(() => {
@@ -39,27 +38,31 @@ function Navbar() {
     }, 10);
   };
 
-  const [dropDown, setDropDown] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
   const supabase = createClient();
-  const { user, setUser, loading, setLoading } = useGlobalContext();
+  const { user, setUser, navLoading, setNavLoading } = useGlobalContext();
 
   useEffect(() => {
     async function getUser() {
       const { data, error } = await supabase.auth.getUser();
       setUser(data.user);
     }
+
     getUser();
   }, [router, pathname]);
 
   const handleLogout = async () => {
-    setLoading(true);
+    setNavLoading(true);
     await logout();
     const { data, error } = await supabase.auth.getUser();
     setUser(data.user);
-    setLoading(false);
+    setNavLoading(false);
   };
+
+  useEffect(() => {
+    setNavLoading(false);
+  }, [user, pathname]);
 
   return (
     <nav
@@ -159,10 +162,12 @@ function Navbar() {
               <Image src={DISCORD} alt="Discord" width={25} height={25} />
             </Link>
 
-            {user && !loading ? (
+            {navLoading ? (
+              <></>
+            ) : user ? (
               <Dialog>
                 <DialogTrigger asChild>
-                  <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-[#f0b542] shadow-lg cursor-pointer">
+                  <div className="w-[40px] h-[40px] rounded-[10px] flex justify-center items-center bg-transparent border-[#f0b542] border-[2px] shadow-lg cursor-pointer transition-all hover:scale-[1.05]">
                     PM
                   </div>
                 </DialogTrigger>
@@ -188,7 +193,7 @@ function Navbar() {
             ) : (
               <Button
                 asChild
-                className="bg-[#f0b542] hover:bg-transparent  border-[#f0b542] border-[2px] !transition-all cursor-pointer "
+                className=" hover:bg-[#f0b542] bg-transparent  border-[#f0b542] border-[2px] !transition-all cursor-pointer "
               >
                 <Link href="/login" className="!opacity-100">
                   Login

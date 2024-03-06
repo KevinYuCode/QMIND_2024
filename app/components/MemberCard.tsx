@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import barcode from "../../assets/barcode.png";
@@ -5,7 +6,6 @@ import styles from "../styles/MemberCard.module.scss";
 import fitty from "fitty";
 import { useMediaQuery } from "react-responsive";
 import { cn } from "@/lib/utils";
-
 function CompanyLogo({ companyLogo, companyName, className }: any) {
   return (
     <>
@@ -21,9 +21,12 @@ function CompanyLogo({ companyLogo, companyName, className }: any) {
           </div>
 
           <img
-            src={companyLogo.src}
+            src={companyLogo?.src || ""}
             alt="company"
-            className={`mt-[-10px] md:mt-0 max-h-[20px] ${companyLogo.style}`}
+            className={cn(
+              `mt-[-10px] md:mt-0 max-h-[20px] `,
+              companyLogo.style
+            )}
           />
         </div>
       ) : (
@@ -34,9 +37,9 @@ function CompanyLogo({ companyLogo, companyName, className }: any) {
           )}
         >
           <img
-            src={companyLogo.src}
+            src={companyLogo?.src || ""}
             alt="company"
-            className={`${companyLogo.style}`}
+            className={cn(``, companyLogo.style)}
           />
         </div>
       )}
@@ -54,8 +57,8 @@ function MemberCard({
   className,
   style,
   activeCard,
-  angle,
 }: any) {
+
   return (
     <>
       {spotlight ? (
@@ -83,7 +86,7 @@ function MemberCard({
             ></CompanyLogo>
 
             <div className="absolute left-0 top-[70px] flex flex-col items-center">
-              <img src={headshot} alt={name} className="w-[60%] z-10" />
+              <img src={headshot || ""} alt={name} className="w-[60%] z-10" />
             </div>
 
             <div className="absolute w-full left-0 top-[290px] flex flex-col items-center">
@@ -107,13 +110,13 @@ function MemberCard({
           onClick={onClick}
           className={cn(
             "cursor-pointer relative z-0 h-[190px] min-w-[120px] w-[120px] md:h-[220px] md:w-[140px] md:scale-[105%] md:hover:scale-[115%] hover:drop-shadow-2xl hover:z-10 bg-white hover:bg-[#FCFCFC] transition-all rounded-[9px] px-[10px] py-[10px]",
+            className,
             {
-              "bg-gradient-to-b from-[#f0b542] to-[#E7E7E7]": activeCard,
+              "active-card-spotlight": activeCard,
             },
             {
-              "bg-gradient-to-b from-[#FCFCFC] to-[#E7E7E7]": !activeCard,
-            },
-            className
+              "not-active-card-spotlight": !activeCard,
+            }
           )}
         >
           <div
@@ -126,7 +129,7 @@ function MemberCard({
           ></CompanyLogo>
           {/* Headshot */}
           <div className="absolute left-0 top-[30px] md:top-[45px] flex flex-col items-center">
-            <img src={headshot} alt={name} className="w-[50%]" />
+            <img src={headshot || ""} alt={name} className="w-[50%]" />
           </div>
           {/* Name and Position */}
           <div className="absolute w-full left-0 top-[118px] md:top-[142px] flex flex-col items-center leading-[10px]">

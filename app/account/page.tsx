@@ -13,8 +13,6 @@ export default async function Account() {
     redirect('/Projects')
   }
 
-  console.log(data.user)
-
   return (
     <Container>
       <div className="flex flex-col justify-start items-center gap-[30px] pb-[100px]">
