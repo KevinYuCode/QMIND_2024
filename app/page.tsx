@@ -188,9 +188,9 @@ const COMPANIES_HALF = [
   },
 ];
 
-export const COMPANIES = [...COMPANIES_HALF, ...COMPANIES_HALF];
+const COMPANIES = [...COMPANIES_HALF, ...COMPANIES_HALF];
 
-export const TESTIMONIALS = [
+const TESTIMONIALS = [
   {
     name: "Daniel Wang",
     headshot: MEMBER_DANIEL.src,
@@ -373,7 +373,7 @@ export const TESTIMONIALS = [
   },
 ];
 
-export const DATA = [
+const DATA = [
   {
     id: 1,
     main_text: "230+",
