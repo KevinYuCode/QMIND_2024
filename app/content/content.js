@@ -3,13 +3,7 @@ import INGENUITY from "../../assets/Companies/IngenuityLabs.png";
 import DIABETES from "../../assets/diebetes.jpg";
 import QUANTUM from "../../assets/quantum.jpg";
 import ANDRIOD from "../../assets/andriod.jpg";
-import DISTRIBUTIVE from "../../assets/Companies/Distributive.png";
-import AMAZON from "../../assets/Companies/Amazon.png";
-import EY from "../../assets/Companies/EY.png";
-import PWC from "../../assets/Companies/PWC.png";
 import MICROSOFT_WHITE from "../../assets/Companies/Micosoft_white.png";
-import RECALC from "../../assets/Companies/Recalc.png";
-import UBER from "../../assets/Companies/Uber.png";
 import AMAZON1 from "../../assets/Companies/Amazon1.png";
 import GOVERNMENT from "../../assets/Companies/Government.png";
 import CIBC from "../../assets/Companies/CIBC.png";
@@ -27,7 +21,6 @@ import NATIONAL from "../../assets/Companies/National.png";
 import PWC1 from "../../assets/Companies/PWC1.png";
 import EY1 from "../../assets/Companies/EY1.png";
 import PG from "../../assets/Companies/PG.png";
-import FELLOW from "../../assets/Companies/cansbridge.png";
 import EY_LOGO from "../../assets/Companies/EY_Logo.png";
 import INGENUITY_LOGO from "../../assets/Companies/Ingenuity_Labs.png";
 import RECALC_LOGO from "../../assets/Recalc.png";
@@ -36,52 +29,25 @@ import RBC_WHITE from "../../assets/Companies/RBC_White.png";
 import MICROSOFT from "../../assets/MemberCardImages/Microsoft.png";
 import TD from "../../assets/MemberCardImages/TD.png";
 import AMAZON_BLACK from "../../assets/MemberCardImages/Amazon.png";
-import SKYMOUNT from "../../assets/MemberCardImages/Skymount Drones.png";
 import PWC_BLACK from "../../assets/MemberCardImages/PWC.png";
-import RIPPLE from "../../assets/MemberCardImages/Ripple.png";
-import DELOITTE from "../../assets/MemberCardImages/Deloitte.png";
 import DELOITTE_WHITE from "../../assets/MemberCardImages/Deloitte_white.png";
-import RBC from "../../assets/MemberCardImages/RBC.png";
 import UBER_BLACK from "../../assets/MemberCardImages/Uber.png";
-import ROBLOX from "../../assets/MemberCardImages/Roblox.png";
-import BMO from "../../assets/MemberCardImages/BMO.png";
-import IRVING from "../../assets/MemberCardImages/Irving.png";
 import CANSBRIDGE from "../../assets/MemberCardImages/Cansbridge_Fellowship.png";
 import KATAROK from "../../assets/Companies/Katarok.png";
-import ETHAN from "../../assets/Headshots/Ethan_C.png";
-import HANI from "../../assets/Headshots/Hani_Khatib.png";
-import LEVI from "../../assets/Headshots/Levi_Stringer.png";
-import OLIVIA_XU from "../../assets/Headshots/Olivia_Xu.png";
-import REBAB from "../../assets/Headshots/Rabab_Azeem.png";
-import MARCELO from "../../assets/Headshots/Marcelo_Chaman_Mallqui.png";
-import DANIEL from "../../assets/Headshots/Daniel_Wang.png";
-import RODRIGO from "../../assets/Headshots/Rodrigo_D.png";
-import SAM from "../../assets/Headshots/Sam_Lin.png";
-import KEVIN from "../../assets/Headshots/Kevin_Yu.png";
-import GEORGE from "../../assets/Headshots/George_T.png";
+
 
 import MEMBER_OLIVIA_XU from "../../assets/MemberCardImages/Olivia_Xu.png";
 import MEMBER_KEVIN from "../../assets/MemberCardImages/Kevin_Yu.png";
 import MEMBER_RABAB from "../../assets/MemberCardImages/Rabab_Azeem.png";
 import MEMBER_DANIEL from "../../assets/MemberCardImages/Daniel_Wang.png";
-import MEMBER_LUKE from "../../assets/MemberCardImages/Luke_Major.png";
 import MEMBER_RODRIGO from "../../assets/MemberCardImages/Rodrigo_D.png";
 import MEMBER_GEORGE from "../../assets/MemberCardImages/George_Trieu.png";
 import MEMBER_SAM from "../../assets/MemberCardImages/Sam_Lin.png";
 import MEMBER_MARCELO from "../../assets/MemberCardImages/Marcelo_M.png";
-import MEMBER_RAMY from "../../assets/MemberCardImages/Ramy_Mahfouz.png";
-import MEMBER_THOMAS from "../../assets/MemberCardImages/Thomas_Tesselaar.png";
-import MEMBER_JOSHUA from "../../assets/MemberCardImages/Joshua_Geddes.png";
-import MEMBER_OLIVIA_ANGLIN from "../../assets/MemberCardImages/Olivia_Anglin.png";
-import MEMBER_JORDAN from "../../assets/MemberCardImages/Jordan_Capello.png";
 import MEMBER_LEVI from "../../assets/Levi_Stringer.png";
 import MEMBER_HANI from "../../assets/Hani_khatib.png";
 import MEMBER_ETHAN from "../../assets/Ethan_Callanan.png";
 import MEMBER_JACOB from "../../assets/Jacob_Laframboise.png";
-
-import BLUE from "../../assets/MemberCardImages/vectorblue.png";
-import YELLOW from "../../assets/MemberCardImages/vectoryellow.png";
-import RED from "../../assets/MemberCardImages/vectorred.png";
 
 import EVENT_SHOPIFY1 from "../../assets/Industry/Shopify_1.jpg";
 import EVENT_SHOPIFY2 from "../../assets/Industry/Shopify_2.jpg";
@@ -208,8 +174,8 @@ export const TESTIMONIALS = [
     position: "Business Program Manager",
     companyLogo: { img: { src: MICROSOFT.src, style: "h-[20px] md:h-[20px]" } },
     company: "Microsoft",
-    angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Commerce '26`,
+    angle: "rotate-[-10deg] !md:rotate-[3deg]",
+    education: "Commerce '26",
   },
   {
     name: "Rabab Azeem",
@@ -223,24 +189,10 @@ export const TESTIMONIALS = [
       img: { src: AMAZON_BLACK.src, style: "h-[25px]" },
     },
     company: "Amazon",
-    angle: `rotate-[0deg] md:rotate-[-4deg]`,
-    education: `Applied Sciences '24`,
+    angle: "!rotate-[5deg] md:rotate-[-4deg]",
+    education: "Applied Sciences '24",
   },
-  // {
-  //   name: "Luke Major",
-  //   headshot: MEMBER_LUKE.src,
-  //   linkedin: "https://www.linkedin.com/in/luke-major-4ab297116/",
-  //   team: "design",
-  //   message:
-  //     "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
-  //   position: "AI Systems Engineer",
-  //   companyLogo: {
-  //     name: "Skymount Drones",
-  //     img: { src: SKYMOUNT.src, style: "h-[50px]" },
-  //   },
-  //   company: "Skymount Drones",
-  //   angle: `rotate-[0deg] md:rotate-[0deg]`,
-  // },
+
   {
     name: "Kevin Yu",
     headshot: MEMBER_KEVIN.src,
@@ -256,8 +208,8 @@ export const TESTIMONIALS = [
       },
     },
     company: "PWC",
-    angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Applied Sciences '24`,
+    angle: "!rotate-[5deg] !md:rotate-[3deg]",
+    education: "Applied Sciences '24",
   },
   {
     name: "Marcelo Chaman Mallqui",
@@ -271,39 +223,9 @@ export const TESTIMONIALS = [
       img: { src: RECALC_LOGO.src, style: "mt-[3px] h-[15px] md:h-[20px]" },
     },
     company: "Recalc Academy",
-    angle: `rotate-[0deg] md:rotate-[-2deg]`,
-    education: `Commerce '26`,
+    angle: "!rotate-[5deg] md:rotate-[-2deg]",
+    education: "Commerce '26",
   },
-  // {
-  //   name: "Ramy Mahfouz",
-  //   headshot: MEMBER_RAMY.src,
-  //   linkedin: "https://www.linkedin.com/in/ramy-mahfouz-086a0922b/",
-  //   team: "design",
-  //   message:
-  //     "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
-  //   position: "Tax Analyst",
-  //   companyLogo: {
-  //     img: {
-  //       src: DELOITTE.src,
-  //       style: "mt-[-7px] md:mt-[-14px] h-[30px] md:h-[50px]",
-  //     },
-  //   },
-  //   company: "Deloitte",
-  //   angle: `rotate-[0deg] md:rotate-[1deg]`,
-  // },
-  // {
-  //   name: "Thomas Tesselaar",
-  //   headshot: MEMBER_THOMAS.src,
-  //   linkedin: "https://www.linkedin.com/in/thomas-tesselaar/",
-  //   team: "design",
-  //   message:
-  //     "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
-  //   position: "Quantitative Trading Analyst",
-  //   companyLogo: { img: { src: RBC.src, style: "mt-[-5px] h-[40px]" } },
-  //   company: "RBC",
-  //   angle: `rotate-[0deg] md:rotate-[-2deg]`,
-  // },
-
   {
     name: "Olivia Xu",
     headshot: MEMBER_OLIVIA_XU.src,
@@ -314,39 +236,10 @@ export const TESTIMONIALS = [
     position: "Software Engineer",
     companyLogo: { img: { src: UBER_BLACK.src, style: "mt-[-5px] h-[30px]" } },
     company: "Uber",
-    angle: `rotate-[0deg] md:rotate-[-4deg]`,
-    education: `Computer Science '24`,
+    angle: "!rotate-[5deg] md:rotate-[-4deg]",
+    education: "Computer Science '24",
   },
-  // {
-  //   name: "Joshua Geddes",
-  //   headshot: MEMBER_JOSHUA.src,
-  //   linkedin: "https://www.linkedin.com/in/joshuageddes/",
-  //   team: "design",
-  //   message:
-  //     "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
-  //   position: "Software Engineer",
-  //   companyLogo: {
-  //     name: "Roblox",
-  //     img: { src: ROBLOX.src, style: "!mt-[-5px] h-[60px]" },
-  //   },
-  //   company: "Roblox",
-  //   angle: `rotate-[0deg] md:rotate-[5deg]`,
-  // },
-  // {
-  //   name: "Olivia Anglin",
-  //   headshot: MEMBER_OLIVIA_ANGLIN.src,
-  //   linkedin: "https://www.linkedin.com/in/olivia-anglin/",
-  //   team: "development",
-  //   message:
-  //     "QMIND has given me so many opportunities to learn about the things I am passionate about! I have met some amazing people through this club. I can say with confidence that QMIND is a big reason for my achievements as a university student.",
-  //   position: "Wealth Management",
-  //   companyLogo: {
-  //     name: "BMO",
-  //     img: { src: BMO.src, style: "h-[30px] mt-[5px]" },
-  //   },
-  //   company: "BMO",
-  //   angle: `rotate-[0deg] md:rotate-[-2deg]`,
-  // },
+
   {
     name: "Jacob Laframboise",
     headshot: MEMBER_JACOB.src,
@@ -360,7 +253,7 @@ export const TESTIMONIALS = [
       img: { src: AMAZON_BLACK.src, style: "h-[25px] mt-[5px]" },
     },
     company: "Amazon",
-    angle: `rotate-[0deg] md:rotate-[-2deg]`,
+    angle: "!rotate-[5deg] md:rotate-[-2deg]",
     education: "Computer Science '23",
   },
   {
@@ -375,7 +268,7 @@ export const TESTIMONIALS = [
       img: { src: AMAZON_BLACK.src, style: "h-[25px]" },
     },
     company: "Amazon",
-    angle: `rotate-[0deg] md:rotate-[4deg]`,
+    angle: "!rotate-[5deg] md:rotate-[4deg]",
     education: "Applied Sciences '23",
   },
   {
@@ -390,8 +283,8 @@ export const TESTIMONIALS = [
       img: { src: INGENUITY_LOGO.src, style: "mt-[0px] h-[35px]" },
     },
     company: "Ingenuity Labs",
-    angle: `rotate-[0deg] md:rotate-[-2deg]`,
-    education: `Computer Science '23`,
+    angle: "!rotate-[5deg] md:rotate-[-2deg]",
+    education: "Computer Science '23",
   },
   // {
   //   name: "Jordan Capello",
@@ -403,7 +296,7 @@ export const TESTIMONIALS = [
   //   position: "Data Analyst",
   //   companyLogo: { img: { src: IRVING.src, style: "mt-[-20px] h-[60px]" } },
   //   company: "Irving",
-  //   angle: `rotate-[0deg] md:rotate-[-2deg]`,
+  //   angle: "!rotate-[5deg] md:rotate-[-2deg]",
   // },
   {
     name: "Hani Khatib",
@@ -415,8 +308,8 @@ export const TESTIMONIALS = [
     position: "Cybersecurity Consultant",
     companyLogo: { img: { src: EY_LOGO.src, style: "mt-[-5px] h-[35px]" } },
     company: "EY",
-    angle: `rotate-[0deg] md:rotate-[2deg]`,
-    education: `Commerce '22`,
+    angle: "!rotate-[5deg] md:rotate-[2deg]",
+    education: "Commerce '22",
   },
   {
     name: "Rodrigo Del Aguila",
@@ -426,10 +319,10 @@ export const TESTIMONIALS = [
     message:
       "From being introduced to ML through a project to being able to create my own startup and make valuable connections, QMIND has been key in my professional development. It's amazing to think about the opportunities and learning experiences I have gotten from being a part of an incredibly talented and driven team in only a couple of years!",
     position: "Cybersecurity Analyst",
-    companyLogo: { img: { src: TD.src, style: "mt-[-5px] h-[25px]" } },
+    companyLogo: { img: { src: TD.src, style: "mt-[-5px] !h-[25px]" } },
     company: "TD",
-    angle: `rotate-[0deg] md:rotate-[1deg]`,
-    education: `Applied Science '25`,
+    angle: "!rotate-[5deg] md:rotate-[1deg]",
+    education: "Applied Science '25",
   },
   {
     name: "LEVI Stringer",
@@ -444,8 +337,8 @@ export const TESTIMONIALS = [
       img: { src: KATAROK.src, style: "h-[50px] !mt-[-22px]" },
     },
     company: "Katarok",
-    angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Applied Science '20`,
+    angle: "!rotate-[5deg] !md:rotate-[3deg]",
+    education: "Applied Science '20",
   },
   {
     name: "Sam Lin",
@@ -460,8 +353,8 @@ export const TESTIMONIALS = [
       img: { src: CANSBRIDGE.src, style: "h-[25px] mt-[1px]" },
     },
     company: "Cansbridge Fellowship",
-    angle: `rotate-[0deg] md:rotate-[3deg]`,
-    education: `Ivy Business '25`,
+    angle: "!rotate-[5deg] !md:rotate-[3deg]",
+    education: "Ivey Business '25",
   },
 ];
 

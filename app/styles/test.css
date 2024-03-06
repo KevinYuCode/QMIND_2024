@@ -1,0 +1,114 @@
+.App{
+    width: 100vw;
+    display: block
+  
+  }
+  
+  .product_container{
+    width: 100;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    padding: 20px;
+  
+    .product_card{
+      background: linear-gradient(180deg, #1C9FFF 0%, rgba(0, 86, 150, 0.25) 119.74%);
+      border-radius: 10px;
+      display: block;
+      text-align: center;
+      padding-bottom: 20px;
+      height: 180px;
+      width: 460px;
+    }
+  }
+  
+  
+  .product_card img{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .product_card p{
+    text-align: left;
+    margin-left: 20px;
+  }
+  .expanded_card{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    top: 25%;
+    left: 25%;
+    right: 50%;
+    height: 350px;
+    width: 50%;
+    background: linear-gradient(180deg, #1C9FFF 0%, rgba(0, 86, 150, 0.25) 119.74%);
+    padding: 40px;
+    border-radius: 17px;
+   
+  
+  }
+  .expanded_image{
+    width: 50%;
+    display: block;
+    margin-bottom: 30px;
+    background-color: rgb(233, 232, 232);
+  }
+  .expanded_image-content {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    padding-top: 20px;
+    border-radius: 40px;
+  
+  }
+  .expanded_image-content p{
+    text-align: left;
+    margin-bottom: 40px;
+    color: orangered;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .expanded_image-content img{
+    width: 90%;
+  }
+  .expanded_text{
+    width: 50%;
+    display: block;
+    padding: 90px;
+  }
+  
+  .product_name{
+    padding-top: 60px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .product_details{
+    font-size: 24px;
+    color: gray;
+    margin-top: 20px;
+  }
+  
+  .text_footer {
+    margin-left: 40px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .product_price{
+    font-size: 18px;
+    color: gray;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  button{
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: orangered;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }

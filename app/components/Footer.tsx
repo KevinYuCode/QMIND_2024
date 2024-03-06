@@ -2,17 +2,16 @@
 import Link from "next/link";
 import React from "react";
 import PILLARS from "../../assets/colourful-pillar.png";
-import ContentContainer from "./ContentContainer";
+import Container from "./Container";
 import Image from "next/image";
 function Footer() {
   return (
     <div className="pb-[4rem]">
-      <ContentContainer className="flex !flex-row justify-between gap-[30px] md:gap-[75px] lg:gap-[50px]">
+      <Container className="flex !flex-row justify-between gap-[30px] md:gap-[75px] lg:gap-[50px]">
         <div className="flex flex-col self-start ">
           <h2 className="font-bold text-[20px] pb-[30px]">Menu</h2>
           <div className="flex flex-col opacity-[70%] gap-[15px]">
             <Link href="/">Home</Link>
-            <Link href="/design">Design</Link>
             <Link href="/leadership">Leadership</Link>
             <Link href="/blog">Blog</Link>
             <Link
@@ -72,7 +71,7 @@ function Footer() {
             </a>
           </div>
         </div>
-      </ContentContainer>
+      </Container>
     </div>
   );
 }
