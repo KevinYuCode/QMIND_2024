@@ -171,13 +171,10 @@ function Navbar() {
                     PM
                   </div>
                 </DialogTrigger>
-                <DialogContent
-                  onOpenAutoFocus={(e) => e.preventDefault()}
-                  className="p-[50px]"
-                >
+                <DialogContent onOpenAutoFocus={(e) => e.preventDefault()}>
                   <DialogHeader>
                     <DialogTitle className="text-2xl text-center">
-                      Settings:
+                      Logout
                     </DialogTitle>
                   </DialogHeader>
                   <div className="w-[100%] flex justify-center mt-[30px]">

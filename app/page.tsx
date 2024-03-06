@@ -29,7 +29,7 @@ import "aos/dist/aos.css";
 import PartnersAndClients from "./components/PartnersAndClients";
 import { cn } from "./lib/utils";
 import localFont from "next/font/local";
-import { tradeGothic } from "./font";
+import { kontrapunkt, tradeGothic } from "./font";
 
 import MICROSOFT_WHITE from "@/../assets/companies/Micosoft_white.png";
 import AMAZON1 from "@/../assets/companies/Amazon1.png";
@@ -57,20 +57,20 @@ import RBC_WHITE from "@/../assets/companies/RBC_White.png";
 import MICROSOFT from "@/../assets/memberCardImages/Microsoft.png";
 import TD from "@/../assets/memberCardImages/TD.png";
 import AMAZON_BLACK from "@/../assets/memberCardImages/Amazon.png";
-import PWC_BLACK from "@/../assets/MemberCardImages/PWC.png";
-import DELOITTE_WHITE from "@/../assets/MemberCardImages/Deloitte_white.png";
-import UBER_BLACK from "@/../assets/MemberCardImages/Uber.png";
-import CANSBRIDGE from "@/../assets/MemberCardImages/Cansbridge_Fellowship.png";
+import PWC_BLACK from "@/../assets/memberCardImages/PWC.png";
+import DELOITTE_WHITE from "@/../assets/memberCardImages/Deloitte_white.png";
+import UBER_BLACK from "@/../assets/memberCardImages/Uber.png";
+import CANSBRIDGE from "@/../assets/memberCardImages/Cansbridge_Fellowship.png";
 import KATAROK from "@/../assets/companies/Katarok.png";
 
-import MEMBER_OLIVIA_XU from "@/../assets/MemberCardImages/Olivia_Xu.png";
-import MEMBER_KEVIN from "@/../assets/MemberCardImages/Kevin_Yu.png";
-import MEMBER_RABAB from "@/../assets/MemberCardImages/Rabab_Azeem.png";
-import MEMBER_DANIEL from "@/../assets/MemberCardImages/Daniel_Wang.png";
-import MEMBER_RODRIGO from "@/../assets/MemberCardImages/Rodrigo_D.png";
-import MEMBER_GEORGE from "@/../assets/MemberCardImages/George_Trieu.png";
-import MEMBER_SAM from "@/../assets/MemberCardImages/Sam_Lin.png";
-import MEMBER_MARCELO from "@/../assets/MemberCardImages/Marcelo_M.png";
+import MEMBER_OLIVIA_XU from "@/../assets/memberCardImages/Olivia_Xu.png";
+import MEMBER_KEVIN from "@/../assets/memberCardImages/Kevin_Yu.png";
+import MEMBER_RABAB from "@/../assets/memberCardImages/Rabab_Azeem.png";
+import MEMBER_DANIEL from "@/../assets/memberCardImages/Daniel_Wang.png";
+import MEMBER_RODRIGO from "@/../assets/memberCardImages/Rodrigo_D.png";
+import MEMBER_GEORGE from "@/../assets/memberCardImages/George_Trieu.png";
+import MEMBER_SAM from "@/../assets/memberCardImages/Sam_Lin.png";
+import MEMBER_MARCELO from "@/../assets/memberCardImages/Marcelo_M.png";
 import MEMBER_LEVI from "@/../assets/Levi_Stringer.png";
 import MEMBER_HANI from "@/../assets/Hani_khatib.png";
 import MEMBER_ETHAN from "@/../assets/Ethan_Callanan.png";
@@ -643,18 +643,18 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className="flex justify-center items-center flex-row xxs:flex-col gap-[15px] xxs:gap-[25px] w-auto xxs:w-[100%]">
+        <div className="flex justify-center items-center flex-col xxs:flex-row gap-[15px] xxs:gap-[30px] w-auto xxs:w-[100%]">
           <BtnLink
             isExternalLink={true}
             text="LEARN MORE"
             href="https://www.cucai.ca/"
-            className="!py-[6px]"
+            className={`${tradeGothic.className} `}
           />
           <BtnLink
             isExternalLink={true}
             text="PROCEEDINGS"
             href="https://qmind.ca/CUCAI_Proceedings_2023.pdf"
-            className="!py-[6px]"
+            className={`${tradeGothic.className} `}
           />
         </div>
       </Container>
@@ -679,7 +679,7 @@ export default function Home() {
             isExternalLink={true}
             text="LEARN MORE"
             href="https://www.instagram.com/inqubate.ai/?hl=en"
-            className={`${tradeGothic.className} !py-[6px]`}
+            className={`${tradeGothic.className} `}
           />
         </div>
       </Container>
