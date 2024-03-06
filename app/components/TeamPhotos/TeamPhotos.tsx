@@ -43,7 +43,8 @@ function TeamPhotos({ project, members }: any) {
     const allowedTypes = ["image/png", "image/jpeg"];
 
     // Strip any spaces from file name
-    if (files.length > 0 && files[0] && files[0]?.name && files[0]?.name.includes(" ")) {
+    // @ts-ignore
+    if (files.length > 0 && files[0] && files[0].name.includes(" ")) {
       alert("Can't have spaces in file name.");
       return;
     }
