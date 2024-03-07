@@ -139,6 +139,7 @@ function TeamPhotos({ project, members }: any) {
 
   useEffect(() => {
     setProjectMembers(members);
+    // eslint-disable-next-line react-hooks/exhaustive-deps 
   }, [project, members]);
 
   return (

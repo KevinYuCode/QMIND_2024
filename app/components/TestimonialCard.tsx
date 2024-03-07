@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import QUOTES from "@/assets/quotes.svg";
 import styles from "../styles/testimonialCard.module.scss";
@@ -38,22 +38,20 @@ function TestimonialCard({
             {message}
           </p>
           <div className="flex items-center h-[90px] md:h-[110px] w-full">
-            <img
+            <div
               className={`${
                 styles.headshot
-              } ${"object-cover h-full w-auto aspect-square rounded-[10px] bg-[#a8a2a2]"}`}
-              src={headShot}
-              alt="headshot"
-            />
+              } ${"relative h-full w-auto aspect-square rounded-[10px] bg-[#a8a2a2]"}`}
+            >
+              <Image src={headShot} alt="headshot" fill  className="object-cover"/>
+            </div>
             <div className="ml-[16px] flex flex-col justify-center gap-1 h-[95%]">
               <p className="md:text-lg leading-none w-full  tracking-tight md:tracking-normal">
                 {name} <span className="font-light">| {position}</span>
               </p>
-              <img
-                className="md:h-[55px] mt-2 h-[40px] w-auto max-w-[70%] object-scale-down"
-                src={companyLogo}
-                alt=""
-              />
+              <div className="relative md:h-[55px] mt-2 h-[40px] w-auto max-w-[70%]">
+                <Image src={companyLogo} alt="Company" fill  className="object-scale-down"/>
+              </div>
             </div>
           </div>
         </div>

@@ -21,14 +21,14 @@ function CompanyLogo({ companyLogo, companyName, className }: any) {
             {companyName}
           </div>
 
-          <img
-            src={companyLogo?.src || ""}
-            alt="company"
+          <div
             className={cn(
-              `mt-[-10px] md:mt-0 max-h-[20px] `,
+              `relative w-full`,
               companyLogo.style
             )}
-          />
+          >
+            <Image src={companyLogo?.src || ""} alt="company" fill  className="object-contain"/>
+          </div>
         </div>
       ) : (
         <div
@@ -37,11 +37,9 @@ function CompanyLogo({ companyLogo, companyName, className }: any) {
             className
           )}
         >
-          <img
-            src={companyLogo?.src || ""}
-            alt="company"
-            className={cn(``, companyLogo.style)}
-          />
+          <div className={cn(`relative w-full`, companyLogo.style)}>
+            <Image src={companyLogo?.src || ""} alt="company" fill className="object-contain"/>
+          </div>
         </div>
       )}
     </>
@@ -59,7 +57,6 @@ function MemberCard({
   style,
   activeCard,
 }: any) {
-
   return (
     <>
       {spotlight ? (

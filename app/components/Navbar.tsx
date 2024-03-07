@@ -43,10 +43,12 @@ function Navbar() {
   useEffect(() => {
     async function getUser() {
       const { data, error } = await supabase.auth.getUser();
+      console.log(data.user)
       setUser(data.user);
     }
 
     getUser();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router, pathname]);
 
   const handleLogout = async () => {

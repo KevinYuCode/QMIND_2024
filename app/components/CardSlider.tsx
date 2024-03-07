@@ -15,6 +15,7 @@ function CardSlider({ cards, slideLeft }: any) {
     const cardsWidth = cardsContainer!?.clientWidth / 2 + 12;
     setPosition(cardsWidth);
     controls.start({ x: slideLeft ? -cardsWidth : cardsWidth });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const controls = useAnimation();
@@ -27,7 +28,6 @@ function CardSlider({ cards, slideLeft }: any) {
     controls.start({ x: slideLeft ? -position : position });
   };
 
-  // { x: slideLeft ? -position : position }
   return (
     <div
       className={`min-h-[200px] sm:min-h-[290px] md:min-h-[350px] text-left`}

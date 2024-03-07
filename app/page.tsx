@@ -10,10 +10,6 @@ import CardSlider from "./components/CardSlider";
 import CompanySlider from "./components/CompanySlider";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import PARTNERS_DESKTOP from "@/assets/partners_desktop.svg";
-import PARTNERS_MOBILE from "@/assets/partners_mobile.svg";
-import ALUMNI_DESKTOP from "@/assets/alumni_desktop.svg";
-import ALUMNI_MOBILE from "@/assets/alumni_mobile.png";
 import react, { useEffect } from "react";
 import MemberCard from "./components/MemberCard";
 import Link from "next/link";
@@ -27,8 +23,6 @@ import Text from "./components/Text";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PartnersAndClients from "./components/PartnersAndClients";
-import { cn } from "./lib/utils";
-import localFont from "next/font/local";
 import { kontrapunkt, tradeGothic } from "./font";
 
 import MICROSOFT_WHITE from "@/assets/companies/Micosoft_white.png";
@@ -200,7 +194,7 @@ const TESTIMONIALS = [
     position: "Business Program Manager",
     companyLogo: { img: { src: MICROSOFT.src, style: "h-[20px] md:h-[20px]" } },
     company: "Microsoft",
-    angle: "rotate-[-10deg] md:rotate-[3deg]",
+    angle: "rotate-[0deg] md:rotate-[3deg]",
     education: "Commerce '26",
   },
   {
@@ -215,7 +209,7 @@ const TESTIMONIALS = [
       img: { src: AMAZON_BLACK.src, style: "h-[25px]" },
     },
     company: "Amazon",
-    angle: "rotate-[5deg] md:rotate-[-4deg]",
+    angle: "rotate-[0deg] md:rotate-[-4deg]",
     education: "Applied Sciences '24",
   },
 
@@ -234,7 +228,7 @@ const TESTIMONIALS = [
       },
     },
     company: "PWC",
-    angle: "rotate-[5deg] md:rotate-[3deg]",
+    angle: "rotate-[0deg] md:rotate-[3deg]",
     education: "Applied Sciences '24",
   },
   {
@@ -249,7 +243,7 @@ const TESTIMONIALS = [
       img: { src: RECALC_LOGO.src, style: "mt-[3px] h-[15px] md:h-[20px]" },
     },
     company: "Recalc Academy",
-    angle: "rotate-[5deg] md:rotate-[-2deg]",
+    angle: "rotate-[0deg] md:rotate-[-2deg]",
     education: "Commerce '26",
   },
   {
@@ -262,7 +256,7 @@ const TESTIMONIALS = [
     position: "Software Engineer",
     companyLogo: { img: { src: UBER_BLACK.src, style: "mt-[-5px] h-[30px]" } },
     company: "Uber",
-    angle: "rotate-[5deg] md:rotate-[-4deg]",
+    angle: "rotate-[0deg] md:rotate-[-4deg]",
     education: "Computer Science '24",
   },
 
@@ -279,7 +273,7 @@ const TESTIMONIALS = [
       img: { src: AMAZON_BLACK.src, style: "h-[25px] mt-[5px]" },
     },
     company: "Amazon",
-    angle: "rotate-[5deg] md:rotate-[-2deg]",
+    angle: "rotate-[0deg] md:rotate-[-2deg]",
     education: "Computer Science '23",
   },
   {
@@ -294,7 +288,7 @@ const TESTIMONIALS = [
       img: { src: AMAZON_BLACK.src, style: "h-[25px]" },
     },
     company: "Amazon",
-    angle: "rotate-[5deg] md:rotate-[4deg]",
+    angle: "rotate-[0deg] md:rotate-[4deg]",
     education: "Applied Sciences '23",
   },
   {
@@ -309,7 +303,7 @@ const TESTIMONIALS = [
       img: { src: INGENUITY_LOGO.src, style: "mt-[0px] h-[35px]" },
     },
     company: "Ingenuity Labs",
-    angle: "rotate-[5deg] md:rotate-[-2deg]",
+    angle: "rotate-[0deg] md:rotate-[-2deg]",
     education: "Computer Science '23",
   },
   {
@@ -322,7 +316,7 @@ const TESTIMONIALS = [
     position: "Cybersecurity Consultant",
     companyLogo: { img: { src: EY_LOGO.src, style: "mt-[-5px] h-[35px]" } },
     company: "EY",
-    angle: "rotate-[5deg] md:rotate-[2deg]",
+    angle: "rotate-[0deg] md:rotate-[2deg]",
     education: "Commerce '22",
   },
   {
@@ -335,7 +329,7 @@ const TESTIMONIALS = [
     position: "Cybersecurity Analyst",
     companyLogo: { img: { src: TD.src, style: "mt-[-5px] !h-[25px]" } },
     company: "TD",
-    angle: "rotate-[5deg] md:rotate-[1deg]",
+    angle: "rotate-[0deg] md:rotate-[1deg]",
     education: "Applied Science '25",
   },
   {
@@ -351,7 +345,7 @@ const TESTIMONIALS = [
       img: { src: KATAROK.src, style: "h-[50px] !mt-[-22px]" },
     },
     company: "Katarok",
-    angle: "rotate-[5deg] md:rotate-[3deg]",
+    angle: "rotate-[0deg] md:rotate-[3deg]",
     education: "Applied Science '20",
   },
   {
@@ -367,7 +361,7 @@ const TESTIMONIALS = [
       img: { src: CANSBRIDGE.src, style: "h-[25px] mt-[1px]" },
     },
     company: "Cansbridge Fellowship",
-    angle: "rotate-[5deg] md:rotate-[3deg]",
+    angle: "rotate-[0deg] md:rotate-[3deg]",
     education: "Ivey Business '25",
   },
 ];
@@ -414,13 +408,13 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-[24px]">
               <BtnLink
                 isExternalLink={true}
-                className={`min-w-[200px] !text-[13px] ${tradeGothic.className}`}
+                className={`min-w-[200px] !text-[13px] justify-center ${tradeGothic.className}`}
                 text="WORK WITH US"
                 href="mailto:partnerships@qmind.ca"
               />
               <BtnLink
                 isExternalLink={true}
-                className={`min-w-[200px] !text-[13px] ${tradeGothic.className}`}
+                className={`min-w-[200px] !text-[13px] justify-center ${tradeGothic.className}`}
                 text="OUR PROJECTS"
                 href="./2021_Lookbook.pdf"
               />
@@ -555,7 +549,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-start md:justify-center mx-[20px] md:mx-0 overflow-x-scroll md:overflow-visible w-[100dvw] md:w-[100%] md:flex-wrap lg:max-w-[1000px] items-center gap-[5px] md:gap-[15px] px-8 appearance-none	md:px-0 ">
+        <div className="flex flex-row justify-start md:justify-center mx-[20px] md:mx-0 overflow-x-scroll md:overflow-visible w-[100dvw] md:w-[100%] md:flex-wrap lg:max-w-[1000px] items-center gap-[5px] md:gap-[15px] px-8 appearance-none	md:px-0 pb-[10px]">
           {TESTIMONIALS.map((card, key) => (
             <MemberCard
               className={`${card.angle}`}

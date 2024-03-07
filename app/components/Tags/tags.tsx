@@ -72,6 +72,7 @@ function Tags({ project }: any) {
       {tags &&
         tags.map((tag: any, key: any) => (
           <Dialog
+            key={key}
             open={key === showUpdateTag}
             onOpenChange={(e) => handleShowUpdateTag(e, key)}
           >

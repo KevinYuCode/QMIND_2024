@@ -125,6 +125,8 @@ function PhotoGallary({ project, images }: any) {
       (imageName: string) => imageName !== deletingImageName
     );
 
+
+    // Removing from the pathname from sql table
     const fileDeleteFromList = await supabase
       .from("projects")
       .update({
@@ -138,6 +140,8 @@ function PhotoGallary({ project, images }: any) {
       return;
     }
 
+
+    // Remove from bucket
     const fileDeleteRes = await supabase.storage
       .from("projects")
       .remove([deletingImageName]);

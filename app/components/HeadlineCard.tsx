@@ -21,6 +21,7 @@ function HeadlineCard({ project }: any) {
     controls.stop();
     controls.set("initial");
     controls.start("final");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [project]);
 
   const carouselVariants = {

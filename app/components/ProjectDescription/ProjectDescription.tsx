@@ -21,6 +21,7 @@ function InfoTextArea({ project }: any) {
     setShortDescription(project.shortDescription);
     setImpactDescription(project.impactDescription);
     setFullDescription(project.fullDescription);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [project]);
   return (
     <>
