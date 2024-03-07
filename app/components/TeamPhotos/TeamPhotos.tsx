@@ -31,7 +31,7 @@ function TeamPhotos({ project, members }: any) {
   const [memberName, setMemberName] = useState("");
   const [memberPosition, setMemberPosition] = useState("");
   const [memberSocial, setMemberSocial] = useState("");
-  const [memberImage, setMemberImage] = useState([]);
+  const [memberImage, setMemberImage] = useState<any>([]);
   const [isOpenAddMember, setIsOpenAddMember] = useState(false);
   const [loading, setLoading] = useState(false);
   const supabase = createClient();
@@ -48,7 +48,8 @@ function TeamPhotos({ project, members }: any) {
       alert("Can't have spaces in file name.");
       return;
     }
-
+     
+    // @ts-ignore
     const curImages = files.filter((file) => allowedTypes.includes(file?.type));
 
     // Show error message if any invalid files are selected
@@ -163,6 +164,7 @@ function TeamPhotos({ project, members }: any) {
               variant={"outline"}
               className="relative"
               onClick={() => {
+                // @ts-ignore
                 if (uploadRef) uploadRef?.current?.click();
               }}
             >
