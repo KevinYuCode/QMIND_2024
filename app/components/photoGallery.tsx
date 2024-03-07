@@ -31,6 +31,7 @@ function PhotoGallary({ project, images }: any) {
     const curErrorMessages = [];
     const files = Array.from(e.target.files);
     const allowedTypes = ["image/png", "image/jpeg"];
+    // @ts-ignore
     let curImages = files.filter((file) => allowedTypes.includes(file?.type));
 
     // Show error message if any invalid files are selected
@@ -82,7 +83,8 @@ function PhotoGallary({ project, images }: any) {
         .upload(`project_images/${image.name}`, image);
 
       if (fileUploadRes.error) {
-        if (fileUploadRes.error?.statusCode === "409")
+        // @ts-ignore
+        if (fileUploadRes?.error?.statusCode === "409")
           alert("Uploaded duplicate image");
         else alert("Error Uploading " + image.name);
 
@@ -174,6 +176,7 @@ function PhotoGallary({ project, images }: any) {
                 variant={"outline"}
                 className="relative"
                 onClick={() => {
+                  // @ts-ignore
                   if (uploadRef) uploadRef?.current?.click();
                 }}
               >
