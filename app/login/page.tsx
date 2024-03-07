@@ -12,7 +12,7 @@ export default async function LoginPage() {
   const supabase = createClient();
   const user = await supabase.auth.getUser();
 
-  if (user) redirect(`/`);
+  if (user?.data?.user) redirect(`/`);
 
   return (
     <Container className="flex justify-center items-center md:py-[90px]">

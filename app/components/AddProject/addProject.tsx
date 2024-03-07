@@ -3,17 +3,28 @@
 import { createClient } from "@/utils/supabase/client";
 import { Button } from "../ui/button";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
-async function AddProject() {
-  const supabase = createClient();
+function AddProject() {
   const [loading, setLoading] = useState(false);
+  const supabase = createClient();
+  const router = useRouter();
+
   const handleAddProject = async () => {
     setLoading(true);
-    const { data, error } = await supabase.from("projects").insert({});
+
+    const userRes = await supabase.auth.getUser();
+    const { data, error } = await supabase
+      .from("projects")
+      .insert({ pmEmail: userRes?.data?.user?.email || "No_Email" });
+
     if (error) {
       alert("Failed to create new project");
     }
+
     setLoading(false);
+
+    router.refresh();
   };
 
   return (

@@ -9,7 +9,6 @@ import PLACEHOLDER from "@/assets/Leadership_image.jpg";
 import ProjectCard from "@/components/ui/projectCard";
 import { createClient, downloadImage } from "@/utils/supabase/server";
 import AddProject from "@/components/AddProject/addProject";
-import { Card } from "@/components/ui/card";
 export default async function Projects({ props, searchParams }: any) {
   const supabase = createClient();
   const { data } = await supabase
@@ -31,6 +30,7 @@ export default async function Projects({ props, searchParams }: any) {
   });
   const userHasProject = new Set(data?.map((project) => project.pmEmail));
   const userRes = await supabase.auth.getUser();
+  const user = userRes?.data?.user;
 
   let hasProject = false;
   if (userRes && userRes.data?.user?.email)
@@ -95,7 +95,7 @@ export default async function Projects({ props, searchParams }: any) {
                 />
               ))}
 
-          {userRes && !hasProject && <AddProject />}
+          {user && !hasProject && <AddProject />}
         </div>
       </div>
     </Container>
