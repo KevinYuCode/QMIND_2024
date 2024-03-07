@@ -52,6 +52,7 @@ export const downloadImage = async (path: string) => {
 export const downloadAllImages = async (paths: Array<String>) => {
   try {
     // Use Promise.all to download all images at once
+    // @ts-ignore
     const imagePromises = paths.map(downloadImage);
     const images = await Promise.all(imagePromises);
 
