@@ -21,13 +21,13 @@ function CompanyLogo({ companyLogo, companyName, className }: any) {
             {companyName}
           </div>
 
-          <div
-            className={cn(
-              `relative w-full`,
-              companyLogo.style
-            )}
-          >
-            <Image src={companyLogo?.src || ""} alt="company" fill  className="object-contain"/>
+          <div className={cn(`relative w-full`, companyLogo.style)}>
+            <Image
+              src={companyLogo?.src || ""}
+              alt="company"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       ) : (
@@ -38,7 +38,12 @@ function CompanyLogo({ companyLogo, companyName, className }: any) {
           )}
         >
           <div className={cn(`relative w-full`, companyLogo.style)}>
-            <Image src={companyLogo?.src || ""} alt="company" fill className="object-contain"/>
+            <Image
+              src={companyLogo?.src || ""}
+              alt="company"
+              fill
+              className="object-contain"
+            />
           </div>
         </div>
       )}
@@ -84,7 +89,9 @@ function MemberCard({
             ></CompanyLogo>
 
             <div className="absolute left-0 top-[70px] flex flex-col items-center">
-              <img src={headshot || ""} alt={name} className="w-[60%] z-10" />
+              <div className="w-[60%] z-10 relative ">
+                <Image src={headshot || ""} alt={name} className="object-fit" />
+              </div>
             </div>
 
             <div className="absolute w-full left-0 top-[290px] flex flex-col items-center">
@@ -127,7 +134,9 @@ function MemberCard({
           ></CompanyLogo>
           {/* Headshot */}
           <div className="absolute left-0 top-[30px] md:top-[45px] flex flex-col items-center">
-            <img src={headshot || ""} alt={name} className="w-[50%]" />
+            <div className="w-[50%] relative">
+              <Image src={headshot || ""} alt={name} className="" />
+            </div>
           </div>
           {/* Name and Position */}
           <div className="absolute w-full left-0 top-[118px] md:top-[142px] flex flex-col items-center leading-[10px]">

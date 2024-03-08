@@ -43,7 +43,6 @@ function Navbar() {
   useEffect(() => {
     async function getUser() {
       const { data, error } = await supabase.auth.getUser();
-      console.log(data.user)
       setUser(data.user);
     }
 
@@ -61,6 +60,7 @@ function Navbar() {
 
   useEffect(() => {
     setNavLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, pathname]);
 
   return (
@@ -79,11 +79,14 @@ function Navbar() {
             navOn ? "hidden" : "block"
           } absolute top-[28px] lg:top-0 left-[30px] lg:left-0  lg:relative lleft-section`}
         >
-          <img
-            className="ml-[15px] h-[40px] lg:h-[47px]"
-            src={QMIND_NAV_LOGO.src}
-            alt="Qmind Nav Logo"
-          />
+          <div className="relative ml-[15px] h-[40px] lg:h-[47px]">
+            <Image
+              className="object-contain"
+              src={QMIND_NAV_LOGO.src}
+              alt="Qmind Nav Logo"
+              fill
+            />
+          </div>
         </Link>
 
         {/* Open Button */}

@@ -11,6 +11,7 @@ function SocialLinks({ project }: any) {
 
   useEffect(() => {
     setGithubUrl(project.githubUrl);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [project]);
 
   return (
