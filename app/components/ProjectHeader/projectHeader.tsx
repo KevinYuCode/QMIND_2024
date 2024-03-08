@@ -21,6 +21,7 @@ function ProjectHeader({ project }: any) {
     setProjectTitle(project.projectTitle);
     setCategory(project.category);
     setPublished(project.published);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [project]);
   return (
     <>

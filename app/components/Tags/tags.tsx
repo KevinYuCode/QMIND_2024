@@ -67,7 +67,6 @@ function Tags({ project }: any) {
   useEffect(() => {
     setTags(project.tags);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-
   }, []);
   return (
     <div className="users-tech">

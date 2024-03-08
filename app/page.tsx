@@ -454,14 +454,6 @@ export default function Home() {
             </Text>
           </Head3>
         </Title>
-        {/* View Project Lookbooks */}
-        {/* <div>
-          <BtnLink
-            isExternalLink={true}
-            text="VIEW PROJECT LOOKBOOKS"
-            href="https://www.cucai.ca/"
-          />
-        </div> */}
       </Container>
 
       {/* Design Team Projects */}

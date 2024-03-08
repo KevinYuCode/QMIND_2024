@@ -1,11 +1,8 @@
 "use client";
+// @ts-nocheck
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-// import barcode from "@../../assets/barcode.png";
 import barcode from "@/assets/barcode.png";
-import styles from "../styles/MemberCard.module.scss";
-import fitty from "fitty";
-import { useMediaQuery } from "react-responsive";
 import { cn } from "@/lib/utils";
 function CompanyLogo({ companyLogo, companyName, className }: any) {
   return (
@@ -21,14 +18,14 @@ function CompanyLogo({ companyLogo, companyName, className }: any) {
             {companyName}
           </div>
 
-          <div className={cn(`relative w-full`, companyLogo.style)}>
-            <Image
-              src={companyLogo?.src || ""}
-              alt="company"
-              fill
-              className="object-contain"
-            />
-          </div>
+          <img
+            src={companyLogo?.src || ""}
+            alt="company"
+            className={cn(
+              `mt-[-10px] md:mt-0 max-h-[20px] `,
+              companyLogo.style
+            )}
+          />
         </div>
       ) : (
         <div
@@ -37,14 +34,11 @@ function CompanyLogo({ companyLogo, companyName, className }: any) {
             className
           )}
         >
-          <div className={cn(`relative w-full`, companyLogo.style)}>
-            <Image
-              src={companyLogo?.src || ""}
-              alt="company"
-              fill
-              className="object-contain"
-            />
-          </div>
+          <img
+            src={companyLogo?.src || ""}
+            alt="company"
+            className={cn(``, companyLogo.style)}
+          />
         </div>
       )}
     </>
@@ -62,6 +56,7 @@ function MemberCard({
   style,
   activeCard,
 }: any) {
+
   return (
     <>
       {spotlight ? (
@@ -89,9 +84,7 @@ function MemberCard({
             ></CompanyLogo>
 
             <div className="absolute left-0 top-[70px] flex flex-col items-center">
-              <div className="w-[60%] z-10 relative ">
-                <Image src={headshot || ""} alt={name} className="object-fit" />
-              </div>
+              <img src={headshot || ""} alt={name} className="w-[60%] z-10" />
             </div>
 
             <div className="absolute w-full left-0 top-[290px] flex flex-col items-center">
@@ -134,9 +127,7 @@ function MemberCard({
           ></CompanyLogo>
           {/* Headshot */}
           <div className="absolute left-0 top-[30px] md:top-[45px] flex flex-col items-center">
-            <div className="w-[50%] relative">
-              <Image src={headshot || ""} alt={name} className="" />
-            </div>
+            <img src={headshot || ""} alt={name} className="w-[50%]" />
           </div>
           {/* Name and Position */}
           <div className="absolute w-full left-0 top-[118px] md:top-[142px] flex flex-col items-center leading-[10px]">

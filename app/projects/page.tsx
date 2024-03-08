@@ -9,7 +9,7 @@ import PLACEHOLDER from "@/assets/Leadership_image.jpg";
 import ProjectCard from "@/components/ui/projectCard";
 import { createClient, downloadImage } from "@/utils/supabase/server";
 import AddProject from "@/components/AddProject/addProject";
-export default async function Projects({ props, searchParams }: any) {
+export default async function Projects({ searchParams }: any) {
   const supabase = createClient();
   const { data } = await supabase
     .from("projects")
