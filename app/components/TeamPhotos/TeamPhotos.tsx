@@ -48,7 +48,7 @@ function TeamPhotos({ project, members }: any) {
       alert("Can't have spaces in file name.");
       return;
     }
-     
+
     // @ts-ignore
     const curImages = files.filter((file) => allowedTypes.includes(file?.type));
 
@@ -113,7 +113,10 @@ function TeamPhotos({ project, members }: any) {
   const handleDeleteImage = async (memberId: string, memberImage: string) => {
     setLoading(true);
 
-    const fileDeleteFromList = await supabase.from("teams").delete().eq("memberId", memberId);
+    const fileDeleteFromList = await supabase
+      .from("teams")
+      .delete()
+      .eq("memberId", memberId);
 
     if (fileDeleteFromList.error) {
       alert("Error removing team member");
@@ -139,7 +142,7 @@ function TeamPhotos({ project, members }: any) {
 
   useEffect(() => {
     setProjectMembers(members);
-    // eslint-disable-next-line react-hooks/exhaustive-deps 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [project, members]);
 
   return (
@@ -149,110 +152,112 @@ function TeamPhotos({ project, members }: any) {
       </h1>
 
       {/* Project Member photos */}
-      <div className="flex flex-wrap justify-center md:justify-start gap-[10px]">
-        {isEditing && projectMembers.length <= 6}
-        <Dialog open={isOpenAddMember} onOpenChange={setIsOpenAddMember}>
-          <DialogTrigger className="self-start">
-            <Card className="min-h-[100px] w-[100px] max-w-[100px] rounded-[12px] border-[1.5px] border-[#4E4E4E] flex justify-center items-center cursor-pointer hover:scale-[1.01]">
-              <Image src={PLUS} alt="add" height={30} width={30} />
-            </Card>
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Add Team Member</DialogTitle>
-            </DialogHeader>
-            <Button
-              variant={"outline"}
-              className="relative"
-              onClick={() => {
-                // @ts-ignore
-                if (uploadRef) uploadRef?.current?.click();
-              }}
-            >
-              <Input
-                type="file"
-                id="image"
-                name="image"
-                accept="image/*"
-                className="absolute invisible"
-                onChange={handleAddPhoto}
-                ref={uploadRef}
-              />
-              Upload Image
-            </Button>
+      <div className="flex flex-wrap justify-center md:justify-start gap-[10px] min-h-[100px]">
+        {isEditing && (
+          <Dialog open={isOpenAddMember} onOpenChange={setIsOpenAddMember}>
+            <DialogTrigger className="self-start">
+              <Card className="min-h-[100px] w-[100px] max-w-[100px] rounded-[12px] border-[1.5px] border-[#4E4E4E] flex justify-center items-center cursor-pointer hover:scale-[1.01]">
+                <Image src={PLUS} alt="add" height={30} width={30} />
+              </Card>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Add Team Member</DialogTitle>
+              </DialogHeader>
+              <Button
+                variant={"outline"}
+                className="relative"
+                onClick={() => {
+                  // @ts-ignore
+                  if (uploadRef) uploadRef?.current?.click();
+                }}
+              >
+                <Input
+                  type="file"
+                  id="image"
+                  name="image"
+                  accept="image/*"
+                  className="absolute invisible"
+                  onChange={handleAddPhoto}
+                  ref={uploadRef}
+                />
+                Upload Image
+              </Button>
 
-            {/* Uploaded Images */}
-            <div className="flex flex-col gap-[15px]">
-              {memberImage &&
-                memberImage.map((image: any, key: any) => (
-                  <div
-                    className="flex gap-[10px] items-center justify-between "
-                    key={key}
-                  >
-                    <Label>{image?.name}</Label>
-                    <Button
-                      variant={"outline"}
-                      className="p-[10px] flex h-auto"
-                      onClick={() => {
-                        removeUploadedImage(key);
-                      }}
+              {/* Uploaded Images */}
+              <div className="flex flex-col gap-[15px]">
+                {memberImage &&
+                  memberImage.map((image: any, key: any) => (
+                    <div
+                      className="flex gap-[10px] items-center justify-between "
+                      key={key}
                     >
-                      <Image src={CLOSE} height={6} width={6} alt="close" />
-                    </Button>
-                  </div>
-                ))}
-            </div>
+                      <Label>{image?.name}</Label>
+                      <Button
+                        variant={"outline"}
+                        className="p-[10px] flex h-auto"
+                        onClick={() => {
+                          removeUploadedImage(key);
+                        }}
+                      >
+                        <Image src={CLOSE} height={6} width={6} alt="close" />
+                      </Button>
+                    </div>
+                  ))}
+              </div>
 
-            <Input
-              placeholder="Name"
-              maxLength={25}
-              value={memberName}
-              onChange={(e) => setMemberName(e.target.value)}
-            />
-            <Input
-              placeholder="Position"
-              maxLength={25}
-              value={memberPosition}
-              onChange={(e) => setMemberPosition(e.target.value)}
-            />
-            <Input
-              placeholder="LinkedIn Url"
-              maxLength={50}
-              value={memberSocial}
-              onChange={(e) => setMemberSocial(e.target.value)}
-            />
+              <Input
+                placeholder="Name"
+                maxLength={25}
+                value={memberName}
+                onChange={(e) => setMemberName(e.target.value)}
+              />
+              <Input
+                placeholder="Position"
+                maxLength={25}
+                value={memberPosition}
+                onChange={(e) => setMemberPosition(e.target.value)}
+              />
+              <Input
+                placeholder="LinkedIn Url"
+                maxLength={50}
+                value={memberSocial}
+                onChange={(e) => setMemberSocial(e.target.value)}
+              />
 
-            <Button
-              onClick={() => handleSubmitImage()}
-              disabled={loading || memberImage.length <= 0}
-            >
-              {loading ? (
-                <svg
-                  className="animate-spin h-5 w-5 text-white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="#202020"
-                    stroke-width="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="#202020"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
-                </svg>
-              ) : (
-                "Submit"
-              )}
-            </Button>
-          </DialogContent>
-        </Dialog>
+              <Button
+                onClick={() => handleSubmitImage()}
+                disabled={loading || memberImage.length <= 0}
+              >
+                {loading ? (
+                  <svg
+                    className="animate-spin h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="#202020"
+                      stroke-width="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="#202020"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                ) : (
+                  "Submit"
+                )}
+              </Button>
+            </DialogContent>
+          </Dialog>
+        )}
+
         {projectMembers &&
           projectMembers.map((member: any, index: any) => (
             <>

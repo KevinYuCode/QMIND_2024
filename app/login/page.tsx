@@ -1,23 +1,43 @@
+"use client";
 import { Label } from "@/components/ui/label";
-import { login } from "./actions";
 import Container from "@/components/Container";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useState } from "react";
 import { createClient } from "@/utils/supabase/client";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
-export default async function LoginPage() {
+export default function LoginPage({ searchParams }: any) {
+  const [error, setError] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const supabase = createClient();
-  const user = await supabase.auth.getUser();
+  const router = useRouter();
+  const handleSignup = async () => {
+    setLoading(true);
 
-  if (user?.data?.user) redirect(`/`);
+    const { error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
+    });
+
+    if (error) {
+      setError(true);
+      setLoading(false);
+      return;
+    }
+
+    setLoading(false);
+    router.push("/");
+  };
 
   return (
-    <Container className="flex justify-center items-center md:py-[90px]">
+    <Container className="flex justify-center items-center pb-[70px]">
       <Card className="border-transparent md:border-white border-none p-0 m-0">
-        <CardHeader className="">
+        <CardHeader>
           <div className="flex gap-[20px] items-center">
             <Image
               src={"/icons/qmind_logo.png"}
@@ -30,13 +50,16 @@ export default async function LoginPage() {
           </div>
         </CardHeader>
         <CardContent>
-          <form className="flex flex-col max-w-[500px] w-[80vw] items-center gap-[15px]">
+          <div className="flex flex-col max-w-[500px] w-[80vw] items-center gap-[15px]">
             <div className="w-full">
               <Label htmlFor="email">Email:</Label>
               <Input
                 id="email"
                 name="email"
                 type="email"
+                placeholder="Email Address"
+                defaultValue={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-[100%] min-h-[58px] text-lg"
               />
@@ -47,17 +70,25 @@ export default async function LoginPage() {
                 id="password"
                 name="password"
                 type="password"
+                placeholder="Password"
+                value={password}
+                disabled={loading}
+                onChange={(e) => setPassword(e.target.value)}
                 required
                 className="w-[100%] min-h-[58px] text-lg"
               />
             </div>
+            {error && (
+              <p className="text-destructive">Invalid username or password</p>
+            )}
             <Button
-              formAction={login}
+              disabled={loading}
+              onClick={() => handleSignup()}
               className="mt-[15px] w-[100%] text-lg py-[25px]"
             >
-              Log in
+              login
             </Button>
-          </form>
+          </div>
         </CardContent>
       </Card>
     </Container>

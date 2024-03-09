@@ -11,10 +11,8 @@ import { usePathname, useRouter } from "next/navigation";
 import DISCORD from "@/assets/icons/Discord.png";
 import INSTAGRAM from "@/assets/icons/Instagram.png";
 import Image from "next/image";
-// import { useGlobalContext } from "@/Context/store";
 
 import { createClient } from "../utils/supabase/client";
-import { User } from "@supabase/supabase-js";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -22,6 +20,7 @@ import {
   DialogContent,
   DialogTrigger,
   DialogTitle,
+  DialogDescription,
 } from "./ui/dialog";
 import { logout } from "@/actions/authActions";
 import { revalidatePath } from "next/cache";
@@ -56,6 +55,7 @@ function Navbar() {
     const { data, error } = await supabase.auth.getUser();
     setUser(data.user);
     setNavLoading(false);
+    setNavOn(false);
   };
 
   useEffect(() => {
@@ -79,14 +79,11 @@ function Navbar() {
             navOn ? "hidden" : "block"
           } absolute top-[28px] lg:top-0 left-[30px] lg:left-0  lg:relative lleft-section`}
         >
-          <div className="relative ml-[15px] h-[40px] lg:h-[47px]">
-            <Image
-              className="object-contain"
-              src={QMIND_NAV_LOGO.src}
-              alt="Qmind Nav Logo"
-              fill
-            />
-          </div>
+          <img
+            src={QMIND_NAV_LOGO.src}
+            alt="Qmind Nav Logo"
+            className="relative ml-[15px] h-[40px] lg:h-[47px] "
+          />
         </Link>
 
         {/* Open Button */}
@@ -169,19 +166,25 @@ function Navbar() {
             ) : user ? (
               <Dialog>
                 <DialogTrigger asChild>
-                  <div className="w-[40px] h-[40px] rounded-[10px] flex justify-center items-center bg-transparent border-[#f0b542] border-[2px] shadow-lg cursor-pointer transition-all hover:scale-[1.05]">
+                  <div className="text-lg w-[40px] h-[40px] rounded-[10px] flex justify-center items-center bg-transparent border-[#f0b542] border-[2px] shadow-lg cursor-pointer transition-all hover:scale-[1.05] ">
                     PM
                   </div>
                 </DialogTrigger>
-                <DialogContent onOpenAutoFocus={(e) => e.preventDefault()}>
+                <DialogContent
+                  onOpenAutoFocus={(e) => e.preventDefault()}
+                  className="w-[auto] min-w-[300px] rounded-[.5rem]"
+                >
                   <DialogHeader>
-                    <DialogTitle className="text-2xl text-center">
+                    <DialogTitle className="text-3xl text-left">
                       Logout
                     </DialogTitle>
+                    <DialogDescription className="text-xl text-left">
+                      Hope to see you again!
+                    </DialogDescription>
                   </DialogHeader>
-                  <div className="w-[100%] flex justify-center mt-[30px]">
+                  <div className="w-[100%] flex justify-center mt-[10px]">
                     <Button
-                      className="px-[20px]"
+                      className="px-[20px] w-full"
                       onClick={() => handleLogout()}
                     >
                       Logout

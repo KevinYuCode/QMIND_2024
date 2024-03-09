@@ -15,6 +15,8 @@ export default async function Projects({ searchParams }: any) {
     .from("projects")
     .select("*")
     .ilike("projectTitle", `%${searchParams?.search || ""}%`);
+  const isSearching = searchParams?.search;
+
 
   const previewMap = {} as any;
 
@@ -76,7 +78,7 @@ export default async function Projects({ searchParams }: any) {
                 userRes?.data?.user?.email == project.pmEmail
             ).length <= 0 && (
               <div className="w-full flex justify-center mb-[100px]">
-                <Label className="text-3xl">No Projects Avaiable...</Label>
+                <Label className="text-3xl">Projects Coming Soon...</Label>
               </div>
             )}
 
@@ -95,7 +97,7 @@ export default async function Projects({ searchParams }: any) {
                 />
               ))}
 
-          {user && !hasProject && <AddProject />}
+          {user && !hasProject && !isSearching && <AddProject />}
         </div>
       </div>
     </Container>

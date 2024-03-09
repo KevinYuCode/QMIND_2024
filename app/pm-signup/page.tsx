@@ -10,7 +10,7 @@ import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
 
 export default function LoginPage({ searchParams }: any) {
-  const [errors, setErrors] = useState("");
+  const [error, setError] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordCheck, setPasswordCheck] = useState("");
@@ -22,6 +22,7 @@ export default function LoginPage({ searchParams }: any) {
 
     if (password !== passwordCheck) {
       alert("passwords incorrect");
+      setLoading(false);
       return;
     }
 
@@ -31,7 +32,9 @@ export default function LoginPage({ searchParams }: any) {
     });
 
     if (error) {
-      alert("Error registering account");
+      setError(true);
+      setLoading(false);
+      return;
     }
 
     setLoading(false);
@@ -63,7 +66,10 @@ export default function LoginPage({ searchParams }: any) {
                 type="email"
                 placeholder="Email Address"
                 defaultValue={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setError(false);
+                  setEmail(e.target.value);
+                }}
                 required
                 className="w-[100%] min-h-[58px] text-lg"
               />
@@ -76,8 +82,10 @@ export default function LoginPage({ searchParams }: any) {
                 type="password"
                 placeholder="Password"
                 value={password}
-                disabled={loading}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setError(false);
+                  setPassword(e.target.value);
+                }}
                 required
                 className="w-[100%] min-h-[58px] text-lg"
               />
@@ -91,12 +99,22 @@ export default function LoginPage({ searchParams }: any) {
                 placeholder="Confirm Password"
                 required
                 className="w-[100%] min-h-[58px] text-lg"
-                onChange={(e) => setPasswordCheck(e.target.value)}
+                onChange={(e) => {
+                  setError(false);
+                  setPasswordCheck(e.target.value);
+                }}
                 value={passwordCheck}
               />
             </div>
-            {errors && <p>Passwords Don't Match</p>}
+            {error && (
+              <p className="text-destructive">
+                Error Registering Account.
+                <br />
+                Make sure passwor is atleast 6 characters long
+              </p>
+            )}
             <Button
+              disabled={loading}
               onClick={() => handleSignup()}
               className="mt-[15px] w-[100%] text-lg py-[25px]"
             >

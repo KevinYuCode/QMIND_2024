@@ -17,6 +17,7 @@ import { Button } from "./ui/button";
 import CLOSE from "@/assets/icons/Close.png";
 import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
+import { useGlobalContext } from "@/Context/store";
 
 function PhotoGallary({ project, images }: any) {
   const [uploadImages, setUploadImages] = useState<any>([]);
@@ -27,6 +28,8 @@ function PhotoGallary({ project, images }: any) {
   const supabase = createClient();
   const router = useRouter();
 
+
+  const {isEditing} = useGlobalContext();
   const handleAddPhotos = (e: any) => {
     const curErrorMessages = [];
     const files = Array.from(e.target.files);
@@ -161,9 +164,9 @@ function PhotoGallary({ project, images }: any) {
   return (
     <div className="w-full">
       <div className="users-img-title">PHOTO & VIDEO GALLERY</div>
-      <div className="users-img">
+      <div className="users-img min-h-[256px]">
         {/* Add Project Image */}
-        {images.length <= 6 && (
+        {isEditing && images.length <= 6 && (
           <Dialog open={showUploadImage} onOpenChange={setShowUploadImage}>
             <DialogTrigger>
               <Card className="min-w-[338px] min-h-[256px] xxs:w-[150px] rounded-[12px] border-[1.5px] border-[#4E4E4E] flex justify-center items-center cursor-pointer hover:scale-[1.01]">
