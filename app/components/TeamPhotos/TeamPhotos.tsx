@@ -152,7 +152,7 @@ function TeamPhotos({ project, members }: any) {
       </h1>
 
       {/* Project Member photos */}
-      <div className="flex flex-wrap justify-center md:justify-start gap-[10px] min-h-[100px]">
+      <div className="flex flex-wrap justify-start gap-[10px] min-h-[100px]">
         {isEditing && (
           <Dialog open={isOpenAddMember} onOpenChange={setIsOpenAddMember}>
             <DialogTrigger className="self-start">
@@ -280,8 +280,8 @@ function TeamPhotos({ project, members }: any) {
                   </Link>
                 </div>
                 <div className="mt-[5px] text-center">
-                  <p className="text-xs">{member.memberName}</p>
-                  <p className="text-xs">{member.memberPosition}</p>
+                  <p className="text-[13px] font-bold">{member.memberName}</p>
+                  <p className="text-[12px] font-light">{member.memberPosition}</p>
                 </div>
                 {isEditing && (
                   <Button
