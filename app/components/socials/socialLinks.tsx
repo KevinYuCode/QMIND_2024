@@ -20,7 +20,8 @@ function SocialLinks({ project }: any) {
         <div className="info text-center md:text-left">GITHUB REPOSITORY</div>
         {!isEditing ? (
           <Link
-            href="https://github.com/"
+            href={githubUrl}
+            target="_blank"
             className="hover:text-[skyblue] text-center md:text-left w-[100%] flex gap-[5px] items-center md:justify-start justify-center"
           >
             {githubUrl}
@@ -42,7 +43,8 @@ function SocialLinks({ project }: any) {
         </div>
         <div className="flex flex-col ">
           <Link
-            href="https://github.com/"
+            href="https://www.instagram.com/qmind.ai"
+            target="_blank"
             className="hover:text-[skyblue] text-center md:text-left flex gap-[5px] items-center md:justify-start justify-center"
           >
             <span>Instagram</span>
@@ -55,7 +57,8 @@ function SocialLinks({ project }: any) {
           </Link>
           <Link
             rel="icon"
-            href="https://github.com/"
+            href="https://www.linkedin.com/school/qmindai/"
+            target="_blank"
             className="hover:text-[skyblue] text-center md:text-left flex gap-[5px] items-center md:justify-start justify-center"
           >
             Linkedin
