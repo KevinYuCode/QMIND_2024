@@ -73,6 +73,7 @@ function TeamPhotos({ project, members }: any) {
 
     if (!memberSocial.includes("https://www.linkedin.com/")) {
       alert("Invalid LinkedIn URL");
+      setLoading(false);
       return;
     }
 
@@ -87,7 +88,6 @@ function TeamPhotos({ project, members }: any) {
     if (error) {
       alert("Error uploading image");
       setLoading(false);
-
       return;
     }
 
