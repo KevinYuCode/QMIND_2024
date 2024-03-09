@@ -9,6 +9,7 @@ import { DialogTitle } from "@radix-ui/react-dialog";
 import { useDebounce, useDebouncedCallback } from "use-debounce";
 import LOADING from "@/assets/icons/loading.png";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 function EditProject({ project }: any) {
   const {
     handleSaveProject,
@@ -18,7 +19,7 @@ function EditProject({ project }: any) {
     setIsEditing,
   } = useGlobalContext();
   const [isLoading, setIsLoading] = useState(false);
-
+  const router = useRouter();
   const handleEditState = (e: any) => {
     if (!isEditing) {
       setIsEditing(true);
@@ -27,6 +28,7 @@ function EditProject({ project }: any) {
     setIsLoading(true);
     setTimeout(async () => {
       await handleSaveProject(project);
+      router.refresh();
       setIsLoading(false);
     }, 1000);
   };
@@ -36,7 +38,10 @@ function EditProject({ project }: any) {
       <Button
         variant={"ghost"}
         disabled={isLoading}
-        className={cn(`w-auto h-auto p-[15px] bg-[#1e1e1e] rounded-[50%] shadow-lg border-[2px] border-[#4E4E4E] z-[2]`, {"border-[#f0b542]": isEditing})}
+        className={cn(
+          `w-auto h-auto p-[15px] bg-[#1e1e1e] rounded-[50%] shadow-lg border-[2px] border-[#4E4E4E] z-[2]`,
+          { "border-[#f0b542]": isEditing }
+        )}
         onClick={(e) => {
           handleEditState(e);
         }}
