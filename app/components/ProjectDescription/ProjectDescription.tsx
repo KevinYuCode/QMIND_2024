@@ -43,6 +43,7 @@ function InfoTextArea({ project }: any) {
               placeholder="Type description here..."
               value={shortDescription}
               onChange={(e) => setShortDescription(e.target.value)}
+              maxLength={8000}
             />
           </div>
         )}
@@ -66,6 +67,7 @@ function InfoTextArea({ project }: any) {
               placeholder="Type description here..."
               value={impactDescription}
               onChange={(e) => setImpactDescription(e.target.value)}
+              maxLength={8000}
             />
           </div>
         )}
@@ -89,6 +91,7 @@ function InfoTextArea({ project }: any) {
               placeholder="Type description here..."
               value={fullDescription}
               onChange={(e) => setFullDescription(e.target.value)}
+              maxLength={8000}
             />
           </div>
         )}

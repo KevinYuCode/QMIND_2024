@@ -32,6 +32,7 @@ function SocialLinks({ project }: any) {
               placeholder="https://github.com/"
               value={githubUrl}
               onChange={(e) => setGithubUrl(e.target.value)}
+              maxLength={100}
             />
           </div>
         )}

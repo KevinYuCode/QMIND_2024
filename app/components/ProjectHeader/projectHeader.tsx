@@ -51,6 +51,7 @@ function ProjectHeader({ project }: any) {
               placeholder="Project Title"
               value={projectTitle}
               onChange={(e) => setProjectTitle(e.target.value)}
+              maxLength={56}
             />
           </div>
         )}
@@ -64,7 +65,7 @@ function ProjectHeader({ project }: any) {
               placeholder="Project Title"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              maxLength={30}
+              maxLength={25}
             />
           </div>
         )}
