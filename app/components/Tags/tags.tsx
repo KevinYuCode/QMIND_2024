@@ -142,6 +142,7 @@ function Tags({ project }: any) {
                 placeholder="Tag Name"
                 value={tagName}
                 onChange={(e) => setTagName(e.target.value)}
+                maxLength={35}
               />
               <Button onClick={() => handleAddTag()}>Add Tag</Button>
             </DialogContent>
